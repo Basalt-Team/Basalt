@@ -1,9 +1,0 @@
-div {
-    color: azure !important;
-}
-
-@media screen and (min-width: 120px;) {
-    div {
-        color: blue !important;
-    }
-}
