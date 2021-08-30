@@ -11,14 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <style>
+      body {
+          overflow: hidden;
+      }
+
       body p, body a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: Atkinson Hyperlegible, sans-serif;
+      }
+
+      body a {
+          text-decoration: none !important;
+          color: #990000;
+          font-weight: 900;
+      }
+
+      ::selection {
+          background: rgba(153, 0, 0, 0.645);
+          color: white;
       }
   </style>
   <body>
-<div style="margin: 0 auto 0 auto;">
-    <img src="basalt-847536.svg" alt="basalt" style="margin: 0 auto 0 auto; width: 30rem;">
+<div style="display: flex; flex-direction: column; align-content: center; justify-content: center; align-items: center; flex-wrap: wrap; height: 100vh; width: 100vw;">
+    <img src="basalt-847536.svg" alt="basalt" style="width: 30rem;">
     <p>This is where we store files. Check out the theme page <a href="https://scp-wiki.wikidot.com/theme:basalt">here</a> and the GitHub repository <a href="https://github.com/Basalt-Team/Basalt">here.</a></p>
 </div>
   </body>
