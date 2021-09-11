@@ -9,7 +9,7 @@ Basalt is an alternate base visual theme for the SCP Foundation Wiki, designed t
 </p>
 
 <p align="center">
-  • <a href="http://wanderers-library.wikidot.com/wandercon-2021">View theme page</a>
+  • <a href="https://scp-wiki.wikidot.com/theme:basalt">View theme page</a>
 </p>
 
 ---
