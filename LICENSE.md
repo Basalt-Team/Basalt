@@ -1,6 +1,10 @@
+<h1 align="center">
 MIT License
+</h1>
 
+<p align="center">
 Copyright (c) 2021 Basalt Team
+</p>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
