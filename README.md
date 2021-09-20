@@ -1,7 +1,7 @@
  <h2 align="center">Basalt Theme</h2>
 
 <p align="center">
-<img src="https://basalt-team.github.io/Basalt/nubasalt_logo_text_icon.svg" width="70%">
+<img src="https://basalt-team.github.io/Basalt/bin/nubasalt_logo_text_icon.svg" width="70%">
 </p>
 
 <p align="center">
