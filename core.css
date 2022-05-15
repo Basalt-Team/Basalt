@@ -372,7 +372,7 @@ body {
     position: relative;
     border: none;
     background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
-    backdrop-filter: blur(0.08rem);
+    backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
     transition: clip-path var(--top-bar-link-transition-1st);
 }
