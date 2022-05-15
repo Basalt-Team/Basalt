@@ -1,4 +1,4 @@
-@import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
+@import url("https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/normalize.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
@@ -25,16 +25,20 @@
     --title-size: 1.65rem;
     --subtitle-size: 0.85rem;
 
-    --header-height: calc((var(--title-size) + var(--subtitle-size))*1.25 + 0.5rem);
+    --base-header-height: calc((var(--title-size) + var(--subtitle-size))*1.25 + 0.5rem);
+    --header-border-width: 0.15rem;
+    --header-desktop-height: calc(var(--base-header-height) + var(--header-border-width));
+    --header-mobile-height: calc(var(--header-desktop-height) + var(--top-bar-mobile-height));
+    --header-final-height: var(--header-desktop-height);
 
     --top-bar-link-transition-1st: 0.15s ease 0.05s;
     --top-bar-link-transition-2nd: 0.205s ease-out 0.15s;
     --top-bar-link-color: var(--basalt-main-text-color);
     --top-bar-link-color-hover: var(--basalt-primary-color);
-    --top-bar-mobile-height: min(calc(var(--header-UI-font-size)*4), calc(var(--header-height)*0.875));
+    --top-bar-mobile-height: min(calc(var(--header-UI-font-size)*4), calc(var(--base-header-height)*0.875));
 
     --sidebar-button-width: 3rem;
-    --login-status-width: calc(var(--header-height)*4);
+    --login-status-width: calc(var(--base-header-height)*4);
     --user-button-width: 3.75rem;
     --search-button-width: 2.25rem;
     --sidebar-button-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMjE4LjE0IDM5NS43M2gzMTUuNzJjNy4wNDY5IDAgMTMuNTYyLTMuNzYxNyAxNy4wODYtOS44NjcyIDMuNTI3My02LjEwNTUgMy41MjczLTEzLjYyNSAwLTE5LjczLTMuNTIzNC02LjEwNTUtMTAuMDM5LTkuODY3Mi0xNy4wODYtOS44NjcyaC0zMTUuNzJjLTcuMDUwOCAwLTEzLjU2MiAzLjc2MTctMTcuMDkgOS44NjcyLTMuNTIzNCA2LjEwNTUtMy41MjM0IDEzLjYyNSAwIDE5LjczIDMuNTI3MyA2LjEwNTUgMTAuMDM5IDkuODY3MiAxNy4wOSA5Ljg2NzJ6Ii8+CiAgPHBhdGggZD0ibTUzMy44NiAyMzcuODhoLTMxNS43MmMtNy4wNTA4IDAtMTMuNTYyIDMuNzU3OC0xNy4wOSA5Ljg2MzMtMy41MjM0IDYuMTA1NS0zLjUyMzQgMTMuNjI5IDAgMTkuNzM0IDMuNTI3MyA2LjEwNTUgMTAuMDM5IDkuODY3MiAxNy4wOSA5Ljg2NzJoMzE1LjcyYzcuMDQ2OSAwIDEzLjU2Mi0zLjc2MTcgMTcuMDg2LTkuODY3MiAzLjUyNzMtNi4xMDU1IDMuNTI3My0xMy42MjkgMC0xOS43MzQtMy41MjM0LTYuMTA1NS0xMC4wMzktOS44NjMzLTE3LjA4Ni05Ljg2MzN6Ii8+CiAgPHBhdGggZD0ibTIxOC4xNCA1MTQuMTNoMzE1LjcyYzcuMDQ2OSAwIDEzLjU2Mi0zLjc2MTcgMTcuMDg2LTkuODY3MiAzLjUyNzMtNi4xMDU1IDMuNTI3My0xMy42MjUgMC0xOS43My0zLjUyMzQtNi4xMDU1LTEwLjAzOS05Ljg2NzItMTcuMDg2LTkuODY3MmgtMzE1LjcyYy03LjA1MDggMC0xMy41NjIgMy43NjE3LTE3LjA5IDkuODY3Mi0zLjUyMzQgNi4xMDU1LTMuNTIzNCAxMy42MjUgMCAxOS43MyAzLjUyNzMgNi4xMDU1IDEwLjAzOSA5Ljg2NzIgMTcuMDkgOS44NjcyeiIvPgogPC9nPgo8L3N2Zz4K");
@@ -44,6 +48,7 @@
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-background-color: 0,0,0;
     --side-bar-width: 19rem;
+    --side-bar-transition: 0.2s ease 0.075s;
 
     --main-content-width: 1080px;
     --base-font-size: 1rem;
@@ -53,6 +58,7 @@
         calc(var(--base-font-size)*1.05)
     );
     --header-UI-font-size: calc(var(--true-font-size)*0.775);
+    --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
 }
 
 body {
@@ -89,9 +95,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: var(--header-height);
+    box-sizing: border-box;
+    height: var(--header-final-height);
     background-color: rgb(var(--basalt-secondary-color));
-    border-bottom: solid 0.125rem rgb(var(--basalt-tertiary-color));
+    border-bottom: solid var(--header-border-width) rgb(var(--basalt-tertiary-color));
     grid-template-areas:
             "open-menu h-link top-bar search ."
             "open-menu h-link top-bar search ."
@@ -173,7 +180,7 @@ body {
     background-color: rgb(var(--basalt-overtone));
 }
 #header .open-menu p a::after {
-    transition: background-color var(--top-bar-link-transition-1st);
+    transition: background-color var(--side-bar-transition);
     -webkit-mask-image: var(--sidebar-button-mask);
                 mask-image: var(--sidebar-button-mask);
     -webkit-mask-position: 50%;
@@ -184,11 +191,11 @@ body {
                 mask-repeat: no-repeat;
 }
 #header .open-menu p a::before {
-    width: 0;
-    transition: width var(--top-bar-link-transition-1st);
+    height: 0;
+    transition: height var(--side-bar-transition);
 }
 #header .open-menu p a:is(:hover, :focus)::before {
-    width: 100%;
+    height: 100%;
 }
 #header .open-menu p a:is(:hover, :focus)::after {
     background-color: rgb(var(--top-bar-link-color-hover));
@@ -205,15 +212,16 @@ body {
     align-items: center;
     height: 100%;
     width: max-content;
-    grid-gap: calc(var(--header-height)*0.1);
-    padding-right: calc(var(--header-height)*0.1);
+    grid-gap: calc(var(--base-header-height)*0.1);
+    padding-right: calc(var(--base-header-height)*0.1);
+    letter-spacing: calc(var(--header-UI-font-size) * -0.05);
 }
 #header h1 a::before {
     content: "";
     display: block;
-    height: calc(var(--header-height)*0.9);
-    width: calc(var(--header-height)*0.9);
-    min-width: calc(var(--header-height)*0.75);
+    height: calc(var(--base-header-height)*0.9);
+    width: calc(var(--base-header-height)*0.9);
+    min-width: calc(var(--base-header-height)*0.75);
     background-image: var(--header-logo);
     background-size: 100%;
     background-position: center;
@@ -363,7 +371,6 @@ body {
 #top-bar div[class*="top-bar"] ul li ul li {
     position: relative;
     border: none;
-    font-size: 115%;
     background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
     backdrop-filter: blur(0.08rem);
     clip-path: inset(0 100% 0 0);
@@ -398,7 +405,8 @@ body {
 
 #top-bar div[class*=top-bar] ul li ul li a {
     width: 100%;
-    padding: 0.75em 0.875em;
+    font-size: var(--header-UI-dropdown-font-size);
+    padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
     background: unset;
     transition: color var(--top-bar-link-transition-1st);
@@ -426,41 +434,13 @@ body {
     transform: none;
 }
 
-/*---- mobile breakpoint for header ----*/
-@media only screen and (max-width: 1024px) {
-    #header {
-        top: calc(var(--header-height)*-1);
-        grid-template-areas:
-            "h-link h-link h-link search username"
-            "h-link h-link h-link search username "
-            "open-menu top-bar top-bar top-bar top-bar";
-        grid-template-rows: calc(var(--header-height)/2) calc(var(--header-height)/2) var(--top-bar-mobile-height);
-    }
-    #top-bar div.mobile-top-bar > ul { display: flex; }
-    #top-bar div.top-bar > ul { display: none; }
-
-    #top-bar div[class*="top-bar"] > ul > li {
-        position: static;
-        flex-grow: 1;
-        flex-basis: auto;
-    }
-    #top-bar div[class*="top-bar"] > ul > li > a {
-        padding: 0 calc(var(--header-UI-font-size)*0.25);  
-    }
-    #top-bar div[class*="top-bar"] ul li ul {
-        transform: none;
-        left: 0;
-    }
-}
-
-
 /*--- LOGIN-STATUS ---*/
 
 #login-status {
     display: grid;
     width: var(--login-status-width);
     max-width: 100%;
-    margin-top: var(--header-height);
+    margin-top: var(--base-header-height);
     pointer-events: none;
     user-select: none;
     font-size: 0;
@@ -490,10 +470,10 @@ body {
     content: "";
     display: block;
     position: absolute;
-    top: calc(var(--header-height) * -1);
+    top: calc(var(--base-header-height) * -1);
     right: 0;
     width: var(--user-button-width);
-    height: var(--header-height);
+    height: var(--base-header-height);
     pointer-events: auto;
     cursor: pointer;
     background-color: rgb(var(--basalt-overtone));
@@ -518,7 +498,7 @@ body {
     height: 0;
     transition: height var(--top-bar-link-transition-1st);
 }
-#login-status:is(:hover,:focus-within)::after { height: var(--header-height); }
+#login-status:is(:hover,:focus-within)::after { height: var(--base-header-height); }
 
 #login-status span.printuser a {
     margin-right: 0.15em;
@@ -655,38 +635,139 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 /*--- SIDE BAR ---*/
 
-#side-bar, #side-bar:target {
+#top-bar div.mobile-top-bar > .open-menu { visibility: hidden; }
+
+#side-bar {
     position: fixed;
     top: 0;
-    left: calc(var(--side-bar-width)* -1.25);
-    height: 100vh;
-    width: min(100%, var(--side-bar-width));
-    background-color: rgb(var(--basalt-secondary-color));
+    left: 0;
+    margin-top: var(--base-header-height);
+    height: calc(100vh - var(--base-header-height));
+    width: var(--side-bar-width);
     box-sizing: border-box;
-    padding: 1em;
+    background-color: rgb(var(--basalt-secondary-color));
+    padding: 0;
+    overflow-x: hidden;
     overflow-y: auto;
+    pointer-events: none;
+    clip-path: inset(calc(var(--header-final-height)*-1) 0 100% 0);
+    transition: clip-path var(--side-bar-transition);
 }
-#side-bar:target {
-    left: 0;
+#side-bar:is(:hover, :focus-within) {
+    pointer-events: auto;
+    clip-path: inset(calc(var(--header-final-height)*-1) 0 0 0);
 }
-#side-bar a.close-menu,
-#side-bar:target a.close-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-left: var(--side-bar-width);
-    background: rgba(var(--basalt-overtone),0.325);
-    z-index: -1;
-}
-#side-bar:target a.close-menu {
+
+#side-bar::before, #side-bar::after {
+    content: "";
     display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: var(--sidebar-button-width);
+    height: var(--base-header-height);
+    background-color: rgb(var(--basalt-overtone));
+    pointer-events: auto;
+    cursor: pointer;
 }
+#side-bar::after {
+    transition: background-color var(--side-bar-transition);
+    -webkit-mask-image: var(--sidebar-button-mask);
+                mask-image: var(--sidebar-button-mask);
+    -webkit-mask-position: 50%;
+                mask-position: 50%;
+    -webkit-mask-size: contain;
+                mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+}
+#side-bar::before {
+    height: 0;
+    transition: height var(--side-bar-transition);
+}
+#side-bar:is(:hover, :focus-within)::before {
+        height: var(--base-header-height);
+}
+#side-bar:is(:hover, :focus-within)::after {
+    background-color: rgb(var(--top-bar-link-color-hover));
+}
+#side-bar a.close-menu, #side-bar:target a.close-menu {
+    display: none;
+}
+
 
 /*--- MAIN CONTENT ---*/
 
+
 #page-content {
-    min-height: 67.5vh;
+    min-height: 75vh;
+}
+
+
+/*---- mobile breakpoint ----*/
+@media only screen and (max-width: 1024px) {
+    :root {
+        --header-final-height: var(--header-mobile-height);
+    }
+
+    #header {
+        top: calc(var(--base-header-height)*-1);
+        grid-template-areas:
+            "h-link h-link h-link search username"
+            "h-link h-link h-link search username"
+            "open-menu top-bar top-bar top-bar top-bar";
+        grid-template-rows: calc(var(--base-header-height)/2) calc(var(--base-header-height)/2) var(--top-bar-mobile-height);
+    }
+    #top-bar div.mobile-top-bar > ul { display: flex; }
+    #top-bar div.top-bar > ul { display: none; }
+
+    #top-bar div[class*="top-bar"] > ul > li {
+        position: static;
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+    #top-bar div[class*="top-bar"] > ul > li > a {
+        padding: 0 calc(var(--header-UI-font-size)*0.25);  
+    }
+    #top-bar div[class*="top-bar"] ul li ul {
+        transform: none;
+        left: 0;
+    }
+
+    /* mobile side-bar */
+
+    #top-bar div.mobile-top-bar > .open-menu { visibility: visible; }
+    #side-bar {
+        margin-top: 0;
+        height: 100vh;
+        left: calc(var(--side-bar-width)* -1);
+        transition: left var(--side-bar-transition);
+    }
+    #side-bar, #side-bar:is(:hover, :focus-within) {
+        pointer-events: auto;
+        clip-path: none;
+    }
+    #side-bar::before, #side-bar::after { display: none; }
+    #side-bar:target {
+        left: 0;
+        width: var(--side-bar-width);
+    }
+    #side-bar a.close-menu, #side-bar:target a.close-menu {
+        display: block;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        opacity: 0;
+        background: rgba(var(--basalt-overtone),0.25);
+        z-index: -1;
+        transition: margin-left var(--side-bar-transition), opacity var(--side-bar-transition);
+    }
+    #side-bar:target a.close-menu {
+        pointer-events: auto;
+        margin-left: var(--side-bar-width);
+        opacity: 1;
+    }
 }
