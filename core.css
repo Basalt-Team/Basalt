@@ -624,16 +624,50 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #search-top-box-form { display: contents; }
-#search-top-box-input { display: none; }
+
+#search-top-box-input {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--basalt-primary-color));
+    margin: 0;
+    padding: calc(var(--header-UI-font-size)*0.5);
+    box-sizing: border-box;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    outline: solid 0 rgb(var(--basalt-undertone));
+    transition: width 0.15s, outline-width 0.125s;
+}
+#search-top-box-input:focus, #search-top-box-input:hover {
+    background-color: rgb(var(--basalt-primary-color));
+}
+#search-top-box-form:focus-within #search-top-box-input {
+    width: calc(var(--header-UI-font-size)*16);
+    opacity: 1;
+    margin-right: 100%;
+    outline-width: var(--header-border-width);
+    cursor: text;
+}
 
 #search-top-box-form input[type=submit] {
+    pointer-events: none;
     display: block;
     width: 100%;
     height: 100%;
     font-size: 0;
     cursor: pointer;
+    outline: solid 0 rgb(var(--basalt-undertone));
+    transition: outline-width 0.125s;
 }
-
+#search-top-box-form:focus-within input[type=submit] {
+    z-index: 2;
+    outline-width: var(--header-border-width);
+    pointer-events: auto;
+}
 
 /*--- SIDE BAR ---*/
 
