@@ -662,12 +662,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     height: 100%;
     font-size: 0;
     cursor: pointer;
-    outline: solid 0 rgb(var(--basalt-undertone));
     z-index: 2;
-    transition: outline-width var(--top-bar-link-transition-1st);
 }
 #search-top-box-form:focus-within input[type=submit] {
-    outline-width: var(--header-border-width);
     pointer-events: auto;
 }
 
