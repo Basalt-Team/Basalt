@@ -632,6 +632,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     right: 0;
     height: 100%;
     width: 100%;
+    color: transparent;
     background-color: transparent;
     margin: 0;
     padding: calc(var(--header-UI-font-size)*0.5);
@@ -643,6 +644,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     transition: width var(--top-bar-link-transition-1st), outline-width var(--top-bar-link-transition-1st), opacity var(--top-bar-link-transition-1st);
 }
 #search-top-box-input:focus, #search-top-box-input:hover {
+    color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-primary-color));
 }
 #search-top-box-form:focus-within #search-top-box-input {
