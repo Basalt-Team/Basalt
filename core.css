@@ -643,7 +643,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     outline: solid 0 rgb(var(--basalt-undertone));
     transition: width var(--top-bar-link-transition-1st), outline-width var(--top-bar-link-transition-1st), opacity var(--top-bar-link-transition-1st);
 }
-#search-top-box-input:focus, #search-top-box-input:hover {
+#search-top-box-form:focus-within #search-top-box-input,
+#search-top-box-input:focus,
+#search-top-box-input:hover {
     color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-primary-color));
 }
