@@ -694,7 +694,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--basalt-overtone));
     pointer-events: auto;
     cursor: pointer;
-    z-index: 10;
 }
 #side-bar::after {
     transition: background-color var(--side-bar-transition);
@@ -770,6 +769,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     #side-bar:target {
         left: 0;
         width: var(--side-bar-width);
+        z-index: 10;
     }
     #side-bar a.close-menu, #side-bar:target a.close-menu {
         display: block;
