@@ -86,7 +86,9 @@ body {
     background-color: rgb(var(--basalt-overtone));
 }
 
+/*------------------*/
 /* ---- HEADER ---- */
+/*------------------*/
  
 #header {
     display: grid;
@@ -101,107 +103,22 @@ body {
     grid-template-areas: "open-menu h-link top-bar search .";
     grid-template-columns: var(--sidebar-button-width) max-content 1fr var(--search-button-width) var(--user-button-width);
     grid-template-rows: 1fr;
+    z-index: 10;
 }
-
-#header h2 { display: none; } /* no need for this anymore, replaced with pseudo-element */
-
-#top-bar,
-#top-bar div.top-bar,
-#top-bar div.mobile-top-bar {
-    display: contents; /* grid passthrough */
-}
-
-/*------------------------*/
 
 #header * {
     color: var(--basalt-main-text-color);
     font-family: var(--UI-font);
 }
 
-#header h1 {
-    display: block;
-    grid-area: h-link;
-}
-
-#top-bar div[class*="top-bar"] > ul {
-    display: flex;
-    grid-area: top-bar;
-}
-#top-bar div.mobile-top-bar > ul { display: none; }
-
-#top-bar div.mobile-top-bar > .open-menu {
-    grid-area: open-menu;
-}
-
-#login-status {
-    position: absolute;
-    top: 0; right: 0;
-}
-
-#search-top-box {
-    position: relative;
-    grid-area: search;
-    top: initial; right: initial;
-}
-
-/*-------------*/
-
-#top-bar div.mobile-top-bar > .open-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#header .open-menu p {
-    display: contents;
-}
-
-#header .open-menu p a {
-    font-size: 0rem;
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-#top-bar .open-menu p a:hover { background: transparent; }
-#header .open-menu p a::before,
-#header .open-menu p a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(var(--basalt-overtone));
-}
-#header .open-menu p a::after {
-    transition: background-color var(--side-bar-transition);
-    -webkit-mask-image: var(--sidebar-button-mask);
-                mask-image: var(--sidebar-button-mask);
-    -webkit-mask-position: 50%;
-                mask-position: 50%;
-    -webkit-mask-size: contain;
-                mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-}
-#header .open-menu p a::before {
-    height: 0;
-    transition: height var(--side-bar-transition);
-}
-#header .open-menu p a:is(:hover, :focus)::before {
-    height: 100%;
-}
-#header .open-menu p a:is(:hover, :focus)::after {
-    background-color: rgb(var(--top-bar-link-color-hover));
-}
-
 /*--- H1 LINK ---*/
 
 #header h1 {
+    display: block;
+    grid-area: h-link;
     overflow: hidden;
 }
+#header h2 { display: none; } /* no need for this anymore, replaced with pseudo-element */
 
 #header h1 a {
     display: flex;
@@ -254,7 +171,75 @@ body {
     transform: rotate(-10deg);
 }
 
+
 /*--- TOP BAR ---*/
+
+#top-bar,
+#top-bar div.top-bar,
+#top-bar div.mobile-top-bar {
+    display: contents; /* grid passthrough */
+}
+
+#top-bar div[class*="top-bar"] > ul {
+    display: flex;
+    grid-area: top-bar;
+}
+#top-bar div.mobile-top-bar > ul { display: none; }
+
+#top-bar div.mobile-top-bar > .open-menu {
+    grid-area: open-menu;
+}
+
+#top-bar div.mobile-top-bar > .open-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .open-menu p {
+    display: contents;
+}
+
+#header .open-menu p a {
+    font-size: 0rem;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+#top-bar .open-menu p a:hover { background: transparent; }
+#header .open-menu p a::before,
+#header .open-menu p a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--basalt-overtone));
+}
+#header .open-menu p a::after {
+    transition: background-color var(--side-bar-transition);
+    -webkit-mask-image: var(--sidebar-button-mask);
+                mask-image: var(--sidebar-button-mask);
+    -webkit-mask-position: 50%;
+                mask-position: 50%;
+    -webkit-mask-size: contain;
+                mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+}
+#header .open-menu p a::before {
+    height: 0;
+    transition: height var(--side-bar-transition);
+}
+#header .open-menu p a:is(:hover, :focus)::before {
+    height: 100%;
+}
+#header .open-menu p a:is(:hover, :focus)::after {
+    background-color: rgb(var(--top-bar-link-color-hover));
+}
 
 #top-bar div[class*="top-bar"] > ul {
     align-items: stretch;
@@ -434,6 +419,8 @@ body {
 
 #login-status {
     display: grid;
+    position: absolute;
+    top: 0; right: 0;
     width: var(--login-status-width);
     max-width: 100%;
     margin-top: var(--base-header-height);
@@ -582,6 +569,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #search-top-box {
     display: flex;
+    position: relative;
+    top: initial; right: initial;
+    grid-area: search;
     width: 100%;
     height: 100%;
 }
@@ -668,7 +658,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     pointer-events: auto;
 }
 
+/*----------------*/
 /*--- SIDE BAR ---*/
+/*----------------*/
 
 #top-bar div.mobile-top-bar > .open-menu { visibility: hidden; }
 
@@ -687,6 +679,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     pointer-events: none;
     clip-path: inset(calc(var(--header-final-height)*-1) 0 100% 0);
     transition: clip-path var(--side-bar-transition);
+    z-index: 10;
 }
 #side-bar:is(:hover, :focus-within) {
     pointer-events: auto;
@@ -703,6 +696,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--basalt-overtone));
     pointer-events: auto;
     cursor: pointer;
+    z-index: 10;
 }
 #side-bar::after {
     transition: background-color var(--side-bar-transition);
@@ -729,8 +723,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
+/*---------------------------*/
+/*---- MOBILE BREAKPOINT ----*/
+/*---------------------------*/
 
-/*---- mobile breakpoint ----*/
 @media only screen and (max-width: 1024px) {
     :root {
         --header-final-height: var(--header-mobile-height);
@@ -759,7 +755,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         left: 0;
     }
 
-    /* mobile side-bar */
+    /*--- mobile side-bar ---*/
 
     #top-bar div.mobile-top-bar > .open-menu { visibility: visible; }
     #side-bar {
