@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
 @import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
  
 :root {
     --basalt-primary-color: 254,254,254;
     --basalt-secondary-color: 247,248,250;
-    --basalt-tertiary-color: 236,236,236;
+    --basalt-tertiary-color: 220,220,220;
     --basalt-main-text-color: 20,20,20;
     --basalt-overtone: 50,50,50;
     --basalt-undertone: 61,71,202;
@@ -15,6 +16,7 @@
 
     --header-font: 'Lexend', sans-serif;
     --UI-font: 'IBM Plex Sans', sans-serif;
+    --body-font: 'Inter', sans-serif;
     --mono-font: 'Fira Code', monospace;
 
     --header-logo: url('https://scp-wiki.wikidot.com/local--files/theme:basalt/basalt_logotype_black.png');
@@ -61,7 +63,9 @@
 body {
     color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-primary-color));
+    font-family: var(--body-font);
     font-size: var(--true-font-size);
+    line-height: 1.5;
 }
  
 .page-source, .code pre, .code p, .code, tt {
