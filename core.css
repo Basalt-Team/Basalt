@@ -26,7 +26,7 @@
     --subtitle-size: 0.825rem;
 
     --base-header-height: calc((var(--title-size) + var(--subtitle-size))*1.325 + 0.5rem);
-    --header-border-width: 0.15rem;
+    --header-border-width: 0.125rem;
     --header-desktop-height: calc(var(--base-header-height) + var(--header-border-width));
     --header-mobile-height: calc(var(--header-desktop-height) + var(--top-bar-mobile-height));
     --header-final-height: var(--header-desktop-height);
@@ -126,6 +126,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
+    line-height: 1.15;
     width: max-content;
     grid-gap: calc(var(--base-header-height)*0.1);
     padding-right: calc(var(--base-header-height)*0.1);
