@@ -384,1583 +384,1260 @@ template {
 	 ========================================================================== */
 
      #content-wrap {
-        position: unset;
-        max-width: unset;
-        height: unset;
-        height: unset;
-        min-height: unset;
-        margin: unset;
+        position:unset;
+        margin:unset;
+        max-width:unset;
+        min-height:unset;
+        height:unset;
+        height:unset;
     }
     
-    h1,
-    #page-title {
-        margin: unset;
-        padding-top: unset;
-        color: unset;
-    }
-    
-    h1,
-    #page-title,
-    h1 {
-        padding: unset;
-        font-weight: unset;
+    h1, #page-title {
+        color:unset;
+        padding:unset;
+        margin:unset;
+        font-weight:unset;
     }
     
     h1 {
-        margin-top: unset;
+        margin-top:unset;
+        padding:unset;
+        font-weight:unset;
     }
     
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    h7 {
-        margin: unset;
-        padding: unset;
-        letter-spacing: unset;
+    h2, h3, h4, h5, h6 {
+        margin:unset;
+        padding:unset;
+        letter-spacing:unset;
     }
     
     #page-title {
-        border-color: unset;
+        border-color:unset;
+    }
+    
+    .meta-title {
+        border-bottom:unset;
+        color:unset;
+        font-weight:unset;
+        margin:unset;
+        padding:unset;
+        font-size:unset;
+    }
+    
+    .meta-title p {
+        margin:unset;
     }
     
     ul {
-        list-style: unset;
+        list-style:unset;
     }
     
-    #top-bar ul {
-        right: unset;
-        bottom: unset;
-    }
-    
-    li,
-    p {
-        line-height: unset;
+    li, p {
+        line-height:unset;
     }
     
     a {
-        background: unset;
-        text-decoration: unset;
+        color:unset;
+        text-decoration:unset;
+        background:unset;
     }
     
-    a,
+    a:visited {
+        color:unset;
+    }
+    
+    a:hover {
+        text-decoration:unset;
+        background-color:unset;
+    }
+    
     #side-bar a:visited,
-    a:visited,
-    a.newpage {
-        color: unset;
+    #interwiki a:visited {
+        color:unset;
     }
     
     a.newpage {
-        background: unset;
-    }
-    
-    a.newpage,
-    a:hover {
-        text-decoration: unset;
-    }
-    
-    a:hover {
-        background-color: unset;
+        color:unset;
+        text-decoration:unset;
+        background:unset;
     }
     
     .form-control {
-        width: unset;
+        width:unset;
     }
     
-    #header,
-    #top-bar {
-        max-width: unset;
-    }
-    
-    #header,
-    #top-bar,
-    #top-bar {
-        width: unset;
-        margin: unset;
+    /* GLOBAL WIDTH */
+    #header, #top-bar {
+        width:unset;
+        max-width:unset;
+        margin:unset;
     }
     
     .mobile-top-bar {
-        display: unset;
-        position: unset;
-        z-index: unset;
-        bottom: unset;
-        left: unset;
+        display:unset;
+        position:unset;
+        left:unset;
+        bottom:unset;
+        z-index:unset;
     }
     
     body {
-        background-color: unset;
-        color: unset;
-        font-size: unset;
+        background-color:unset;
+        font-size:unset;
+        color:unset;
+    }
+    
+    #interwiki body {
+        background-color:unset;
     }
     
     div#container-wrap {
-        background: unset;
+        background:unset;
     }
     
     sup {
-        top: unset;
-        vertical-align: unset;
+        vertical-align:unset;
+        position:unset;
+        top:unset;
     }
     
-    sup,
+    /* HEADER */
     #header {
-        position: unset;
-    }
-    
-    #header {
-        z-index: unset;
-        height: unset;
-        padding-bottom: unset;
-    
-        background: unset;
+        height:unset;
+        position:unset;
+        z-index:unset;
+        padding-bottom:unset; /* FOR MENU */
+        background:unset;
+        background-size:unset;
+        background-position:unset;
     }
     
     #search-top-box {
-        position: unset;
-        z-index: unset;
-        top: unset;
-        right: unset;
-        width: unset;
-        text-align: unset;
+        position:unset;
+        top:unset;
+        right:unset;
+        width:unset;
+        text-align:unset;
     }
     
     #search-top-box-input {
-        border: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-    }
-    
-    #search-top-box input.empty {
-        color: unset;
-    }
-    
-    #search-top-box-input,
-    #search-top-box-input:hover,
-    #search-top-box-input:focus {
-        background-color: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-        color: unset;
+        border:unset;
+        border-radius:unset;
+        color:unset;
+        background-color:unset;
+        box-shadow:unset;
     }
     
     #search-top-box-input:hover,
     #search-top-box-input:focus {
-        border: unset;
+        border:unset;
+        color:unset;
+        background-color:unset;
+        box-shadow:unset;
     }
     
-    #search-top-box-form input[type="submit"] {
-        padding: unset;
-        border: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background: unset;
-        background-color: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-        color: unset;
-        font-size: unset;
-        font-weight: unset;
-        cursor: unset;
+    #search-top-box-form input[type='submit'] {
+        border:unset;
+        border-radius:unset;
+        padding:unset;
+        font-size:unset;
+        font-weight:unset;
+        color:unset;
+        background-color:unset;
+        background-image:unset;
+        box-shadow:unset;
+        cursor:unset;
     }
     
-    #search-top-box-form input[type="submit"]:hover,
-    #search-top-box-form input[type="submit"]:focus {
-        border: unset;
-        background: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-        color: unset;
-        text-shadow: unset;
+    #search-top-box-form input[type='submit']:hover,
+    #search-top-box-form input[type='submit']:focus {
+        border:unset;
+        color:unset;
+        text-shadow:unset;
+        background-color:unset;
+        background-image:unset;
+        box-shadow:unset;
     }
     
     #login-status {
-        position: unset;
-        z-index: unset;
-        z-index: unset;
-        top: unset;
-        right: unset;
-        overflow: unset;
-        color: unset;
-        font-size: unset;
+        color:unset;
+        font-size:unset;
+        z-index:unset;
     }
     
-    #login-status a,
-    #login-status ul a,
+    #login-status a {
+        background:unset;
+        color:unset;
+    }
+    
+    #login-status ul a {
+        color:unset;
+        background:unset;
+    }
+    
     #account-topbutton {
-        background: unset;
-        color: unset;
-    }
-    
-    #login-status>a>strong {
-        -webkit-animation-name: unset;
-        -webkit-animation-duration: unset;
-        -webkit-animation-timing-function: unset;
-        -webkit-animation-iteration-count: unset;
-        text-decoration: unset;
+        background:unset;
+        color:unset;
     }
     
     .printuser img.small {
-        height: unset;
-        margin-right: unset;
-        vertical-align: unset;
+        margin-right:unset;
     }
     
-    #account-options {
-        display: unset;
-        position: unset;
-        z-index: unset;
-        right: unset;
-        -moz-box-sizing: unset;
-        box-sizing: unset;
-        width: unset;
-        padding: unset;
-        border: unset;
-        background-color: unset;
-    }
-    
-    #account-options ul {
-        display: unset;
-        margin: unset;
-        padding: unset;
-        list-style: unset;
-    }
-    
-    #account-options li {
-        display: unset;
-        margin: unset;
-        padding: unset;
-    }
-    
-    #account-options li a {
-        display: unset;
-        z-index: unset;
-        -moz-box-sizing: unset;
-        box-sizing: unset;
-        padding: unset;
-    }
-    
-    #account-options li a:hover {
-        color: unset;
-    }
-    
-    #account-topbutton {
-        margin-left: unset;
-        padding: unset;
-        border: unset;
-        background-color: unset;
-        font-size: unset;
-        font-weight: unset;
-        text-decoration: unset;
-    }
-    
-    #header h1,
-    #header h2 {
-        max-height: unset;
-        margin-left: unset;
-        padding: unset;
-        float: unset;
+    #header h1 {
+        margin-left:unset;
+        padding:unset;
+        float:unset;
+        max-height:unset;
     }
     
     #header h2 {
-        clear: unset;
-        font-size: unset;
+        margin-left:unset;
+        padding:unset;
+        clear:unset;
+        float:unset;
+        font-size:unset;
+        max-height:unset;
     }
     
     #header h1 a {
-        background: unset;
-        font-family: unset;
-        font-size: unset;
-        letter-spacing: unset;
-        text-decoration: unset;
-    }
-    
-    #header h1 a,
-    #header h2 span {
-        display: unset;
-        max-height: unset;
-        margin: unset;
-        padding: unset;
-        color: unset;
-        line-height: unset;
-        text-shadow: unset;
+        display:unset;
+        margin:unset;
+        padding:unset;
+        line-height:unset;
+        max-height:unset;
+        color:unset;
+        background:unset;
+        font-family:unset;
+        font-size:unset;
+        text-decoration:unset;
+        text-shadow:unset;
+        letter-spacing:unset;
     }
     
     #header h2 span {
-        font-weight: unset;
+        display:unset;
+        margin:unset;
+        padding:unset;
+        line-height:unset;
+        max-height:unset;
+        font-weight:unset;
+        color:unset;
+        text-shadow:unset;
+        text-shadow:unset;
     }
     
+    /* TOP MENU */
     #top-bar {
-        position: unset;
-        z-index: unset;
-        z-index: unset;
-        top: unset;
-        height: unset;
-        padding: unset;
-        font-size: unset;
-        line-height: unset;
+        position:unset;
+        top:unset;
+        height:unset;
+        width:unset;
+        line-height:unset;
+        padding:unset;
+        margin:unset;
+        z-index:unset;
+        font-size:unset;
     }
     
     #top-bar ul {
-        float: unset;
+        float:unset;
     }
     
     #top-bar li {
-        margin: unset;
+        margin:unset;
     }
     
     #top-bar a {
-        background: unset;
-        color: unset;
+        color:unset;
+        background:unset;
     }
     
     #top-bar ul li {
-        position: unset;
-        border: unset;
+        border:unset;
+        position:unset;
     }
     
     #top-bar ul li ul {
-        border: unset;
-        border-top: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
+        border:unset;
+        box-shadow:unset;
+        border-top:unset;
+        border-width:unset;
+        width:unset;
     }
     
     #top-bar ul li a {
-        max-height: unset;
-        padding-top: unset;
-        padding-bottom: unset;
-        overflow: unset;
-        border-right: unset;
-        border-left: unset;
-        line-height: unset;
-        text-decoration: unset;
+        border-left:unset;
+        border-right:unset;
+        text-decoration:unset;
+        padding:unset;
+    }
+    
+    #top-bar .top-bar > ul > li > a,
+    #top-bar .mobile-top-bar > ul > li > a {
+        font-weight:unset;
     }
     
     #top-bar ul li.sfhover a,
     #top-bar ul li:hover a {
-        border-right: unset;
-        border-left: unset;
-        background: unset;
-        color: unset;
+        background:unset;
+        color:unset;
+        border-left:unset;
+        border-right:unset;
     }
     
     #top-bar ul li.sfhover ul li a,
     #top-bar ul li:hover ul li a {
-        width: unset;
-        height: unset;
-        max-height: unset;
-        padding-top: unset;
-        padding-bottom: unset;
-        border-top: unset;
-        border-width: unset;
-        line-height: unset;
+        border-width:unset;
+        width:unset;
+        border-top:unset;
+        line-height:unset;
+        height:unset;
+        max-height:unset;
+        padding-top:unset;
+        padding-bottom:unset;
     }
     
     #top-bar ul li.sfhover a:hover,
     #top-bar ul li:hover a:hover {
-        background: unset;
-        text-decoration: unset;
+        background:unset;
+        text-decoration:unset;
     }
     
-    #top-bar ul li ul {
-        width: unset;
-    }
-    
-    #top-bar ul li ul,
     #top-bar ul li ul li,
     #top-bar ul li ul li.sfhover,
-    #top-bar ul li ul li,
-    #top-bar ul li ul li:hover,
-    #top-bar ul li ul li a {
-        border-width: unset;
+    #top-bar ul li ul li:hover {
+        border-width:unset;
     }
     
-    #top-bar ul li ul a,
-    #top-bar a:hover {
-        color: unset;
+    #top-bar ul li ul li a {
+        border-width:unset;
+    }
+    
+    #top-bar ul li ul a, #top-bar a:hover {
+        color:unset;
     }
     
     .top-bar ul li:last-of-type ul {
-        right: unset;
+        right:unset;
     }
     
-    #top-bar ul>li>ul {
-        *margin-top: unset;
-    }
     
+    /* SIDE MENU */
     #side-bar {
-        display: unset;
-        position: unset;
-        top: unset;
-        left: unset;
-        float: unset;
-        clear: unset;
+        clear:unset;
+        float:unset;
+        position:unset;
+        top:unset;
+        left:unset;
+        width:unset;
+        padding:unset;
+        border:unset;
+        display:unset;
+        overscroll-behavior:unset;
     }
     
-    #side-bar,
-    #side-bar .side-block {
-        padding: unset;
-        border: unset;
+    #interwiki .side-block {
+        margin:unset;
     }
     
-    #side-bar .side-block {
-        margin-bottom: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
+    #side-bar .side-block,
+    #interwiki .side-block {
+        padding:unset;
+        border:unset;
+        border-radius:unset;
+        box-shadow:unset;
+        background:unset;
+        margin-bottom:unset;
+    }
+    
+    #side-bar .side-block.media {
+        background:unset;
+    }
+    
+    #side-bar .side-block.resources {
+        background:unset; /* Changed from #fff0f0 */
     }
     
     #side-bar .side-area {
-        padding: unset;
+        padding:unset;
     }
     
-    #side-bar .heading {
-        margin-top: unset;
-        margin-bottom: unset;
-        padding-left: unset;
-        border-bottom: unset;
-        color: unset;
-        font-size: unset;
-        font-weight: unset;
+    #side-bar .heading,
+    #interwiki .heading {
+        color:unset;
+        border-bottom:unset;
+        padding-left:unset;
+        margin-top:unset;
+        margin-bottom:unset;
+        font-size:unset;
+        font-weight:unset;
     }
     
     #side-bar p,
-    #side-bar div.menu-item {
-        margin: unset;
+    #interwiki p {
+        margin:unset;
     }
     
-    #side-bar div.menu-item img {
-        position: unset;
-        bottom: unset;
-        width: unset;
-        height: unset;
-        margin-right: unset;
-        border: unset;
+    #side-bar .menu-item,
+    #interwiki .menu-item {
+        margin:unset;
     }
     
-    #side-bar div.menu-item a {
-        font-weight: unset;
+    #side-bar .menu-item.small {
+        font-size:unset; /* For sidebar item with smaller text, like SCP series links */
     }
     
-    #side-bar div.menu-item.inactive img {
-        opacity: unset;
+    #side-bar .menu-item img,
+    #interwiki .menu-item img {
+        width:unset;
+        height:unset;
+        border:unset;
+        margin-right:unset;
+        position:unset;
+        bottom:unset;
     }
     
-    #side-bar div.menu-item.inactive a {
-        color: unset;
+    #side-bar .menu-item a,
+    #interwiki .menu-item a {
+        font-weight:unset;
     }
     
-    #side-bar div.menu-item .sub-text {
-        color: unset;
-        font-size: unset;
+    #side-bar .menu-item.inactive img {
+        opacity:unset;
     }
     
-    #side-bar .collapsible-block-folded {
-        background: unset;
+    #side-bar .menu-item.inactive a {
+        color:unset;
+    }
+    
+    #side-bar .menu-item .sub-text {
+        font-size:unset;
+        color:unset;
     }
     
     #side-bar .collapsible-block-link {
-        margin-left: unset;
-        font-weight: unset;
+        margin-left:unset;
+        font-weight:unset;
     }
     
     #side-bar .collapsible-block-unfolded-link {
-        border-bottom: unset;
+        border-bottom:unset;
     }
     
     #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
-        margin-top: unset;
-        margin-bottom: unset;
-        color: unset;
-        font-size: unset;
+        margin-top:unset;
+        margin-bottom:unset;
+        margin-left:unset;
+        font-size:unset;
+        color:unset;
     }
     
     #side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
-        color: unset;
-        text-decoration: unset;
+        color:unset;
+        text-decoration:unset;
     }
     
     #side-bar ul {
-        padding: unset;
-        list-style-type: unset;
+        list-style-type:unset;
+        padding:unset;
     }
     
-    div.scpnet-interwiki-wrapper {
-        width: unset;
-        margin-left: unset;
+    /* off-canvas */
+    .close-menu {
+        display:unset;
     }
     
-    iframe.scpnet-interwiki-frame {
-        border: unset;
+    /* side bar mobile query on their own */
+    @media (max-width: 767px) {
+        #top-bar .open-menu a {
+            position:unset;
+            top:unset;
+            left:unset;
+            z-index:unset;
+            font-family:unset;
+            font-size:unset;
+            font-weight:unset;
+            width:unset;
+            height:unset;
+            line-height:unset;
+            text-align:unset;
+            border:unset;
+            background-color:unset;
+            border-radius:unset;
+            color:unset;
+        }
+    
+        #top-bar .open-menu a:hover {
+            text-decoration:unset;
+            -webkit-box-shadow:unset;
+            box-shadow:unset;
+        }
+    
+        #side-bar {
+            display:unset;
+            position:unset;
+            top:unset;
+            left:unset;
+            width:unset;
+            height:unset;
+            background-color:unset;
+            overflow-y:unset;
+            z-index:unset;
+            padding:unset;
+            -webkit-transition:unset;
+            -o-transition:unset;
+            transition:unset;
+        }
+    
+        #side-bar::after {
+            content:unset;
+            position:unset;
+            top:unset;
+            width:unset;
+            height:unset;
+            background-color:unset;
+        }
+    
+        #side-bar:target {
+            display:unset;
+            left:unset;
+            width:unset;
+            margin:unset;
+            border:unset;
+            z-index:unset;
+        }
+    
+        #side-bar:target .close-menu {
+            display:unset;
+            position:unset;
+            width:unset;
+            height:unset;
+            top:unset;
+            left:unset;
+            background:unset;
+            z-index:unset;
+        }
     }
     
+    /* CONTENT */
     #main-content {
-        position: unset;
-        margin: unset;
-        padding: unset;
+        margin:unset;
+        padding:unset;
+        position:unset;
     }
     
-    #page-info-break {
-        height: 1px;
-        clear: both;
-        font-size: 1px;
-    }
-    
-    #page-info {
-        margin: unset;
-        clear: unset;
-        font-size: unset;
-        text-align: unset;
-    }
-    
-    .page-tags {
-        margin: unset;
-        padding: unset;
-        clear: unset;
-        text-align: unset;
-    }
-    
-    .page-tags a {
-        margin: unset;
-    }
-    
-    .page-tags span {
-        padding-top: unset;
-        border-top: unset;
-        font-size: unset;
+    /* ACTUALLY HIDE HIDDEN TAGS */
+    #main-content .page-tags a[href^='/system:page-tags/tag/_'] {
+        display:unset;
     }
     
     #breadcrumbs {
-        margin: unset;
+        margin:unset;
     }
     
-    .psuedocrumbs {
-        margin: unset;
+    .pseudocrumbs {
+        margin:unset;
     }
     
+    /* YUI-TABS */
     .yui-navset .yui-content {
-        background-color: unset;
+        background-color:unset;
     }
     
     .yui-navset .yui-nav a,
     .yui-navset .yui-navset-top .yui-nav a {
-        background-color: unset;
-        background-image: unset;
+        background-color:unset;
+        background-image:unset;
     }
     
     .yui-navset .yui-nav .selected a,
-    .yui-navset .yui-nav .selected a:focus,
-    .yui-navset .yui-nav .selected a:hover {
-        background: unset;
-        color: unset;
+    .yui-navset .yui-nav .selected a:focus, /* no focus effect for selected */
+    .yui-navset .yui-nav .selected a:hover { /* no hover effect for selected */
+        background:unset; /* selected tab background */
+        color:unset;
     }
     
     .yui-navset .yui-nav a:hover,
     .yui-navset .yui-nav a:focus {
-        background: unset;
-        text-decoration: unset;
+        background:unset;
+        text-decoration:unset;
     }
     
-    .yui-navset .yui-nav,
-    .yui-navset .yui-navset-top .yui-nav,
     .yui-navset .yui-nav,
     .yui-navset .yui-navset-top .yui-nav {
-        border-color: unset;
-    }
-    
-    .yui-navset .yui-nav li a em,
-    .yui-navset-top .yui-nav li a em,
-    .yui-navset-bottom .yui-nav li a em {
-        display: unset;
+        border-color:unset;
     }
     
     .yui-navset li {
-        line-height: unset;
+        line-height:unset;
     }
     
+    /* FOOTER */
     #footer {
-        margin-top: unset;
-        padding: unset;
-        clear: unset;
-        background: unset;
-        color: unset;
-        font-size: unset;
+        clear:unset;
+        font-size:unset;
+        background:unset;
+        color:unset;
+        margin-top:unset;
+        padding:unset;
     }
     
     #footer .options {
-        display: unset;
-        visibility: unset;
-        width: unset;
-        float: unset;
-        font-size: unset;
-        text-align: unset;
+        visibility:unset;
+        display:unset;
+        float:unset;
+        width:unset;
+        font-size:unset;
+        text-align:unset;
     }
     
     #footer a {
-        background: unset;
-        color: unset;
+        color:unset;
+        background:unset;
     }
     
-    #footer p {
-        margin: unset;
-        padding: unset;
-    }
-    
-    #license-area {
-        padding: unset;
-        color: unset;
-        text-align: unset;
-    }
-    
-    #toc {
-        border: unset;
-        background-color: unset;
-    }
-    
-    #toc #toc-action-bar {
-        padding: unset;
-    }
-    
-    #toc .title {
-        margin: unset;
-        font-weight: unset;
-        text-align: unset;
-    }
-    
-    #revision-list .pager {
-        margin: unset;
-        text-align: unset;
-    }
-    
-    .pager {
-        margin: unset;
-        text-align: unset;
-    }
-    
-    .pager-no {
-        padding: unset;
-    }
-    
-    .pager .dots {
-        margin: unset;
-        padding: unset;
-    }
-    
-    .pager a {
-        margin: unset;
-        padding: unset;
-        border: unset;
-        text-decoration: unset;
-    }
-    
-    .pager .current {
-        margin: unset;
-        padding: unset;
-        border: unset;
-        background-color: unset;
-        color: unset;
-        font-weight: unset;
-    }
-    
+    /* SOME NICE BOXES */
     div.sexy-box {
-        overflow: unset;
-        background: unset;
+        background:unset;
+        border:unset;
+        padding:unset;
+        margin:unset;
+        overflow:unset;
     }
     
-    div.sexy-box,
     div.sexy-box div.image-container img {
-        margin: unset;
-        padding: unset;
-        border: unset;
+        margin:unset;
+        padding:unset;
+        border:unset;
     }
     
+    /* Custom page content classes */
     #page-content {
-        min-height: unset;
+        min-height:unset;
     }
     
-    .unmargined>p {
-        margin: unset;
-        line-height: unset;
+    .unmargined > p {
+        margin:unset;
+        line-height:unset;
     }
     
     .content-panel {
-        margin: unset;
-        border: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background-color: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-        box-shadow: unset;
+        border:unset;
+        border-radius:unset;
+        background-color:unset;
+        margin:unset;
+        box-shadow:unset;
+        box-shadow:
+            0 2px 6px rgba(0, 0, 0, .5),
+            inset 0 1px rgba(255, 255, 255, .3),
+            inset 0 10px rgba(255, 255, 255, .2),
+            inset 0 10px 20px rgba(255, 255, 255, .25),
+            inset 0 -15px 30px rgba(0, 0, 0, .1);
     }
     
     .content-panel.standalone {
-        background: unset;
+        background:unset;
     }
     
     .content-panel.series {
-        margin-bottom: unset;
-        padding: unset;
+        padding:unset;
+        margin-bottom:unset;
     }
     
     .content-panel.centered {
-        text-align: unset;
+        text-align:unset;
     }
     
-    .content-panel.left-column,
+    .content-panel.left-column {
+        float:unset;
+        width:unset;
+    }
+    
     .content-panel.right-column {
-        width: unset;
-        float: unset;
+        float:unset;
+        width:unset;
     }
     
     .content-panel .panel-heading {
-        padding: unset;
-        color: unset;
-        font-size: unset;
-        font-weight: unset;
-        text-shadow: unset;
+        padding:unset;
+        color:unset;
+        font-size:unset;
+        font-weight:unset;
+        text-shadow:unset;
     }
     
-    .content-panel .panel-heading>p,
-    .content-panel .panel-footer>p {
-        margin: unset;
+    .content-panel .panel-heading > p,
+    .content-panel .panel-footer > p {
+        margin:unset;
     }
     
     .content-panel .panel-body {
-        padding: unset;
-        background: unset;
+        padding:unset;
+        background:unset;
     }
     
     .content-panel .panel-footer {
-        padding: unset;
-        color: unset;
-        font-size: unset;
-        font-weight: unset;
-        text-align: unset;
-        text-shadow: unset;
+        padding:unset;
+        color:unset;
+        font-size:unset;
+        font-weight:unset;
+        text-align:unset;
+        text-shadow:unset;
     }
     
     .content-panel .panel-footer a {
-        color: unset;
+        color:unset;
     }
     
     .content-panel .content-toc {
-        margin: unset;
-        padding: unset;
-        float: unset;
-        border: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background-color: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-        white-space: unset;
+        float:unset;
+        padding:unset;
+        background-color:unset;
+        border:unset;
+        border-radius:unset;
+        margin:unset;
+        white-space:unset;
+        box-shadow:unset;
     }
     
     .alternate:nth-child(even) {
-        background-color: unset;
+        background-color:unset;
     }
     
+    /* Page Rating Module Customizations */
     .page-rate-widget-box {
-        display: unset;
-        margin-right: unset;
-        margin-bottom: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
+        display:unset;
+        border-radius:unset;
+        box-shadow:unset;
+        margin-bottom:unset;
+        margin-right:unset;
     }
     
     .page-rate-widget-box .rate-points {
-        border: unset;
-        border-right: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background-color: unset;
+        background-color:unset;
+        border:unset;
+        border-right:unset;
+        border-radius:unset;
     }
     
     .page-rate-widget-box .rateup,
     .page-rate-widget-box .ratedown {
-        border-top: unset;
-        border-bottom: unset;
-        background-color: unset;
-        font-weight: unset;
+        background-color:unset;
+        border-top:unset;
+        border-bottom:unset;
+        font-weight:unset;
     }
     
     .page-rate-widget-box .rateup a,
     .page-rate-widget-box .ratedown a {
-        margin: unset;
-        padding: unset;
-        background: unset;
-        color: unset;
+        background:unset;
+        color:unset;
+        padding:unset;
+        margin:unset;
     }
     
     .page-rate-widget-box .rateup a:hover,
     .page-rate-widget-box .ratedown a:hover {
-        background: unset;
-        color: unset;
-        text-decoration: unset;
+        background:unset;
+        color:unset;
+        text-decoration:unset;
     }
     
     .page-rate-widget-box .cancel {
-        border: unset;
-        border-left: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background-color: unset;
+        background-color:unset;
+        border:unset;
+        border-left:unset;
+        border-radius:unset;
     }
     
     .page-rate-widget-box .cancel a {
-        background: unset;
-        color: unset;
-        text-transform: unset;
+        background:unset;
+        text-transform:unset;
+        color:unset;
     }
     
     .page-rate-widget-box .cancel a:hover {
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background: unset;
-        color: unset;
-        text-decoration: unset;
+        border-radius:unset;
+        background:unset;
+        color:unset;
+        text-decoration:unset;
     }
     
-    .heritage-rating-module {
-        display: unset;
-        padding: unset;
-        border: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background-color: unset;
-    }
-    
-    .heritage-rating-module,
-    .heritage-rating-module .page-rate-widget-box {
-        margin-right: unset;
-        margin-bottom: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-    }
-    
-    .heritage-rating-module .heritage-emblem {
-        position: unset;
-        top: unset;
-        left: unset;
-        width: unset;
-        height: unset;
-        margin-right: unset;
-        float: unset;
-        overflow: unset;
-    }
-    
-    .heritage-rating-module .heritage-emblem img {
-        width: unset;
-        height: unset;
-        border: unset;
-    }
-    
+    /* Fixes for multi-line page tags */
     #main-content .page-tags {
-        margin: unset;
-        padding: unset;
+        margin:unset;
+        padding:unset;
     }
     
     #main-content .page-tags span {
-        display: unset;
-        max-width: unset;
-        padding: unset;
+        display:unset;
+        padding:unset;
+        max-width:unset;
     }
     
     #main-content .page-tags a {
-        display: unset;
-        white-space: unset;
+        display:unset;
+        white-space:unset;
     }
     
+    /* Standard Image Block */
     .scp-image-block {
-        width: unset;
-        border: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
+        border:unset;
+        box-shadow:unset;
+        width:unset;
     }
     
-    .scp-image-block.block-right,
+    .scp-image-block.block-right {
+        float:unset;
+        clear:unset;
+        margin:unset;
+    }
+    
     .scp-image-block.block-left {
-        margin: unset;
-        float: unset;
-        clear: unset;
+        float:unset;
+        clear:unset;
+        margin:unset;
     }
     
     .scp-image-block.block-center {
-        margin-right: unset;
-        margin-left: unset;
+        margin-right:unset;
+        margin-left:unset;
     }
     
     .scp-image-block img {
-        width: unset;
-        border: unset;
+        border:unset;
+        width:unset;
     }
     
     .scp-image-block .scp-image-caption {
-        width: unset;
-        padding: unset;
-        border-top: unset;
-        background-color: unset;
-        font-size: unset;
-        font-weight: unset;
-        text-align: unset;
+        background-color:unset;
+        border-top:unset;
+        padding:unset;
+        font-size:unset;
+        font-weight:unset;
+        text-align:unset;
+        width:unset;
     }
     
-    .scp-image-block>p {
-        margin: unset;
+    .scp-image-block > p {
+        margin:unset;
     }
     
-    .scp-image-block .scp-image-caption>p {
-        margin: unset;
-        padding: unset;
+    .scp-image-block .scp-image-caption > p {
+        margin:unset;
+        padding:unset;
     }
     
+    /* Collapsible Link */
+    #page-content a.collapsible-block-link {
+        overflow-wrap:unset;
+    }
+    
+    /* Wikiwalk Navigation */
     .footer-wikiwalk-nav {
-        font-size: unset;
-        font-weight: unset;
+        font-weight:unset;
+        font-size:unset;
     }
     
-    .forum-thread-box .description-block,
+    /* Licensebox */
+    .licensebox .collapsible-block-link {
+        margin-left:unset;
+        padding:unset;
+        font-weight:unset;
+        opacity:unset;
+        color:unset;
+        -webkit-transition:unset;
+        -moz-transition:unset;
+        transition:unset;
+    }
+    
+    .licensebox .collapsible-block-link:hover,
+    .licensebox .collapsible-block-link:active {
+        opacity:unset;
+    }
+    
+    /* Forum Customizations */
+    .forum-thread-box .description-block {
+        padding:unset;
+        border-radius:unset;
+        box-shadow:
+            0 1px 5px rgba(0, 0, 0, .15),
+            inset 0 1px 0 rgba(255, 255, 255, .8),
+            inset 0 10px 5px rgba(255, 255, 255, .25),
+            inset 0 -15px 30px rgba(0, 0, 0, .1);
+    }
+    
     .thread-container .post .head {
-        padding: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
+        padding:unset;
+        background-color:unset;
+        background-image:unset;
+        box-shadow:unset;
+        border-radius:unset;
     }
     
-    .thread-container .post .head {
-        background: unset;
-        background-color: unset;
-    }
-    
+    /* Hide Forum Signatures */
     .signature {
-        display: unset;
+        display:unset;
     }
     
-    .ruby,
-    ruby {
-        height: unset;
-        vertical-align: unset;
+    /* Ruby by Nanimono Demonai */
+    .ruby, ruby {
+        display:unset;
+        text-align:unset;
+        white-space:unset;
+        line-height:unset;
+        height:unset;
+        vertical-align:unset;
     }
     
-    .ruby,
-    ruby,
-    .rt,
-    rt {
-        display: unset;
-        line-height: unset;
-        text-align: unset;
-        white-space: unset;
+    .rt, rt {
+        display:unset;
+        font-size:unset;
+        line-height:unset;
+        text-align:unset;
+        white-space:unset;
     }
     
-    .rt,
-    rt,
+    /* Keycap */
     .keycap {
-        font-size: unset;
+        border:unset;
+        border-color:unset;
+        border-bottom-width:unset;
+        -moz-border-radius:unset;
+        -webkit-border-radius:unset;
+        border-radius:unset;
+        background-color:unset;
+        padding:unset;
+        font-family:unset;
+        font-size:unset;
+        white-space:unset;
     }
     
-    .keycap {
-        border: unset;
-        border-bottom-width: unset;
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        border-color: unset;
-        background-color: unset;
-        font-family: unset;
-        white-space: unset;
-    }
-    
-    .keycap,
+    /* tag style */
     .tags {
-        padding: unset;
+        display:unset;
+        margin:unset;
+        padding:unset;
+        height:unset;
+        line-height:unset;
+        font-size:unset;
+        background:unset;
+        color:unset;
+        text-decoration:unset;
+        -moz-border-radius-bottomright:unset;
+        -webkit-border-bottom-right-radius:unset;
+        border-bottom-right-radius:unset;
+        -moz-border-radius-topright:unset;
+        -webkit-border-top-right-radius:unset;
+        border-top-right-radius:unset;
     }
     
-    .tags {
-        display: unset;
-        height: unset;
-        margin: unset;
-        -webkit-border-top-right-radius: unset;
-        border-top-right-radius: unset;
-        -webkit-border-bottom-right-radius: unset;
-        border-bottom-right-radius: unset;
-        background: unset;
-        color: unset;
-        font-size: unset;
-        line-height: unset;
-        text-decoration: unset;
+    .tags::before {
+        content:unset;
+        padding:unset;
+        float:unset;
+        position:unset;
+        top:unset;
+        left:unset;
+        width:unset;
+        height:unset;
+        border-color:unset;
+        border-style:unset;
+        border-width:unset;
     }
     
-    .tags:before {
-        padding: unset;
-        border-width: unset;
-        border-style: unset;
-        border-color: unset;
+    .tags::after {
+        content:unset;
+        position:unset;
+        top:unset;
+        left:unset;
+        float:unset;
+        width:unset;
+        height:unset;
+        -moz-border-radius:unset;
+        -webkit-border-radius:unset;
+        border-radius:unset;
+        background:unset;
+        -moz-box-shadow:unset;
+        -webkit-box-shadow:unset;
+        box-shadow:unset;
     }
     
-    .tags:before,
-    .tags:after {
-        content: unset;
-        position: unset;
-        top: unset;
-        left: unset;
-        width: unset;
-        height: unset;
-        float: unset;
-    }
-    
-    .tags:after {
-        -webkit-border-radius: unset;
-        border-radius: unset;
-        background: unset;
-        -webkit-box-shadow: unset;
-        box-shadow: unset;
-    }
-    
+    /* Display Black Block by Nanimono Demonai */
     .bblock {
-        -webkit-transition: unset;
-        -o-transition: unset;
-        transition: unset;
+        color:unset;
+        background-color:unset;
+        transition:unset;
+        text-decoration:unset;
     }
     
-    .bblock,
-    .bblock:hover,
-    .dblock {
-        background-color: unset;
-        color: unset;
-        text-decoration: unset;
+    .bblock:hover {
+        background-color:unset;
+        color:unset;
+        text-decoration:unset;
     }
     
     .dblock {
-        -webkit-transition: unset;
-        -o-transition: unset;
-        transition: unset;
+        color:unset;
+        background-color:unset;
+        transition:unset;
+        text-decoration:unset;
     }
     
     .dblock:hover {
-        background-color: unset;
-        text-decoration: unset;
+        background-color:unset;
+        text-decoration:unset;
     }
     
-    .emph {
-        -webkit-text-emphasis-style: unset;
-        text-emphasis-style: unset;
+    /* Blockquote Mimic Div */
+    div.blockquote {
+        border:unset;
+        background-color:unset;
+        padding:unset;
+        margin:unset;
     }
     
-    @document url-prefix() {
-        .emph {
-            padding: unset;
-            background-clip: unset;
-            background-color: unset;
-            background-image: unset;
-            background-repeat: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-    
-            font-family: unset;
-            font-style: unset;
-            font-weight: unset;
-        }
-    }
-    
-    @media screen and (-ms-high-contrast: active),
-    (-ms-high-contrast: none) {
-        .emph {
-            padding: unset;
-            background-clip: unset;
-            background-color: unset;
-            background-image: unset;
-            background-repeat: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-    
-            font-family: unset;
-            font-style: unset;
-            font-weight: unset;
-        }
-    }
-    
-    @-ms-viewport {
-        width: unset;
-        zoom: unset;
-    }
-    
-    @-o-viewport {
-        width: unset;
-        zoom: unset;
-    }
-    
-    @viewport {
-        width: unset;
-        zoom: unset;
-    }
-    
-    ::-webkit-scrollbar {
-        width: unset;
-    
-        height: unset;
-    
-        border: unset;
-        border-round: unset;
-    }
-    
-    ::-webkit-scrollbar-track,
-    ::-webkit-scrollbar-thumb {
-        background: unset;
-    }
-    
-    .page-source {
-        word-break: unset;
-    }
-    
-    img,
-    embed,
-    video,
-    object,
-    iframe,
-    table,
-    #page-content div,
-    #page-content div table {
-        max-width: unset;
-    }
-    
-    table.form td,
-    table.form th {
-        padding: unset;
-        vertical-align: unset;
-    }
-    
-    #edit-page-comments {
-        width: unset;
-    }
-    
-    .change-textarea-size {
-        float: unset;
-    }
-    
-    @media (max-width: 767px) {
-        .owindow {
-            min-width: unset;
-            max-width: unset;
-        }
-    
-        .modal-body .table,
-        .modal-body .table~div,
-        .owindow .button-bar {
-            float: unset;
-        }
-    
-        .owindow div a.btn-primary {
-            width: unset;
-            float: unset;
-        }
-    
-        .mobile-top-bar ul li:last-of-type ul {
-            right: unset;
-        }
-    
-        span,
-        a {
-            word-break: unset;
-        }
+    div.curved {
+        border-radius:unset;
+        margin:unset;
     }
     
     @media (max-width: 479px) {
-        #search-top-box-input {
-            display: unset;
-        }
-    
-        #page-content {
-            font-size: unset;
-        }
-    
-        #main-content {
-            margin: unset;
-        }
-    
-        #recent-posts-category {
-            width: unset;
-        }
-    
-        #header,
-        .mobile-top-bar {
-            max-width: unset;
-        }
-    
-        #side-bar {
-            position: unset;
-            width: unset;
-        }
-    
-        .top-bar,
-        .mobile-top-bar {
-            display: unset;
-        }
-    
-        .mobile-top-bar,
-        .page-options-bottom a {
-            padding: unset;
-        }
-    
-        #header h1 a {
-            font-size: unset;
-        }
-    
         blockquote,
-        .blockquote,
-        div.blockquote {
-            margin: unset;
-        }
-    
-        .license-area {
-            font-size: unset;
-        }
-    
-        #header {
-            background-position: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-        }
-    
-        #header h1,
-        #header h2 {
-            margin-left: unset;
-        }
-    
-        table.form td,
-        table.form th {
-            padding: unset;
-            float: unset;
-            vertical-align: unset;
-        }
-    
-        td.name {
-            width: unset;
-        }
-    
-        table.form td,
-        table.form th {
-            padding: unset;
-        }
-    
-        #edit-page-title {
-            max-width: unset;
-        }
-    
-        .content-panel.left-column,
-        .content-panel.right-column {
-            width: unset;
-            float: unset;
-        }
-    
-        #page-content div,
-        #page-content div table {
-            clear: unset;
-        }
-    
-        #page-content div.title {
-            word-break: unset;
+        div.blockquote,
+        div.curved {
+            margin:unset;
         }
     }
     
     @media (min-width: 480px) and (max-width: 580px) {
-        #search-top-box-input {
-            width: unset;
-        }
-    
-        #main-content {
-            margin: unset;
-        }
-    
-        #header,
-        .mobile-top-bar {
-            max-width: unset;
-        }
-    
-        #side-bar {
-            position: unset;
-            width: unset;
-        }
-    
-        .top-bar,
-        .mobile-top-bar {
-            display: unset;
-        }
-    
-        .page-options-bottom a {
-            padding: unset;
-        }
-    
-        #header h1 a {
-            font-size: unset;
-        }
-    
         blockquote,
-        .blockquote,
-        div.blockquote {
-            margin: unset;
-        }
-    
-        .license-area {
-            font-size: unset;
-        }
-    
-        #header {
-            background-position: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-        }
-    
-        #header h1,
-        #header h2 {
-            margin-left: unset;
-        }
-    
-        #page-content div.title {
-            word-break: unset;
-        }
-    
-        td.name {
-            width: unset;
-        }
-    
-        .content-panel.left-column,
-        .content-panel.right-column {
-            width: unset;
-            float: unset;
-        }
-    
-        #page-content div,
-        #page-content div table {
-            clear: unset;
+        div.blockquote,
+        div.curved {
+            margin:unset;
         }
     }
     
-    @media (min-width: 581px) and (max-width: 767px) {
+    /* Fix revision list */
+    .changes-list-item td.title {
+        min-width:unset;
+    }
     
-        #search-top-box-input,
-        #side-bar {
-            width: unset;
-        }
+    .changes-list-item .flags {
+        text-align:unset;
+        width:unset;
+    }
     
-        #side-bar {
-            position: unset;
-        }
+    .changes-list-item .mod-date {
+        text-align:unset;
+    }
     
-        #main-content {
-            margin: unset;
-        }
+    .changes-list-item .mod-by {
+        width:unset;
+    }
     
-        #header,
-        .mobile-top-bar {
-            max-width: unset;
-        }
-    
-        .top-bar,
-        .mobile-top-bar {
-            display: unset;
-        }
-    
-        .page-options-bottom a {
-            padding: unset;
-        }
-    
-        #header h1 a,
-        .license-area {
-            font-size: unset;
-        }
-    
-        #header {
-            background-position: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-        }
-    
-        #header h1,
-        #header h2 {
-            margin-left: unset;
+    @media (max-width: 435px) {
+        .changes-list-item .revision-no {
+            display:unset;
         }
     }
     
-    @media (min-width: 768px) and (max-width: 979px) {
-        #main-content {
-            margin: unset;
-        }
+    /*
+        2011-11-13 Minobe Hiroyuki @ Marguerite Site
+        www.marguerite.jp/Nihongo/WWW/CSSTips/EmphasizeDots-CSS3.html
+        Edited for the SCP Foundation by Nanimono_Demonai
+    */
     
-        #header,
-        #top-bar #side-bar {
-            max-width: unset;
-        }
-    
-        .top-bar li {
-            margin: unset;
-        }
-    
-        #top-bar ul li.sfhover ul li a,
-        #top-bar ul li:hover ul li a {
-            width: unset;
-        }
-    
-        .page-options-bottom a {
-            padding: unset;
-        }
-    
-        #header h1 a,
-        .license-area {
-            font-size: unset;
-        }
-    
-        #header {
-            background-position: unset;
-            -webkit-background-size: unset inherit;
-            background-size: unset;
-        }
-    
-        #header h1,
-        #header h2 {
-            margin-left: unset;
-        }
-    
-        .content-panel.left-column,
-        .content-panel.right-column {
-            width: unset;
-            float: unset;
-        }
-    
-        #page-content div,
-        #page-content div table {
-            clear: unset;
-        }
+    .emph {
+        text-emphasis-style:unset;
+        -webkit-text-emphasis-style:unset;
     }
     
-    .close-menu {
-        display: unset;
+    
+    /* webkit scrollbar */
+    ::-webkit-scrollbar {
+        width:unset; /* for vertical scrollbars */
+        height:unset; /* for horizontal scrollbars */
+        border:unset;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background:unset;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background:unset;
+    }
+    
+    .page-source {
+        word-break:unset;
+    }
+    
+    /* Responsive Web Design */
+    img, embed, video, object, iframe, table {
+        max-width:unset;
+    }
+    
+    #page-content div, #page-content div table {
+        max-width:unset;
+    }
+    
+    #edit-page-comments {
+        width:unset;
     }
     
     @media (max-width: 767px) {
+        #main-content {
+            max-width:unset;
+            margin:unset;
+            padding:unset;
+            -webkit-transition:unset;
+            -o-transition:unset;
+            transition:unset;
+        }
+    
+        span, a {
+            word-break:unset;
+        }
+    
         .page-history tbody tr td:last-child {
-            width: unset;
+            width:unset;
         }
     
-        .owindow {
-            min-width: unset;
-            max-width: unset;
-        }
-    
-        .modal-body .table,
-        .modal-body .table~div,
-        .owindow .button-bar {
-            float: unset;
-        }
-    
-        .owindow div .btn-primary {
-            width: unset;
-            float: unset;
-        }
-    
-        .owindow div .btn-primary~div {
-            width: unset;
+        td.name {
+            width:unset;
         }
     
         .yui-navset {
-            z-index: unset;
+            z-index:unset;
         }
     
-        #navi-bar,
-        #navi-bar-shadow {
-            display: unset;
+        #navi-bar, #navi-bar-shadow {
+            display:unset;
         }
     
-        #top-bar .open-menu a {
-            position: unset;
-            z-index: unset;
-            top: unset;
-            left: unset;
-            width: unset;
-            height: unset;
-            border: unset;
-            -webkit-border-radius: unset;
-            border-radius: unset;
-            background-color: unset;
-            color: unset;
-            font-family: unset;
-            font-size: unset;
-            font-weight: unset;
-            line-height: unset;
-            text-align: unset;
+        .page-options-bottom a {
+            padding:unset;
         }
     
-        #top-bar .open-menu a:hover {
-            -webkit-box-shadow: unset;
-            box-shadow: unset;
-            text-decoration: unset;
+        .license-area {
+            font-size:unset;
         }
     
-        #main-content {
-            max-width: unset;
-            margin: unset;
+        /* owindow */
+        .owindow {
+            min-width:unset;
+            max-width:unset;
         }
     
-        #main-content,
-        #side-bar {
-            padding: unset;
-            -webkit-transition: unset;
-            -o-transition: unset;
-            transition: unset;
+        .modal-body .table, .modal-body .table ~ div {
+            float:unset;
         }
     
-        #side-bar {
-            display: unset;
-            z-index: unset;
-            left: unset;
-            overflow-y: unset;
+        .owindow .button-bar {
+            float:unset;
         }
     
-        #side-bar,
-        #side-bar:after {
-            position: unset;
-            top: unset;
-            width: unset;
-            height: unset;
-            background-color: unset;
+        .owindow div a.btn-primary {
+            width:unset;
+            float:unset;
         }
     
-        #side-bar:after {
-            content: unset;
+        .owindow div .btn-primary ~ div {
+            width:unset;
         }
     
-        #side-bar:target {
-            display: unset;
-            z-index: unset;
-            left: unset;
-            width: unset;
-            margin: unset;
-            border: unset;
+        /* header area and top bar */
+        #header {
+            max-width:unset;
+            background-size:unset;
+            background-position:unset;
         }
     
-        #side-bar:target+#main-content {
-            left: unset;
+        #header h1, #header h2 {
+            margin-left:unset;
         }
     
-        #side-bar:target .close-menu {
-            display: unset;
-            position: unset;
-            z-index: unset;
-            top: unset;
-            left: unset;
-            width: unset;
-            height: unset;
-            background: unset;
+        #header h1 a {
+            font-size:unset;
+        }
+    
+        #search-top-box-input {
+            width:unset;
+        }
+    
+        .top-bar {
+            display:unset;
+        }
+    
+        .mobile-top-bar {
+            display:unset;
+        }
+    
+        .mobile-top-bar ul li:last-of-type ul {
+            right:unset;
         }
     }
     
     @media (max-width: 479px) {
         #search-top-box-input {
-            width: unset;
+            display:unset;
+        }
+    
+        #page-content {
+            font-size:unset;
+        }
+    
+        #recent-posts-category {
+            width:unset;
+        }
+    
+        .page-options-bottom a {
+            padding:unset;
+        }
+    
+        .license-area {
+            font-size:unset;
+        }
+    
+        table.form td, table.form th {
+            float:unset;
+            padding:unset;
+        }
+    
+        #edit-page-title {
+            max-width:unset;
+        }
+    
+        .content-panel.left-column, .content-panel.right-column {
+            width:unset;
+            float:unset;
+        }
+    
+        #page-content div, #page-content div table {
+            clear:unset;
+        }
+    
+        #page-content div.title {
+            word-break:unset;
         }
     }
+    
+    div.scpnet-interwiki-wrapper {
+        width:unset;
+        margin-left:unset;
+    }
+    
+    iframe.scpnet-interwiki-frame {
+        height:unset;
+        width:unset;
+        border:unset;
+    }
+    
+    @media (min-width: 768px) {
+        iframe.scpnet-interwiki-frame, div.scpnet-interwiki-wrapper {
+            width:unset;
+        }
+    }
+
