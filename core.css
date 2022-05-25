@@ -155,8 +155,8 @@ body {
 #header h1 a::before {
     content: "";
     display: block;
-    height: calc(var(--base-header-height)*0.95);
-    width: calc(var(--base-header-height)*0.95);
+    height: 100%;
+    width: calc(var(--base-header-height)*0.925);
     min-width: calc(var(--base-header-height)*0.75);
     background-image: var(--header-logo);
     background-size: contain;
@@ -863,6 +863,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         "open-menu top-bar top-bar top-bar top-bar";
         grid-template-rows: var(--base-header-height) var(--top-bar-mobile-height);
     }
+    #header h1 a { padding-left: calc(var(--base-header-height)*0.1); }
+
     #top-bar div.mobile-top-bar > ul { display: flex; }
     #top-bar div.top-bar > ul { display: none; }
 
