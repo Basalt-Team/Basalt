@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 @import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
  
 :root {
     --basalt-primary-color: 254,254,254;
     --basalt-secondary-color: 247,248,250;
-    --basalt-tertiary-color: 220,220,220;
+    --basalt-tertiary-color: 218,219,222;
     --basalt-main-text-color: 20,20,20;
     --basalt-overtone: 50,50,50;
     --basalt-undertone: 61,71,202;
@@ -17,7 +17,7 @@
     --header-font: 'Lexend', sans-serif;
     --UI-font: 'IBM Plex Sans', sans-serif;
     --body-font: 'Inter', sans-serif;
-    --mono-font: 'Fira Code', monospace;
+    --mono-font: 'JetBrains Mono', monospace;
 
     --header-logo: url('https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/basaltlogo.svg');
     --header-title: 'SCP Foundation';
@@ -30,15 +30,21 @@
     --header-desktop-height: calc(var(--base-header-height) + var(--header-border-width));
     --header-mobile-height: calc(var(--header-desktop-height) + var(--top-bar-mobile-height));
     --header-final-height: var(--header-desktop-height);
+    --header-link-transition-1st: 0.15s ease 0.05s;
+    --header-link-transition-2nd: 0.205s ease-out 0.15s;
+    --top-bar-mobile-height: calc(var(--header-UI-font-size)*4.5);
 
-    --top-bar-link-transition-1st: 0.15s ease 0.05s;
-    --top-bar-link-transition-2nd: 0.205s ease-out 0.15s;
     --top-bar-link-color: var(--basalt-main-text-color);
     --top-bar-link-color-hover: var(--basalt-primary-color);
-    --top-bar-mobile-height: calc(var(--header-UI-font-size)*4.5);
+    --top-bar-link-bg-hover: var(--basalt-undertone);
+    --top-bar-link-bg-hover-alt: var(--basalt-overtone);
+    --top-bar-dropdown-bg: var(--basalt-primary-color);
+    --top-bar-dropdown-bg-alt: var(--basalt-secondary-color);
+    --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
 
     --sidebar-button-width: 3rem;
     --login-status-width: calc(var(--header-UI-font-size)*20);
+    --login-status-link-bg-hover: var(--top-bar-link-bg-hover);
     --user-button-width: 3rem;
     --search-button-width: 2rem;
     --sidebar-button-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtMjE4LjE0IDM5NS43M2gzMTUuNzJjNy4wNDY5IDAgMTMuNTYyLTMuNzYxNyAxNy4wODYtOS44NjcyIDMuNTI3My02LjEwNTUgMy41MjczLTEzLjYyNSAwLTE5LjczLTMuNTIzNC02LjEwNTUtMTAuMDM5LTkuODY3Mi0xNy4wODYtOS44NjcyaC0zMTUuNzJjLTcuMDUwOCAwLTEzLjU2MiAzLjc2MTctMTcuMDkgOS44NjcyLTMuNTIzNCA2LjEwNTUtMy41MjM0IDEzLjYyNSAwIDE5LjczIDMuNTI3MyA2LjEwNTUgMTAuMDM5IDkuODY3MiAxNy4wOSA5Ljg2NzJ6Ii8+CiAgPHBhdGggZD0ibTUzMy44NiAyMzcuODhoLTMxNS43MmMtNy4wNTA4IDAtMTMuNTYyIDMuNzU3OC0xNy4wOSA5Ljg2MzMtMy41MjM0IDYuMTA1NS0zLjUyMzQgMTMuNjI5IDAgMTkuNzM0IDMuNTI3MyA2LjEwNTUgMTAuMDM5IDkuODY3MiAxNy4wOSA5Ljg2NzJoMzE1LjcyYzcuMDQ2OSAwIDEzLjU2Mi0zLjc2MTcgMTcuMDg2LTkuODY3MiAzLjUyNzMtNi4xMDU1IDMuNTI3My0xMy42MjkgMC0xOS43MzQtMy41MjM0LTYuMTA1NS0xMC4wMzktOS44NjMzLTE3LjA4Ni05Ljg2MzN6Ii8+CiAgPHBhdGggZD0ibTIxOC4xNCA1MTQuMTNoMzE1LjcyYzcuMDQ2OSAwIDEzLjU2Mi0zLjc2MTcgMTcuMDg2LTkuODY3MiAzLjUyNzMtNi4xMDU1IDMuNTI3My0xMy42MjUgMC0xOS43My0zLjUyMzQtNi4xMDU1LTEwLjAzOS05Ljg2NzItMTcuMDg2LTkuODY3MmgtMzE1LjcyYy03LjA1MDggMC0xMy41NjIgMy43NjE3LTE3LjA5IDkuODY3Mi0zLjUyMzQgNi4xMDU1LTMuNTIzNCAxMy42MjUgMCAxOS43MyAzLjUyNzMgNi4xMDU1IDEwLjAzOSA5Ljg2NzIgMTcuMDkgOS44NjcyeiIvPgogPC9nPgo8L3N2Zz4K");
@@ -50,28 +56,31 @@
     --side-bar-width: 19rem;
     --side-bar-transition: 0.2s ease 0.075s;
 
-    --base-font-size: 1rem;
-    --true-font-size: clamp(
-        calc(var(--base-font-size)*0.925),
-        calc(var(--base-font-size)*0.875 + 0.125vw),
-        calc(var(--base-font-size)*1.05));
-
-    --header-UI-font-size: calc(var(--true-font-size)*0.775);
-    --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
-
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.675rem;
     --main-content-bottom-margin: var(--main-content-top-margin);
     --main-content-side-margin: calc(var(--main-content-top-margin)*1.875);
 
     --bottom-area-padding: calc(var(--true-font-size)*0.85);
-    --bottom-area-logo: var(--header-logo);
-    --bottom-area-logo-size: 2.75rem;
-    --bottom-area-divider-thickness: 0.1rem;
-    --bottom-area-divider-color: var(--basalt-tertiary-color);
+    --footer-divider-thickness: 0.075rem;
+    --footer-divider-color: var(--basalt-tertiary-color);
+    --license-area-logo: var(--header-logo);
+    --license-area-logo-size: 2.75rem;
+    --license-area-divider-thickness: 0.1rem;
+    --license-area-divider-color: var(--basalt-tertiary-color);
+    
+    --base-font-size: 1rem;
+    --true-font-size: clamp(
+        calc(var(--base-font-size)*0.925),
+        calc(var(--base-font-size)*0.875 + 0.125vw),
+        calc(var(--base-font-size)*1.05));
+    --header-UI-font-size: calc(var(--true-font-size)*0.775);
+    --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
     --footer-font-size: calc(var(--true-font-size)*0.825);
     --license-area-font-size: calc(var(--true-font-size)*0.8);
 
+    --scrollbar-track-color: var(--basalt-tertiary-color);
+    --scrollbar-thumb-color: var(--basalt-overtone);
 }
 
 body {
@@ -95,17 +104,17 @@ body {
 /* scrollbar */
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgb(var(--basalt-overtone)) rgb(var(--basalt-tertiary-color));
+    scrollbar-color: rgb(var(--scrollbar-thumb-color)) rgb(var(--scrollbar-track-color));
 }
 ::-webkit-scrollbar {
     width: 0.5rem;
     background: transparent;
 }
 ::-webkit-scrollbar-track {
-    background: rgb(var(--basalt-tertiary-color));
+    background: rgb(var(--scrollbar-track-color));
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--scrollbar-thumb-color));
 }
 
 /*------------------*/
@@ -290,14 +299,14 @@ body {
 
     position: relative;
     z-index: 0;
-    transition: color var(--top-bar-link-transition-2nd);
+    transition: color var(--header-link-transition-2nd);
 }
 #top-bar div[class*="top-bar"] > ul > li > a:hover,
 #top-bar div[class*="top-bar"] > ul > li > a:focus,
 #top-bar div[class*="top-bar"] > ul > li.sfhover > a,
 #top-bar div[class*="top-bar"] > ul > li:focus-within > a {
     color: rgb(var(--top-bar-link-color-hover));
-    transition: color var(--top-bar-link-transition-1st);
+    transition: color var(--header-link-transition-1st);
 }
 
 #top-bar div[class*="top-bar"] > ul > li > a::before,
@@ -321,24 +330,24 @@ body {
     height: 100%;
 }
 #top-bar div[class*="top-bar"] > ul > li > a::before {
-    background-color: rgb(var(--basalt-undertone));
-    transition: height var(--top-bar-link-transition-2nd);
+    background-color: rgb(var(--top-bar-link-bg-hover));
+    transition: height var(--header-link-transition-2nd);
 }
 #top-bar div[class*="top-bar"] > ul > li > a::after {
-    background-color: rgb(var(--basalt-overtone));
-    transition: height var(--top-bar-link-transition-1st);
+    background-color: rgb(var(--top-bar-link-bg-hover-alt));
+    transition: height var(--header-link-transition-1st);
 }
 #top-bar div[class*="top-bar"] > ul > li > a:hover::before,
 #top-bar div[class*="top-bar"] > ul > li > a:focus::before,
 #top-bar div[class*="top-bar"] > ul > li.sfhover > a::before,
 #top-bar div[class*="top-bar"] > ul > li:focus-within > a::before {
-    transition: height var(--top-bar-link-transition-1st);
+    transition: height var(--header-link-transition-1st);
 }
 #top-bar div[class*="top-bar"] > ul > li > a:hover::after,
 #top-bar div[class*="top-bar"] > ul > li > a:focus::after,
 #top-bar div[class*="top-bar"] > ul > li.sfhover > a::after,
 #top-bar div[class*="top-bar"] > ul > li:focus-within > a::after {
-    transition: height var(--top-bar-link-transition-2nd);
+    transition: height var(--header-link-transition-2nd);
 }
 
 #top-bar div[class*="top-bar"] ul li ul {
@@ -364,29 +373,29 @@ body {
     top: 0; left: 0;
     width: 0.325rem; height: 0;
     background-color: rgb(var(--basalt-overtone));
-    transition: height var(--top-bar-link-transition-2nd);
+    transition: height var(--header-link-transition-2nd);
 }
 #top-bar div[class*=top-bar] ul li:is(:hover,:focus-within) ul::before,
 #top-bar div[class*=top-bar] ul li ul:is(:hover,:focus-within)::before {
     height: 100%;
-    transition: height var(--top-bar-link-transition-1st);
+    transition: height var(--header-link-transition-1st);
 }
 
 #top-bar div[class*="top-bar"] ul li ul li {
     position: relative;
     border: none;
-    background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
+    background-color: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
-    transition: clip-path var(--top-bar-link-transition-1st);
+    transition: clip-path var(--header-link-transition-1st);
 }
 #top-bar div[class*="top-bar"] ul li ul li:nth-of-type(2n) {
-    background-color: rgba(var(--basalt-secondary-color), var(--basalt-UI-opacity));
+    background-color: rgba(var(--top-bar-dropdown-bg-alt), var(--basalt-UI-opacity));
 }
 #top-bar div[class*=top-bar] ul li:is(:hover,:focus-within) ul li,
 #top-bar div[class*=top-bar] ul li ul:is(:hover,:focus-within) li {
     clip-path: inset(0);
-    transition: clip-path var(--top-bar-link-transition-2nd);
+    transition: clip-path var(--header-link-transition-2nd);
 }
 
 #top-bar div[class*=top-bar] ul li ul li::before {
@@ -399,8 +408,8 @@ body {
     z-index: -1;
 }
 #top-bar div[class*=top-bar] ul li ul li::before {
-    background-color: rgb(var(--basalt-undertone));
-    transition: width var(--top-bar-link-transition-1st);
+    background-color: rgb(var(--top-bar-dropdown-hover-bg));
+    transition: width var(--header-link-transition-1st);
 }
 #top-bar div[class*=top-bar] ul li ul li:is(:hover, :focus-within)::before {
     width: 100%;
@@ -413,7 +422,7 @@ body {
     padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
     background: unset;
-    transition: color var(--top-bar-link-transition-1st);
+    transition: color var(--header-link-transition-1st);
     display: flex;
     align-items: center;
 }
@@ -430,7 +439,7 @@ body {
     margin-right: -1em;
     opacity: 0;
     transform: translateX(-75%);
-    transition: margin-right var(--top-bar-link-transition-1st), opacity var(--top-bar-link-transition-1st), transform var(--top-bar-link-transition-2nd);
+    transition: margin-right var(--header-link-transition-1st), opacity var(--header-link-transition-1st), transform var(--header-link-transition-2nd);
 }
 #top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus)::before {
     opacity: 1;
@@ -450,25 +459,22 @@ body {
     pointer-events: none;
     user-select: none;
     font-size: 0;
-
     grid-template-areas:
         "printuser printuser"
         "options options";
     grid-template-columns: 1fr 1fr;
 }
+#login-status:is(:hover,:focus-within) { pointer-events: auto; }
 
 #login-status > * {
     clip-path: inset(0 0 0 100%);
     user-select: auto;
     font-size: var(--header-UI-font-size);
-    transition: clip-path var(--top-bar-link-transition-1st);
+    transition: clip-path var(--header-link-transition-1st);
 }
 #login-status:is(:hover,:focus-within) > * {
     clip-path: inset(0);
-}
-#login-status:is(:hover,:focus-within),
-#login-status:is(:hover,:focus-within) > * {
-    pointer-events: auto;
+    transition: clip-path var(--header-link-transition-2nd);
 }
 
 #login-status::before,
@@ -494,17 +500,23 @@ body {
                 mask-position: center;
     -webkit-mask-size: 50%;
                 mask-size: 50%;
-    transition: background-color var(--top-bar-link-transition-1st);
-}
-#login-status:is(:hover,:focus-within)::before {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    transition: background-color var(--header-link-transition-2nd);
 }
 #login-status::after {
     z-index: 1;
     height: 0;
-    transition: height var(--top-bar-link-transition-1st);
+    transition: height var(--header-link-transition-2nd);
 }
-#login-status:is(:hover,:focus-within)::after { height: var(--base-header-height); }
+#login-status:is(:hover,:focus-within)::before {
+    background-color: rgb(var(--top-bar-link-color-hover));
+    transition: background-color var(--header-link-transition-1st);
+}
+#login-status:is(:hover,:focus-within)::after {
+    height: var(--base-header-height);
+    transition: height var(--header-link-transition-1st);
+}
+
+/*---------------------------*/
 
 #login-status span.printuser a {
     margin-right: 0.15em;
@@ -579,9 +591,9 @@ div#account-options > ul > li > a::before,
     right: 0;
     width: 0;
     height: 100%;
-    background-color: rgb(var(--basalt-undertone));
+    background-color: rgb(var(--login-status-link-bg-hover));
     z-index: -1;
-    transition: width var(--top-bar-link-transition-1st);
+    transition: width var(--header-link-transition-1st);
 }
 div#account-options > ul > li > a:is(:hover, :focus)::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in):is(:hover, :focus)::before {
@@ -612,7 +624,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 #search-top-box::before {
     height: 0;
-    transition: height var(--top-bar-link-transition-1st);
+    transition: height var(--header-link-transition-1st);
 }
 #search-top-box:is(:hover, :focus-within)::before {
     height: 100%;
@@ -626,7 +638,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
                 mask-position: center;
     -webkit-mask-size: 52.5%;
                 mask-size: 52.5%;
-    transition: background-color var(--top-bar-link-transition-1st);
+    transition: background-color var(--header-link-transition-1st);
 }
 #search-top-box:is(:hover,:focus-within)::after {
     background-color: rgb(var(--top-bar-link-color-hover));
@@ -642,6 +654,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     height: 100%;
     width: 100%;
     color: transparent;
+    font-family: var(--body-font);
     background-color: transparent;
     margin: 0;
     padding: calc(var(--header-UI-font-size)*0.5);
@@ -650,7 +663,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     cursor: pointer;
     z-index: 3;
     outline: solid 0 rgb(var(--basalt-undertone));
-    transition: width var(--top-bar-link-transition-1st), outline-width var(--top-bar-link-transition-1st), opacity var(--top-bar-link-transition-1st);
+    transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity var(--header-link-transition-1st);
 }
 #search-top-box-form:focus-within #search-top-box-input,
 #search-top-box-input:focus,
@@ -665,7 +678,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     z-index: 0;
     outline-width: var(--header-border-width);
     cursor: text;
-    transition: width var(--top-bar-link-transition-1st), outline-width var(--top-bar-link-transition-1st), opacity 0s;
+    transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity 0s;
 }
 
 #search-top-box-form input[type=submit] {
@@ -698,7 +711,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--basalt-secondary-color));
     padding: 0;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+    direction: rtl;
     pointer-events: none;
     clip-path: inset(calc(var(--header-final-height)*-1) 0 100% 0);
     transition: clip-path var(--side-bar-transition);
@@ -741,6 +755,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #side-bar:is(:hover, :focus-within)::after {
     background-color: rgb(var(--top-bar-link-color-hover));
 }
+
+#side-bar > * { direction: ltr; }
 #side-bar a.close-menu, #side-bar:target a.close-menu {
     display: none;
 }
@@ -784,7 +800,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-size: 0;
     margin-right: calc(var(--bottom-area-padding)/2);
     padding-right: calc(var(--bottom-area-padding)/2);
-    border-right: solid var(--bottom-area-divider-thickness) rgb(var(--bottom-area-divider-color));
+    border-right: solid var(--footer-divider-thickness) rgb(var(--footer-divider-color));
 }
 #footer .options a {
     font-size: var(--footer-font-size);
@@ -805,28 +821,28 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #license-area::before, #license-area::after {
     content: "";
     display: block;
-    height: var(--bottom-area-logo-size);
+    height: var(--license-area-logo-size);
     width: 100%;
 }
 #license-area::before {
-    background: rgb(var(--bottom-area-divider-color));
-    clip-path: inset(calc(50% - var(--bottom-area-divider-thickness)/2) 0);
+    background: rgb(var(--license-area-divider-color));
+    clip-path: inset(calc(50% - var(--license-area-divider-thickness)/2) 0);
     -webkit-mask-image:
         linear-gradient(90deg,
             black 0%,
-            black calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
-            transparent calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
-            transparent calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
-            black calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% - var(--license-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% - var(--license-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% + var(--license-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% + var(--license-area-logo-size)/2 + var(--bottom-area-padding)/2),
             black 100%
         );
     mask-image:
         linear-gradient(90deg,
             black 0%,
-            black calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
-            transparent calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
-            transparent calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
-            black calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% - var(--license-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% - var(--license-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% + var(--license-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% + var(--license-area-logo-size)/2 + var(--bottom-area-padding)/2),
             black 100%
         );
 }
@@ -834,7 +850,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: absolute;
     top: calc(var(--bottom-area-padding)/2);
     left: 0;
-    background-image: var(--bottom-area-logo);
+    background-image: var(--license-area-logo);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
