@@ -19,7 +19,7 @@
     --body-font: 'Inter', sans-serif;
     --mono-font: 'Fira Code', monospace;
 
-    --header-logo: url('http://scptestwiki.wdfiles.com/local--files/sigma%3Asytest2/basaltlogo.png');
+    --header-logo: url('https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/basaltlogo.svg');
     --header-title: 'SCP Foundation';
     --header-subtitle: 'SECURE - CONTAIN - PROTECT';
     --title-size: 1.5rem;
@@ -65,12 +65,12 @@
     --main-content-side-margin: calc(var(--main-content-top-margin)*1.875);
 
     --bottom-area-padding: calc(var(--true-font-size)*0.85);
-    --bottom-area-logo-size: 2.5rem;
+    --bottom-area-logo: var(--header-logo);
+    --bottom-area-logo-size: 2.75rem;
     --bottom-area-divider-thickness: 0.1rem;
     --bottom-area-divider-color: var(--basalt-tertiary-color);
-    --footer-logo: var(--header-logo);
     --footer-font-size: calc(var(--true-font-size)*0.825);
-    --license-area-font-size: calc(var(--true-font-size)*0.775);
+    --license-area-font-size: calc(var(--true-font-size)*0.8);
 
 }
 
@@ -757,6 +757,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: var(--main-content-width);
     margin: 0.625rem auto;
     max-width: calc(100% - var(--main-content-side-margin)*2);
+    overflow-wrap: break-word;
 }
 
 
@@ -770,6 +771,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     grid-template-columns: 1fr max-content max-content;
     font-size: var(--footer-font-size);
     padding: var(--bottom-area-padding);
+    font-family: var(--UI-font);
     color: rgb(var(--basalt-overtone));
     background-color: rgb(var(--basalt-secondary-color));
     box-sizing: border-box;
@@ -780,16 +782,17 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: flex!important;
     flex-wrap: wrap;
     font-size: 0;
-    margin-right: var(--bottom-area-padding);
-    padding-right: var(--bottom-area-padding);
+    margin-right: calc(var(--bottom-area-padding)/2);
+    padding-right: calc(var(--bottom-area-padding)/2);
     border-right: solid var(--bottom-area-divider-thickness) rgb(var(--bottom-area-divider-color));
 }
 #footer .options a {
     font-size: var(--footer-font-size);
-    padding: 0.5ch 2ch;
+    margin: 0.5ch 2ch;
 }
 
 #license-area {
+    font-family: var(--UI-font);
     font-size: var(--license-area-font-size);
     color: rgb(var(--basalt-overtone));
     background-color: rgb(var(--basalt-secondary-color));
@@ -804,7 +807,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: block;
     height: var(--bottom-area-logo-size);
     width: 100%;
-    margin-bottom: calc(var(--bottom-area-padding)/2);
 }
 #license-area::before {
     background: rgb(var(--bottom-area-divider-color));
@@ -832,7 +834,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: absolute;
     top: calc(var(--bottom-area-padding)/2);
     left: 0;
-    background-image: var(--footer-logo);
+    background-image: var(--bottom-area-logo);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
