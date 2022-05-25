@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 @import url('https://rsms.me/inter/inter.css');
-@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
  
 :root {
     --basalt-primary-color: 254,254,254;
@@ -19,7 +19,7 @@
     --body-font: 'Inter', sans-serif;
     --mono-font: 'Fira Code', monospace;
 
-    --header-logo: url('https://scp-wiki.wikidot.com/local--files/theme:basalt/basalt_logotype_black.png');
+    --header-logo: url('http://scptestwiki.wdfiles.com/local--files/sigma%3Asytest2/basaltlogo.png');
     --header-title: 'SCP Foundation';
     --header-subtitle: 'SECURE - CONTAIN - PROTECT';
     --title-size: 1.5rem;
@@ -54,10 +54,24 @@
     --true-font-size: clamp(
         calc(var(--base-font-size)*0.925),
         calc(var(--base-font-size)*0.875 + 0.125vw),
-        calc(var(--base-font-size)*1.05)
-    );
+        calc(var(--base-font-size)*1.05));
+
     --header-UI-font-size: calc(var(--true-font-size)*0.775);
     --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
+
+    --main-content-width: 67.5rem;
+    --main-content-top-margin: 0.675rem;
+    --main-content-bottom-margin: var(--main-content-top-margin);
+    --main-content-side-margin: calc(var(--main-content-top-margin)*1.875);
+
+    --bottom-area-padding: calc(var(--true-font-size)*0.85);
+    --bottom-area-logo-size: 2.5rem;
+    --bottom-area-divider-thickness: 0.1rem;
+    --bottom-area-divider-color: var(--basalt-tertiary-color);
+    --footer-logo: var(--header-logo);
+    --footer-font-size: calc(var(--true-font-size)*0.825);
+    --license-area-font-size: calc(var(--true-font-size)*0.775);
+
 }
 
 body {
@@ -67,7 +81,13 @@ body {
     font-size: var(--true-font-size);
     line-height: 1.5;
 }
- 
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .page-source, .code pre, .code p, .code, tt {
     font-family: var(--mono-font);
 }
@@ -135,11 +155,11 @@ body {
 #header h1 a::before {
     content: "";
     display: block;
-    height: calc(var(--base-header-height)*0.9);
-    width: calc(var(--base-header-height)*0.9);
+    height: calc(var(--base-header-height)*0.95);
+    width: calc(var(--base-header-height)*0.95);
     min-width: calc(var(--base-header-height)*0.75);
     background-image: var(--header-logo);
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.25s ease-out;
@@ -724,6 +744,106 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #side-bar a.close-menu, #side-bar:target a.close-menu {
     display: none;
 }
+
+/*-----------------*/
+/*---- CONTENT ----*/
+/*-----------------*/
+
+#content-wrap {
+    flex-grow: 1;
+}
+
+#main-content {
+    width: var(--main-content-width);
+    margin: 0.625rem auto;
+    max-width: calc(100% - var(--main-content-side-margin)*2);
+}
+
+
+/*-------------------------------*/
+/*---- FOOTER & LICENSE AREA ----*/
+/*-------------------------------*/
+
+#footer  {
+    display: grid !important;
+    align-items: center;
+    grid-template-columns: 1fr max-content max-content;
+    font-size: var(--footer-font-size);
+    padding: var(--bottom-area-padding);
+    color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-secondary-color));
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+#footer > a:last-child { margin-left: 0.375ch; }
+#footer .options {
+    display: flex!important;
+    flex-wrap: wrap;
+    font-size: 0;
+    margin-right: var(--bottom-area-padding);
+    padding-right: var(--bottom-area-padding);
+    border-right: solid var(--bottom-area-divider-thickness) rgb(var(--bottom-area-divider-color));
+}
+#footer .options a {
+    font-size: var(--footer-font-size);
+    padding: 0.5ch 2ch;
+}
+
+#license-area {
+    font-size: var(--license-area-font-size);
+    color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-secondary-color));
+    box-sizing: border-box;
+    text-align: center;
+    padding: var(--bottom-area-padding);
+    padding-top: calc(var(--bottom-area-padding)/2);
+    position: relative;
+}
+#license-area::before, #license-area::after {
+    content: "";
+    display: block;
+    height: var(--bottom-area-logo-size);
+    width: 100%;
+    margin-bottom: calc(var(--bottom-area-padding)/2);
+}
+#license-area::before {
+    background: rgb(var(--bottom-area-divider-color));
+    clip-path: inset(calc(50% - var(--bottom-area-divider-thickness)/2) 0);
+    -webkit-mask-image:
+        linear-gradient(90deg,
+            black 0%,
+            black calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black 100%
+        );
+    mask-image:
+        linear-gradient(90deg,
+            black 0%,
+            black calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% - var(--bottom-area-logo-size)/2 - var(--bottom-area-padding)/2),
+            transparent calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black calc(50% + var(--bottom-area-logo-size)/2 + var(--bottom-area-padding)/2),
+            black 100%
+        );
+}
+#license-area::after {
+    position: absolute;
+    top: calc(var(--bottom-area-padding)/2);
+    left: 0;
+    background-image: var(--footer-logo);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#license-area a {
+    font-weight: bold;
+}
+#license-area a::after { content: "."; }
+
+
 
 /*---------------------------*/
 /*---- MOBILE BREAKPOINT ----*/
