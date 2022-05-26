@@ -10,6 +10,8 @@
     --basalt-main-text-color: 20,20,20;
     --basalt-overtone: 50,50,50;
     --basalt-undertone: 61,71,202;
+    --basalt-alternate-color: 255,132,0;
+    --basalt-cancel-color: 255,48,48;
 
     --basalt-UI-opacity: 0.9;
     --basalt-UI-blur: 0.1rem;
@@ -468,7 +470,7 @@ body {
 
 #login-status > * {
     clip-path: inset(0 0 0 100%);
-    user-select: auto;
+    user-select: text;
     font-size: var(--header-UI-font-size);
     transition: clip-path var(--header-link-transition-1st);
 }
