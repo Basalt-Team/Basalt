@@ -93,8 +93,8 @@
     --footer-font-size: calc(var(--true-font-size)*0.825);
     --license-area-font-size: calc(var(--true-font-size)*0.8);
 
-    --scrollbar-track-color: var(--basalt-tertiary-color);
-    --scrollbar-thumb-color: var(--basalt-overtone);
+    --scrollbar-track-color: var(--basalt-overtone);
+    --scrollbar-thumb-color: var(--basalt-undertone);
 
     --button-text-color: var(--basalt-main-text-color);
     --button-bg-color: var(--basalt-secondary-color);
@@ -121,13 +121,12 @@ body {
     line-height: 1.5;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+textarea:focus-visible,
+input[type="text"]:focus-visible {
+    outline: solid 0.1rem rgb(var(--basalt-focus-color));
 }
 
-.page-source, .code pre, .code p, .code, tt {
+.code, .code pre, .code p, tt {
     font-family: var(--mono-font);
 }
  
@@ -794,6 +793,12 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 /*-----------------*/
 /*---- CONTENT ----*/
 /*-----------------*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 #content-wrap {
     flex-grow: 1;
