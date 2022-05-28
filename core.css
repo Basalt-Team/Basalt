@@ -50,6 +50,7 @@
     --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
 
     --search-icon-color: var(--basalt-undertone);
+    --search-bg-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
     --login-status-background-color: var(--basalt-overtone);
@@ -108,6 +109,7 @@
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-bg-color: var(--basalt-secondary-color);
     --edit-area-toolbar-icon-size: 1.75rem;
+    --edit-area-main-bg-color: var(--basalt-background-color);
     --edit-area-ancillary-bg-color: var(--basalt-secondary-color);
 }
 
@@ -697,7 +699,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-input:focus,
 #search-top-box-input:hover {
     color: rgb(var(--basalt-main-text-color));
-    background-color: rgb(var(--basalt-primary-color));
+    background-color: rgb(var(--search-bg-color));
 }
 #search-top-box-form:focus-within #search-top-box-input {
     width: calc(var(--header-UI-font-size)*16);

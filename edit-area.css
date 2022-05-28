@@ -134,15 +134,14 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 
 /* Edit area */
 form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
-form#edit-page-form #edit-page-textarea {
+#edit-page-textarea {
     min-width: inherit;
     min-height: calc(var(--true-font-size)*8);
     font-family: var(--body-font);
     padding: 1ch 0.5ch;
-    box-sizing: border-box;
-}
-#edit-page-textarea {
+    background-color: rgb(var(--edit-area-main-bg-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
+    box-sizing: border-box;
 }
 #edit-page-textarea:focus-visible {
     outline: none;
