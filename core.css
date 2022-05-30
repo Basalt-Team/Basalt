@@ -12,7 +12,8 @@
     --basalt-undertone: 61,71,202;
     --basalt-alternate-color: 255,132,0;
     --basalt-cancel-color: 255,48,48;
-    --basalt-sub-text-color: 136,128,150;
+    --basalt-sub-text-color: 155,154,162;
+    --basalt-light-text-color: var(--basalt-primary-color);
 
     --basalt-UI-opacity: 0.9;
     --basalt-UI-blur: 0.1rem;
@@ -93,7 +94,7 @@
     --footer-font-size: calc(var(--true-font-size)*0.825);
     --license-area-font-size: calc(var(--true-font-size)*0.8);
 
-    --scrollbar-track-color: var(--basalt-overtone);
+    --scrollbar-track-color: var(--basalt-tertiary-color);
     --scrollbar-thumb-color: var(--basalt-undertone);
 
     --button-text-color: var(--basalt-main-text-color);
@@ -130,6 +131,20 @@ input[type="text"]:focus-visible {
     font-family: var(--mono-font);
 }
  
+.printuser {
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 0.25em;
+}
+.printuser > a:first-child img {
+    height: 1.15em;
+    width: 1.15em;
+    padding: 0;
+    padding-left: 0.5em;
+    object-fit: contain;
+    background-size: cover;
+}
+
 /* scrollbar */
 * {
     scrollbar-width: thin;
@@ -548,7 +563,6 @@ input[type="text"]:focus-visible {
 /*---------------------------*/
 
 #login-status span.printuser a {
-    margin-right: 0.15em;
     background: transparent;
 }
 #login-status span.printuser img { padding-right: 0; }

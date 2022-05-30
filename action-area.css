@@ -1,0 +1,662 @@
+/*-------------------*/
+/*--- ACTION AREA ---*/
+/*-------------------*/
+
+#action-area:not([style*="none"]) {
+    display: grid!important;
+}
+#action-area {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: max-content 1fr;
+}
+
+#action-area > * {
+    grid-column: 1 / 3;
+}
+#action-area a.action-area-close {
+    float: none;
+    grid-column: 1 / 2;
+    grid-row-start: 1;
+    z-index: 1;
+    align-self: center;
+    width: max-content;
+    margin: 0;
+    padding: 0.325ch 0.675ch;
+    font-family: var(--UI-font);
+    color: rgb(var(--basalt-cancel-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#action-area a.action-area-close:is(:hover,:focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
+
+#action-area > h1 {
+    grid-row-start: 1;
+    font-family: var(--UI-font);
+    font-size: calc(var(--true-font-size)*1.2);
+    color: rgb(var(--basalt-sub-text-color));
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.425rem 0;
+}
+#action-area > h1::before,
+#action-area > h1::after {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    height: 0.075rem;
+    min-width: 2.5ch;
+    flex-grow: 1;
+}
+#action-area > h1::before { margin-right: 0.5ch; min-width: 4.25ch; }
+#action-area > h1::after { margin-left: 0.5ch; }
+
+
+/*---------------*/
+/*--- EDITBOX ---*/
+/*---------------*/
+
+form#edit-page-form {
+    font-family: var(--UI-font);
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "toolbar toolbar"
+        "txt txt"
+        "help size"
+        "bottom bottom"
+        "hdn hdn"
+        "button button";
+    grid-template-columns: 1fr auto;
+    column-gap: 0.5rem;
+}
+form#edit-page-form table.form { grid-area: title; }
+form#edit-page-form #wd-editor-toolbar-panel { grid-area: toolbar; }
+form#edit-page-form > div:nth-of-type(2) { grid-area: txt; }
+form#edit-page-form .change-textarea-size { grid-area: size; }
+form#edit-page-form .edit-help-34 { grid-area: help; }
+form#edit-page-form table.edit-page-bottomtable { grid-area: bottom; }
+form#edit-page-form #edit-page-captcha { grid-area: hdn; }
+form#edit-page-form .buttons.alignleft { grid-area: button; }
+
+/* Title area */
+form#edit-page-form table.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0!important;
+    font-size: calc(var(--true-font-size)*1.25);
+}
+form#edit-page-form table.form tbody,
+form#edit-page-form table.form tr {
+    display: contents;
+}
+form#edit-page-form table.form td {
+    display: block;
+    flex-grow: 1;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+form#edit-page-form table.form td:nth-of-type(1) {
+    font-size: var(--true-font-size);
+    color: rgb(var(--basalt-main-text-color));
+    transition: color 0.175s ease-out;
+}
+form#edit-page-form table.form:focus-within td:nth-of-type(1) {
+    color: rgb(var(--basalt-focus-color));
+}
+form#edit-page-form table.form td:nth-of-type(2) {
+    flex-grow: 99;
+}
+form#edit-page-form table.form  td:nth-of-type(1)::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 0;
+    background-color: rgb(var(--basalt-focus-color));
+    order: 1;
+    transition: width 0.175s ease-out;
+}
+form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
+    width: 100%;
+}
+#edit-page-title {
+    width: 100%;
+    padding: 0.125ch 0.325ch;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    font-family: var(--header-font);
+    background-color: rgb(var(--edit-area-ancillary-bg-color));
+}
+#edit-page-title:focus-visible {
+    outline: none;
+}
+
+/* Toolbar area */
+#wd-editor-toolbar-panel {
+    display: grid;
+    grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
+    background-color: rgb(var(--edit-area-toolbar-bg-color));
+    border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
+    border-bottom: 0;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    grid-template-areas:
+        "txt-format elements"
+        "other elements";
+    grid-template-columns: 5fr 4fr;
+    align-items: flex-start;
+}
+#wd-editor-toolbar-panel > div:nth-child(1) { grid-area: txt-format; }
+#wd-editor-toolbar-panel > div:nth-child(2) { grid-area: elements; justify-content: flex-end; }
+#wd-editor-toolbar-panel > div:nth-child(3) { grid-area: other; }
+#wd-editor-toolbar-panel > div {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
+}
+#wd-editor-toolbar-panel > div > ul {
+    display: contents;
+}
+
+#wd-editor-toolbar-panel > div > ul > li {
+    float: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.wd-editor-toolbar-panel li.hseparator { display: none; }
+.wd-editor-toolbar-panel ul li a,
+.wd-editor-toolbar-panel ul li a:hover {
+    background-image: none;
+}
+.wd-editor-toolbar-panel ul li a {
+    display: block;
+    height: var(--edit-area-toolbar-icon-size);
+    width: var(--edit-area-toolbar-icon-size);
+    background-color: rgb(var(--basalt-overtone));
+}
+.wd-editor-toolbar-panel ul li a:is(:hover, :focus) {
+    background-color: rgb(var(--basalt-focus-color));
+}
+
+/* Edit area */
+form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
+#edit-page-textarea {
+    min-width: inherit;
+    min-height: calc(var(--true-font-size)*8);
+    font-family: var(--body-font);
+    padding: 1ch 0.5ch;
+    background-color: rgb(var(--edit-area-main-bg-color));
+    border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
+    box-sizing: border-box;
+}
+#edit-page-textarea:focus-visible {
+    outline: none;
+}
+
+/* Size buttons + help area */
+form#edit-page-form .change-textarea-size {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: var(--edit-area-border-width);
+    grid-gap: var(--edit-area-border-width);
+    background-color: rgb(var(--edit-area-border-color));
+    box-sizing: border-box;
+    padding-top: 0;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+form#edit-page-form .change-textarea-size a {
+    text-decoration: none;
+    display: flex;
+    width: 10ch;
+    flex-grow: 1;
+    padding: 0;
+    border: none;
+    font-size: calc(var(--true-font-size)*1.25);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(var(--button-bg-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+form#edit-page-form .change-textarea-size a:is(:hover,:focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    outline-width: var(--edit-area-border-width);
+}
+
+form#edit-page-form .edit-help-34 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    align-items: center;
+    margin: 0;
+}
+form#edit-page-form .edit-help-34 a {
+    margin-right: 0.625em;
+    width: max-content;
+    font-size: calc(var(--true-font-size)*0.75);
+}
+
+/* Bottom area */
+form#edit-page-form table.edit-page-bottomtable {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.75rem;
+    padding: 0!important;
+}
+form#edit-page-form table.edit-page-bottomtable tbody,
+form#edit-page-form table.edit-page-bottomtable tr {
+    display: contents;
+}
+form#edit-page-form table.edit-page-bottomtable tr td {
+    box-sizing: border-box;
+    flex-basis: calc(var(--main-content-width)/3);
+    flex-grow: 1;
+    display: block;
+    padding: 0!important;
+    position: relative;
+}
+form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(2) {
+    display: flex;
+    align-items: flex-end;
+}
+form#edit-page-form table.edit-page-bottomtable tr td > div:nth-of-type(1) {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: calc(var(--true-font-size)*0.875);
+    font-weight: bold;
+    display: grid;
+    transition: color 0.175s ease-out;
+}
+form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1)::before {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 0;
+    background-color: rgb(var(--basalt-focus-color));
+    order: 1;
+    transition: width 0.175s ease-out;
+}
+form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1):focus-within {
+    color: rgb(var(--basalt-focus-color));
+}
+form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1):focus-within::before {
+    width: 100%;
+}
+#edit-page-comments {
+    width: 100%!important;
+    min-height: calc(var(--true-font-size)*6.5);
+    padding: 1ch 0.875ch;
+    box-sizing: border-box;
+    font-weight: initial;
+    background-color: rgb(var(--edit-area-ancillary-bg-color));
+    border: none;
+    order: 2;
+}
+#edit-page-comments:focus-visible {
+    outline: none;
+}
+form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
+    color: rgb(var(--basalt-sub-text-color));
+    font-size: 81.25%;
+    position: absolute;
+    bottom: 0.125ch;
+    right: 1.75ch;
+}
+
+#lock-info {
+    background-color: rgb(var(--edit-area-ancillary-bg-color));
+    text-align: center;
+    border: none;
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Save button area */
+#edit-page-form > div.buttons.alignleft {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(calc(var(--main-content-width)/4), 100%), 1fr));
+    grid-gap: 0.625rem;
+    padding: 0.625rem 0 0;
+}
+#edit-page-form > .buttons.alignleft > input[type="button"] {
+    margin: 0;
+    font-size: calc(var(--true-font-size)*1.05);
+    padding: 0.675ch;
+    cursor: pointer;
+    color: rgb(var(--button-text-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.1em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#edit-page-form > .buttons.alignleft > input[type="button"]:is(:hover,:focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
+#edit-page-form > .buttons.alignleft > input#edit-cancel-button {
+    --button-text-color: var(--basalt-cancel-color);
+}
+#edit-page-form > .buttons.alignleft > input#edit-save-button {
+    --button-text-color: var(--basalt-undertone);
+    font-weight: bold;
+}
+
+
+/*---------------*/
+/*--- HISTORY ---*/
+/*---------------*/
+
+#revision-list .pager {
+    display: grid;
+    grid-template-areas:
+        "pgno pgno pgno pgno pgno pgno pgno pgno pgno pgno pgno"
+        "dv dv dv dv dv dv dv dv dv dv dv"
+        "prv . . . . . . . . . nxt";
+}
+#revision-list .pager > * {
+    display: flex;
+    text-align: center;
+    flex-grow: 1;
+    height: 1.75em;
+    align-items: center;
+    justify-content: center;
+}
+#revision-list .pager .pager-no {
+    text-transform: uppercase;
+    grid-area: pgno;
+    width: max-content;
+    padding: 0 1ch;
+    box-sizing: border-box;
+    background-color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-light-text-color));
+}
+#revision-list .pager::before {
+    content: "";
+    display: block;
+    background-color: rgb(var(--basalt-overtone));
+    grid-area: dv;
+    height: 0.25rem;
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+#revision-list .pager > span.current {
+    background-color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-light-text-color));
+}
+#revision-list .pager > span.dots {
+    flex-basis: max-content;
+    padding: 0 0.5ch;
+}
+#revision-list .pager  span.target { display: contents; }
+#revision-list .pager > span.target > a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: color 0.1s ease-out;
+}
+#revision-list .pager span > a::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 0;
+    background-color: rgb(var(--basalt-focus-color));
+    z-index: -1;
+    transition: height 0.125s ease-out;
+}
+#revision-list .pager span > a:is(:hover, :focus) { color: rgb(var(--basalt-light-text-color)); }
+#revision-list .pager span > a:is(:hover, :focus)::before { height: 100%; }
+
+#revision-list .pager > span.target:nth-child(2) > a[onclick*="updatePagedList"] { grid-area: prv; }
+#revision-list .pager > span.target:last-child > a[onclick*="updatePagedList"] { grid-area: nxt; }
+
+#revision-list .pager > span.target:is(:nth-child(2), :last-child) > a[onclick*="updatePagedList"] {
+    font-weight: bold;
+    min-width: max-content;
+    padding: 0 1ch;
+   box-sizing: border-box;
+}
+#revision-list .pager > span.target:is(:nth-child(2), :last-child) > a[onclick*="updatePagedList"]::before {
+    height: 100%;
+    width: 0;
+    transition: width 0.125s ease-out;
+}
+#revision-list .pager > span.target:last-child > a[onclick*="updatePagedList"]::before {
+    right: 0; left: unset;
+}
+#revision-list .pager > span.target:is(:nth-child(2), :last-child) > a[onclick*="updatePagedList"]:is(:hover, :focus)::before {
+    width: 100%;
+}
+
+/*-------------------------------------*/
+
+#revision-list .page-history {
+    display: block;
+    width: 100%;
+    font-size: calc(var(--true-font-size)*0.875);
+}
+#revision-list .page-history tbody { display: contents; }
+
+#revision-list .page-history td.optionstd a {
+    text-decoration: none;
+    display: flex;
+    padding: 0;
+    font-size: calc(var(--true-font-size)*0.925);
+    justify-content: center;
+    align-items: center;
+    border: solid 0.1em rgb(var(--button-border-color));
+    background-color: rgb(var(--button-bg-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#revision-list .page-history td.optionstd a:is(:hover,:focus) {
+    color: rgb(var(--button-hover-text-color));
+    border-color: rgb(var(--button-hover-border-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    outline-width: var(--edit-area-border-width);
+}
+
+#revision-list .page-history tr:first-child { display: none; }
+#revision-list .page-history tr[id*="revision-row"] {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+        "rev flags . date"
+        "dv dv dv dv"
+        "radio actions by comment";
+    grid-template-columns: 5.5ch 8.25em 1.5fr 5fr;
+    padding: 0.375rem;
+    box-sizing: border-box;
+    border-top: solid 0.075rem rgb(var(--basalt-tertiary-color));
+    transition: background-color 0.175s ease-out;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) {
+    background-color: rgb(var(--basalt-focus-color),0.0625);
+}
+
+#revision-list .page-history tr[id*="revision-row"]::before {
+    grid-area: dv;
+    content: "";
+    display: block;
+    height: 0.15rem;
+    width: 0;
+    background: rgb(var(--basalt-overtone));
+    transition: width 0.25s ease-out;
+    transition-delay: 0s;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within)::before {
+    width: 100%;
+    transition-delay: 0.1s;
+}
+#revision-list .page-history tr[id*="revision-row"] td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: unset!important;
+}
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(1) {
+    grid-area: rev;
+    font-family: var(--mono-font);
+    font-size: 0.925em;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    transition: color 0.125s ease-out;
+}
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(1)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 0;
+    background-color: rgb(var(--basalt-overtone));
+    transition: width 0.075s ease-out;
+    transition-delay: 0s;
+    z-index: -1;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) td:nth-child(1) {
+    color: rgb(var(--basalt-light-text-color));
+    transition-delay: 0.125s;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) td:nth-child(1)::before {
+    width: 100%;
+    transition-delay: 0.125s;
+}
+
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(2) {
+    grid-area: radio;
+    grid-gap: 0.125rem;
+}
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(3) {
+    grid-area: flags;
+    justify-content: left;
+    padding: 0;
+}
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(3) > span {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 0.325em;
+    color: rgb(var(--basalt-sub-text-color));
+    position: relative;
+    z-index: 0;
+    transition: color 0.075s ease-out;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) td:nth-child(3) > span {
+    color: rgb(var(--basalt-light-text-color));
+    transition-delay: 0.125s;
+}
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(3) > span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 0;
+    background: rgb(var(--basalt-focus-color));
+    transition: width 0.075s ease-out;
+    transition-delay: 0s;
+    z-index: -1;
+    transition: width 0.075s ease-out;
+}
+#revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) td:nth-child(3) > span::before {
+    width: 100%;
+    transition-delay: 0.125s;
+}
+
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(4) {
+    grid-area: actions;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.125rem;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-family: var(--UI-font);
+}
+
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(5) {
+    grid-area: by;
+    margin: 0.375em 2vw;
+}
+
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(6) {
+    grid-area: date;
+    justify-content: right;
+    text-align: right;
+    font-size: 0.975em;
+    font-family: var(--UI-font);
+    padding: 0!important;
+}
+
+#revision-list .page-history tr[id*="revision-row"] td:nth-child(7) {
+    grid-area: comment;
+    justify-content: left;
+    text-align: justify;
+    font-size: calc(var(--true-font-size)*0.875)!important;
+    padding-top: 0.375em;
+}
+
+@media only screen and (max-width: 580px) {
+    #revision-list .pager {
+        grid-template-areas:
+            "pgno pgno pgno pgno pgno pgno pgno"
+            "dv dv dv dv dv dv dv"
+            "prv . . . . . nxt"
+            "prv . . . . . nxt";
+    }
+    #revision-list .page-history tr[id*="revision-row"] {
+        grid-template-areas:
+            "rev flags date"
+            "dv dv dv"
+            "radio actions by"
+            "comment comment comment";
+        grid-template-columns: 5.5ch 1fr 11.75em;
+    }
+}
+
+/*-------------------*/
+/*--- PAGE SOURCE ---*/
+/*-------------------*/
+
+#action-area .page-source {
+    overflow-wrap: anywhere;
+    font-family: var(--mono-font);
+    font-size: 0.875em;
+    padding: 0.5em 0;
+    border: none;
+}
