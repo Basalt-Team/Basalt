@@ -106,7 +106,9 @@
     --button-hover-border-color: var(--basalt-focus-color);
     --button-hover-transition: 0.075s ease-out;
 
-    --edit-area-border-color: var(--basalt-tertiary-color);
+    --action-area-border-color: var(--basalt-tertiary-color);
+
+    --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-bg-color: var(--basalt-secondary-color);
     --edit-area-toolbar-icon-size: 1.75rem;

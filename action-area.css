@@ -22,7 +22,9 @@
 #action-area :is(a, input).btn {
     cursor: pointer;
     margin: 0;
-    padding: 0.325ch 0.675ch;
+    display: inline-block;
+    text-align: center;
+    padding: 0.325ch 0.5ch;
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-bg-color));
@@ -51,7 +53,6 @@
     grid-row-start: 1;
     font-family: var(--UI-font);
     font-size: calc(var(--true-font-size)*1.2);
-    color: rgb(var(--basalt-sub-text-color));
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -64,8 +65,8 @@
 #action-area > h1::after {
     content: "";
     display: block;
-    background-color: currentColor;
-    height: 0.075rem;
+    background-color: rgb(var(--action-area-border-color));
+    height: 0.1rem;
     min-width: 2.5ch;
     flex-grow: 1;
 }
@@ -360,18 +361,6 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     margin: 0;
     font-size: calc(var(--true-font-size)*1.05);
     padding: 0.675ch;
-    cursor: pointer;
-    color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
-    border: solid 0.1em rgb(var(--button-border-color));
-    outline: rgb(var(--button-outline-color)) solid 0;
-    transition: all var(--button-hover-transition);
-}
-#edit-page-form > .buttons.alignleft > input[type="button"]:is(:hover,:focus) {
-    color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
-    border-color: rgb(var(--button-hover-border-color));
-    outline-width: 0.25rem;
 }
 #edit-page-form > .buttons.alignleft > input#edit-cancel-button {
     --button-text-color: var(--basalt-cancel-color);
@@ -422,7 +411,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 #history-form-1 > table.form > tbody > tr:first-child > td:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1.25em minmax(10.75em, 1fr));
+    grid-template-columns: repeat(auto-fill, 1.25em minmax(10.5em, 1fr));
     grid-auto-rows: 1.75em;
     align-items: center;
     margin: 0.375em 0;
@@ -437,13 +426,65 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     flex-direction: column;
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td {
+    position: relative;
     font-family: var(--UI-font);
-    font-weight: bold;
-    text-align: center;
 }
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:first-child {
+    text-align: center;
+    font-size: 0.75em;
+    padding: 0.425ch 0 0.125ch;
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.125s ease-out;
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:first-child::before {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    display: block;
+    width: 100%; height: 0;
+    background-color: rgb(var(--basalt-overtone));
+    z-index: -1;
+    transition: height 0.125s ease-out;
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2):focus-within > td:first-child { color: rgb(var(--basalt-light-text-color)); }
+#history-form-1 > table.form > tbody > tr:nth-child(2):focus-within > td:first-child::before { height: 100%; }
+
 #h-perpage {
     width: 100%;
+    appearance: none;
+    background-color: rgb(var(--basalt-background-color));
+    padding: 0.25ch 0.325ch;
+    border: solid 0.125em rgb(var(--action-area-border-color));
+    box-sizing: border-box;
+    outline: solid 0 rgb(var(--basalt-overtone));
 }
+#h-perpage:focus {
+    border-color: rgb(var(--basalt-overtone));
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::before,
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 1.625em;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    transition: all 0.125s ease-out;
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::before {
+    height: 0;
+    background-color: rgb(var(--basalt-overtone));
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {
+    content: "\2BC6";
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2):focus-within::before { height: 100%; }
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2):focus-within::after { color: rgb(var(--basalt-light-text-color)); }
+
 #history-form-1 > div.buttons {
     display: flex;
     flex-wrap: wrap;
@@ -619,7 +660,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     grid-template-columns: 5.5ch 8.25em 1.5fr 5fr;
     padding: 0.25rem 0.375rem;
     box-sizing: border-box;
-    border-top: solid 0.075rem rgb(var(--basalt-tertiary-color));
+    border-top: solid 0.075rem rgb(var(--action-area-border-color));
     transition: background-color 0.175s ease-out;
 }
 #revision-list .page-history tr[id*="revision-row"]:is(:hover, :focus-within) {
@@ -798,6 +839,65 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     margin: 0.425rem 0;
 }
 
+
+/*-------------*/
+/*--- FILES ---*/
+/*-------------*/
+
+#action-area table.page-files {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+#action-area table.page-files > :is(thead, tbody) {
+    display: contents;
+}
+
+#action-area table.page-files > :is(thead, tbody) > tr {
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-template-columns: 2.5fr 1fr 4.5em 2fr;
+    align-items: center;
+    padding: 0.475em 0;
+    border-top: solid 0.1em rgb(var(--action-area-border-color));
+    overflow-wrap: anywhere;
+}
+#action-area table.page-files > thead > tr {
+    border-top: 0;
+    text-transform: uppercase;
+    font-family: var(--UI-font);
+}
+#action-area table.page-files > tbody > tr:last-child {
+    border-bottom: solid 0.1em rgb(var(--action-area-border-color));
+}
+#action-area table.page-files > tbody > tr[id*="file-options-row"] {
+    border-top:  0;
+    padding-top: 0;
+    background-color: transparent;
+}
+
+#action-area table.page-files :is(td, th) {
+    text-align: center;
+    padding: 0;
+    display: block;
+    font-size: 0.875em;
+}
+#action-area table.page-files > tbody > tr > td:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.325rem;
+}
+#action-area table.page-files > tbody > tr > td:last-child > a {
+    flex-grow: 1;
+    flex-basis: 3.75em;
+}
+
+#action-area > div[style="margin-top:1em; text-align: center; font-size: 120%;"] {
+    font-size: 1.05em!important;
+    margin: 0.5em 0!important;
+    display: flex;
+    justify-content: flex-end;
+}
 
 /*----------------*/
 /*--- WATCHERS ---*/
