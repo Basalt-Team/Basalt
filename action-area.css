@@ -18,6 +18,25 @@
 #action-area > * {
     grid-column: 1 / 3;
 }
+
+#action-area :is(a, input).btn {
+    cursor: pointer;
+    margin: 0;
+    padding: 0.325ch 0.675ch;
+    font-family: var(--UI-font);
+    color: rgb(var(--button-text-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#action-area :is(a, input).btn:is(:hover, :focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
+
 #action-area a.action-area-close {
     float: none;
     grid-column: 1 / 2;
@@ -25,20 +44,7 @@
     z-index: 1;
     align-self: center;
     width: max-content;
-    margin: 0;
-    padding: 0.325ch 0.675ch;
-    font-family: var(--UI-font);
     color: rgb(var(--basalt-cancel-color));
-    background-color: rgb(var(--button-bg-color));
-    border: solid 0.125em rgb(var(--button-border-color));
-    outline: rgb(var(--button-outline-color)) solid 0;
-    transition: all var(--button-hover-transition);
-}
-#action-area a.action-area-close:is(:hover,:focus) {
-    color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
-    border-color: rgb(var(--button-hover-border-color));
-    outline-width: 0.25rem;
 }
 
 #action-area > h1 {
@@ -240,6 +246,7 @@ form#edit-page-form .change-textarea-size a {
     font-size: calc(var(--true-font-size)*1.25);
     justify-content: center;
     align-items: center;
+    color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-bg-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
@@ -379,6 +386,87 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 /*--- HISTORY ---*/
 /*---------------*/
 
+#history-form-1 {
+    display: grid;
+    grid-template-columns: 1fr 11.25em;
+    grid-template-rows: auto auto auto;
+    column-gap: 1.25rem;
+}
+#revision-list { grid-column: 1/3; }
+
+#history-form-1 > table.form, #history-form-1 > table.form > tbody { display: contents; }
+#history-form-1 > table.form > tbody > tr:first-child {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+}
+
+#history-form-1 > table.form > tbody > tr:first-child::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: rgb(var(--basalt-overtone));
+}
+
+#history-form-1 > table.form > tbody > tr:first-child > td:first-child {
+    display: block;
+    width: max-content;
+    padding: 0.5ch 0.75ch 0;
+    font-size: 0.75em;
+    background-color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-light-text-color));
+    font-family: var(--UI-font);
+    text-transform: uppercase;
+    order: -1;
+}
+#history-form-1 > table.form > tbody > tr:first-child > td:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1.25em minmax(10.75em, 1fr));
+    grid-auto-rows: 1.75em;
+    align-items: center;
+    margin: 0.375em 0;
+}
+#history-form-1 > table.form > tbody > tr:first-child > td:nth-child(2) input.checkbox {
+    display: inline-block;
+    margin: 0 0 0 auto;
+}
+
+#history-form-1 > table.form > tbody > tr:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td {
+    font-family: var(--UI-font);
+    font-weight: bold;
+    text-align: center;
+}
+#h-perpage {
+    width: 100%;
+}
+#history-form-1 > div.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 1rem 0;
+    grid-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+    align-self: center;
+}
+#history-form-1 > div.buttons > input.btn {
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: min(12em, 47.5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.875em;
+}
+
+/*-------------------------------------*/
+
 #revision-list .pager {
     display: grid;
     position: relative;
@@ -407,6 +495,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     box-sizing: border-box;
     background-color: rgb(var(--basalt-overtone));
     color: rgb(var(--basalt-light-text-color));
+    font-family: var(--UI-font);
     text-transform: uppercase;
 }
 #revision-list .pager .pager-no::after {
@@ -507,6 +596,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     justify-content: center;
     align-items: center;
     border: solid 0.1em rgb(var(--button-border-color));
+    color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-bg-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
@@ -664,6 +754,9 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 
 @media only screen and (max-width: 580px) {
+    #history-form-1 {
+        display: block;
+    }
     #revision-list .pager {
         grid-template-areas:
             "pgno pgno pgno pgno pgno pgno pgno"
@@ -704,6 +797,20 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     text-align: center;
     margin: 0.425rem 0;
 }
+
+
+/*----------------*/
+/*--- WATCHERS ---*/
+/*----------------*/
+
+#action-area > ul[style="list-style: none"] {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(auto-fill, minmax(min(16em, 100%), 1fr));
+    grid-gap: 0.25rem;
+}
+
 
 /*-------------------*/
 /*--- PAGE SOURCE ---*/
