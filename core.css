@@ -193,9 +193,14 @@ a.newpage {
     transform: rotate(45deg);
 }
 
+textarea,
+input[type="text"] {
+    outline: solid 0 rgb(var(--basalt-focus-color));
+    transition: outline-width 0.125s linear;
+}
 textarea:focus-visible,
 input[type="text"]:focus-visible {
-    outline: solid 0.1rem rgb(var(--basalt-focus-color));
+    outline-width: 0.175rem;
 }
 
 .code, .code pre, .code p, tt {

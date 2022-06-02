@@ -2,6 +2,12 @@
 /*--- ACTION AREA ---*/
 /*-------------------*/
 
+#action-area div.sub {
+    color: rgb(var(--basalt-sub-text-color));
+    font-size: 81.25%;
+    text-align: right;
+}
+
 #history-subarea:not([style*="none"]),
 #action-area:not([style*="none"]) {
     display: grid!important;
@@ -17,12 +23,6 @@
 #history-subarea > *,
 #action-area > * {
     grid-column: 1 / 3;
-}
-
-#action-area div.sub {
-    color: rgb(var(--basalt-sub-text-color));
-    font-size: 81.25%;
-    text-align: right;
 }
 
 #action-area :is(a, input).btn {
@@ -224,9 +224,11 @@ form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
     background-color: rgb(var(--edit-area-main-bg-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     box-sizing: border-box;
+    transition: border-color 0.125s linear;
 }
 #edit-page-textarea:focus-visible {
     outline: none;
+    border-color: rgb(var(--basalt-focus-color));
 }
 
 /* Size buttons + help area */
@@ -871,7 +873,7 @@ form[onsubmit*="setParent"] > table.form,
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(calc(var(--main-content-width)/2.75), 100%), 1fr));
+    grid-gap: 0.125em;
     align-items: center;
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td {
@@ -885,10 +887,28 @@ form[onsubmit*="setParent"] > table.form,
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.325;
+    transition: color 0.125s linear;
 }
-
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) tr:focus-within > td:nth-child(1) {
+    color: rgb(var(--basalt-focus-color));
+}
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) td:nth-child(2) > *:not(div) {
     width: 100%;
+}
+
+#action-area table + div.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+#action-area table + div.buttons > * {
+    flex-basis: 16em;
+    flex-shrink: 1;
+    padding: 0.625ch;
+}
+#action-area table + div.buttons > *:is([onclick*="closeActionArea"],[onclick*="uploadCancel"]) {
+    --button-text-color: var(--basalt-cancel-color);
 }
 
 /*-------------*/
@@ -949,8 +969,36 @@ form[onsubmit*="setParent"] > table.form,
     justify-content: flex-end;
 }
 
+input#upload-userfile {
+    box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
+    transition: box-shadow 0.125s linear;
+}
+#file-upload-form table.form tr:first-child:is(:hover, :focus-within) td:first-child {
+    color: rgb(var(--basalt-focus-color));
+}
+#file-upload-form table.form tr:first-child:is(:hover, :focus-within) input#upload-userfile {
+    box-shadow: 0 0 0 0.175rem rgb(var(--basalt-focus-color));
+}
+input#upload-userfile::file-selector-button {
+    padding: 0.5ch;
+    margin: 0 0.55em 0 0.125em;
+    font-family: var(--UI-font);
+    color: rgb(var(--button-text-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#file-upload-form table.form tr:first-child:is(:hover, :focus-within) input#upload-userfile::file-selector-button {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.475em;
+}
+
 #file-comments {
     min-width: 100%;
+    max-width: 100%;
     min-height: 4.875em;
 }
 #action-area #upload-dfilename {
@@ -987,3 +1035,9 @@ form[onsubmit*="setParent"] > table.form,
     padding: 0.5em 0;
     border: none;
 }
+
+/*----------------*/
+/*--- PARENT ---*/
+/*----------------*/
+
+#action-area div.autocomplete-container.yui-ac { width: 100%!important; }
