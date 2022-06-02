@@ -10,6 +10,9 @@
     --basalt-main-text-color: 20,20,20;
     --basalt-overtone: 50,50,50;
     --basalt-undertone: 61,71,202;
+
+    --basalt-bright-element-color: 6,69,173;
+    --basalt-dark-element-color: 18,20,150;
     --basalt-alternate-color: 255,132,0;
     --basalt-cancel-color: 255,48,48;
     --basalt-sub-text-color: 155,154,162;
@@ -19,6 +22,10 @@
     --basalt-UI-blur: 0.1rem;
     --basalt-focus-color: var(--basalt-undertone);
     --basalt-background-color: var(--basalt-primary-color);
+
+    --link-color: var(--basalt-bright-element-color);
+    --link-visited-color: var(--basalt-dark-element-color);
+    --link-newpage-color: var(--basalt-alternate-color);
 
     --header-font: 'Lexend', sans-serif;
     --UI-font: 'IBM Plex Sans', sans-serif;
@@ -121,7 +128,69 @@ body {
     background-color: rgb(var(--basalt-background-color));
     font-family: var(--body-font);
     font-size: var(--true-font-size);
-    line-height: 1.5;
+}
+
+body, li, p { line-height: 1.5; }
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    font-family: var(--header-font);
+    margin: 0.325em 0;
+}
+
+a:any-link {
+    color: rgb(var(--link-color));
+}
+a:visited {
+    color: rgb(var(--link-visited-color));
+}
+a:is(:hover,:focus) {
+    text-decoration: underline 0.1em;
+    text-underline-offset: 0.08em;
+}
+a.newpage {
+    color: rgb(var(--link-newpage-color));
+}
+
+[type="checkbox"], [type="radio"] {
+    appearance: none;
+    display: inline-block;
+    border: solid 0.125em rgb(var(--basalt-tertiary-color));
+    border-radius: 0;
+    width: 1.15em;
+    height: 1.15em;
+    position: relative;
+}
+[type="radio"] {
+    border-radius: 50%;
+}
+[type="radio"]:checked {
+    border: solid 0.425em rgb(var(--basalt-focus-color));
+    background-color: rgb(var(--basalt-background-color));
+}
+[type="checkbox"]:checked {
+    border-color: rgb(var(--basalt-focus-color));
+    background-color: rgb(var(--basalt-focus-color));
+}
+[type="checkbox"]:checked::before,
+[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 0.1875em;
+    background-color: rgb(var(--basalt-light-text-color));
+}
+[type="checkbox"]:checked::before {
+    height: 45%;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(-45deg);
+}
+[type="checkbox"]:checked::after {
+    height: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: rotate(45deg);
 }
 
 textarea:focus-visible,

@@ -26,6 +26,7 @@
     text-align: center;
     padding: 0.325ch 0.5ch;
     font-family: var(--UI-font);
+    text-decoration: none;
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-bg-color));
     border: solid 0.125em rgb(var(--button-border-color));
@@ -51,7 +52,6 @@
 
 #action-area > h1 {
     grid-row-start: 1;
-    font-family: var(--UI-font);
     font-size: calc(var(--true-font-size)*1.2);
     text-transform: uppercase;
     display: flex;
@@ -471,19 +471,19 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     align-items: center; justify-content: center;
     width: 1.625em;
     height: 100%;
+    background-color: rgb(var(--basalt-overtone));
     pointer-events: none;
     z-index: 1;
     transition: all 0.125s ease-out;
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::before {
     height: 0;
-    background-color: rgb(var(--basalt-overtone));
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {
-    content: "\2BC6";
+    clip-path: polygon(25% 40%, 75% 40%, 50% 70%);
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2):focus-within::before { height: 100%; }
-#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2):focus-within::after { color: rgb(var(--basalt-light-text-color)); }
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2):focus-within::after { background-color: rgb(var(--basalt-light-text-color)); }
 
 #history-form-1 > div.buttons {
     display: flex;
