@@ -19,6 +19,12 @@
     grid-column: 1 / 3;
 }
 
+#action-area div.sub {
+    color: rgb(var(--basalt-sub-text-color));
+    font-size: 81.25%;
+    text-align: right;
+}
+
 #action-area :is(a, input).btn {
     cursor: pointer;
     margin: 0;
@@ -334,8 +340,6 @@ form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-o
     outline: none;
 }
 form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
-    color: rgb(var(--basalt-sub-text-color));
-    font-size: 81.25%;
     position: absolute;
     bottom: 0.125ch;
     right: 1.75ch;
@@ -411,8 +415,9 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 #history-form-1 > table.form > tbody > tr:first-child > td:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1.25em minmax(10.5em, 1fr));
+    grid-template-columns: repeat(auto-fill, 1.25em minmax(9.875em, 1fr));
     grid-auto-rows: 1.75em;
+    grid-gap: 0.175em;
     align-items: center;
     margin: 0.375em 0;
 }
@@ -565,6 +570,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     align-items: center;
     justify-content: center;
     position: relative;
+    text-decoration: none;
     border: none;
     margin: 0;
     padding: 0;
@@ -839,6 +845,51 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     margin: 0.425rem 0;
 }
 
+/*-------------------*/
+/*-------------------*/
+/*-------------------*/
+
+#action-area input.text,
+textarea#file-comments {
+    border: none;
+    background-color: rgb(var(--basalt-secondary-color));
+    padding: 0.5ch 0.325ch;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#file-upload-form table.form,
+form[onsubmit*="setParent"] > table.form,
+#rename-option-rename table.form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.625rem;
+    width: 100%;
+}
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody {
+    display: contents;
+}
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(calc(var(--main-content-width)/2.75), 100%), 1fr));
+    align-items: center;
+}
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td {
+    display: block;
+    margin: 0;
+    position: relative;
+}
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td:nth-child(1) {
+    font-family: var(--UI-font);
+    font-size: 0.875em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.325;
+}
+
+:is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) td:nth-child(2) > *:not(div) {
+    width: 100%;
+}
 
 /*-------------*/
 /*--- FILES ---*/
@@ -852,7 +903,6 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 #action-area table.page-files > :is(thead, tbody) {
     display: contents;
 }
-
 #action-area table.page-files > :is(thead, tbody) > tr {
     display: grid;
     grid-gap: 0.625rem;
@@ -897,6 +947,20 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     margin: 0.5em 0!important;
     display: flex;
     justify-content: flex-end;
+}
+
+#file-comments {
+    min-width: 100%;
+    min-height: 4.875em;
+}
+#action-area #upload-dfilename {
+    padding-bottom: 1.25em;
+}
+:is(#upload-dfilename, #file-comments) + div.sub {
+    position: absolute;
+    bottom: 0.125ch;
+    right: 1.25ch;
+    width: max-content;
 }
 
 /*----------------*/
