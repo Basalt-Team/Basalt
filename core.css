@@ -908,7 +908,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-size: var(--footer-font-size);
     padding: var(--bottom-area-padding);
     font-family: var(--UI-font);
-    color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-sub-text-color));
     background-color: rgb(var(--bottom-area-background-color));
     box-sizing: border-box;
     padding-bottom: 0;
