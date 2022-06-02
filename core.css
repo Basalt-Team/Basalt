@@ -896,6 +896,12 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     overflow-wrap: break-word;
 }
 
+#page-title, .meta-title {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 2.325em;
+}
+
 
 /*-------------------------------*/
 /*---- FOOTER & LICENSE AREA ----*/
