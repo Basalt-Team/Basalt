@@ -14,7 +14,9 @@
     --basalt-bright-element-color: 6,69,173;
     --basalt-dark-element-color: 18,20,150;
     --basalt-alternate-color: 255,132,0;
-    --basalt-cancel-color: 255,48,48;
+    --basalt-positive-color: 24,163,20;
+    --basalt-negative-color: 255,48,48;
+    --basalt-cancel-color: var(--basalt-negative-color);
     --basalt-sub-text-color: 155,154,162;
     --basalt-light-text-color: var(--basalt-primary-color);
 

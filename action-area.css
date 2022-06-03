@@ -2,10 +2,29 @@
 /*--- ACTION AREA ---*/
 /*-------------------*/
 
+#action-area p {
+    margin: 0.325em 0 0.625em;
+}
+
 #action-area div.sub {
     color: rgb(var(--basalt-sub-text-color));
     font-size: 81.25%;
     text-align: right;
+}
+#action-area div.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 0.5rem;
+    padding: 0.625em 0;
+    width: 100%;
+    max-width: calc(var(--main-content-width)*0.75);
+    margin: 0 auto;
+}
+#action-area div.buttons > * {
+    flex-basis: 12em;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 #history-subarea:not([style*="none"]),
@@ -30,7 +49,7 @@
     margin: 0;
     display: inline-block;
     text-align: center;
-    padding: 0.325ch 0.5ch;
+    padding: 0.5ch;
     font-family: var(--UI-font);
     text-decoration: none;
     color: rgb(var(--button-text-color));
@@ -44,6 +63,14 @@
     background-color: rgb(var(--button-hover-bg-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
+}
+
+#action-area div.buttons > :is([value="Cancel"],[value="Close"]) {
+    --button-text-color: var(--basalt-cancel-color);
+}
+#action-area div.buttons > :is([value="Save"],[value="Save Tags"]) {
+    --button-text-color: var(--basalt-positive-color);
+    font-weight: bold;
 }
 
 #action-area a.action-area-close {
@@ -362,19 +389,38 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     grid-template-columns: repeat(auto-fill, minmax(min(calc(var(--main-content-width)/4), 100%), 1fr));
     grid-gap: 0.625rem;
     padding: 0.625rem 0 0;
+    max-width: 100%;
 }
 #edit-page-form > .buttons.alignleft > input[type="button"] {
     margin: 0;
     font-size: calc(var(--true-font-size)*1.05);
     padding: 0.675ch;
 }
-#edit-page-form > .buttons.alignleft > input#edit-cancel-button {
-    --button-text-color: var(--basalt-cancel-color);
+
+
+/*------------*/
+/*--- TAGS ---*/
+/*------------*/
+
+form[onsubmit*="PageTagsModule"] > table.form {
+    display: grid;
+    width: 100%;
 }
-#edit-page-form > .buttons.alignleft > input#edit-save-button {
-    --button-text-color: var(--basalt-undertone);
+form[onsubmit*="PageTagsModule"] > table.form > tbody,
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr {
+    display: contents;
+}
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td { display: block; }
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td:first-child {
+    font-family: var(--UI-font);
+    font-size: 0.875em;
     font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.325;
+    transition: color 0.125s linear;
 }
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:first-child { color: rgb(var(--basalt-focus-color)); }
+#page-tags-input { width: 100%; }
 
 
 /*---------------*/
@@ -896,21 +942,6 @@ form[onsubmit*="setParent"] > table.form,
     width: 100%;
 }
 
-#action-area table + div.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 0.5rem;
-}
-#action-area table + div.buttons > * {
-    flex-basis: 16em;
-    flex-shrink: 1;
-    padding: 0.625ch;
-}
-#action-area table + div.buttons > *:is([onclick*="closeActionArea"],[onclick*="uploadCancel"]) {
-    --button-text-color: var(--basalt-cancel-color);
-}
-
 /*-------------*/
 /*--- FILES ---*/
 /*-------------*/
@@ -973,6 +1004,16 @@ input#upload-userfile {
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: box-shadow 0.125s linear;
 }
+
+#file-upload-form table.form {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#file-upload-form table.form >tbody > tr {
+    flex-grow: 1;
+    flex-basis: calc(var(--main-content-width)/2.5);
+}
+
 #file-upload-form table.form tr:first-child:is(:hover, :focus-within) td:first-child {
     color: rgb(var(--basalt-focus-color));
 }
@@ -1023,7 +1064,6 @@ input#upload-userfile::file-selector-button {
     grid-gap: 0.25rem;
 }
 
-
 /*-------------------*/
 /*--- PAGE SOURCE ---*/
 /*-------------------*/
@@ -1039,5 +1079,57 @@ input#upload-userfile::file-selector-button {
 /*----------------*/
 /*--- PARENT ---*/
 /*----------------*/
-
 #action-area div.autocomplete-container.yui-ac { width: 100%!important; }
+
+/*-----------------------*/
+/*--- RENAME/DELETE ---*/
+/*-----------------------*/
+
+#rename-option-rename > p > :is(#rename-show-backlinks, #rename-hide-backlinks) {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#action-area > a.action-area-close + h1 + p + table.form {
+    display: block;
+    width: 100%;
+    padding: 0.675rem;
+    border-style: solid;
+    border-color: rgb(var(--action-area-border-color));
+    border-width: 0.1em 0;
+}
+#action-area > a.action-area-close + h1 + p + table.form > tbody { display: contents; }
+#action-area > a.action-area-close + h1 + p + table.form > tbody > tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 0.25rem 1rem;
+    flex-wrap: wrap;
+}
+#action-area > a.action-area-close + h1 + p + table.form > tbody > tr > td:first-child {
+    font-family: var(--UI-font);
+    font-size: 0.875em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#action-area > a.action-area-close + h1 + p + table.form > tbody > tr > td:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1.25em 1fr;
+    align-items: center;
+    grid-gap: 0.25rem 0.125rem;
+}
+
+#rename-option-rename > form {
+    border-top: solid 0.1em rgb(var(--action-area-border-color));
+    margin-top: 1em;
+    padding-top: 0.75em;
+}
+
+:is(#rename-option-delete, form[onsubmit*="RenamePageModule"]) div.buttons > input.btn:first-child {
+    --button-text-color: var(--basalt-main-text-color);
+}
+#rename-option-delete div.buttons > input.btn:last-child {
+    --button-text-color: var(--basalt-negative-color);
+    font-weight: bold;
+}
