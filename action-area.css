@@ -44,7 +44,7 @@
     grid-column: 1 / 3;
 }
 
-#action-area :is(a, input).btn {
+:is(#action-area, div.buttons) :is(a, input).btn {
     cursor: pointer;
     margin: 0;
     display: inline-block;
@@ -58,7 +58,7 @@
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
-#action-area :is(a, input).btn:is(:hover, :focus) {
+:is(#action-area, div.buttons) :is(a, input).btn:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
     background-color: rgb(var(--button-hover-bg-color));
     border-color: rgb(var(--button-hover-border-color));
@@ -569,6 +569,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
         "prv . . . . . . . . . nxt";
     grid-template-columns: 7.75em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 7.75em;
     grid-template-rows: 2em auto;
+    margin: 0;
     z-index: 0;
 }
 
@@ -847,6 +848,99 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     padding-top: 0.375em;
 }
 
+div.site-changes-box > form > table.form {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.75rem;
+    width: 100%;
+}
+div.site-changes-box > form > table.form > tbody { display: contents; }
+div.site-changes-box > form > table.form > tbody > tr {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 14.5em;
+    flex-grow: 1;
+}
+div.site-changes-box > form > table.form > tbody > tr:first-child {
+    flex-basis: 100%;
+}
+div.site-changes-box > form > table.form > tbody > tr > td:first-child {
+    order: -1;
+    width: max-content;
+    padding: 0.5ch 0.75ch 0;
+    font-size: 0.75em;
+    box-sizing: border-box;
+    background-color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-light-text-color));
+    font-family: var(--UI-font);
+    text-transform: uppercase;
+}
+div.site-changes-box > form > table.form > tbody > tr::before {
+    content: "";
+    display: block;
+    background-color: rgb(var(--basalt-overtone));
+    width: 100%;
+    height: 0.25rem;
+}
+div.site-changes-box > form > table.form > tbody > tr:first-child > td:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1.75em minmax(12.75em, 1fr));
+    grid-auto-rows: 1.75em;
+    grid-gap: 0.175em;
+    align-items: center;
+    margin: 0.325rem 0;
+}
+div.site-changes-box > form > table.form > tbody > tr:first-child > td:nth-child(2) input[type="checkbox"] {
+    margin: 0 0 0 auto;
+}
+div.site-changes-box > form > table.form > tbody > tr > td > select {
+    width: 100%;
+}
+
+#site-changes-list div.changes-list-item {
+    display: grid;
+    grid-template-areas:
+        "name flag rev user"
+        "comment flag rev date";
+    grid-template-columns: 1fr 3.25em 5.875em 10em;
+    grid-gap: 0.25em;
+    padding: 0.625em 0.175em 0.325em;
+    align-items: center;
+    font-size: 0.95em;
+    border-top: solid 0.075rem rgb(var(--action-area-border-color));
+    transition: background-color 0.175s ease-out;
+}
+#site-changes-list div.changes-list-item:is(:hover, :focus-within) { background-color: rgb(var(--basalt-focus-color),0.0625); }
+
+#site-changes-list div.changes-list-item > table,
+#site-changes-list div.changes-list-item > table > tbody,
+#site-changes-list div.changes-list-item > table > tbody > tr { display: contents; }
+#site-changes-list div.changes-list-item > table > tbody > tr > td {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+#site-changes-list div.changes-list-item > table > tbody > tr > td.title { grid-area: name; }
+#site-changes-list div.changes-list-item > table > tbody > tr > td.flags { grid-area: flag; }
+#site-changes-list div.changes-list-item > table > tbody > tr > td.flags > .spantip {
+    text-decoration: none;
+    color: rgb(var(--basalt-sub-text-color));
+    font-weight: bold;
+}
+#site-changes-list div.changes-list-item > table > tbody > tr > td.revision-no { grid-area: rev; font-family: var(--UI-font); }
+#site-changes-list div.changes-list-item > table > tbody > tr > td.mod-by { grid-area: user; text-align: center; }
+#site-changes-list div.changes-list-item > table > tbody > tr > td.mod-date {
+    grid-area: date;
+    font-size: 0.825em;
+    font-family: var(--UI-font);
+}
+#site-changes-list div.changes-list-item > div.comments {
+    grid-area: comment;
+    margin: 0;
+    color: rgb(var(--basalt-main-text-color));
+    text-align: center;
+}
+
 @media only screen and (max-width: 580px) {
     #history-form-1 {
         display: block;
@@ -878,6 +972,16 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
             "comment comment comment";
         grid-template-columns: 5.5ch 1fr 11.75em;
     }
+
+    #site-changes-list div.changes-list-item {
+        grid-template-areas:
+            "name name name rev"
+            "comment comment comment comment"
+            "flag user date date";
+        grid-template-columns: 3.25em 1fr 4.5em 5.875em;
+    }
+    #site-changes-list div.changes-list-item > table > tbody > tr > td.flags { text-align: left; }
+    #site-changes-list div.changes-list-item > table > tbody > tr > td:is(.revision-no,.mod-date) { text-align: right; }
 }
 
 #history-subarea > h2 {
