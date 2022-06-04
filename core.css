@@ -494,7 +494,7 @@ input[type="text"]:focus-visible {
     position: absolute;
     top: 0; left: 0;
     width: 0.325rem; height: 0;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--top-bar-link-bg-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
 #top-bar div[class*=top-bar] ul li:is(:hover,:focus-within) ul::before,
@@ -684,6 +684,7 @@ div#account-options > ul > li > a {
     align-items: center;
     justify-content: center;
     position: relative;
+    text-decoration: none;
     color: rgb(var(--login-status-text-color));
 }
 div#account-options > ul > li > a:is(:hover, :focus) {
@@ -714,6 +715,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: relative;
     height: var(--top-bar-mobile-height);
     text-align: center;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, rgb(var(--basalt-overtone),1) 0%, rgb(var(--basalt-overtone),var(--basalt-UI-opacity)) 100%);
