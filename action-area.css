@@ -235,7 +235,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     display: block;
     height: var(--edit-area-toolbar-icon-size);
     width: var(--edit-area-toolbar-icon-size);
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
 }
 .wd-editor-toolbar-panel ul li a:is(:hover, :focus) {
     background-color: rgb(var(--basalt-focus-color));
@@ -447,7 +447,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     display: block;
     width: 100%;
     height: 0.25rem;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
 }
 
 #history-form-1 > table.form > tbody > tr:first-child > td:first-child {
@@ -455,7 +455,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     width: max-content;
     padding: 0.5ch 0.75ch 0;
     font-size: 0.75em;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     font-family: var(--UI-font);
     text-transform: uppercase;
@@ -496,7 +496,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     bottom: 0; left: 0;
     display: block;
     width: 100%; height: 0;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     z-index: -1;
     transition: height 0.125s ease-out;
 }
@@ -510,10 +510,10 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     padding: 0.25ch 0.325ch;
     border: solid 0.125em rgb(var(--action-area-border-color));
     box-sizing: border-box;
-    outline: solid 0 rgb(var(--basalt-overtone));
+    outline: solid 0 rgb(var(--basalt-UI-dark-palette));
 }
 #h-perpage:focus {
-    border-color: rgb(var(--basalt-overtone));
+    border-color: rgb(var(--basalt-UI-dark-palette));
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::before,
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {
@@ -524,7 +524,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     align-items: center; justify-content: center;
     width: 1.625em;
     height: 100%;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     pointer-events: none;
     z-index: 1;
     transition: all 0.125s ease-out;
@@ -588,7 +588,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     width: max-content;
     padding: 0 0.75ch;
     box-sizing: border-box;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     font-family: var(--UI-font);
     text-transform: uppercase;
@@ -605,7 +605,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 }
 
 :is(#site-changes-list,#revision-list) .pager > span.current {
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     margin: 0;
     padding: 0;
@@ -727,7 +727,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     display: block;
     height: 0.15rem;
     width: 0;
-    background: rgb(var(--basalt-overtone));
+    background: rgb(var(--basalt-UI-dark-palette));
     transition: width 0.25s ease-out;
     transition-delay: 0s;
 }
@@ -759,7 +759,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 0;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     transition: width 0.075s ease-out;
     transition-delay: 0s;
     z-index: -1;
@@ -870,7 +870,7 @@ div.site-changes-box > form > table.form > tbody > tr > td:first-child {
     padding: 0.5ch 0.75ch 0;
     font-size: 0.75em;
     box-sizing: border-box;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     font-family: var(--UI-font);
     text-transform: uppercase;
@@ -878,7 +878,7 @@ div.site-changes-box > form > table.form > tbody > tr > td:first-child {
 div.site-changes-box > form > table.form > tbody > tr::before {
     content: "";
     display: block;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     width: 100%;
     height: 0.25rem;
 }

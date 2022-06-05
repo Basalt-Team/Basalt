@@ -22,6 +22,7 @@
 
     --basalt-UI-opacity: 0.9;
     --basalt-UI-blur: 0.1rem;
+    --basalt-UI-dark-palette: var(--basalt-overtone);
     --basalt-focus-color: var(--basalt-undertone);
     --basalt-background-color: var(--basalt-primary-color);
 
@@ -54,7 +55,7 @@
     --top-bar-link-color: var(--basalt-main-text-color);
     --top-bar-link-color-hover: var(--basalt-primary-color);
     --top-bar-link-bg-hover: var(--basalt-focus-color);
-    --top-bar-link-bg-hover-alt: var(--basalt-overtone);
+    --top-bar-link-bg-hover-alt: var(--basalt-UI-dark-palette);
     --top-bar-dropdown-bg: var(--basalt-primary-color);
     --top-bar-dropdown-bg-alt: var(--basalt-secondary-color);
     --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
@@ -63,7 +64,7 @@
     --search-bg-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
-    --login-status-background-color: var(--basalt-overtone);
+    --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-primary-color);
     --login-status-width: calc(var(--header-UI-font-size)*20);
     --login-status-link-bg-hover: var(--top-bar-link-bg-hover);
@@ -102,6 +103,9 @@
     --scrollbar-track-color: var(--basalt-tertiary-color);
     --scrollbar-thumb-color: var(--basalt-undertone);
 
+    --rate-module-bg-color: var(--UI-dark-palette);
+    --rate-module-text-color: var(--basalt-light-text-color);
+
     --button-text-color: var(--basalt-main-text-color);
     --button-bg-color: var(--basalt-secondary-color);
     --button-border-color: var(--basalt-tertiary-color);
@@ -126,6 +130,12 @@
     --modal-close-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtMjI4LjAxIDE2OC44MS01OS4xOTkgNTkuMTk5IDE0OCAxNDcuOTktMTQ4IDE0OCA1OS4xOTkgNTkuMTk1IDE0Ny45OS0xNDcuOTkgMTQ4IDE0Ny45OSA1OS4xOTUtNTkuMTk1LTE0Ny45OS0xNDggMTQ3Ljk5LTE0Ny45OS01OS4xOTUtNTkuMTk5LTE0OCAxNDh6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==");
 }
  
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /*------------------*/
 /* ---- HEADER ---- */

@@ -124,6 +124,75 @@ input[type="text"]:focus-visible {
 }
 
 
+/*------------------------------*/
+/*--- RATE & INFO MODULE ---*/
+/*------------------------------*/
+
+.creditRate > .rateBox,
+.rate-box-with-credit-button > .page-rate-widget-box {
+    display: contents;
+}
+
+.creditRate {
+    float: none;
+    display: block;
+    margin: 0.5em 0;
+    text-align: right;
+}
+
+.page-rate-widget-box,
+.rate-box-with-credit-button {
+    color: rgb(var(--rate-module-text-color));
+    background-color: rgb(var(--rate-module-bg-color))!important;
+    height: 1.75em;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+:is(.page-rate-widget-box, .rate-box-with-credit-button) span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.75em;
+    min-width: max-content;
+    height: 100%;
+}
+.page-rate-widget-box .rate-points {
+    background-color: transparent!important;
+    padding: 0 0.625em!important;
+    text-transform: uppercase;
+    font-size: 0.675em;
+    font-weight: bold;
+}
+.page-rate-widget-box .number {
+    width: max-content;
+    font-size: var(--true-font-size);
+    padding: 0 0.125em;
+}
+
+.rate-box-with-credit-button .creditButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 1.75em;
+}
+.rate-box-with-credit-button .creditButton > p { display: contents; }
+:is(.page-rate-widget-box, .rate-box-with-credit-button) a {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+.creditButton > p > a {
+    border: none;
+    padding: 0; margin: 0;
+    font-size: initial;
+}
+
 /*--------------------*/
 /*--- USER DISPLAY ---*/
 /*--------------------*/
@@ -155,7 +224,7 @@ input[type="text"]:focus-visible {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(var(--basalt-overtone),var(--basalt-UI-opacity));
+    background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 
@@ -176,7 +245,7 @@ input[type="text"]:focus-visible {
 .owindow p { margin: 0.5em 0; }
 
 .owindow > *:not(.button-bar,.title) {
-    padding: 0.625em 0.75em 0;
+    padding: 0.625em 0.875em 0;
     display: flex;
     flex-wrap: wrap;
     grid-gap: 0.625rem;
@@ -191,7 +260,7 @@ input[type="text"]:focus-visible {
     text-transform: uppercase;
     padding: 0 0.75em;
     color: rgb(var(--basalt-light-text-color));
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--basalt-UI-dark-palette));
     height: 2.75rem;
     display: flex;
     align-items: center;
@@ -324,12 +393,6 @@ input[type="text"]:focus-visible {
 /*-----------------*/
 /*---- CONTENT ----*/
 /*-----------------*/
-
-#container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
 #content-wrap {
     flex-grow: 1;
