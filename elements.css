@@ -1,0 +1,349 @@
+/*-------------*/
+/*--- BASIC ---*/
+/*-------------*/
+
+body {
+    color: rgb(var(--basalt-main-text-color));
+    background-color: rgb(var(--basalt-background-color));
+    font-family: var(--body-font);
+    font-size: var(--true-font-size);
+}
+
+body, li, p { line-height: 1.5; }
+
+.code, .code pre, .code p, tt {
+    font-family: var(--mono-font);
+}
+
+/* scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--scrollbar-thumb-color)) rgb(var(--scrollbar-track-color));
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+}
+::-webkit-scrollbar-track {
+    background: rgb(var(--scrollbar-track-color));
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--scrollbar-thumb-color));
+}
+
+
+/*---------------*/
+/*--- HEADERS ---*/
+/*---------------*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    font-family: var(--header-font);
+    margin: 0.325em 0;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.325em; }
+h5 { font-size: 1.15em; }
+h6 { font-size: 1em; }
+
+
+/*-------------*/
+/*--- LINKS ---*/
+/*-------------*/
+
+a:any-link {
+    color: rgb(var(--link-color));
+}
+a:visited {
+    color: rgb(var(--link-visited-color));
+}
+a:is(:hover,:focus) {
+    text-decoration: underline 0.1em;
+    text-underline-offset: 0.08em;
+}
+a.newpage {
+    color: rgb(var(--link-newpage-color));
+}
+
+
+/*--------------*/
+/*--- INPUTS ---*/
+/*--------------*/
+
+[type="checkbox"], [type="radio"] {
+    appearance: none;
+    display: inline-block;
+    background-color: rgb(var(--basalt-background-color));
+    border: solid 0.125em rgb(var(--basalt-tertiary-color));
+    border-radius: 0;
+    width: 1.15em;
+    height: 1.15em;
+    position: relative;
+}
+[type="radio"] {
+    border-radius: 50%;
+}
+[type="radio"]:checked {
+    border: solid 0.425em rgb(var(--basalt-focus-color));
+}
+[type="checkbox"]:checked {
+    border-color: rgb(var(--basalt-focus-color));
+    background-color: rgb(var(--basalt-focus-color));
+}
+[type="checkbox"]:checked::before,
+[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 0.1875em;
+    background-color: rgb(var(--basalt-light-text-color));
+}
+[type="checkbox"]:checked::before {
+    height: 45%;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(-45deg);
+}
+[type="checkbox"]:checked::after {
+    height: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+textarea,
+input[type="text"] {
+    outline: solid 0 rgb(var(--basalt-focus-color));
+    transition: outline-width 0.125s linear;
+}
+textarea:focus-visible,
+input[type="text"]:focus-visible {
+    outline-width: 0.175rem;
+}
+
+
+/*--------------------*/
+/*--- USER DISPLAY ---*/
+/*--------------------*/
+
+.printuser {
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 0.25em;
+}
+.printuser > a:first-child img {
+    height: 1.15em;
+    width: 1.15em;
+    padding: 0;
+    padding-left: 0.5em;
+    object-fit: contain;
+    background-size: cover;
+}
+
+
+/*---------------*/
+/*--- OWINDOW ---*/
+/*---------------*/
+
+.odialog-shader, .odialog-shader-iframe { display: none; }
+#odialog-container[style*="block"] {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--basalt-overtone),var(--basalt-UI-opacity));
+    backdrop-filter: blur(var(--basalt-UI-blur));
+}
+
+.owindow {
+    position: relative;
+    top: initial!important; left: initial!important;
+    background-color: rgb(var(--basalt-background-color));
+    border: none;
+    flex-basis: calc(100vw - var(--main-content-side-margin)*2);
+    max-width: 80ch;
+    display: grid;
+}
+.owindow h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+.owindow p { margin: 0.5em 0; }
+
+.owindow > *:not(.button-bar,.title) {
+    padding: 0.625em 0.75em 0;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.625rem;
+    align-items: center;
+    justify-content: center;
+}
+.owindow .title {
+    cursor: initial;
+    font-family: var(--header-font);
+    font-size: 1.15em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0.75em;
+    color: rgb(var(--basalt-light-text-color));
+    background-color: rgb(var(--basalt-overtone));
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+}
+.owindow .button-bar {
+    margin: 0;
+    padding: 0 0.5rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+.owindow .button-bar > a:not([onclick*="cleanAll"]),
+.owindow div[style*="margin-top"] a {
+    margin: 0;
+    display: inline-block;
+    flex-basis: 12em;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.5ch;
+    font-family: var(--UI-font);
+    text-decoration: none;
+    color: rgb(var(--button-text-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+.owindow .button-bar > a:not([onclick*="cleanAll"]):is(:hover, :focus),
+.owindow div[style*="margin-top"] a:is(:hover, :focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
+.owindow .button-bar > a, .owindow .button-bar > a:hover { background: transparent; }
+
+.owindow .button-bar > a[onclick*="cleanAll"] {
+    position: absolute;
+    top: 0; right: 0;
+    display: block;
+    border: none;
+    height: 2.75rem; width: 2.75rem;
+    font-size: 0;
+    background-image: linear-gradient(to bottom, rgb(var(--basalt-cancel-color)), rgb(var(--basalt-cancel-color)));
+    background-size: 100% 0;
+    background-position: 0 0; background-repeat: no-repeat;
+    transition: background-size 0.125s ease-out;
+}
+.owindow .button-bar > a[onclick*="cleanAll"]:is(:hover,:focus) { background-size: 100% 100%; }
+.owindow .button-bar > a[onclick*="cleanAll"]::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.owindow .button-bar > a[onclick*="cleanAll"]::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(var(--basalt-light-text-color));
+    -webkit-mask-image: var(--modal-close-mask);
+                  mask-image: var(--modal-close-mask);
+    -webkit-mask-position: 50%;
+                  mask-position: 50%;
+    -webkit-mask-size: contain;
+                  mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+                  mask-repeat: no-repeat;
+}
+
+/*--- User Info Modal ---*/
+
+.owindow > *:not(.button-bar,.title) > img {
+    float: none!important;
+    padding: 0!important;
+    background: transparent!important;
+    height: 5.25em;
+}
+.owindow > *:not(.button-bar,.title) > *:not(img, img + h1) {
+    flex-basis: 100%;
+}
+
+.owindow > .content.modal-body > img + h1 + table {
+    display: grid;
+    border: solid rgb(var(--basalt-tertiary-color));
+    border-width: 0.1em 0;
+    max-height: 47.5vh;
+    overflow-y: auto;
+    direction: rtl;
+}
+.owindow > .content.modal-body > img + h1 + table > tbody { display: contents; }
+.owindow > .content.modal-body > img + h1 + table > tbody > tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
+    align-items: center;
+    padding: 0.5em;
+    direction: ltr;
+}
+.owindow > .content.modal-body > img + h1 + table > tbody > tr:not(:last-child) {
+    border-bottom: solid 0.1em rgb(var(--basalt-tertiary-color));
+}
+.owindow > .content.modal-body > img + h1 + table > tbody > tr > td {
+    display: block;
+    padding: 0;
+    text-align: justify;
+}
+.owindow > .content.modal-body > img + h1 + table > tbody > tr > td:first-child {
+    font-family: var(--UI-font);
+}
+
+.owindow div[style*="margin-top"] {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(12em, 100%), 1fr));
+}
+.owindow div[style*="margin-top"] > div { display: contents; }
+.owindow div[style*="margin-top"] > div > a {
+    order: 4;
+    grid-column: -1/-2;
+    --button-text-color: var(--basalt-cancel-color);
+}
+
+/*-----------------*/
+/*---- CONTENT ----*/
+/*-----------------*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    flex-grow: 1;
+}
+
+#main-content {
+    width: var(--main-content-width);
+    margin: 0.625rem auto;
+    max-width: calc(100% - var(--main-content-side-margin)*2);
+    overflow-wrap: break-word;
+}
+
+#page-title, .meta-title {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 2.325em;
+}
