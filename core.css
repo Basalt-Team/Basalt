@@ -102,7 +102,7 @@
     --scrollbar-track-color: var(--basalt-tertiary-color);
     --scrollbar-thumb-color: var(--basalt-undertone);
 
-    --rate-module-bg-color: var(--UI-dark-palette);
+    --rate-module-bg-color: var(--basalt-UI-dark-palette);
     --rate-module-text-color: var(--basalt-light-text-color);
 
     --button-text-color: var(--basalt-main-text-color);
