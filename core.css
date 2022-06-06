@@ -474,7 +474,7 @@
     top: 0; right: 0;
     width: var(--login-status-width);
     max-width: 100%;
-    margin-top: var(--base-header-height);
+    padding-top: var(--base-header-height);
     pointer-events: none;
     user-select: none;
     font-size: 0;
@@ -482,6 +482,7 @@
         "printuser printuser"
         "options options";
     grid-template-columns: 1fr 1fr;
+    z-index: 2;
 }
 #login-status:is(:hover,:focus-within) { pointer-events: auto; }
 
@@ -501,7 +502,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: calc(var(--base-header-height) * -1);
+    top: 0;
     right: 0;
     width: var(--user-button-width);
     height: var(--base-header-height);
@@ -629,6 +630,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     grid-area: search;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 #search-top-box::before,
 #search-top-box::after {
