@@ -562,6 +562,7 @@ a#account-topbutton, a#my-account {
 
 div#account-options {
     grid-area: options;
+    width: 100%;
     position: relative;
     border: none;
     display: block!important;
