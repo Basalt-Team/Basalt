@@ -480,6 +480,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td {
     position: relative;
+    padding: 0;
     font-family: var(--UI-font);
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:first-child {
@@ -1042,7 +1043,7 @@ form[onsubmit*="setParent"] > table.form,
     color: rgb(var(--basalt-focus-color));
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) td:nth-child(2) > *:not(div) {
-    width: 100%;
+    width: 100%!important;
 }
 
 /*-------------*/
@@ -1150,8 +1151,8 @@ input#upload-userfile::file-selector-button {
 }
 :is(#upload-dfilename, #file-comments) + div.sub {
     position: absolute;
-    bottom: 0.125ch;
-    right: 1.25ch;
+    bottom: 0.325ch;
+    right: 3.125ch;
     width: max-content;
 }
 
