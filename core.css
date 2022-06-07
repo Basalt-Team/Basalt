@@ -114,7 +114,11 @@
     --button-hover-border-color: var(--basalt-focus-color);
     --button-hover-transition: 0.075s ease-out;
 
-    --action-area-border-color: var(--basalt-tertiary-color);
+    --general-border-color: var(--basalt-tertiary-color);
+    --action-area-border-color: var(--general-border-color);
+    
+    --blockquote-bg-color: var(--basalt-secondary-color);
+    --blockquote-border-color: var(--general-border-color);
 
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
