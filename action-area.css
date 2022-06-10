@@ -562,7 +562,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 
 /*-------------------------------------*/
 
-:is(#site-changes-list,#revision-list) .pager {
+#main-content .pager {
     display: grid;
     position: relative;
     grid-template-areas:
@@ -574,7 +574,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     z-index: 0;
 }
 
-:is(#site-changes-list,#revision-list) .pager > * {
+#main-content .pager > * {
     display: flex;
     text-align: center;
     flex-grow: 1;
@@ -582,7 +582,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     align-items: center;
     justify-content: center;
 }
-:is(#site-changes-list,#revision-list) .pager .pager-no {
+#main-content .pager .pager-no {
     grid-area: pgno;
     position: static;
     height: auto;
@@ -594,7 +594,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     font-family: var(--UI-font);
     text-transform: uppercase;
 }
-:is(#site-changes-list,#revision-list) .pager .pager-no::after {
+#main-content .pager .pager-no::after {
     content: "";
     display: block;
     background-color: inherit;
@@ -605,15 +605,15 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     height: 0.25rem;
 }
 
-:is(#site-changes-list,#revision-list) .pager > span.current {
+#main-content .pager > span.current {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     margin: 0;
     padding: 0;
 }
 
-:is(#site-changes-list,#revision-list) .pager span.target { display: contents; }
-:is(#site-changes-list,#revision-list) .pager > span.target > a {
+#main-content .pager span.target { display: contents; }
+#main-content .pager > span.target > a {
     display: flex;
     height: 100%;
     width: 100%;
@@ -626,7 +626,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     padding: 0;
     transition: color 0.1s ease-out;
 }
-:is(#site-changes-list,#revision-list) .pager span > a::before {
+#main-content .pager span > a::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -637,31 +637,31 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     z-index: -1;
     transition: height 0.125s ease-out;
 }
-:is(#site-changes-list,#revision-list) .pager span > a:is(:hover, :focus) { color: rgb(var(--basalt-light-text-color)); }
-:is(#site-changes-list,#revision-list) .pager span > a:is(:hover, :focus)::before { height: 100%; }
+#main-content .pager span > a:is(:hover, :focus) { color: rgb(var(--basalt-light-text-color)); }
+#main-content .pager span > a:is(:hover, :focus)::before { height: 100%; }
 
-:is(#site-changes-list,#revision-list) .pager > span.target:nth-child(2) > a { grid-area: prv; }
-:is(#site-changes-list,#revision-list) .pager > span.target:last-child > a { grid-area: nxt; }
-:is(#site-changes-list,#revision-list) .pager > span.target:is(:nth-child(2), :last-child) > a {
+#main-content .pager > span.target:nth-child(2) > a { grid-area: prv; }
+#main-content .pager > span.target:last-child > a { grid-area: nxt; }
+#main-content .pager > span.target:is(:nth-child(2), :last-child) > a {
     font-weight: bold;
     min-width: max-content;
     padding: 0 1ch;
     margin: 0;
     box-sizing: border-box;
 }
-:is(#site-changes-list,#revision-list) .pager > span.target:is(:nth-child(2), :last-child) > a::before {
+#main-content .pager > span.target:is(:nth-child(2), :last-child) > a::before {
     height: 100%;
     width: 0;
     transition: width 0.125s ease-out;
 }
-:is(#site-changes-list,#revision-list) .pager > span.target:last-child > a::before {
+#main-content .pager > span.target:last-child > a::before {
     right: 0; left: unset;
 }
-:is(#site-changes-list,#revision-list) .pager > span.target:is(:nth-child(2), :last-child) > a:is(:hover, :focus)::before {
+#main-content .pager > span.target:is(:nth-child(2), :last-child) > a:is(:hover, :focus)::before {
     width: 100%;
 }
 
-:is(#site-changes-list,#revision-list) .pager::before, :is(#site-changes-list,#revision-list) .pager::after {
+#main-content .pager::before, #main-content .pager::after {
     grid-area: nxt;
     display: flex;
     align-items: center;
@@ -672,8 +672,8 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     z-index: -1;
     cursor: not-allowed;
 }
-:is(#site-changes-list,#revision-list) .pager::before { content: "« previous"; grid-area: prv; }
-:is(#site-changes-list,#revision-list) .pager::after { content: "next »"; grid-area: nxt; }
+#main-content .pager::before { content: "« previous"; grid-area: prv; }
+#main-content .pager::after { content: "next »"; grid-area: nxt; }
 
 /*-------------------------------------*/
 
@@ -946,26 +946,26 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     #history-form-1 {
         display: block;
     }
-    :is(#site-changes-list,#revision-list) .pager {
+    #main-content .pager {
         grid-template-areas:
             "pgno pgno pgno pgno pgno pgno pgno"
             "prv . . . . . nxt"
             "prv . . . . . nxt";
         grid-template-columns: 2.5em 1fr 1fr 1fr 1fr 1fr 2.5em;
     }
-    :is(#site-changes-list,#revision-list) .pager > span.target:is(:nth-child(2), :last-child) > a {
+    #main-content .pager > span.target:is(:nth-child(2), :last-child) > a {
         font-size: 0;
     }
-    :is(#site-changes-list,#revision-list) .pager::before, :is(#site-changes-list,#revision-list) .pager::after,
-    :is(#site-changes-list,#revision-list) .pager > span.target:is(:nth-child(2), :last-child) > a::after {
+    #main-content .pager::before, #main-content .pager::after,
+    #main-content .pager > span.target:is(:nth-child(2), :last-child) > a::after {
         font-size: calc(var(--true-font-size)*1.25);
     }
-    :is(#site-changes-list,#revision-list) .pager::before,
-    :is(#site-changes-list,#revision-list) .pager > span.target:nth-child(2) > a::after { content: "«";  }
-    :is(#site-changes-list,#revision-list) .pager::after,
-    :is(#site-changes-list,#revision-list) .pager > span.target:last-child > a::after { content: "»";  }
+    #main-content .pager::before,
+    #main-content .pager > span.target:nth-child(2) > a::after { content: "«";  }
+    #main-content .pager::after,
+    #main-content .pager > span.target:last-child > a::after { content: "»";  }
 
-    :is(#site-changes-list,#revision-list) .page-history tr[id*="revision-row"] {
+    #main-content .page-history tr[id*="revision-row"] {
         grid-template-areas:
             "rev flags date"
             "dv dv dv"
