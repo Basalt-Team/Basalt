@@ -1029,6 +1029,7 @@ form[onsubmit*="setParent"] > table.form,
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td {
     display: block;
     margin: 0;
+    padding: 0;
     position: relative;
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td:nth-child(1) {
@@ -1151,8 +1152,8 @@ input#upload-userfile::file-selector-button {
 }
 :is(#upload-dfilename, #file-comments) + div.sub {
     position: absolute;
-    bottom: 0.325ch;
-    right: 3.125ch;
+    bottom: 0.25ch;
+    right: 1.5ch;
     width: max-content;
 }
 

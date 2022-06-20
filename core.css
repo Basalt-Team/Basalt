@@ -735,7 +735,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     height: calc(100vh - var(--base-header-height));
     width: var(--side-bar-width);
     box-sizing: border-box;
-    background-color: rgb(var(--basalt-secondary-color));
+    background-color: rgb(var(--basalt-background-color));
+    border-top: solid var(--header-border-width) rgb(var(--header-border-color));
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -784,6 +785,20 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #side-bar > * { direction: ltr; }
+
+:is(#side-bar, #interwiki) .side-block {
+    font-family: var(--UI-font);
+}
+
+:is(#side-bar, #interwiki) .heading {
+    background-color: rgb(var(--basalt-secondary-color));
+    font-size: 0.875em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.15em;
+}
+
 #side-bar a.close-menu, #side-bar:target a.close-menu {
     display: none;
 }
