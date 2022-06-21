@@ -73,7 +73,7 @@
     --sidebar-button-width: 3rem;
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
-    --side-bar-transition: 0.25s ease 0.075s;
+    --side-bar-transition: 0.25s ease 0.125s;
 
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.675rem;
@@ -731,12 +731,11 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: fixed;
     top: 0;
     left: calc(var(--side-bar-width)*-1.125);
-    margin-top: var(--base-header-height);
-    height: calc(100vh - var(--base-header-height));
+    margin-top: var(--header-final-height);
+    height: calc(100vh - var(--header-final-height));
     width: var(--side-bar-width);
     box-sizing: border-box;
     background-color: rgb(var(--basalt-background-color));
-    border-top: solid var(--header-border-width) rgb(var(--header-border-color));
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
