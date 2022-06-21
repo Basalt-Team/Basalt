@@ -73,7 +73,7 @@
     --sidebar-button-width: 3rem;
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
-    --side-bar-transition: 0.2s ease 0.075s;
+    --side-bar-transition: 0.25s ease 0.075s;
 
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.675rem;
@@ -730,7 +730,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #side-bar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: calc(var(--side-bar-width)*-1.125);
     margin-top: var(--base-header-height);
     height: calc(100vh - var(--base-header-height));
     width: var(--side-bar-width);
@@ -741,14 +741,11 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     overflow-x: hidden;
     overflow-y: scroll;
     direction: rtl;
-    pointer-events: none;
-    clip-path: inset(calc(var(--header-final-height)*-1) 0 100% 0);
-    transition: clip-path var(--side-bar-transition);
+    transition: left var(--side-bar-transition);
     z-index: 10;
 }
 #side-bar:is(:hover, :focus-within) {
-    pointer-events: auto;
-    clip-path: inset(calc(var(--header-final-height)*-1) 0 0 0);
+    left: 0;
 }
 
 #side-bar::before, #side-bar::after {
