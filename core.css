@@ -927,12 +927,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     #side-bar {
         margin-top: 0;
         height: 100vh;
-        left: calc(var(--side-bar-width)* -1);
-        transition: left var(--side-bar-transition);
     }
-    #side-bar, #side-bar:is(:hover, :focus-within) {
-        pointer-events: auto;
-        clip-path: none;
+    #side-bar, #side-bar:is(:hover, :focus-within):not(:target) {
+        left: calc(var(--side-bar-width)*-1.125);
     }
     #side-bar::before, #side-bar::after { display: none; }
     #side-bar:target {
