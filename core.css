@@ -20,7 +20,7 @@
     --basalt-sub-text-color: 155,154,162;
     --basalt-light-text-color: var(--basalt-primary-color);
 
-    --basalt-UI-opacity: 0.9;
+    --basalt-UI-opacity: 0.875;
     --basalt-UI-blur: 0.1rem;
     --basalt-UI-dark-palette: var(--basalt-overtone);
     --basalt-focus-color: var(--basalt-undertone);
@@ -736,6 +736,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: var(--side-bar-width);
     box-sizing: border-box;
     background-color: rgb(var(--basalt-background-color));
+    border-right: solid 0.125rem rgb(var(--general-border-color));
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -799,6 +800,13 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
+#side-bar iframe.scpnet-interwiki-frame {
+    width: 100%;
+}
+
+#side-bar a:visited, #interwiki a:visited {
+    color: rgb(var(--link-visited-color));
+}
 
 /*-------------------------------*/
 /*---- FOOTER & LICENSE AREA ----*/
@@ -946,7 +954,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         height: 100%;
         margin-left: 0;
         opacity: 0;
-        background: rgba(var(--basalt-overtone),0.25);
+        background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
+        backdrop-filter: blur(var(--basalt-UI-blur));
         z-index: -1;
         transition: margin-left var(--side-bar-transition), opacity var(--side-bar-transition);
     }
