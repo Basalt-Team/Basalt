@@ -133,15 +133,15 @@ input[type="text"]:focus-visible {
     display: contents;
 }
 
-.creditRate {
+#page-content .creditRate {
     float: none;
     display: block;
-    margin: 0.5em 0;
+    margin: 0;
     text-align: right;
 }
 
-.page-rate-widget-box,
-.rate-box-with-credit-button {
+#main-content .page-rate-widget-box,
+#main-content .rate-box-with-credit-button {
     color: rgb(var(--rate-module-text-color));
     background-color: rgb(var(--rate-module-bg-color))!important;
     height: 1.75em;
@@ -149,6 +149,7 @@ input[type="text"]:focus-visible {
     align-items: center;
     border-radius: 0;
     border: none;
+    margin: 0.325em 0;
     box-shadow: none;
 }
 
