@@ -289,6 +289,59 @@ div#toc {
 }
 .footnotes-footer .footnote-footer > a:first-child::after { content: "."; }
 
+sup {
+    position: relative;
+    top: -0.75em;
+}
+.hovertip {
+    min-width: min(37.5%, calc(var(--main-content-width)*0.325));
+    max-width: min(87.5%, calc(var(--main-content-width)*0.75));
+    background-color: rgb(var(--basalt-secondary-color))!important;
+    border: solid 0.125rem rgb(var(--general-border-color))!important;
+}
+.hovertip .content {
+    padding: 0.325em 0.5em;
+}
+.hovertip .content .footnote .f-heading,
+.hovertip .content .reference .r-heading {
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    color: rgb(var(--basalt-light-text-color));
+    width: max-content;
+    padding: 0.25ch 0.75ch;
+    font-family: var(--UI-font);
+    position: absolute;
+    top: -1rem;
+    left: -0.125rem;
+}
+.hovertip .content .footnote::before,
+.hovertip .content .reference::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%; width: 0.325rem;
+    left: -0.125rem; top: 0.125rem;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+}
+.hovertip .content .footnote .f-content,
+.hovertip .content .reference .r-content {
+    padding-left: 0.5rem;
+    margin: 0.625rem 0 0;
+}
+.hovertip .content .footnote .f-footer,
+.hovertip .content .reference .r-footer {
+    text-align: right;
+    font-size: 0.75rem;
+    color: rgb(var(--basalt-sub-text-color));
+}
+
+/*-------------*/
+/*--- TABLE ---*/
+/*-------------*/
+
+table, table.wiki-content-table {
+    margin: 0.25rem auto;
+}
+
 /*--------------------*/
 /*--- USER DISPLAY ---*/
 /*--------------------*/
