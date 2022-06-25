@@ -123,10 +123,27 @@ input[type="text"]:focus-visible {
     outline-width: 0.175rem;
 }
 
+/*-------------*/
+/*--- TABLE ---*/
+/*-------------*/
 
-/*------------------------------*/
+table, table.wiki-content-table {
+    margin: 0.25rem auto;
+}
+
+/*----------*/
+/*--- HR ---*/
+/*----------*/
+
+hr {
+    height: 0.125rem;
+    margin: 1.5rem auto;
+    background-color: rgb(var(--hr-color));
+}
+
+/*--------------------------*/
 /*--- RATE & INFO MODULE ---*/
-/*------------------------------*/
+/*--------------------------*/
 
 .creditRate > .rateBox,
 .rate-box-with-credit-button > .page-rate-widget-box {
@@ -332,14 +349,6 @@ sup {
     text-align: right;
     font-size: 0.75rem;
     color: rgb(var(--basalt-sub-text-color));
-}
-
-/*-------------*/
-/*--- TABLE ---*/
-/*-------------*/
-
-table, table.wiki-content-table {
-    margin: 0.25rem auto;
 }
 
 /*--------------------*/
@@ -558,4 +567,5 @@ table, table.wiki-content-table {
     font-family: var(--header-font);
     font-weight: bold;
     font-size: 2.325em;
+    border-bottom: solid 0.125rem rgb(var(--title-border-color));
 }
