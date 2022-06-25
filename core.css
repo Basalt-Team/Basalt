@@ -457,22 +457,6 @@
     color: rgb(var(--top-bar-link-color-hover));
     background: unset;
 }
-#top-bar div[class*=top-bar] ul li ul li a::before {
-    content: "";
-    display: inline-block;
-    background-color: currentColor;
-    width: 1em; height: 1em;
-    clip-path: polygon(40% 0, 100% 50%, 40% 100%);
-    margin-right: -1em;
-    opacity: 0;
-    transform: translateX(-75%);
-    transition: margin-right var(--header-link-transition-1st), opacity var(--header-link-transition-1st), transform var(--header-link-transition-2nd);
-}
-#top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus)::before {
-    opacity: 1;
-    margin-right: 0.625em;
-    transform: none;
-}
 
 /*--- LOGIN-STATUS ---*/
 
