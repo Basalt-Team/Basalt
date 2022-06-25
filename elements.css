@@ -219,6 +219,7 @@ div#toc {
     background-color: rgb(var(--toc-bg-color));
     border: solid var(--toc-border-width) rgb(var(--toc-border-color));
     max-width: calc(var(--main-content-width)*0.45);
+    min-width: min(100%, calc(var(--main-content-width)*0.25));
 }
 #toc.floatright {
     float: right;
@@ -234,6 +235,17 @@ div#toc {
 #toc-list > div[style*="4em"] > a { font-size: 0.865em; }
 #toc-list > div[style*="5em"] > a { font-size: 0.835em; }
 #toc-list > div[style*="6em"] > a { font-size: 0.775em; }
+
+/*-------------------------------*/
+/*--- FOOTNOTE & BIBLIOGRAPHY ---*/
+/*-------------------------------*/
+
+.bibitems .title, .footnotes-footer .title {
+    font-family: var(--UI-font);
+    font-size: calc(var(--true-font-size)*1.625);
+    font-weight: bold;
+}
+
 
 /*--------------------*/
 /*--- USER DISPLAY ---*/
