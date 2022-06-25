@@ -248,22 +248,46 @@ div#toc {
 }
 .bibitems .title, .footnotes-footer .title {
     font-family: var(--UI-font);
-    font-size: calc(var(--true-font-size)*1.25);
+    font-size: var(--true-font-size);
     font-weight: bold;
     text-transform: uppercase;
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     width: max-content;
-    padding: 0 0.5em 0 0.325em;
-    margin: 0 0 0.25em;
+    padding: 0.25em 0.5em 0.25em 0.25em;
+    margin: 0 0 0.5em;
 }
-.bibitems .bibitem, .footnotes-footer .footnote-footer {
+.bibitems { counter-reset: bibindex; }
+.bibitems .bibitem, .footnotes-footer .footnote-footer  {
     margin: 0.375em 0;
-    margin-left: 0.75rem;
+    margin-left: 2.75rem;
+    text-indent: -0.575ch;
+    position: relative;
 }
-.bibitems .bibitem::first-letter,  .footnotes-footer .footnote-footer > a:first-child {
+.bibitems .bibitem::first-letter {
+    font-size: 0;
+}
+.bibitems .bibitem::after {
+    counter-increment: bibindex;
+    content: counter(bibindex) ".";
     font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 0.25ch);
+    font-family: var(--mono-font);
 }
+
+.footnotes-footer .footnote-footer { text-indent: -0.875ch; }
+.footnotes-footer .footnote-footer > a:first-child {
+    right: calc(100% + 0.15ch);
+    top: 0;
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    font-family: var(--mono-font);
+}
+.footnotes-footer .footnote-footer > a:first-child::after { content: "."; }
 
 /*--------------------*/
 /*--- USER DISPLAY ---*/
