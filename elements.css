@@ -240,12 +240,30 @@ div#toc {
 /*--- FOOTNOTE & BIBLIOGRAPHY ---*/
 /*-------------------------------*/
 
+.bibitems, .footnotes-footer {
+    padding: 0;
+    border-left: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
+    margin: 1rem 0;
+    height: auto;
+}
 .bibitems .title, .footnotes-footer .title {
     font-family: var(--UI-font);
-    font-size: calc(var(--true-font-size)*1.625);
+    font-size: calc(var(--true-font-size)*1.25);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    color: rgb(var(--basalt-light-text-color));
+    width: max-content;
+    padding: 0 0.5em 0 0.325em;
+    margin: 0 0 0.25em;
+}
+.bibitems .bibitem, .footnotes-footer .footnote-footer {
+    margin: 0.375em 0;
+    margin-left: 0.75rem;
+}
+.bibitems .bibitem::first-letter,  .footnotes-footer .footnote-footer > a:first-child {
     font-weight: bold;
 }
-
 
 /*--------------------*/
 /*--- USER DISPLAY ---*/
