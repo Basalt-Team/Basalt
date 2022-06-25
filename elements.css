@@ -15,6 +15,13 @@ body, li, p { line-height: 1.5; }
     font-family: var(--mono-font);
 }
 
+sup {
+    top: -0.625em;
+}
+sub {
+    bottom: -0.625em;
+}
+
 /* scrollbar */
 * {
     scrollbar-width: thin;
@@ -306,10 +313,7 @@ div#toc {
 }
 .footnotes-footer .footnote-footer > a:first-child::after { content: "."; }
 
-sup {
-    position: relative;
-    top: -0.75em;
-}
+
 .hovertip {
     min-width: min(37.5%, calc(var(--main-content-width)*0.325));
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
