@@ -199,12 +199,13 @@ input[type="text"]:focus-visible {
 /*--- BLOCKQUOTE ---*/
 /*------------------*/
 
-blockquote, div.blockquote {
+#main-content blockquote,
+#main-content div.blockquote {
     background-color: rgb(var(--blockquote-bg-color));
     border: solid 0.1em rgb(var(--blockquote-border-color));
     max-width: calc(var(--main-content-width)*0.825);
     margin: 0.75rem auto;
-    padding: 0.125rem 1.25rem;
+    padding: 0.5rem 1.25rem;
     box-sizing: border-box;
 }
 
