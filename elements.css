@@ -201,7 +201,7 @@ input[type="text"]:focus-visible {
 
 blockquote, div.blockquote {
     background-color: rgb(var(--blockquote-bg-color));
-    border: solid 0.1em rgb(var(--blockquote-border-color));
+    border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
     margin: 0.75rem auto;
     padding: 0.5rem 1.25rem;
     box-sizing: border-box;
@@ -210,6 +210,30 @@ blockquote, div.blockquote {
 #main-content div.blockquote {
     max-width: calc(var(--main-content-width)*0.825);
 }
+
+/*------------------------*/
+/*--- TABLE OF CONTENT ---*/
+/*------------------------*/
+
+div#toc {
+    background-color: rgb(var(--toc-bg-color));
+    border: solid var(--toc-border-width) rgb(var(--toc-border-color));
+    max-width: calc(var(--main-content-width)*0.45);
+}
+#toc.floatright {
+    float: right;
+    margin: 0.25rem 0 0.25rem 1.5rem;
+}
+#toc.floatleft {
+    float: left;
+    margin: 0.25rem 1.5rem 0.25rem 0;
+}
+
+#toc-list > div[style*="2em"] > a { font-size: 0.965em; }
+#toc-list > div[style*="3em"] > a { font-size: 0.915em; }
+#toc-list > div[style*="4em"] > a { font-size: 0.865em; }
+#toc-list > div[style*="5em"] > a { font-size: 0.835em; }
+#toc-list > div[style*="6em"] > a { font-size: 0.775em; }
 
 /*--------------------*/
 /*--- USER DISPLAY ---*/

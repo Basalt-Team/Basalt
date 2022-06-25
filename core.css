@@ -119,6 +119,10 @@
     
     --blockquote-bg-color: var(--basalt-secondary-color);
     --blockquote-border-color: var(--general-border-color);
+    --blockquote-border-width: 0.0875rem;
+    --toc-bg-color: var(--blockquote-bg-color);
+    --toc-border-color: var(--blockquote-border-color);
+    --toc-border-width: var(--blockquote-border-width);
 
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
