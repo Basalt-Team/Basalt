@@ -15,12 +15,12 @@ body, li, p { line-height: 1.5; }
     font-family: var(--mono-font);
 }
 
-sup {
-    top: -0.625em;
+sub, sup {
+    position: relative;
+    font-size: 0.775em;
 }
-sub {
-    bottom: -0.625em;
-}
+sup { top: -0.625em; }
+sub { bottom: -0.625em; }
 
 /* scrollbar */
 * {
