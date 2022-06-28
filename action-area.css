@@ -452,7 +452,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody,
 form[onsubmit*="PageTagsModule"] > table.form > tbody > tr {
     display: contents;
 }
-form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td { display: block; }
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td { display: block; padding: 0; }
 form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td:first-child {
     font-family: var(--UI-font);
     font-size: 0.875em;
