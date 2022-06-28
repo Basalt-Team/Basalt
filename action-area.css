@@ -1220,6 +1220,52 @@ input#upload-userfile::file-selector-button {
     color: rgb(var(--basalt-sub-text-color))!important;
 }
 
+/*-----------------*/
+/*--- EDIT META ---*/
+/*-----------------*/
+
+#action-area > h1 + p + h2 + div[style*="padding-left"] {
+    padding-left: 0!important;
+}
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0.75rem;
+    font-family: var(--mono-font);
+}
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"] {
+    order: 1;
+    margin-right: 0!important;
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+    padding: 0.5ch;
+    font-family: var(--UI-font);
+    text-decoration: none;
+    color: rgb(var(--basalt-cancel-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"]:is(:hover, :focus) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
+
+#edit-meta-addbutton {
+    text-align: center;
+}
+
+#edit-meta-newtag > h2::after { content: ":"; }
+#edit-meta-newtag-form > table {
+    font-family: var(--mono-font);
+}
+
+
 /*----------------*/
 /*--- WATCHERS ---*/
 /*----------------*/
