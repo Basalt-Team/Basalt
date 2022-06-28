@@ -403,6 +403,12 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 /*--- RATE ---*/
 /*------------*/
 
+#action-area > p > a[onclick*="PageRateModule.listeners"] {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+}
+
 #who-rated-page-area > div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(14em, 1fr) 1.75rem);
