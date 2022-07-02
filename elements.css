@@ -315,7 +315,6 @@ div#toc {
 
 
 .hovertip {
-    min-width: min(37.5%, calc(var(--main-content-width)*0.325));
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
     background-color: rgb(var(--basalt-secondary-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
