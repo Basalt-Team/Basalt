@@ -577,7 +577,8 @@ div#toc {
 /*---- PAGE TAG AREA ----*/
 /*-----------------------*/
 #main-content > .page-tags {
-    display: block;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 }
 #main-content > .page-tags::before {
@@ -590,10 +591,17 @@ div#toc {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     font-family: var(--UI-font);
+    order: -2;
+}
+#main-content > .page-tags::after {
+    content: "";
+    display: block;
+    width: 100%; height: 0.175rem;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    order: -1;
 }
 
 #main-content > .page-tags > span {
-    border-top: solid 0.175rem rgb(var(--basalt-UI-dark-palette));
     display: flex;
     flex-wrap: wrap;
     grid-gap: 0.25rem;
