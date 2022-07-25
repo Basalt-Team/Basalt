@@ -606,14 +606,6 @@ div#toc {
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: all var(--button-hover-transition);
 }
-#main-content > .page-tags > span a::before {
-    content: "";
-    display: inline-block;
-    margin-right: 0.25rem;
-    height: 0.35em; width: 0.35em;
-    border-radius: 50%;
-    background-color: currentColor;
-}
 
 #main-content > .page-tags > span a:is(:hover,:focus) {
     color: rgb(var(--basalt-light-text-color));
@@ -639,29 +631,18 @@ div#toc {
     font-size: 0.775em;
     align-items: center;
 }
-#page-options-container::before {
-    content: "";
-    order: -1;
-    display: block;
-    width: 100%; height: 0.175rem;
-    background-color: rgb(var(--basalt-UI-dark-palette));
-}
 
 #page-options-container .page-watch-options {
-    order: -2;
     max-width: 47.5%;
     text-align: right;
 }
 #page-info {
-    order: -3;
     padding: 0.325em 0.875ch 0;
     margin: 0;
     max-width: 47.5%;
     width: max-content;
-    background-color: rgb(var(--basalt-UI-dark-palette));
-    color: rgb(var(--basalt-light-text-color));
     font-family: var(--UI-font);
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 
