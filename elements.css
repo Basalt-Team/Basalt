@@ -633,13 +633,13 @@ div#toc {
 }
 
 #page-options-container .page-watch-options {
-    max-width: 47.5%;
+    order: 99;
+    font-size: 0.875em;
     text-align: right;
 }
 #page-info {
-    padding: 0.325em 0.875ch 0;
+    padding: 0.325em 0 0;
     margin: 0;
-    max-width: 47.5%;
     width: max-content;
     font-family: var(--UI-font);
     text-align: left;
