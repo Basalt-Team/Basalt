@@ -125,7 +125,8 @@ form#edit-page-form {
         "help size"
         "bottom bottom"
         "hdn hdn"
-        "button button";
+        "button button"
+        "notify notify";
     grid-template-columns: 1fr auto;
     column-gap: 0.5rem;
 }
@@ -137,6 +138,7 @@ form#edit-page-form .edit-help-34 { grid-area: help; }
 form#edit-page-form table.edit-page-bottomtable { grid-area: bottom; }
 form#edit-page-form #edit-page-captcha { grid-area: hdn; }
 form#edit-page-form .buttons.alignleft { grid-area: button; }
+form#edit-page-form .checkbox.do-not-notify { grid-area: notify; }
 
 /* Title area */
 form#edit-page-form table.form {
@@ -397,6 +399,17 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     margin: 0;
     font-size: calc(var(--true-font-size)*1.05);
     padding: 0.675ch;
+}
+
+/* notify checkbox */
+#edit-page-form .checkbox.do-not-notify {
+    margin-top: 0.5rem;
+}
+#edit-page-form .checkbox.do-not-notify > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0.25em;
 }
 
 /*------------*/
