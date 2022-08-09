@@ -1227,6 +1227,33 @@ input#upload-userfile::file-selector-button {
     color: rgb(var(--basalt-sub-text-color))!important;
 }
 
+
+/*---------------------*/
+/*--- EDIT SECTIONS ---*/
+/*---------------------*/
+
+#edit-section-content {
+    border: none;
+    padding: 0;
+    background-color: rgb(var(--basalt-focus-color),0.0625);
+    box-shadow: 0 0 0 0.675rem rgb(var(--basalt-focus-color),0.0625);
+}
+a.edit-section-button {
+    float: right;
+    background: transparent;
+    font-size: calc(var(--true-font-size)*0.875);
+    text-transform: uppercase;
+    margin: 0; margin-top: 1.15em;
+    padding: 0;
+}
+a.edit-section-button::before { content: "["; }
+a.edit-section-button::after { content: "]"; }
+
+a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
+    box-shadow: 0 0.1rem 0 rgb(var(--basalt-alternate-color));
+}
+
+
 /*-----------------*/
 /*--- EDIT META ---*/
 /*-----------------*/
