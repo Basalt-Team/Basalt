@@ -185,9 +185,11 @@ hr {
     min-width: max-content;
     height: 100%;
 }
-.page-rate-widget-box .rate-points {
-    background-color: transparent!important;
-    padding: 0.125em 0.625em 0!important;
+div.page-rate-widget-box .rate-points {
+    background-color: transparent;
+    padding: 0.125em 0.625em 0;
+    border: none;
+    border-radius: 0;
     box-sizing: border-box;
     text-transform: uppercase;
     font-size: 0.675em;
