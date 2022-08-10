@@ -563,7 +563,7 @@ div#toc {
 
 #main-content {
     width: var(--main-content-width);
-    margin: 0.625rem auto;
+    margin: var(--main-content-top-margin) auto var(--main-content-bottom-margin);
     max-width: calc(100% - var(--main-content-side-margin)*2);
     overflow-wrap: break-word;
 }
