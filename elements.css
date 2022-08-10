@@ -632,10 +632,18 @@ div#toc {
     align-items: center;
 }
 
+#page-info {
+    order: 1;
+    padding: 0;
+    margin: 0;
+    font-family: var(--UI-font);
+    font-size: calc(var(--true-font-size)*0.675);
+}
+
 #page-options-container .page-watch-options {
-    order: 99;
-    font-size: 0.875em;
-    text-align: right;
+    order: 2;
+    font-size: calc(var(--true-font-size)*0.675);
+    text-align: left;
 }
 #page-info {
     padding: 0.325em 0 0;
@@ -647,8 +655,76 @@ div#toc {
 }
 
 div[id*="page-options-bottom"] {
+    --po-padding: 0.5rem;
     width: 100%;
     text-align: center;
     margin: 0;
     font-size: var(--true-font-size);
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--po-padding);
+    padding: var(--po-padding);
+    padding-right: calc(7.25rem + var(--po-padding));
+    background-color: rgb(var(--basalt-secondary-color));
+    box-sizing: border-box;
+}
+div[id*="page-options-bottom"] > a {
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    flex-basis: 7.25rem;
+    flex-grow: 1;
+    font-size: calc(var(--true-font-size)*0.875);
+    color: rgb(var(--button-text-color));
+    text-decoration: none;
+    border-bottom: solid 0.05em rgb(var(--general-border-color));
+    transition: all var(--button-hover-transition);
+}
+#more-options-button, #delete-button {
+    position: absolute;
+    top: var(--po-padding); right: var(--po-padding);
+    width: calc(7.25rem - var(--po-padding));
+    height: calc(100% - var(--po-padding)*2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    color: rgb(var(--basalt-light-text-color));
+    border: none;
+}
+#page-options-bottom-2 { padding-top: 0; }
+#delete-button {
+    top: 0;
+    color: rgba(var(--basalt-cancel-color));
+    background-color: rgba(var(--basalt-cancel-color),0.105);
+    height: calc(100% - var(--po-padding));
+}
+
+div[id*="page-options-bottom"] > a:is(:hover,:focus) {
+    font-weight: bold;
+    color:  rgb(var(--basalt-focus-color));
+    border-bottom-color:  currentColor;
+}
+#more-options-button:is(:hover,:focus),
+#delete-button:is(:hover,:focus) {
+    color: rgb(var(--basalt-light-text-color));
+    background-color: rgb(var(--basalt-focus-color));
+}
+
+@media only screen and (max-width: 32rem) {
+    div[id*="page-options-bottom"] {
+        width: 100%;
+        padding-right: var(--po-padding);
+    }
+
+    #more-options-button, #delete-button {
+        position: static;
+        top: initial; left: initial;
+        width: initial;
+        height: initial;
+        flex-basis: 100%;
+    }
 }
