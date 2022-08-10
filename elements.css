@@ -136,6 +136,18 @@ input[type="text"]:focus-visible {
 
 table, table.wiki-content-table {
     margin: 0.25rem auto;
+    border-collapse: collapse;
+}
+:is(table, table.wiki-content-table) th {
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    border-color: rgb(var(--basalt-UI-dark-palette));
+    color: rgb(var(--basalt-light-text-color));
+    padding: 0.5em 0.75em;
+    font-weight: bold;
+}
+:is(table, table.wiki-content-table) td {
+    border: solid 0.05rem rgb(var(--general-border-color));
+    padding: 0.325em 0.625em;
 }
 
 /*----------*/
