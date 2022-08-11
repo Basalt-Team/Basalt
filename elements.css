@@ -292,7 +292,7 @@ div#toc {
     padding: 0.625rem;
     padding-left: 1.125rem;
     background-color: rgb(var(--basalt-background-color));
-    counter-reset: toc-num1 toc-num2;
+    counter-reset: toc-num1;
 }
 #toc-list div[style*="1em"] {
     counter-increment: toc-num1;
