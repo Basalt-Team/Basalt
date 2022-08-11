@@ -78,7 +78,7 @@
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.325rem;
     --main-content-bottom-margin: var(--main-content-top-margin);
-    --main-content-side-margin: calc(var(--main-content-top-margin)*1.875);
+    --main-content-side-margin: calc(var(--main-content-top-margin)*4.25);
 
     --tag-bg-color: var(--basalt-secondary-color);
 
