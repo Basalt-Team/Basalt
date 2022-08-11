@@ -123,6 +123,7 @@ a.newpage {
 
 textarea,
 input[type="text"] {
+    border: solid 0.05rem rgb(var(--general-border-color));
     outline: solid 0 rgb(var(--basalt-focus-color));
     transition: outline-width 0.125s linear;
 }
