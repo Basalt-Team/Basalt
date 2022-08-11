@@ -57,7 +57,6 @@
     --top-bar-link-bg-hover: var(--basalt-focus-color);
     --top-bar-link-bg-hover-alt: var(--basalt-UI-dark-palette);
     --top-bar-dropdown-bg: var(--basalt-primary-color);
-    --top-bar-dropdown-bg-alt: var(--basalt-secondary-color);
     --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
 
     --search-icon-color: var(--basalt-undertone);
@@ -390,14 +389,14 @@
     display: flex;
     flex-direction: column;
 }
-#top-bar div[class*=top-bar] ul li:hover ul,
-#top-bar div[class*=top-bar] ul li ul:hover,
-#top-bar div[class*=top-bar] ul li:focus-within ul,
-#top-bar div[class*=top-bar] ul li ul:focus-within {
-    pointer-events: all;
+#top-bar div[class*=top-bar] > ul > li:hover > ul,
+#top-bar div[class*=top-bar] > ul > li > ul:hover,
+#top-bar div[class*=top-bar] > ul > li:focus-within > ul,
+#top-bar div[class*=top-bar] > ul > li > ul:focus-within {
+    pointer-events: auto;
 }
 
-#top-bar div[class*="top-bar"] ul li ul::before {
+#top-bar div[class*="top-bar"] > ul > li > ul::before {
     content: "";
     z-index: 1;
     display: block;
@@ -407,8 +406,8 @@
     background-color: rgb(var(--top-bar-link-bg-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
-#top-bar div[class*=top-bar] ul li:is(:hover,:focus-within) ul::before,
-#top-bar div[class*=top-bar] ul li ul:is(:hover,:focus-within)::before {
+#top-bar div[class*=top-bar] > ul > li:is(:hover,:focus-within) > ul::before,
+#top-bar div[class*=top-bar] > ul > li > ul:is(:hover,:focus-within)::before {
     height: 100%;
     transition: height var(--header-link-transition-1st);
 }
@@ -416,21 +415,37 @@
 #top-bar div[class*="top-bar"] ul li ul li {
     position: relative;
     border: none;
-    background-color: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
-    backdrop-filter: blur(var(--basalt-UI-blur));
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path var(--header-link-transition-1st);
-}
-#top-bar div[class*="top-bar"] ul li ul li:nth-of-type(2n) {
-    background-color: rgba(var(--top-bar-dropdown-bg-alt), var(--basalt-UI-opacity));
-}
-#top-bar div[class*=top-bar] ul li:is(:hover,:focus-within) ul li,
-#top-bar div[class*=top-bar] ul li ul:is(:hover,:focus-within) li {
-    clip-path: inset(0);
-    transition: clip-path var(--header-link-transition-2nd);
 }
 
-#top-bar div[class*=top-bar] ul li ul li::before {
+#top-bar div[class*=top-bar] ul li ul li a {
+    width: 100%;
+    font-size: var(--header-UI-dropdown-font-size);
+    padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
+    box-sizing: border-box;
+    background: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
+    backdrop-filter: blur(var(--basalt-UI-blur));
+    clip-path: inset(0 100% 0 0);
+    transition: color var(--header-link-transition-2nd), clip-path var(--header-link-transition-1st);
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+}
+#top-bar div[class*=top-bar] ul > li:is(:hover,:focus-within) > ul > li > a,
+#top-bar div[class*=top-bar] ul > li > ul:is(:hover,:focus-within) > li > a {
+    clip-path: inset(0);
+    transition: color var(--header-link-transition-1st), clip-path var(--header-link-transition-2nd);
+}
+#top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
+#top-bar div[class*=top-bar] ul > li > ul > li.sfhover a,
+#top-bar div[class*=top-bar] ul > li > ul > li:focus-within > a {
+    color: rgb(var(--top-bar-link-color-hover));
+}
+#top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
+#top-bar div[class*=top-bar] ul li ul li.sfhover a {
+    background: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
+}
+#top-bar div[class*=top-bar] ul li ul li a::before {
     content: "";
     display: block;
     position: absolute;
@@ -438,29 +453,46 @@
     width: 0;
     height: 100%;
     z-index: -1;
-}
-#top-bar div[class*=top-bar] ul li ul li::before {
     background-color: rgb(var(--top-bar-dropdown-hover-bg));
     transition: width var(--header-link-transition-1st);
 }
-#top-bar div[class*=top-bar] ul li ul li:is(:hover, :focus-within)::before {
+#top-bar div[class*=top-bar] ul > li > ul > li:is(:hover, :focus-within) > a::before {
     width: 100%;
 }
 
-
-#top-bar div[class*=top-bar] ul li ul li a {
-    width: 100%;
-    font-size: var(--header-UI-dropdown-font-size);
-    padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
-    box-sizing: border-box;
-    background: unset;
-    transition: color var(--header-link-transition-1st);
-    display: flex;
-    align-items: center;
+/* second tier drop down support */
+#top-bar div[class*=top-bar] ul li ul li ul {
+    position: absolute;
+    top: 0; left: 100%;
+    pointer-events: none;
 }
-#top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus) {
-    color: rgb(var(--top-bar-link-color-hover));
-    background: unset;
+#top-bar div[class*=top-bar] ul li ul li.sfhover > ul {
+    pointer-events: auto;
+}
+#top-bar div[class*=top-bar] ul li ul li ul::before {
+    content: "";
+    display: block;
+    width: 0.375em;
+    height: 0.75em;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    position: absolute;
+    top: var(--header-UI-dropdown-font-size);
+    left: calc(var(--header-UI-dropdown-font-size)*-0.625);
+    background-color: rgb(var(--top-bar-link-bg-hover-alt));
+    z-index: 2;
+    opacity: 0;
+    transition: opacity var(--header-link-transition-1st), background-color var(--header-link-transition-2nd);
+}
+#top-bar div[class*=top-bar] ul li:is(:hover, :focus-within) ul li ul::before {
+    opacity: 1;
+    transition: opacity var(--header-link-transition-2nd), background-color var(--header-link-transition-2nd);
+}
+#top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus) + ul::before,
+#top-bar div[class*=top-bar] ul li ul li:is(:hover, :focus-within) ul::before {
+    background-color: rgb(var(--top-bar-link-color-hover));
+}
+#top-bar div[class*=top-bar] ul li ul li.sfhover ul li a:not(:hover,:focus) {
+    color: rgb(var(--top-bar-link-color));
 }
 
 /*--- LOGIN-STATUS ---*/
