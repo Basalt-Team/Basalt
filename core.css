@@ -95,7 +95,7 @@
         calc(var(--base-font-size)*0.825),
         calc(var(--base-font-size)*0.775 + 0.225vw),
         calc(var(--base-font-size)*1.025));
-    --header-UI-font-size: calc(var(--true-font-size)*0.875);
+    --header-UI-font-size: calc(var(--true-font-size)*0.775);
     --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
     --footer-font-size: calc(var(--true-font-size)*0.825);
     --license-area-font-size: calc(var(--true-font-size)*0.8);
@@ -476,8 +476,9 @@
     height: 0.75em;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     position: absolute;
-    top: var(--header-UI-dropdown-font-size);
+    top: calc(var(--header-UI-dropdown-font-size)*1.5);
     left: calc(var(--header-UI-dropdown-font-size)*-0.625);
+    transform: translateY(-50%);
     background-color: rgb(var(--top-bar-link-bg-hover-alt));
     z-index: 2;
     opacity: 0;
