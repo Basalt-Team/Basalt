@@ -79,6 +79,27 @@ a.newpage {
     color: rgb(var(--link-newpage-color));
 }
 
+/*---------------*/
+/*--- BUTTONS ---*/
+/*---------------*/
+
+div.buttons input, input[type="button"], button {
+    margin: 0;
+    padding: 0.325em 0.5em;
+    cursor: pointer;
+    font-family: var(--UI-font);
+    color: rgb(var(--button-text-color));
+    background-color: rgb(var(--button-bg-color));
+    border: solid 0.125em rgb(var(--button-border-color));
+    outline: rgb(var(--button-outline-color)) solid 0;
+    transition: all var(--button-hover-transition);
+}
+:is(div.buttons input, input[type="button"], button):is(:focus, :hover) {
+    color: rgb(var(--button-hover-text-color));
+    background-color: rgb(var(--button-hover-bg-color));
+    border-color: rgb(var(--button-hover-border-color));
+    outline-width: 0.25rem;
+}
 
 /*--------------*/
 /*--- INPUTS ---*/
@@ -288,6 +309,20 @@ blockquote, div.blockquote {
 #main-content blockquote,
 #main-content div.blockquote {
     max-width: calc(var(--main-content-width)*0.825);
+}
+
+/*------------------*/
+/*--- CODE BLOCK ---*/
+/*------------------*/
+
+.code {
+    background-color: rgb(var(--blockquote-bg-color));
+    margin: 0.5rem 0;
+    border: none;
+    padding: 0.875rem 1rem;
+}
+.code pre {
+    margin: 0;
 }
 
 /*------------------------*/
