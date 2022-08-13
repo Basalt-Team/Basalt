@@ -250,7 +250,12 @@ div.page-rate-widget-box .rate-points {
 }
 .image-block, .scp-image-block {
     border-bottom: solid 0.175rem rgb(var(--basalt-undertone));
+    width: 300px;
 }
+:is(.image-block, .scp-image-block) img {
+    width: 100%!important;
+}
+
 :is(.image-block, .scp-image-block) :is(.image-caption, .scp-image-caption) {
     font-size: 0.875em;
     text-align: center;
@@ -265,7 +270,7 @@ div.page-rate-widget-box .rate-points {
     margin: 0.25rem 2rem 0.5rem 0;
     float: left;
 }
-:is(.image-block, .scp-image-block).block-right {
+:is(.image-block, .scp-image-block).block-center {
     margin: 0.25rem auto;
 }
 
