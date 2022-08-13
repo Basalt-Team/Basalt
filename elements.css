@@ -804,7 +804,6 @@ div#toc {
 }
 
 #page-info {
-    order: 1;
     padding: 0;
     margin: 0;
     font-family: var(--UI-font);
@@ -812,7 +811,6 @@ div#toc {
 }
 
 #page-options-container .page-watch-options {
-    order: 2;
     font-size: calc(var(--true-font-size)*0.675);
     text-align: left;
 }
