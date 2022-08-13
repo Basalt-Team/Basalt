@@ -128,6 +128,15 @@
     --toc-border-color: var(--blockquote-border-color);
     --toc-border-width: var(--blockquote-border-width);
 
+    --tab-background-color: var(--basalt-secondary-color);
+    --tab-hover-background-color: var(--basalt-focus-color);
+    --tab-selected-background-color: var(--basalt-overtone);
+    --tab-border-width: var(--blockquote-border-width);
+    --tab-transition: 0.125s ease-out;
+
+    --image-caption-background-color: var(--basalt-background-color);
+    --image-block-border-color: var(--basalt-undertone);
+
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-bg-color: var(--basalt-secondary-color);
