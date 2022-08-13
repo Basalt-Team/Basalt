@@ -363,6 +363,7 @@ div#toc {
 }
 
 #toc-list {
+    width: 100%;
     border-top: inherit;
     margin: 0;
     padding: 0.625rem;
