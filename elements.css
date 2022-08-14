@@ -217,7 +217,7 @@ hr {
 }
 
 :is(.page-rate-widget-box, .rate-box-with-credit-button) span {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 1.75em;
@@ -225,6 +225,7 @@ hr {
     height: 100%;
 }
 div.page-rate-widget-box .rate-points {
+    display: flex;
     background-color: transparent;
     padding: 0.125em 0.625em 0;
     border: none;
