@@ -566,6 +566,7 @@ div#toc {
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
     background-color: rgb(var(--basalt-secondary-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
+    font-size: calc(var(--true-font-size)*0.95);
 }
 .hovertip .content {
     padding: 0.325em 0.5em;
@@ -598,7 +599,7 @@ div#toc {
 .hovertip .content .footnote .f-footer,
 .hovertip .content .reference .r-footer {
     text-align: right;
-    font-size: 0.75rem;
+    font-size: 0.825em;
     color: rgb(var(--basalt-sub-text-color));
 }
 
