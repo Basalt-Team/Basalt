@@ -170,6 +170,7 @@ input[type="text"]:focus-visible {
     border-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     padding: 0.5em 0.75em;
+    font-family: var(--header-font);
     font-weight: bold;
 }
 :is(#page-content table:not(.form), table.wiki-content-table) td {
