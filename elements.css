@@ -271,7 +271,7 @@ div.page-rate-widget-box .rate-points {
     box-sizing: border-box;
 }
 .image-block, .scp-image-block {
-    border-bottom: solid 0.175rem rgb(var(--basalt-undertone));
+    border-bottom: solid 0.325rem rgb(var(--basalt-bright-element-color));
     width: 300px;
 }
 :is(.image-block, .scp-image-block) img {

@@ -129,7 +129,7 @@
     --toc-border-width: var(--blockquote-border-width);
 
     --tab-background-color: var(--basalt-secondary-color);
-    --tab-hover-background-color: var(--basalt-focus-color);
+    --tab-hover-background-color: var(--basalt-bright-element-color);
     --tab-selected-background-color: var(--basalt-overtone);
     --tab-border-width: var(--blockquote-border-width);
     --tab-transition: 0.125s ease-out;
