@@ -250,15 +250,50 @@ div.page-rate-widget-box .rate-points {
 }
 .rate-box-with-credit-button .creditButton > p { display: contents; }
 :is(.page-rate-widget-box, .rate-box-with-credit-button) a {
+    display: block;
     width: 100%;
     height: 100%;
-    flex-grow: 1;
     text-align: center;
 }
 .creditButton > p > a {
     border: none;
     padding: 0; margin: 0;
     font-size: initial;
+}
+
+#u-credit-view .fader {
+    background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
+    backdrop-filter: blur(var(--basalt-UI-blur));
+}
+#u-credit-view .modalbox {
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: rgb(var(--basalt-background-color));
+    padding: 0;
+}
+#u-credit-view .modalbox > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+}
+#u-credit-view .modalbox > div:first-child > h2 {
+    color: rgb(var(--basalt-light-text-color));
+}
+#u-credit-view iframe.close-credits {
+    filter: saturate(0) brightness(100);
+    transform: scale(1.875);
+}
+#u-credit-view .modalbox > hr {
+    margin: 1.25rem 1.25rem 0.625rem;
+}
+#u-credit-view .modalbox > div.credit {
+    overflow: auto;
+    margin: 0 1.25rem;
 }
 
 /*-------------------*/
