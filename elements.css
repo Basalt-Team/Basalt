@@ -339,8 +339,8 @@ div.page-rate-widget-box .rate-points {
 blockquote, div.blockquote {
     background-color: rgb(var(--blockquote-bg-color));
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
-    margin: 0.75rem auto;
-    padding: 0.5rem 1.25rem;
+    margin: 1.25rem auto;
+    padding: 0.125rem 1.45rem;
     box-sizing: border-box;
 }
 #main-content blockquote,
