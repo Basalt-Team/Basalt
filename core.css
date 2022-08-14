@@ -59,7 +59,7 @@
     --top-bar-dropdown-bg: var(--basalt-primary-color);
     --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
 
-    --search-icon-color: var(--basalt-undertone);
+    --search-icon-color: var(--basalt-bright-element-color);
     --search-bg-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
