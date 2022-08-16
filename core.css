@@ -57,7 +57,7 @@
     --top-bar-link-bg-hover: var(--basalt-focus-color);
     --top-bar-link-bg-hover-alt: var(--basalt-UI-dark-palette);
     --top-bar-dropdown-bg: var(--basalt-primary-color);
-    --top-bar-dropdown-hover-bg: var(--top-bar-link-bg-hover);
+    --top-bar-dropdown-hover-bg: var(--link-color);
 
     --search-icon-color: var(--basalt-bright-element-color);
     --search-bg-color: var(--basalt-background-color);
@@ -106,8 +106,9 @@
     --title-border-color: var(--basalt-undertone);
     --hr-color: var(--basalt-undertone);
 
-    --rate-module-bg-color: var(--basalt-UI-dark-palette);
-    --rate-module-text-color: var(--basalt-light-text-color);
+    --rate-module-bg-color: var(--basalt-secondary-color);
+    --rate-module-text-color: var(--basalt-main-text-color);
+    --rate-module-button-size: 1.75em;
 
     --button-text-color: var(--basalt-main-text-color);
     --button-bg-color: var(--basalt-secondary-color);

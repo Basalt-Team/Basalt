@@ -629,6 +629,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     grid-template-rows: 2em auto;
     margin: 0;
     z-index: 0;
+    --basalt-focus-color: var(--link-color);
 }
 
 #main-content .pager > * {

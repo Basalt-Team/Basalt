@@ -161,7 +161,15 @@ input[type="text"]:focus-visible {
 /*--- TABLE ---*/
 /*-------------*/
 
+#page-content table {
+    width: max-content;
+}
+
 #page-content table:not(.form), table.wiki-content-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
     margin: 0.25rem auto;
     border-collapse: collapse;
 }
@@ -203,32 +211,26 @@ hr {
     margin: 0;
     text-align: right;
 }
-/*
-#main-content .page-rate-widget-box,
-#main-content .rate-box-with-credit-button {
-    color: rgb(var(--rate-module-text-color));
-    background-color: rgb(var(--rate-module-bg-color))!important;
-    height: 1.75em;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 0;
-    border: none;
-    margin: 0.325em 0;
-    box-shadow: none;
+div.creditRate .rateBox {
+    display: contents;
 }
 
-:is(.page-rate-widget-box, .rate-box-with-credit-button) span {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 1.75em;
-    min-width: max-content;
-    height: 100%;
+div.page-rate-widget-box, div.rate-box-with-credit-button {
+    display: inline-flex;
+    box-shadow: none;
+    background-color: rgb(var(--rate-module-bg-color));
+    border: none;
+    border-radius: 0;
+    margin: 0.25rem 0;
+    padding: 0.25em;
 }
+
 div.page-rate-widget-box .rate-points {
     display: flex;
+    align-items: center;
+    color: rgb(var(--rate-module-text-color));
     background-color: transparent;
-    padding: 0.125em 0.625em 0;
+    padding: 0 0.625em;
     border: none;
     border-radius: 0;
     box-sizing: border-box;
@@ -239,28 +241,54 @@ div.page-rate-widget-box .rate-points {
 .page-rate-widget-box .number {
     width: max-content;
     font-size: 1.5em;
-    padding: 0 0.125em;
+    padding: 0 0.125em 0.05em;
 }
 
-.rate-box-with-credit-button .creditButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 1.75em;
-}
-.rate-box-with-credit-button .creditButton > p { display: contents; }
-:is(.page-rate-widget-box, .rate-box-with-credit-button) a {
+div.page-rate-widget-box span.btn {
     display: block;
+    width: var(--rate-module-button-size);
+    height: var(--rate-module-button-size);
+}
+div.rate-box-with-credit-button .creditButton {
+    display: block;
+    width: var(--rate-module-button-size);
+    height: var(--rate-module-button-size);
+}
+div.rate-box-with-credit-button .creditButton > p { display: contents; }
+
+div.page-rate-widget-box span.btn > a,
+div.rate-box-with-credit-button .creditButton > p > a {
+    display: block;
+    position: relative;
+    width: 100%; height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: transparent;
+    font-size: 0;
+    box-sizing: border-box;
+    transition: all 0.095s linear;
+}
+div.page-rate-widget-box span.btn > a { border-bottom: solid 0.1rem rgb(var(--general-border-color)); }
+div.page-rate-widget-box span.btn > a::before,
+div.rate-box-with-credit-button .creditButton > p > a::before {
+    content: "";
+    display: block;
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    position: absolute;
     width: 100%;
     height: 100%;
-    text-align: center;
+    transition: background-color 0.095s linear;
 }
-.creditButton > p > a {
-    border: none;
-    padding: 0; margin: 0;
-    font-size: initial;
-}
+
+div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus) { border-color: rgb(var(--basalt-positive-color)); }
+div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus) { border-color: rgb(var(--basalt-negative-color)); }
+div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: rgb(var(--basalt-focus-color)); }
+
+div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-positive-color)); }
+div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-negative-color)); }
+div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
+div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
 #u-credit-view .fader {
     background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
@@ -296,7 +324,7 @@ div.page-rate-widget-box .rate-points {
     overflow: auto;
     margin: 0 1.25rem;
 }
-*/
+
 /*-------------------*/
 /*--- IMAGE BLOCK ---*/
 /*-------------------*/
@@ -307,7 +335,7 @@ div.page-rate-widget-box .rate-points {
     box-sizing: border-box;
 }
 .image-block, .scp-image-block {
-    border-bottom: solid 0.325rem rgb(var(--basalt-bright-element-color));
+    border-bottom: solid 0.325rem rgb(var(--basalt-undertone));
     width: 300px;
 }
 :is(.image-block, .scp-image-block) img {
@@ -330,6 +358,20 @@ div.page-rate-widget-box .rate-points {
 }
 :is(.image-block, .scp-image-block).block-center {
     margin: 0.25rem auto;
+}
+
+/*------------*/
+/*--- NOTE ---*/
+/*------------*/
+
+div.wiki-note {
+    width: min(100%,calc(var(--main-content-width)*0.5));
+    margin: 0.75rem auto;
+    padding: 0.25rem 1.5rem;
+    box-sizing: border-box;
+    border: none;
+    border-left: solid 0.25rem rgb(var(--basalt-undertone));
+    text-align: justify;
 }
 
 /*------------------*/
@@ -830,6 +872,7 @@ div#toc {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    --basalt-focus-color: var(--link-color);
 }
 
 #main-content > .page-tags > span {
