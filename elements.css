@@ -326,6 +326,8 @@ div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus)::before { back
 div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
+/* info modal */
+
 #u-credit-view .fader {
     background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
@@ -343,16 +345,53 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3.5rem;
+    height: 2.75rem;
+    font-size: calc(var(--true-font-size)*0.675);
+    text-transform: uppercase;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
 #u-credit-view .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
-#u-credit-view iframe.close-credits {
-    filter: saturate(0) brightness(100);
-    transform: scale(1.875);
+#u-credit-view .modalbox > .credit > p:first-child::before,
+#u-credit-view .modalbox > .credit > p:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 2.75rem;
+    width: 2.75rem;
+    pointer-events: none;
 }
+#u-credit-view .modalbox > .credit > p:first-child::before {
+    background: rgb(var(--basalt-cancel-color));
+    height: 0;
+    transition: height 0.125s ease-out;
+}
+#u-credit-view .modalbox > .credit > p:first-child::after {
+    background: rgb(var(--basalt-light-text-color));
+    -webkit-mask-image: var(--modal-close-mask);
+    mask-image: var(--modal-close-mask);
+    -webkit-mask-position: 50%;
+    mask-position: 50%;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+#u-credit-view .modalbox > .credit > p:first-child:hover::before {
+    height: 2.75rem;
+}
+
+#u-credit-view iframe.close-credits {
+    transform: scale(1.875);
+    height: 1rem!important;
+    top: 1rem;
+    right: 0.5rem;
+    opacity: 0;
+}
+
 #u-credit-view .modalbox > hr {
     margin: 1.25rem 1.25rem 0.625rem;
 }
