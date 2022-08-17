@@ -223,6 +223,7 @@ div.page-rate-widget-box, div.rate-box-with-credit-button {
     border-radius: 0;
     margin: 0.25rem 0;
     padding: 0.25em;
+    text-align: center;
 }
 
 div.page-rate-widget-box .rate-points {
