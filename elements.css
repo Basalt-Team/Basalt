@@ -222,7 +222,7 @@ div.page-rate-widget-box, div.rate-box-with-credit-button {
     border: none;
     border-radius: 0;
     margin: 0.25rem 0;
-    padding: 0.25em;
+    padding: 0.325em;
     text-align: center;
 }
 
@@ -254,7 +254,7 @@ div.rate-box-with-credit-button .creditButton {
     display: block;
     width: var(--rate-module-button-size);
     height: var(--rate-module-button-size);
-    padding-left: 0.25em;
+    padding-left: 0.325em;
 }
 div.rate-box-with-credit-button .creditButton > p { display: contents; }
 
