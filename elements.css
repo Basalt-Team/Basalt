@@ -253,6 +253,7 @@ div.rate-box-with-credit-button .creditButton {
     display: block;
     width: var(--rate-module-button-size);
     height: var(--rate-module-button-size);
+    padding-left: 0.25em;
 }
 div.rate-box-with-credit-button .creditButton > p { display: contents; }
 
@@ -264,12 +265,11 @@ div.rate-box-with-credit-button .creditButton > p > a {
     padding: 0;
     margin: 0;
     border: none;
-    color: transparent;
-    font-size: 0;
+    color: transparent!important;
     box-sizing: border-box;
     transition: all 0.095s linear;
 }
-div.page-rate-widget-box span.btn > a { border-bottom: solid 0.1rem rgb(var(--general-border-color)); }
+div.page-rate-widget-box span.btn > a { border-bottom: solid 0.05em rgb(var(--general-border-color)); }
 div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::before {
     content: "";
@@ -280,7 +280,42 @@ div.rate-box-with-credit-button .creditButton > p > a::before {
     height: 100%;
     transition: background-color 0.095s linear;
 }
+div.rate-box-with-credit-button .creditButton > p > a::after {
+    content: "";
+    display: block;
+    background-color: rgb(var(--basalt-light-text-color));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
+div.page-rate-widget-box span.btn > a::before,
+div.rate-box-with-credit-button .creditButton > p > a::after {
+    -webkit-mask-size: 40%;
+    mask-size: 40%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+div.page-rate-widget-box span.rateup > a::before {
+    -webkit-mask-image: var(--vote-plus-mask);
+    mask-image: var(--vote-plus-mask);
+}
+div.page-rate-widget-box span.ratedown > a::before {
+    -webkit-mask-image: var(--vote-minus-mask);
+    mask-image: var(--vote-minus-mask);
+}
+div.page-rate-widget-box span.cancel > a::before {
+    -webkit-mask-image: var(--vote-cancel-mask);
+    mask-image: var(--vote-cancel-mask);
+}
+div.rate-box-with-credit-button .creditButton > p > a::after {
+    -webkit-mask-image: var(--vote-info-mask);
+    mask-image: var(--vote-info-mask);
+    -webkit-mask-size: 27.5%;
+    mask-size: 27.5%;
+}
 div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus) { border-color: rgb(var(--basalt-positive-color)); }
 div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus) { border-color: rgb(var(--basalt-negative-color)); }
 div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: rgb(var(--basalt-focus-color)); }
@@ -323,6 +358,9 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 #u-credit-view .modalbox > div.credit {
     overflow: auto;
     margin: 0 1.25rem;
+}
+#u-credit-view .creditBottomRate {
+    height: auto!important;
 }
 
 /*-------------------*/
