@@ -980,6 +980,24 @@ div#toc {
     font-size: 2.325em;
     border-bottom: solid 0.125rem rgb(var(--title-border-color));
 }
+.meta-title > p { margin: 0; }
+
+#breadcrumbs, .pseudocrumbs {
+    font-size: 0.875em;
+    margin-top: 0.125em;
+    font-weight: bold;
+}
+.pseudocrumbs > p { margin: 0; }
+
+:is(#breadcrumbs, .pseudocrumbs) a {
+    font-weight: normal;
+}
+
+.footer-wikiwalk-nav {
+    font-weight: bold;
+    font-size: 0.875em;
+    text-align: center;
+}
 
 /*-----------------------*/
 /*---- PAGE TAG AREA ----*/
