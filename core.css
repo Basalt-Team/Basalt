@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
  
@@ -31,7 +31,7 @@
     --link-newpage-color: var(--basalt-alternate-color);
 
     --header-font: 'Lexend', sans-serif;
-    --UI-font: 'IBM Plex Sans', sans-serif;
+    --UI-font: 'Jost', sans-serif;
     --body-font: 'Inter', sans-serif;
     --mono-font: 'JetBrains Mono', monospace;
 
@@ -96,7 +96,7 @@
         calc(var(--base-font-size)*0.775 + 0.195vw),
         calc(var(--base-font-size)*1.025));
     --header-UI-font-size: calc(var(--true-font-size)*0.775);
-    --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.15);
+    --header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.175);
     --footer-font-size: calc(var(--true-font-size)*0.825);
     --license-area-font-size: calc(var(--true-font-size)*0.8);
 
@@ -533,7 +533,7 @@
 #login-status > * {
     clip-path: inset(0 0 0 100%);
     user-select: text;
-    font-size: var(--header-UI-font-size);
+    font-size: var(--header-UI-dropdown-font-size);
     transition: clip-path var(--header-link-transition-1st);
 }
 #login-status:is(:hover,:focus-within) > * {
@@ -597,8 +597,8 @@ a#account-topbutton, a#my-account {
     text-align: center;
     align-items: center;
     justify-content: center;
-    min-height: calc(var(--header-UI-font-size)*3.25);
-    padding: calc(var(--header-UI-font-size)*.75);
+    min-height: calc(var(--header-UI-dropdown-font-size)*3.25);
+    padding: calc(var(--header-UI-dropdown-font-size)*.75);
     box-sizing: border-box;
     background: linear-gradient(180deg, rgb(var(--login-status-background-color),1) 0%, rgb(var(--login-status-background-color),var(--basalt-UI-opacity)) 100%);
     color: rgb(var(--login-status-text-color));
@@ -623,9 +623,10 @@ div#account-options > ul > li {
 }
 div#account-options > ul > li > a {
     display: flex;
-    height: calc(var(--header-UI-font-size)*3.25);
+    height: calc(var(--header-UI-dropdown-font-size)*3.25);
     align-items: center;
     justify-content: center;
+    padding: 0;
     position: relative;
     text-decoration: none;
     color: rgb(var(--login-status-text-color));
