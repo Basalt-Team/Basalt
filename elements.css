@@ -438,6 +438,13 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     margin: 0.25rem auto;
 }
 
+@media only screen and (max-width: 580px) {
+    :is(.image-block, .scp-image-block):is(.block-right, .block-left) {
+        float: none;
+        margin: 0.25rem auto;
+    }
+}
+
 /*------------*/
 /*--- NOTE ---*/
 /*------------*/
