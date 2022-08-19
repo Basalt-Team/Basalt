@@ -1005,3 +1005,52 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         opacity: 1;
     }
 }
+
+/*-----------------------*/
+/*---- PRINT SUPPORT ----*/
+/*-----------------------*/
+
+#print-options {
+    font-size: var(--true-font-size);
+    font-family: var(--UI-font);
+    padding: 1rem;
+    margin: 0;
+    background-color: rgb(var(--basalt-secondary-color));
+    border: none;
+}
+#print-options tr > td:first-child {
+    font-weight: bold;
+}
+#print-options tr > td:last-child {
+    font-size: 0;
+}
+#print-options tr > td a {
+    font-size: var(--true-font-size);
+    display: inline-block;
+    padding: 0.375em 1.25em;
+    color: rgb(var(--button-text-color));
+    text-decoration: none;
+    border-bottom: solid 0.05em rgb(var(--general-border-color));
+    transition: all var(--button-hover-transition);
+}
+#print-options tr > td a:is(:hover, :focus) {
+    color: rgb(var(--basalt-focus-color));
+    border-bottom-color: rgb(var(--basalt-focus-color));
+}
+
+#print-head {
+    font-family: var(--mono-font);
+    padding: 0 0.5rem;
+    text-align: center;
+}
+body.print-body #container {
+    margin: 0;
+}
+body.print-body #container > hr {
+    display: none;
+}
+body.print-body #page-info {
+    width: 100%;
+    text-align: right;
+    padding: 0;
+}
