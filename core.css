@@ -59,7 +59,7 @@
     --top-bar-dropdown-bg: var(--basalt-primary-color);
     --top-bar-dropdown-hover-bg: var(--link-color);
 
-    --search-icon-color: var(--basalt-bright-element-color);
+    --search-icon-color: var(--basalt-undertone);
     --search-bg-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
@@ -73,6 +73,12 @@
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
+    --side-bar-heading-text-color: var(--basalt-main-text-color);
+    --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
+    --side-bar-heading-bg-color: var(--basalt-secondary-color);
+    --side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
+    --side-bar-unfolded-heading-bg-color: var(--basalt-UI-dark-palette);
+    --side-bar-link-transition: var(--header-link-transition-1st);
 
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.325rem;
@@ -829,24 +835,108 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 :is(#side-bar, #interwiki) .heading {
-    background-color: rgb(var(--basalt-secondary-color));
+    background-color: rgb(var(--side-bar-heading-bg-color));
+    color: rgb(var(--side-bar-heading-text-color));
+    font-family: var(--header-font);
     font-size: 0.875em;
+    padding: 0.15em;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    padding: 0.15em;
 }
 
 #side-bar a.close-menu, #side-bar:target a.close-menu {
     display: none;
 }
 
-#side-bar iframe.scpnet-interwiki-frame {
+#side-bar .collapsible-block a.collapsible-block-link {
+    display: block;
+    text-align: center;
+    background-color: rgb(var(--side-bar-heading-bg-color));
+    color: rgb(var(--side-bar-heading-text-color));
+    font-family: var(--header-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    padding: 0.15em;
+    transition: all var(--side-bar-link-transition);
+}
+#side-bar .collapsible-block-unfolded a.collapsible-block-link {
+    background-color: rgb(var(--side-bar-unfolded-heading-bg-color));
+    color: rgb(var(--side-bar-unfolded-heading-text-color));
+}
+#side-bar .collapsible-block a.collapsible-block-link:is(:hover,:focus) {
+    text-decoration: none;
+    background-color: rgb(var(--basalt-focus-color));
+    color: rgb(var(--side-bar-heading-text-hover-color));
+}
+
+#side-bar .collapsible-block-content {
+    position: relative;
+    background-color: rgb(var(--basalt-secondary-color));
+}
+#side-bar .collapsible-block-content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.425rem;
+    height: 100%;
+    background-color: rgb(var(--side-bar-unfolded-heading-bg-color));
+    animation: collapsible-expand var(--side-bar-link-transition) forwards;
+}
+@keyframes collapsible-expand {
+    0% { height: 0; }
+    100% { height: 100%; }
+}
+#side-bar .collapsible-block-content .menu-item {
+    border-bottom: solid 0.05rem rgb(var(--general-border-color));
+}
+
+:is(#side-bar, #interwiki) .menu-item,
+:is(#side-bar, #interwiki) .menu-item.small {
+    display: flex;
+    font-size: 0;
+}
+:is(#side-bar, #interwiki) .menu-item > p { display: contents; }
+
+:is(#side-bar, #interwiki) .menu-item a {
+    display: inline-block;
+    padding: 0.25em 0.325em;
+    font-size: var(--true-font-size);
+    flex-grow: 1;
+    isolation: isolate;
+    position: relative;
+    transition: color var(--side-bar-link-transition);
+}
+#side-bar .menu-item a[href="/"],
+#side-bar .menu-item a[href="/forum:start"] {
+    text-align: center;
+    font-weight: bold;
+}
+:is(#side-bar, #interwiki) .menu-item a:is(:hover, :focus) {
+    color: rgb(var(--basalt-light-text-color));
+    text-decoration: none;
+}
+:is(#side-bar, #interwiki) .menu-item a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(var(--link-color));
+    transition: width var(--side-bar-link-transition);
+}
+:is(#side-bar, #interwiki) .menu-item a:is(:hover, :focus)::before {
     width: 100%;
 }
 
-#side-bar a:visited, #interwiki a:visited {
-    color: rgb(var(--link-visited-color));
+#side-bar iframe.scpnet-interwiki-frame {
+    width: 100%;
 }
 
 /*-------------------------------*/
