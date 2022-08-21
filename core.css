@@ -73,6 +73,8 @@
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
+
+    --side-bar-media-bg-color: var(--basalt-undertone), 0.115;
     --side-bar-heading-text-color: var(--basalt-main-text-color);
     --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
     --side-bar-heading-bg-color: var(--basalt-secondary-color);
@@ -832,6 +834,14 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 :is(#side-bar, #interwiki) .side-block {
     font-family: var(--UI-font);
+}
+
+#side-bar .side-block.media {
+    background-color: rgb(var(--side-bar-media-bg-color));
+}
+#side-bar .side-block.media > div {
+    display: flex;
+    justify-content: space-evenly;   
 }
 
 :is(#side-bar, #interwiki) .heading {
