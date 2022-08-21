@@ -42,6 +42,11 @@ img, table, iframe {
     background-color: rgb(var(--scrollbar-thumb-color));
 }
 
+/* selection */
+::selection {
+    background-color: rgb(var(--selection-background-color), 0.875);
+    color: rgb(var(--selection-text-color));
+}
 
 /*---------------*/
 /*--- HEADERS ---*/

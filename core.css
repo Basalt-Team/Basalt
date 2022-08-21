@@ -110,6 +110,8 @@
 
     --scrollbar-track-color: var(--basalt-tertiary-color);
     --scrollbar-thumb-color: var(--basalt-undertone);
+    --selection-text-color: var(--basalt-light-text-color);
+    --selection-background-color: var(--basalt-focus-color);
 
     --title-border-color: var(--basalt-undertone);
     --hr-color: var(--basalt-undertone);
