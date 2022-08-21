@@ -991,7 +991,7 @@ div#toc {
 
 #breadcrumbs, .pseudocrumbs {
     font-size: 0.875em;
-    margin-top: 0.125em;
+    margin: 0;
     font-weight: bold;
 }
 .pseudocrumbs > p { margin: 0; }
@@ -1074,7 +1074,8 @@ div#toc {
 }
 
 #page-options-container .page-watch-options {
-    font-size: calc(var(--true-font-size)*0.675);
+    font-family: var(--UI-font);
+    font-size: calc(var(--true-font-size)*0.75);
     text-align: left;
 }
 #page-info {
@@ -1159,4 +1160,60 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
         height: initial;
         flex-basis: 100%;
     }
+}
+
+/*----------------*/
+/*---- CUSTOM ----*/
+/*----------------*/
+
+.bblock {
+    background-color: rgb(var(--basalt-main-text-color));
+    transition: color 0.75s linear;
+}
+.bblock:is(:hover, :focus-within) {
+    background-color: rgb(var(--basalt-main-text-color));
+    color: rgb(var(--basalt-light-text-color));
+}
+
+.dblock {
+    background-color: currentColor;
+    transition: background-color 0.75s linear;
+}
+.dblock:is(:hover, :focus-within) {
+    background-color: transparent;
+}
+
+.keycap {
+    background-color: rgb(var(--basalt-secondary-color));
+    padding: 0.25em;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125em 0 0.05em rgb(var(--general-border-color));
+}
+
+.tags {
+    display: inline-block;
+    background-color: rgba(var(--tag-bg-color), var(--basalt-UI-opacity));
+    border-radius: 0 0.5em;
+    padding: 0.25em 0.475em;
+    transition: all var(--button-hover-transition);
+}
+.tags:is(:hover, :focus, :focus-within) {
+    color: rgb(var(--basalt-light-text-color));
+    background-color: rgb(var(--basalt-focus-color));
+    box-shadow: 0 0 0 0.25rem rgb(var(--basalt-focus-color));
+}
+.rt, rt {
+    display: table-header-group;
+    font-size: .625em;
+    line-height: 1.15;
+}
+.ruby, ruby{
+    display: inline-table;
+    height: 1em;
+    line-height: 1;
+    vertical-align: text-bottom;
+}
+.rt, .ruby, rt, ruby{
+    text-align: center;
+    white-space: nowrap;
 }
