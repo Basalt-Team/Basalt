@@ -75,9 +75,9 @@
     --side-bar-transition: 0.25s ease 0.125s;
 
     --side-bar-media-bg-color: var(--basalt-undertone), 0.115;
-    --side-bar-heading-text-color: var(--basalt-main-text-color);
+    --side-bar-heading-text-color: var(--basalt-light-text-color);
     --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
-    --side-bar-heading-bg-color: var(--basalt-secondary-color);
+    --side-bar-heading-bg-color: var(--basalt-UI-dark-palette);
     --side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
     --side-bar-unfolded-heading-bg-color: var(--basalt-UI-dark-palette);
     --side-bar-link-transition: var(--header-link-transition-1st);
@@ -110,7 +110,7 @@
 
     --scrollbar-track-color: var(--basalt-tertiary-color);
     --scrollbar-thumb-color: var(--basalt-undertone);
-    
+
     --selection-text-color: var(--basalt-light-text-color);
     --selection-background-color: var(--basalt-focus-color);
 
@@ -918,6 +918,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: inline-block;
     padding: 0.25em 0.325em;
     font-size: var(--true-font-size);
+    color: rgb(var(--basalt-main-text-color));
     flex-grow: 1;
     isolation: isolate;
     position: relative;
