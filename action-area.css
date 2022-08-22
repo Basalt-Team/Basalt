@@ -675,6 +675,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     display: flex;
     height: 100%;
     width: 100%;
+    min-height: 1.875em;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -1235,6 +1236,33 @@ input#upload-userfile::file-selector-button {
 #site-tools-box > .page-options-bottom {
     height: auto;
     margin: 0;
+}
+#site-tools-box .page-options-bottom ul.nav-pills {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+#site-tools-box .page-options-bottom ul.nav-pills > li {
+    display: contents;
+}
+#site-tools-box .page-options-bottom ul.nav-pills > li > a {
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+    text-transform: capitalize;
+    border-left: solid 0.05rem rgb(var(--general-border-color));
+    flex-basis: 7.75rem;
+    text-decoration: none;
+    color: rgb(var(--basalt-main-text-color));
+    transition: all var(--button-hover-transition);
+}
+#site-tools-box .page-options-bottom ul.nav-pills > li:first-child > a { border-left: none; }
+#site-tools-box .page-options-bottom ul.nav-pills > li > a:is(:hover, :focus) {
+    font-weight: bold;
+    color:  rgb(var(--basalt-focus-color));
 }
 
 #st-action-area span[style*="#999"] {
