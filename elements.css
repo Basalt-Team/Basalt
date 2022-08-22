@@ -1171,6 +1171,11 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 /*---- CUSTOM ----*/
 /*----------------*/
 
+.licensebox a.collapsible-block-link {
+    color: rgb(var(--basalt-sub-text-color));
+    font-weight: bold;
+}
+
 .bblock {
     background-color: rgb(var(--basalt-main-text-color));
     transition: color 0.75s linear;
