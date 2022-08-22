@@ -74,7 +74,7 @@
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
 
-    --side-bar-media-bg-color: var(--basalt-undertone), 0.115;
+    --side-bar-resources-bg-color: var(--basalt-undertone), 0.115;
     --side-bar-heading-text-color: var(--basalt-light-text-color);
     --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
     --side-bar-heading-bg-color: var(--basalt-UI-dark-palette);
@@ -839,8 +839,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-family: var(--UI-font);
 }
 
-#side-bar .side-block.media {
-    background-color: rgb(var(--side-bar-media-bg-color));
+#side-bar .side-block:is(.media, .resources) {
+    background-color: rgb(var(--side-bar-resources-bg-color));
 }
 #side-bar .side-block.media > div {
     display: flex;
@@ -862,6 +862,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
+#side-bar .collapsible-block {
+    --side-bar-heading-bg-color: var(--basalt-secondary-color);
+    --side-bar-heading-text-color: var(--basalt-main-text-color);
+}
 #side-bar .collapsible-block a.collapsible-block-link {
     display: block;
     text-align: center;
