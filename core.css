@@ -779,7 +779,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: var(--side-bar-width);
     box-sizing: border-box;
     background-color: rgb(var(--basalt-background-color));
-    border-right: solid 0.125rem rgb(var(--general-border-color));
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
