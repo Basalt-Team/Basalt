@@ -919,6 +919,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: relative;
     transition: color var(--side-bar-link-transition);
 }
+:is(#side-bar, #interwiki) .menu-item.small a {
+    font-size: calc(var(--true-font-size) * 0.925);
+}
 #side-bar .menu-item a[href="/"],
 #side-bar .menu-item a[href="/forum:start"] {
     text-align: center;
