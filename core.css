@@ -592,6 +592,7 @@
 a#account-topbutton, a#my-account {
     display: none;
 }
+#login-status > a[href*="account/messages"] { display: none; }
 
 #login-status span.printuser {
     grid-area: printuser;
@@ -628,6 +629,7 @@ div#account-options > ul > li > a {
     height: calc(var(--header-UI-dropdown-font-size)*3.25);
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 0;
     position: relative;
     text-decoration: none;
