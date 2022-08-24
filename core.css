@@ -30,10 +30,14 @@
     --link-visited-color: var(--basalt-dark-element-color);
     --link-newpage-color: var(--basalt-alternate-color);
 
-    --header-font: 'Lexend', sans-serif;
-    --UI-font: 'Jost', sans-serif;
-    --body-font: 'Inter', sans-serif;
-    --mono-font: 'JetBrains Mono', monospace;
+    --header-font-fallback: Franklin Gothic Medium, Franklin Gothic,ITC Franklin Gothic, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    --UI-font-fallback: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --body-font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    --mono-font-fallback: Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
+    --header-font: 'Lexend', var(--header-font-fallback);
+    --UI-font: 'Jost', var(--UI-font-fallback);
+    --body-font: 'Inter', var(--body-font-fallback);
+    --mono-font: 'JetBrains Mono', var(--mono-font-fallback);
 
     --header-logo: url('https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/basaltlogo.svg');
     --header-title: 'SCP Foundation';
