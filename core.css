@@ -152,7 +152,7 @@
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-bg-color: var(--basalt-secondary-color);
-    --edit-area-toolbar-icon-size: 1.75rem;
+    --edit-area-toolbar-icon-size: 1.875rem;
     --edit-area-main-bg-color: var(--basalt-background-color);
     --edit-area-ancillary-bg-color: var(--basalt-secondary-color);
 }
