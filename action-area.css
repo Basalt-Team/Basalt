@@ -198,24 +198,19 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 
 /* Toolbar area */
 #wd-editor-toolbar-panel {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
     background-color: rgb(var(--edit-area-toolbar-bg-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     border-bottom: 0;
     padding: 0.5rem;
     margin-top: 0.5rem;
-    grid-template-areas:
-        "txt-format elements"
-        "other elements";
-    grid-template-columns: 5fr 4fr;
-    align-items: flex-start;
 }
-#wd-editor-toolbar-panel > div:nth-child(1) { grid-area: txt-format; }
-#wd-editor-toolbar-panel > div:nth-child(2) { grid-area: elements; justify-content: flex-end; }
-#wd-editor-toolbar-panel > div:nth-child(3) { grid-area: other; }
 #wd-editor-toolbar-panel > div {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     height: auto;
     grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
@@ -235,14 +230,203 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 .wd-editor-toolbar-panel ul li a:hover {
     background-image: none;
 }
-.wd-editor-toolbar-panel ul li a {
+#wd-editor-toolbar-panel ul li a {
     display: block;
     height: var(--edit-area-toolbar-icon-size);
     width: var(--edit-area-toolbar-icon-size);
+    background-color: transparent;
+    position: relative;
+}
+
+#wd-editor-toolbar-panel ul li ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-left: solid calc(var(--edit-area-toolbar-icon-size)/8) rgb(var(--basalt-UI-dark-palette));
+    background-color: rgb(var(--edit-area-toolbar-bg-color));
+    top: 100%;
+    left: 0;
+    clip-path: inset(0 0 100% 0);
+    pointer-events: none;
+    transition: clip-path 0.175s ease-out;
+}
+#wd-editor-toolbar-panel ul li.sfhover ul,
+#wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
+    clip-path: inset(0);
+    pointer-events: auto;
+}
+
+#wd-editor-toolbar-panel ul li ul li a {
+    height: calc(var(--edit-area-toolbar-icon-size)*7/8);
+    width: calc(var(--edit-area-toolbar-icon-size)*7/8);
+}
+
+#edit-page-form .wd-editor-toolbar-panel a:focus {
+    outline: none;
+}
+#edit-page-form .wd-editor-toolbar-panel a::before,
+#edit-page-form .wd-editor-toolbar-panel a::after {
+    content: "";
+    display: block;
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+#edit-page-form .wd-editor-toolbar-panel a::after {
+    background-color: rgb(var(--basalt-main-text-color));
+    -webkit-mask-image: var(--edit-area-toolbar-icon-mask);
+    mask-image: var(--edit-area-toolbar-icon-mask);
+    -webkit-mask-size: 80%;
+    mask-size: 80%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-color var(--button-hover-transition);
+}
+#edit-page-form .wd-editor-toolbar-panel a::before {
+    background-color: rgb(var(--basalt-focus-color));
+    width: 0;
+    transition: all var(--button-hover-transition);
+}
+#edit-page-form .wd-editor-toolbar-panel a:is(:hover, :focus)::before { width: 100%; }
+#edit-page-form .wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::before,
+#edit-page-form .wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::before {
+    width: 100%;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
-.wd-editor-toolbar-panel ul li a:is(:hover, :focus) {
-    background-color: rgb(var(--basalt-focus-color));
+#edit-page-form .wd-editor-toolbar-panel a:is(:hover, :focus)::after,
+#edit-page-form .wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::after,
+#edit-page-form .wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::after {
+    background-color: rgb(var(--basalt-light-text-color));
+}
+
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h1::after {
+    --edit-area-toolbar-icon-mask: var(--h1-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h2::after {
+    --edit-area-toolbar-icon-mask: var(--h2-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h3::after {
+    --edit-area-toolbar-icon-mask: var(--h3-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h4::after {
+    --edit-area-toolbar-icon-mask: var(--h4-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h5::after {
+    --edit-area-toolbar-icon-mask: var(--h5-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-h6::after {
+    --edit-area-toolbar-icon-mask: var(--h6-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-bold::after {
+    --edit-area-toolbar-icon-mask: var(--bold-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-italic::after {
+    --edit-area-toolbar-icon-mask: var(--italic-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-underline::after {
+    --edit-area-toolbar-icon-mask: var(--underline-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-strikethrough::after {
+    --edit-area-toolbar-icon-mask: var(--strikethrough-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-teletype::after {
+    --edit-area-toolbar-icon-mask: var(--teletype-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-quote::after {
+    --edit-area-toolbar-icon-mask: var(--quote-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-superscript::after {
+    --edit-area-toolbar-icon-mask: var(--superscript-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-subscript::after {
+    --edit-area-toolbar-icon-mask: var(--subscript-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-raw::after {
+    --edit-area-toolbar-icon-mask: var(--rawtext-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-hr::after {
+    --edit-area-toolbar-icon-mask: var(--hr-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-div::after {
+    --edit-area-toolbar-icon-mask: var(--divblock-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloat::after {
+    --edit-area-toolbar-icon-mask: var(--clearfloat-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloatleft::after {
+    --edit-area-toolbar-icon-mask: var(--clearfloatleft-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloatright::after {
+    --edit-area-toolbar-icon-mask: var(--clearfloatright-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-table::after {
+    --edit-area-toolbar-icon-mask: var(--table-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-toc::after {
+    --edit-area-toolbar-icon-mask: var(--toc-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-code::after {
+    --edit-area-toolbar-icon-mask: var(--codeblock-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-codewiz::after {
+    --edit-area-toolbar-icon-mask: var(--codewiz-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-uri::after {
+    --edit-area-toolbar-icon-mask: var(--url-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-uriwiz::after {
+    --edit-area-toolbar-icon-mask: var(--urlwiz-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-pagelink::after {
+    --edit-area-toolbar-icon-mask: var(--pagelink-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-pagelinkwiz::after {
+    --edit-area-toolbar-icon-mask: var(--pagelinkwiz-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-image::after {
+    --edit-area-toolbar-icon-mask: var(--imageblock-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-imagewiz::after {
+    --edit-area-toolbar-icon-mask: var(--imagewiz-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-html::after {
+    --edit-area-toolbar-icon-mask: var(--htmlblock-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-numlist::after {
+    --edit-area-toolbar-icon-mask: var(--ordered-list-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-bullist::after {
+    --edit-area-toolbar-icon-mask: var(--unordered-list-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-incindent::after {
+    --edit-area-toolbar-icon-mask: var(--inc-list-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-decindent::after {
+    --edit-area-toolbar-icon-mask: var(--dec-list-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-deflist::after {
+    --edit-area-toolbar-icon-mask: var(--def-list-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-footnote::after {
+    --edit-area-toolbar-icon-mask: var(--footnote-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-math::after {
+    --edit-area-toolbar-icon-mask: var(--math-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-mathinline::after {
+    --edit-area-toolbar-icon-mask: var(--inline-math-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-eqref::after {
+    --edit-area-toolbar-icon-mask: var(--eq-def-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-bib::after {
+    --edit-area-toolbar-icon-mask: var(--bib-mask);
+}
+#edit-page-form .wd-editor-toolbar-panel a.weditor-bibcite::after {
+    --edit-area-toolbar-icon-mask: var(--bib-cite-mask);
 }
 
 /* Edit area */
