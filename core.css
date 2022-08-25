@@ -1114,6 +1114,18 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     }
 }
 
+/*------------------------*/
+/*---- REDUCED MOTION ----*/
+/*------------------------*/
+
+@media screen and (prefers-reduced-motion: reduce) {  
+    *,*::before,*::after {
+        animation-duration: 0s!important;
+        transition-duration: 0s!important;
+    }
+}
+
+
 /*-----------------------*/
 /*---- PRINT SUPPORT ----*/
 /*-----------------------*/
