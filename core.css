@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
- 
+/*--------------*/
+/*---- VARS ----*/
+/*--------------*/
+
 :root {
     --basalt-primary-color: 254,254,254;
     --basalt-secondary-color: 247,248,250;
@@ -161,11 +160,25 @@
     --edit-area-ancillary-bg-color: var(--basalt-secondary-color);
 }
  
+/*----------------------*/
+/*---- CONTENT AREA ----*/
+/*----------------------*/
 
 #container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+#content-wrap {
+    flex-grow: 1;
+}
+
+#main-content {
+    width: var(--main-content-width);
+    margin: var(--main-content-top-margin) auto var(--main-content-bottom-margin);
+    max-width: calc(100% - var(--main-content-side-margin)*2);
+    overflow-wrap: break-word;
 }
 
 /*------------------*/

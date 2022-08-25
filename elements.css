@@ -975,17 +975,6 @@ div#toc {
 /*---- CONTENT ----*/
 /*-----------------*/
 
-#content-wrap {
-    flex-grow: 1;
-}
-
-#main-content {
-    width: var(--main-content-width);
-    margin: var(--main-content-top-margin) auto var(--main-content-bottom-margin);
-    max-width: calc(100% - var(--main-content-side-margin)*2);
-    overflow-wrap: break-word;
-}
-
 #page-title, .meta-title {
     font-family: var(--header-font);
     font-weight: bold;
