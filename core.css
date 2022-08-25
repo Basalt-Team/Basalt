@@ -132,7 +132,7 @@
     --button-hover-text-color: var(--basalt-primary-color);
     --button-hover-bg-color: var(--basalt-focus-color);
     --button-hover-border-color: var(--basalt-focus-color);
-    --button-hover-transition: 0.075s ease-out;
+    --button-hover-transition: 0.095s ease-out 0.015s;
 
     --general-border-color: var(--basalt-tertiary-color);
     --action-area-border-color: var(--general-border-color);
