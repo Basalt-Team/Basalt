@@ -996,112 +996,9 @@ template {
         background:unset;
     }
     
-    /* SOME NICE BOXES */
-    div.sexy-box {
-        background:unset;
-        border:unset;
-        padding:unset;
-        margin:unset;
-        overflow:unset;
-    }
-    
-    div.sexy-box div.image-container img {
-        margin:unset;
-        padding:unset;
-        border:unset;
-    }
-    
     /* Custom page content classes */
     #page-content {
         min-height:unset;
-    }
-    
-    .unmargined > p {
-        margin:unset;
-        line-height:unset;
-    }
-    
-    .content-panel {
-        border:unset;
-        border-radius:unset;
-        background-color:unset;
-        margin:unset;
-        box-shadow:unset;
-        box-shadow:
-            0 2px 6px rgba(0, 0, 0, .5),
-            inset 0 1px rgba(255, 255, 255, .3),
-            inset 0 10px rgba(255, 255, 255, .2),
-            inset 0 10px 20px rgba(255, 255, 255, .25),
-            inset 0 -15px 30px rgba(0, 0, 0, .1);
-    }
-    
-    .content-panel.standalone {
-        background:unset;
-    }
-    
-    .content-panel.series {
-        padding:unset;
-        margin-bottom:unset;
-    }
-    
-    .content-panel.centered {
-        text-align:unset;
-    }
-    
-    .content-panel.left-column {
-        float:unset;
-        width:unset;
-    }
-    
-    .content-panel.right-column {
-        float:unset;
-        width:unset;
-    }
-    
-    .content-panel .panel-heading {
-        padding:unset;
-        color:unset;
-        font-size:unset;
-        font-weight:unset;
-        text-shadow:unset;
-    }
-    
-    .content-panel .panel-heading > p,
-    .content-panel .panel-footer > p {
-        margin:unset;
-    }
-    
-    .content-panel .panel-body {
-        padding:unset;
-        background:unset;
-    }
-    
-    .content-panel .panel-footer {
-        padding:unset;
-        color:unset;
-        font-size:unset;
-        font-weight:unset;
-        text-align:unset;
-        text-shadow:unset;
-    }
-    
-    .content-panel .panel-footer a {
-        color:unset;
-    }
-    
-    .content-panel .content-toc {
-        float:unset;
-        padding:unset;
-        background-color:unset;
-        border:unset;
-        border-radius:unset;
-        margin:unset;
-        white-space:unset;
-        box-shadow:unset;
-    }
-    
-    .alternate:nth-child(even) {
-        background-color:unset;
     }
     
     /* Page Rating Module Customizations */
@@ -1254,30 +1151,6 @@ template {
     .licensebox .collapsible-block-link:hover,
     .licensebox .collapsible-block-link:active {
         opacity:unset;
-    }
-    
-    /* Forum Customizations */
-    .forum-thread-box .description-block {
-        padding:unset;
-        border-radius:unset;
-        box-shadow:
-            0 1px 5px rgba(0, 0, 0, .15),
-            inset 0 1px 0 rgba(255, 255, 255, .8),
-            inset 0 10px 5px rgba(255, 255, 255, .25),
-            inset 0 -15px 30px rgba(0, 0, 0, .1);
-    }
-    
-    .thread-container .post .head {
-        padding:unset;
-        background-color:unset;
-        background-image:unset;
-        box-shadow:unset;
-        border-radius:unset;
-    }
-    
-    /* Hide Forum Signatures */
-    .signature {
-        display:unset;
     }
     
     /* Ruby by Nanimono Demonai */
