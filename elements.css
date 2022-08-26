@@ -94,14 +94,14 @@ div.buttons input, input[type="button"], button {
     cursor: pointer;
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     border: solid 0.125em rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
 :is(div.buttons input, input[type="button"], button):is(:focus, :hover) {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
 }
@@ -223,7 +223,7 @@ div.creditRate .rateBox {
 div.page-rate-widget-box, div.rate-box-with-credit-button {
     display: inline-flex;
     box-shadow: none;
-    background-color: rgb(var(--rate-module-bg-color));
+    background-color: rgb(var(--rate-module-background-color));
     border: none;
     border-radius: 0;
     margin: 0.25rem 0;
@@ -469,7 +469,7 @@ div.wiki-note {
 /*------------------*/
 
 blockquote, div.blockquote {
-    background-color: rgb(var(--blockquote-bg-color));
+    background-color: rgb(var(--blockquote-background-color));
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
     margin: 1.25rem auto;
     padding: 0.125rem 1.45rem;
@@ -485,7 +485,7 @@ blockquote, div.blockquote {
 /*------------------*/
 
 .code {
-    background-color: rgb(var(--blockquote-bg-color));
+    background-color: rgb(var(--blockquote-background-color));
     margin: 0.5rem 0;
     border: none;
     padding: 0.875rem 1rem;
@@ -506,7 +506,7 @@ div#toc {
     align-items: center;
     justify-content: space-between;
     padding: 0;
-    background-color: rgb(var(--toc-bg-color));
+    background-color: rgb(var(--toc-background-color));
     border: solid var(--toc-border-width) rgb(var(--toc-border-color));
 }
 #toc.floatright {
@@ -827,7 +827,7 @@ div#toc {
     font-family: var(--UI-font);
     text-decoration: none;
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     border: solid 0.125em rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
@@ -835,7 +835,7 @@ div#toc {
 .owindow .button-bar > a:not([onclick*="cleanAll"]):is(:hover, :focus),
 .owindow div[style*="margin-top"] a:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
 }
@@ -1029,7 +1029,7 @@ div#toc {
     margin: 0;
     padding: 0.25em 0.475em;
     flex-grow: 1;
-    background-color: rgba(var(--tag-bg-color), var(--basalt-UI-opacity));
+    background-color: rgba(var(--tag-background-color), var(--basalt-UI-opacity));
     border-radius: 0 0.5em;
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: all var(--button-hover-transition);
@@ -1191,7 +1191,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 .tags {
     display: inline-block;
-    background-color: rgba(var(--tag-bg-color), var(--basalt-UI-opacity));
+    background-color: rgba(var(--tag-background-color), var(--basalt-UI-opacity));
     border-radius: 0 0.5em;
     padding: 0.25em 0.475em;
     transition: all var(--button-hover-transition);

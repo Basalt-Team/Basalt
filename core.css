@@ -57,19 +57,19 @@
 
     --top-bar-link-color: var(--basalt-main-text-color);
     --top-bar-link-color-hover: var(--basalt-primary-color);
-    --top-bar-link-bg-hover: var(--basalt-focus-color);
-    --top-bar-link-bg-hover-alt: var(--basalt-UI-dark-palette);
-    --top-bar-dropdown-bg: var(--basalt-primary-color);
-    --top-bar-dropdown-hover-bg: var(--link-color);
+    --top-bar-link-background-hover: var(--basalt-focus-color);
+    --top-bar-link-background-hover-alt: var(--basalt-UI-dark-palette);
+    --top-bar-dropdown-background: var(--basalt-primary-color);
+    --top-bar-dropdown-background-hover: var(--link-color);
 
     --search-icon-color: var(--basalt-undertone);
-    --search-bg-color: var(--basalt-background-color);
+    --search-background-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
     --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-primary-color);
     --login-status-width: calc(var(--header-UI-font-size)*20);
-    --login-status-link-bg-hover: var(--top-bar-link-bg-hover);
+    --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
 
     --side-bar-button-width: 3rem;
@@ -77,12 +77,12 @@
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
 
-    --side-bar-resources-bg-color: var(--basalt-undertone), 0.115;
+    --side-bar-resources-background-color: var(--basalt-undertone), 0.115;
     --side-bar-heading-text-color: var(--basalt-light-text-color);
     --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
-    --side-bar-heading-bg-color: var(--basalt-UI-dark-palette);
+    --side-bar-heading-background-color: var(--basalt-UI-dark-palette);
     --side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
-    --side-bar-unfolded-heading-bg-color: var(--basalt-UI-dark-palette);
+    --side-bar-unfolded-heading-background-color: var(--basalt-UI-dark-palette);
     --side-bar-link-transition: var(--header-link-transition-1st);
 
     --main-content-width: 67.5rem;
@@ -90,7 +90,7 @@
     --main-content-bottom-margin: var(--main-content-top-margin);
     --main-content-side-margin: calc(var(--main-content-top-margin)*4.25);
 
-    --tag-bg-color: var(--basalt-secondary-color);
+    --tag-background-color: var(--basalt-secondary-color);
 
     --bottom-area-background-color: var(--basalt-secondary-color);
     --bottom-area-padding: calc(var(--true-font-size)*0.85);
@@ -120,26 +120,26 @@
     --title-border-color: var(--basalt-undertone);
     --hr-color: var(--basalt-undertone);
 
-    --rate-module-bg-color: var(--basalt-secondary-color);
+    --rate-module-background-color: var(--basalt-secondary-color);
     --rate-module-text-color: var(--basalt-main-text-color);
     --rate-module-button-size: 1.625em;
 
     --button-text-color: var(--basalt-main-text-color);
-    --button-bg-color: var(--basalt-secondary-color);
+    --button-background-color: var(--basalt-secondary-color);
     --button-border-color: var(--basalt-tertiary-color);
     --button-outline-color: var(--basalt-focus-color);
     --button-hover-text-color: var(--basalt-primary-color);
-    --button-hover-bg-color: var(--basalt-focus-color);
+    --button-hover-background-color: var(--basalt-focus-color);
     --button-hover-border-color: var(--basalt-focus-color);
     --button-hover-transition: 0.095s ease-out 0.015s;
 
     --general-border-color: var(--basalt-tertiary-color);
     --action-area-border-color: var(--general-border-color);
     
-    --blockquote-bg-color: var(--basalt-secondary-color);
+    --blockquote-background-color: var(--basalt-secondary-color);
     --blockquote-border-color: var(--general-border-color);
     --blockquote-border-width: 0.0875rem;
-    --toc-bg-color: var(--blockquote-bg-color);
+    --toc-background-color: var(--blockquote-background-color);
     --toc-border-color: var(--blockquote-border-color);
     --toc-border-width: var(--blockquote-border-width);
 
@@ -154,10 +154,10 @@
 
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
-    --edit-area-toolbar-bg-color: var(--basalt-secondary-color);
+    --edit-area-toolbar-background-color: var(--basalt-secondary-color);
     --edit-area-toolbar-icon-size: 1.875rem;
-    --edit-area-main-bg-color: var(--basalt-background-color);
-    --edit-area-ancillary-bg-color: var(--basalt-secondary-color);
+    --edit-area-main-background-color: var(--basalt-background-color);
+    --edit-area-ancillary-background-color: var(--basalt-secondary-color);
 }
  
 /*----------------------*/
@@ -394,11 +394,11 @@
     height: 100%;
 }
 #top-bar div[class*="top-bar"] > ul > li > a::before {
-    background-color: rgb(var(--top-bar-link-bg-hover));
+    background-color: rgb(var(--top-bar-link-background-hover));
     transition: height var(--header-link-transition-2nd);
 }
 #top-bar div[class*="top-bar"] > ul > li > a::after {
-    background-color: rgb(var(--top-bar-link-bg-hover-alt));
+    background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-1st);
 }
 #top-bar div[class*="top-bar"] > ul > li > a:hover::before,
@@ -436,7 +436,7 @@
     position: absolute;
     top: 0; left: 0;
     width: 0.325rem; height: 0;
-    background-color: rgb(var(--top-bar-link-bg-hover-alt));
+    background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
 }
 #top-bar div[class*=top-bar] > ul > li:is(:hover,:focus-within) > ul::before,
@@ -455,7 +455,7 @@
     font-size: var(--header-UI-dropdown-font-size);
     padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
-    background: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
+    background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
     transition: color var(--header-link-transition-2nd), clip-path var(--header-link-transition-1st);
@@ -476,7 +476,7 @@
 }
 #top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
 #top-bar div[class*=top-bar] ul li ul li.sfhover a {
-    background: rgba(var(--top-bar-dropdown-bg), var(--basalt-UI-opacity));
+    background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
 }
 #top-bar div[class*=top-bar] ul li ul li a::before {
     content: "";
@@ -486,7 +486,7 @@
     width: 0;
     height: 100%;
     z-index: -1;
-    background-color: rgb(var(--top-bar-dropdown-hover-bg));
+    background-color: rgb(var(--top-bar-dropdown-background-hover));
     transition: width var(--header-link-transition-1st);
 }
 #top-bar div[class*=top-bar] ul > li > ul > li:is(:hover, :focus-within) > a::before {
@@ -512,7 +512,7 @@
     top: calc(var(--header-UI-dropdown-font-size)*1.5);
     left: calc(var(--header-UI-dropdown-font-size)*-0.625);
     transform: translateY(-50%);
-    background-color: rgb(var(--top-bar-link-bg-hover-alt));
+    background-color: rgb(var(--top-bar-link-background-hover-alt));
     z-index: 2;
     opacity: 0;
     transition: opacity var(--header-link-transition-1st), background-color var(--header-link-transition-2nd);
@@ -664,7 +664,7 @@ div#account-options > ul > li > a::before,
     right: 0;
     width: 0;
     height: 100%;
-    background-color: rgb(var(--login-status-link-bg-hover));
+    background-color: rgb(var(--login-status-link-background-hover));
     z-index: -1;
     transition: width var(--header-link-transition-1st);
 }
@@ -758,7 +758,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-input:focus,
 #search-top-box-input:hover {
     color: rgb(var(--basalt-main-text-color));
-    background-color: rgb(var(--search-bg-color));
+    background-color: rgb(var(--search-background-color));
 }
 #search-top-box-form:focus-within #search-top-box-input {
     width: calc(var(--header-UI-font-size)*16);
@@ -849,7 +849,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #side-bar .side-block:is(.media, .resources) {
-    background-color: rgb(var(--side-bar-resources-bg-color));
+    background-color: rgb(var(--side-bar-resources-background-color));
 }
 #side-bar .side-block.media > div {
     display: flex;
@@ -857,7 +857,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 :is(#side-bar, #interwiki) .heading {
-    background-color: rgb(var(--side-bar-heading-bg-color));
+    background-color: rgb(var(--side-bar-heading-background-color));
     color: rgb(var(--side-bar-heading-text-color));
     font-family: var(--header-font);
     font-size: 0.875em;
@@ -872,13 +872,13 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #side-bar .collapsible-block {
-    --side-bar-heading-bg-color: var(--basalt-secondary-color);
+    --side-bar-heading-background-color: var(--basalt-secondary-color);
     --side-bar-heading-text-color: var(--basalt-main-text-color);
 }
 #side-bar .collapsible-block a.collapsible-block-link {
     display: block;
     text-align: center;
-    background-color: rgb(var(--side-bar-heading-bg-color));
+    background-color: rgb(var(--side-bar-heading-background-color));
     color: rgb(var(--side-bar-heading-text-color));
     font-family: var(--header-font);
     font-weight: bold;
@@ -888,7 +888,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     transition: all var(--side-bar-link-transition);
 }
 #side-bar .collapsible-block-unfolded a.collapsible-block-link {
-    background-color: rgb(var(--side-bar-unfolded-heading-bg-color));
+    background-color: rgb(var(--side-bar-unfolded-heading-background-color));
     color: rgb(var(--side-bar-unfolded-heading-text-color));
 }
 #side-bar .collapsible-block a.collapsible-block-link:is(:hover,:focus) {
@@ -909,7 +909,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     right: 0;
     width: 0.425rem;
     height: 100%;
-    background-color: rgb(var(--side-bar-unfolded-heading-bg-color));
+    background-color: rgb(var(--side-bar-unfolded-heading-background-color));
     animation: collapsible-expand var(--side-bar-link-transition) forwards;
 }
 @keyframes collapsible-expand {

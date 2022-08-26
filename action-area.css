@@ -54,7 +54,7 @@
     font-family: var(--UI-font);
     text-decoration: none;
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     border: solid 0.125em rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
@@ -62,7 +62,7 @@
 :is(#action-area, div.buttons) :is(a, input).btn:is(:hover, :focus),
 #history-subarea a.action-area-close:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
 }
@@ -190,7 +190,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     margin: 0;
     border: none;
     font-family: var(--header-font);
-    background-color: rgb(var(--edit-area-ancillary-bg-color));
+    background-color: rgb(var(--edit-area-ancillary-background-color));
 }
 #edit-page-title:focus-visible {
     outline: none;
@@ -202,7 +202,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     flex-wrap: wrap;
     justify-content: center;
     grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
-    background-color: rgb(var(--edit-area-toolbar-bg-color));
+    background-color: rgb(var(--edit-area-toolbar-background-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     border-bottom: 0;
     padding: 0.5rem;
@@ -244,7 +244,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     flex-direction: column;
     border: none;
     border-left: solid calc(var(--edit-area-toolbar-icon-size)/8) rgb(var(--basalt-UI-dark-palette));
-    background-color: rgb(var(--edit-area-toolbar-bg-color));
+    background-color: rgb(var(--edit-area-toolbar-background-color));
     top: 100%;
     left: 0;
     clip-path: inset(0 0 100% 0);
@@ -436,7 +436,7 @@ form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
     min-height: calc(var(--true-font-size)*8);
     font-family: var(--body-font);
     padding: 1ch 0.5ch;
-    background-color: rgb(var(--edit-area-main-bg-color));
+    background-color: rgb(var(--edit-area-main-background-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     box-sizing: border-box;
     transition: border-color 0.125s linear;
@@ -471,13 +471,13 @@ form#edit-page-form .change-textarea-size a {
     justify-content: center;
     align-items: center;
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
 form#edit-page-form .change-textarea-size a:is(:hover,:focus) {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     outline-width: var(--edit-area-border-width);
 }
 
@@ -549,7 +549,7 @@ form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-o
     padding: 1ch 0.875ch;
     box-sizing: border-box;
     font-weight: initial;
-    background-color: rgb(var(--edit-area-ancillary-bg-color));
+    background-color: rgb(var(--edit-area-ancillary-background-color));
     border: none;
     order: 2;
 }
@@ -563,7 +563,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 
 #lock-info {
-    background-color: rgb(var(--edit-area-ancillary-bg-color));
+    background-color: rgb(var(--edit-area-ancillary-background-color));
     text-align: center;
     border: none;
     padding: 1em;
@@ -937,14 +937,14 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     align-items: center;
     border: solid 0.1em rgb(var(--button-border-color));
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
 #revision-list .page-history td.optionstd a:is(:hover,:focus) {
     color: rgb(var(--button-hover-text-color));
     border-color: rgb(var(--button-hover-border-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     outline-width: var(--edit-area-border-width);
 }
 
@@ -1374,14 +1374,14 @@ input#upload-userfile::file-selector-button {
     margin: 0 0.55em 0 0.125em;
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     border: solid 0.125em rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
 #file-upload-form table.form tr:first-child:is(:hover, :focus-within) input#upload-userfile::file-selector-button {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.475em;
 }
@@ -1504,14 +1504,14 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     font-family: var(--UI-font);
     text-decoration: none;
     color: rgb(var(--basalt-cancel-color));
-    background-color: rgb(var(--button-bg-color));
+    background-color: rgb(var(--button-background-color));
     border: solid 0.125em rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
 #action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"]:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
-    background-color: rgb(var(--button-hover-bg-color));
+    background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
 }
