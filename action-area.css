@@ -67,7 +67,7 @@
     outline-width: 0.25rem;
 }
 
-#action-area div.buttons > :is([name="cancel"],[value="Close"]) {
+#action-area div.buttons > :is([name="cancel"],[onclick*="page.listeners.closeActionArea(event)"]) {
     --button-text-color: var(--basalt-cancel-color);
 }
 #action-area div.buttons > :is([name="save"],[onclick*="PageTagsModule.listeners.save(event)"]) {
