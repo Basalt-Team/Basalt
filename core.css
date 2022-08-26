@@ -56,7 +56,7 @@
     --top-bar-mobile-height: calc(var(--header-UI-font-size)*4.5);
 
     --top-bar-link-color: var(--basalt-main-text-color);
-    --top-bar-link-color-hover: var(--basalt-primary-color);
+    --top-bar-link-color-hover: var(--basalt-light-text-color);
     --top-bar-link-background-hover: var(--basalt-focus-color);
     --top-bar-link-background-hover-alt: var(--basalt-UI-dark-palette);
     --top-bar-dropdown-background: var(--basalt-primary-color);
@@ -77,6 +77,9 @@
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
 
+    --side-bar-link-color: var(--basalt-main-text-color);
+    --side-bar-link-color-hover: var(--basalt-light-text-color);
+    --side-bar-link-background-hover: var(--link-color);
     --side-bar-resources-background-color: var(--basalt-undertone), 0.115;
     --side-bar-heading-text-color: var(--basalt-light-text-color);
     --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
@@ -931,7 +934,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: inline-block;
     padding: 0.25em 0.325em;
     font-size: var(--true-font-size);
-    color: rgb(var(--basalt-main-text-color));
+    color: rgb(var(--side-bar-link-color));
     flex-grow: 1;
     isolation: isolate;
     position: relative;
@@ -946,7 +949,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-weight: bold;
 }
 :is(#side-bar, #interwiki) .menu-item a:is(:hover, :focus) {
-    color: rgb(var(--basalt-light-text-color));
+    color: rgb(var(--side-bar-link-color-hover));
     text-decoration: none;
 }
 :is(#side-bar, #interwiki) .menu-item a::before {
@@ -958,7 +961,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: 0;
     height: 100%;
     z-index: -1;
-    background-color: rgb(var(--link-color));
+    background-color: rgb(var(--side-bar-link-background-hover));
     transition: width var(--side-bar-link-transition);
 }
 :is(#side-bar, #interwiki) .menu-item a:is(:hover, :focus)::before {
