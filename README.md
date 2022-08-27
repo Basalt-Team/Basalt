@@ -15,6 +15,6 @@ Basalt is an alternate base visual theme for the SCP Foundation Wiki, designed t
 ---
 
 ```
-[2021 Wikidot Theme]
-Built by Azamo & Placeholder McD
+[2022 Wikidot Theme]
+Built by EstrellaYoshte, Liryn, Placeholder McD
 ```
