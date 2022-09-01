@@ -90,8 +90,8 @@
 
     --main-content-width: 67.5rem;
     --main-content-top-margin: 0.325rem;
-    --main-content-bottom-margin: var(--main-content-top-margin);
     --main-content-side-margin: calc(var(--main-content-top-margin)*4.25);
+    --main-content-bottom-margin: var(--main-content-side-margin);
 
     --tag-background-color: var(--basalt-secondary-color);
 
@@ -1056,7 +1056,22 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 #license-area a::after { content: "."; }
 
-
+#footer-bar {
+    max-width: unset;
+    margin: 0;
+    padding: 0.75rem var(--main-content-side-margin);
+    background-color: rgb(var(--bottom-area-background-color));
+    border: none;
+}
+#footer-bar .units {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#footer-bar .units .unit {
+    flex-basis: 12.5rem;
+    text-align: center;
+}
 
 /*---------------------------*/
 /*---- MOBILE BREAKPOINT ----*/
