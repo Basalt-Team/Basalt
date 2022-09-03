@@ -617,6 +617,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     border-left: solid 0.075rem rgb(var(--action-area-border-color));
     transition: background-color 0.175s ease-out;
     position: relative;
+    align-items: center;
 }
 #who-rated-page-area > div span:nth-of-type(2n+1)::after {
     content: "";

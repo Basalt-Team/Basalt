@@ -765,9 +765,12 @@ div#toc {
 
 .printuser {
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     grid-gap: 0.25em;
     text-indent: 0;
+}
+.printuser > a:first-child {
+    align-self: center;
 }
 .printuser > a:first-child img {
     height: 1.15em;
