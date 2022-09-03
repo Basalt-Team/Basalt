@@ -532,6 +532,7 @@ div#toc {
 #toc #toc-action-bar {
     text-align: right;
     padding: 0.625rem;
+    width: 4em;
 }
 #toc .title {
     flex-grow: 1;
