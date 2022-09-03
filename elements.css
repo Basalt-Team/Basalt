@@ -580,6 +580,7 @@ div#toc {
 .yui-navset.yui-navset-top {
     display: flex;
     flex-direction: column;
+    margin: 0.75rem 0;
 }
 .yui-navset.yui-navset-top > ul.yui-nav {
     display: flex;
