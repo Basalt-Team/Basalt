@@ -464,7 +464,7 @@ div.wiki-note {
     padding: 0.25rem 1.5rem;
     box-sizing: border-box;
     border: none;
-    border-left: solid 0.25rem rgb(var(--basalt-undertone));
+    background-color: rgb(var(--basalt-alternate-color),0.075);
     text-align: justify;
 }
 
