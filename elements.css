@@ -533,6 +533,10 @@ div#toc {
     margin: 0.25rem 1.5rem 0.25rem 0;
 }
 
+/* non-float toc */
+#page-content table[style="margin:0; padding:0"],
+#page-content table[style="margin:0; padding:0"] :is(tbody, tr, td) { display: contents; }
+
 #toc #toc-action-bar {
     text-align: right;
     padding: 0.625rem;
