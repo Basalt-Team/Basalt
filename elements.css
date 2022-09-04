@@ -601,6 +601,8 @@ div#toc {
     border: none;
     font-family: var(--mono-font);
     font-size: 0.95em;
+    grid-gap: 0.05rem;
+    background-color: rgb(var(--general-border-color));
 }
 .yui-navset.yui-navset-top > ul.yui-nav > li {
     margin: 0;
