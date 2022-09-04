@@ -48,6 +48,15 @@ img, table, iframe {
     color: rgb(var(--selection-text-color));
 }
 
+/* id scroll jump */
+#main-content [id] {
+    scroll-snap-margin-top: var(--header-final-height);
+    scroll-margin-top: var(--header-final-height);
+}
+@media only screen and (max-width: 1024px) {
+    #main-content [id] { --header-final-height: var(--top-bar-mobile-height); }
+}
+
 /*---------------*/
 /*--- HEADERS ---*/
 /*---------------*/
@@ -64,14 +73,6 @@ h3 { font-size: 1.5em; }
 h4 { font-size: 1.325em; }
 h5 { font-size: 1.15em; }
 h6 { font-size: 1em; }
-
-:is(h1,h2,h3,h4,h5,h6)[id*="toc"] {
-    scroll-snap-margin-top: var(--header-final-height);
-    scroll-margin-top: var(--header-final-height);
-}
-@media only screen and (max-width: 1024px) {
-    :is(h1,h2,h3,h4,h5,h6)[id*="toc"] { --header-final-height: var(--top-bar-mobile-height); }
-}
 
 /*-------------*/
 /*--- LINKS ---*/
