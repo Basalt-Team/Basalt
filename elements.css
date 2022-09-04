@@ -518,7 +518,7 @@ blockquote, div.blockquote {
 /*------------------------*/
 
 div#toc {
-    max-width: calc(var(--main-content-width)*0.45);
+    max-width: calc(var(--main-content-width)*0.375);
     min-width: min(100%, calc(var(--main-content-width)*0.25));
     display: flex;
     flex-wrap: wrap;
