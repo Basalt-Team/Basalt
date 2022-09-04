@@ -696,6 +696,7 @@ div#toc {
     text-indent: -0.575ch;
     position: relative;
 }
+.bibitems .bibitem > *, .footnotes-footer .footnote-footer > * { text-indent: 0; }
 .bibitems .bibitem::first-letter {
     font-size: 0;
 }
