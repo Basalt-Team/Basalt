@@ -664,7 +664,7 @@ div#toc {
     position: static;
 }
 .yui-navset.yui-navset-top .yui-content {
-    border: solid var(--tab-border-width) rgb(var(--toc-border-color));
+    border: solid var(--tab-border-width) rgb(var(--general-border-color));
     padding: 0.625rem 1rem;
 }
 
