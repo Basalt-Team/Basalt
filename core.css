@@ -77,6 +77,7 @@
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
 
+    --side-bar-background-color: var(--basalt-background-color);
     --side-bar-link-color: var(--basalt-main-text-color);
     --side-bar-link-color-hover: var(--basalt-light-text-color);
     --side-bar-link-background-hover: var(--link-color);
@@ -800,7 +801,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     height: calc(100vh - var(--header-final-height));
     width: var(--side-bar-width);
     box-sizing: border-box;
-    background-color: rgb(var(--basalt-background-color));
+    background-color: rgb(var(--side-bar-background-color));
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
