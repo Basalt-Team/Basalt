@@ -747,16 +747,12 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 
 #h-perpage {
     width: 100%;
-    appearance: none;
-    color: rgb(var(--basalt-main-text-color));
-    background-color: rgb(var(--basalt-background-color));
-    padding: 0.25ch 0.325ch;
     border: solid 0.125em rgb(var(--action-area-border-color));
-    box-sizing: border-box;
     outline: solid 0 rgb(var(--basalt-UI-dark-palette));
 }
 #h-perpage:focus {
     border-color: rgb(var(--basalt-UI-dark-palette));
+    outline-width: 0;
 }
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::before,
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {

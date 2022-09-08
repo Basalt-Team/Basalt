@@ -170,6 +170,20 @@ input[type="text"]:focus-visible {
     outline-width: 0.175rem;
 }
 
+select {
+    appearance: none;
+    color: rgb(var(--basalt-main-text-color));
+    background-color: rgb(var(--basalt-background-color));
+    padding: 0.25ch 0.325ch;
+    border: solid 0.125em rgb(var(--general-border-color));
+    box-sizing: border-box;
+    outline: solid 0 rgb(var(--basalt-focus-color));
+    transition: outline-width 0.125s linear;
+}
+select:focus {
+    outline-width: 0.175rem;
+}
+
 /*-------------*/
 /*--- TABLE ---*/
 /*-------------*/
