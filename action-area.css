@@ -748,6 +748,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #h-perpage {
     width: 100%;
     appearance: none;
+    color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-background-color));
     padding: 0.25ch 0.325ch;
     border: solid 0.125em rgb(var(--action-area-border-color));
@@ -1240,6 +1241,17 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     align-items: center;
     text-align: center;
     margin: 0.425rem 0;
+}
+
+.inline-diff.page-source ins {
+    text-decoration: none;
+    background-color: rgb(var(--basalt-positive-color),0.1875);
+}
+.inline-diff.page-source del {
+    background-color: rgb(var(--basalt-negative-color),0.1875);
+}
+.inline-diff.page-source :is(ins, del) > br {
+    display: none;
 }
 
 /*-------------------*/
