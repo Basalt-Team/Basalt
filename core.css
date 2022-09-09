@@ -1141,11 +1141,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
         backdrop-filter: blur(var(--basalt-UI-blur));
         z-index: -1;
-        transition: margin-left var(--side-bar-transition), opacity var(--side-bar-transition);
+        transition: opacity var(--side-bar-transition);
     }
     #side-bar:target a.close-menu {
         pointer-events: auto;
-        margin-left: min(calc(100% - 3.75rem),var(--side-bar-width));
         opacity: 1;
     }
 }
