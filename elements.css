@@ -688,6 +688,7 @@ div#toc {
 
 .bibitems, .footnotes-footer {
     padding: 0;
+    padding-bottom: 0.125rem;
     border-left: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
     margin: 1rem 0;
     height: auto;
