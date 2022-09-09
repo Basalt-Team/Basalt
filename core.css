@@ -800,7 +800,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     left: calc(var(--side-bar-width)*-1.125);
     margin-top: var(--header-final-height);
     height: calc(100vh - var(--header-final-height));
-    width: min(calc(100% - 3.75rem),var(--side-bar-width));
+    width: var(--side-bar-width);
+    max-width: calc(100% - 3.75rem);
     box-sizing: border-box;
     background-color: rgb(var(--side-bar-background-color));
     padding: 0;
@@ -1125,7 +1126,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     #side-bar::before, #side-bar::after { display: none; }
     #side-bar:target {
         left: 0;
-        width: min(calc(100% - 3.75rem),var(--side-bar-width));
+        width: var(--side-bar-width);
         z-index: 10;
     }
     #side-bar a.close-menu, #side-bar:target a.close-menu {
@@ -1133,15 +1134,16 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         pointer-events: none;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         width: 100%;
+        min-width: 3.75rem;
         height: 100%;
         margin-left: 0;
         opacity: 0;
         background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
         backdrop-filter: blur(var(--basalt-UI-blur));
         z-index: -1;
-        transition: opacity var(--side-bar-transition);
+        transition: width var(--side-bar-transition), opacity var(--side-bar-transition);
     }
     #side-bar:target a.close-menu {
         pointer-events: auto;
