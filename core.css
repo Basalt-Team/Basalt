@@ -800,7 +800,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     left: calc(var(--side-bar-width)*-1.125);
     margin-top: var(--header-final-height);
     height: calc(100vh - var(--header-final-height));
-    width: var(--side-bar-width);
+    width: min(calc(100% - 3.75rem),var(--side-bar-width));
     box-sizing: border-box;
     background-color: rgb(var(--side-bar-background-color));
     padding: 0;
