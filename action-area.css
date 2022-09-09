@@ -705,8 +705,9 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #history-form-1 > table.form > tbody > tr:first-child > td:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(auto-fill, 1.25em minmax(9.875em, 1fr));
-    grid-auto-rows: 1.75em;
-    grid-gap: 0.175em;
+    grid-auto-rows: auto;
+    text-indent: -0.5ex;
+    grid-gap: 0.325em 0.375em;
     align-items: center;
     margin: 0.375em 0;
 }
