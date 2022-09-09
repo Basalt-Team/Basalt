@@ -1125,7 +1125,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     #side-bar::before, #side-bar::after { display: none; }
     #side-bar:target {
         left: 0;
-        width: var(--side-bar-width);
+        width: min(calc(100% - 3.75rem),var(--side-bar-width));
         z-index: 10;
     }
     #side-bar a.close-menu, #side-bar:target a.close-menu {
@@ -1145,7 +1145,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     }
     #side-bar:target a.close-menu {
         pointer-events: auto;
-        margin-left: var(--side-bar-width);
+        margin-left: min(calc(100% - 3.75rem),var(--side-bar-width));
         opacity: 1;
     }
 }
