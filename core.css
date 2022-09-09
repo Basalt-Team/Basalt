@@ -1146,6 +1146,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         transition: width var(--side-bar-transition), opacity var(--side-bar-transition);
     }
     #side-bar:target a.close-menu {
+        width: calc(100% - var(--side-bar-width));
         pointer-events: auto;
         opacity: 1;
     }
