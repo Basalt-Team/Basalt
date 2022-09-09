@@ -66,6 +66,9 @@
 	--header-subtitle: "POLSKA FILIA SCP";
 }
 
+#main-content .pager::before { content: "« poprzednia"; }
+#main-content .pager::after { content: "następna »"; }
+
 /* ===PORTUGESE BRANCH=== */
 :root:lang(pt-br) {
 	/* Header */
