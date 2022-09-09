@@ -639,7 +639,7 @@ div#toc {
 }
 .yui-navset.yui-navset-top > ul.yui-nav > li > a:is(:hover, :focus),
 .yui-navset.yui-navset-top > ul.yui-nav > li.selected > a {
-    color: rgb(var(--basalt-light-text-color));
+    color: rgb(var(--tab-focus-text-color));
 }
 .yui-navset.yui-navset-top > ul.yui-nav > li::before {
     content: "";
