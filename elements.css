@@ -1146,7 +1146,8 @@ div[id*="page-options-bottom"] {
     box-sizing: border-box;
 }
 div[id*="page-options-bottom"] > a {
-    display: grid;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0;
