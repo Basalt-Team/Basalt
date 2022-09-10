@@ -804,6 +804,7 @@ div#toc {
     padding-left: 0.5em;
     object-fit: contain;
     background-size: cover;
+    overflow: hidden;
 }
 
 
