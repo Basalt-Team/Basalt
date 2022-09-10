@@ -793,6 +793,7 @@ div#toc {
     text-indent: 0;
 }
 .printuser > a:first-child {
+    display: flex;
     user-select: none;
     align-self: center;
 }
