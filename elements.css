@@ -361,7 +361,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
-#u-credit-view .modalbox {
+:is(#u-credit-view, div#u-credit-otherwise) .modalbox {
     display: flex;
     flex-direction: column;
     box-shadow: none;
@@ -382,8 +382,8 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 #u-credit-view .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
-#u-credit-view .modalbox > .credit > p:first-child::before,
-#u-credit-view .modalbox > .credit > p:first-child::after {
+#u-credit-view .modalbox > .credit.first > p:first-child::before,
+#u-credit-view .modalbox > .credit.first > p:first-child::after {
     content: "";
     position: absolute;
     top: 0;
@@ -393,12 +393,12 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     width: 2.75rem;
     pointer-events: none;
 }
-#u-credit-view .modalbox > .credit > p:first-child::before {
+#u-credit-view .modalbox > .credit.first > p:first-child::before {
     background: rgb(var(--basalt-cancel-color));
     height: 0;
     transition: height 0.125s ease-out;
 }
-#u-credit-view .modalbox > .credit > p:first-child::after {
+#u-credit-view .modalbox > .credit.first > p:first-child::after {
     background: rgb(var(--basalt-light-text-color));
     -webkit-mask-image: var(--modal-close-mask);
     mask-image: var(--modal-close-mask);
@@ -409,7 +409,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }
-#u-credit-view .modalbox > .credit > p:first-child:hover::before {
+#u-credit-view .modalbox > .credit.first > p:first-child:hover::before {
     height: 2.75rem;
 }
 
