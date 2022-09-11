@@ -428,6 +428,10 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     overflow: auto;
     margin: 0 1.25rem;
 }
+#u-credit-view .modalbox div.credit:last-child {
+    margin: 0!important;
+}
+
 #u-credit-view .creditBottomRate {
     height: auto!important;
 }
