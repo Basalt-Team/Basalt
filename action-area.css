@@ -436,6 +436,7 @@ form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
     min-height: calc(var(--true-font-size)*8);
     font-family: var(--body-font);
     padding: 1ch 0.5ch;
+    color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--edit-area-main-background-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     box-sizing: border-box;
