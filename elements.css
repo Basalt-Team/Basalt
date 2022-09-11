@@ -370,7 +370,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     background: rgb(var(--basalt-background-color));
     padding: 0;
 }
-#u-credit-view .modalbox > div:first-child {
+:is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
