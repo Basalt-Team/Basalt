@@ -302,12 +302,13 @@ div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::before {
     content: "";
     display: block;
-    background-color: rgb(var(--basalt-UI-dark-palette));
+    background-color: rgb(var(--basalt-main-text-color));
     position: absolute;
     width: 100%;
     height: 100%;
     transition: background-color 0.095s linear;
 }
+div.rate-box-with-credit-button .creditButton > p > a::before { background-color: rgb(var(--basalt-UI-dark-palette)); }
 div.rate-box-with-credit-button .creditButton > p > a::after {
     content: "";
     display: block;
