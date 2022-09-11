@@ -1011,7 +1011,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #license-area {
     font-family: var(--UI-font);
     font-size: var(--license-area-font-size);
-    color: rgb(var(--basalt-overtone));
+    color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--bottom-area-background-color));
     box-sizing: border-box;
     text-align: center;
