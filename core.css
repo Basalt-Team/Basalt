@@ -923,7 +923,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     100% { height: 100%; }
 }
 #side-bar .collapsible-block-content .menu-item {
-    border-bottom: solid 0.05rem rgb(var(--general-border-color));
+    box-shadow: inset 0 -0.05rem 0 rgb(var(--general-border-color));
 }
 
 :is(#side-bar, #interwiki) .menu-item,
