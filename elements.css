@@ -796,6 +796,7 @@ div#toc {
     display: flex;
     user-select: none;
     align-self: center;
+    min-width: max-content;
 }
 .printuser > a:first-child img {
     height: 1.15em;

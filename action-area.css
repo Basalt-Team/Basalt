@@ -608,8 +608,8 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 
 #who-rated-page-area > div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr) 1.75rem);
-    font-size: calc(var(--true-font-size)*0.875);
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr) 1.75rem);
+    font-size: calc(var(--true-font-size)*0.925);
 }
 #who-rated-page-area > div br { display: none; }
 #who-rated-page-area > div span:nth-of-type(2n+1) {
@@ -628,10 +628,12 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     height: 100%;
 }
 #who-rated-page-area > div span[style*="color"] {
+    display: grid;
+    place-items: center;
     color: rgb(var(--basalt-main-text-color))!important;
     font-weight: bold;
     text-align: center;
-    font-size: 1.15em;
+    font-size: 1.25em;
     transition: background-color 0.175s ease-out;
 }
 #who-rated-page-area > div span:nth-of-type(2n+1):is(:hover, :focus-within),
