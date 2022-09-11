@@ -12,8 +12,8 @@
 	--header-subtitle: "SÉCURISER - CONTENIR - PROTÉGER";
 }
 
-#main-content .pager::before { content: "« précédente"; }
-#main-content .pager::after { content: "suivante »"; }
+:root:lang(fr) #main-content .pager::before { content: "« précédente"; }
+:root:lang(fr) #main-content .pager::after { content: "suivante »"; }
 
 /* ===GERMAN BRANCH=== */
 :root:lang(de) {
@@ -22,8 +22,8 @@
 	--header-subtitle: "AUF DEUTSCH";
 }
 
-#main-content .pager::before { content: "« vorherige"; }
-#main-content .pager::after { content: "nächste »"; }
+:root:lang(de) #main-content .pager::before { content: "« vorherige"; }
+:root:lang(de) #main-content .pager::after { content: "nächste »"; }
 
 /* ===GREEK BRANCH=== */
 :root:lang(el) {
@@ -39,8 +39,8 @@
 	--header-subtitle: "BRANCA ITALIANA - SCP FOUNDATION";
 }
 
-#main-content .pager::before { content: "« precedente"; }
-#main-content .pager::after { content: "prossimo »"; }
+:root:lang(it) #main-content .pager::before { content: "« precedente"; }
+:root:lang(it) #main-content .pager::after { content: "prossimo »"; }
 
 /* ===JAPANESE BRANCH=== */
 :root:lang(ja) {
@@ -68,8 +68,8 @@
     --header-font-fallback: var(--body-font-fallback);
 }
 
-#main-content .pager::before { content: "« 이전"; }
-#main-content .pager::after { content: "다음 »"; }
+:root:lang(ko) #main-content .pager::before { content: "« 이전"; }
+:root:lang(ko) #main-content .pager::after { content: "다음 »"; }
 
 /* ===POLISH BRANCH=== */
 :root:lang(pl) {
@@ -78,8 +78,8 @@
 	--header-subtitle: "POLSKA FILIA SCP";
 }
 
-#main-content .pager::before { content: "« poprzednia"; }
-#main-content .pager::after { content: "następna »"; }
+:root:lang(pl) #main-content .pager::before { content: "« poprzednia"; }
+:root:lang(pl) #main-content .pager::after { content: "następna »"; }
 
 /* ===PORTUGESE BRANCH=== */
 :root:lang(pt-br) {
@@ -88,8 +88,8 @@
 	--header-subtitle: "FILIAL LUSÓFONA";
 }
 
-#main-content .pager::before { content: "« anterior"; }
-#main-content .pager::after { content: "próximo »"; }
+:root:lang(pt-br) #main-content .pager::before { content: "« anterior"; }
+:root:lang(pt-br) #main-content .pager::after { content: "próximo »"; }
 
 /* ===RUSSIAN BRANCH=== */
 :root:lang(ru) {
