@@ -346,11 +346,11 @@ div.rate-box-with-credit-button .creditButton > p > a::after {
 }
 div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus) { border-color: rgb(var(--basalt-positive-color)); }
 div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus) { border-color: rgb(var(--basalt-negative-color)); }
-div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: rgb(var(--basalt-focus-color)); }
+div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: rgb(var(--basalt-overtone)); }
 
 div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-positive-color)); }
 div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-negative-color)); }
-div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
+div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-overtone)); }
 div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
 /* info modal */
