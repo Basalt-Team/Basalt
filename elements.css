@@ -118,7 +118,7 @@ div.buttons input, input[type="button"], button {
 /*--- INPUTS ---*/
 /*--------------*/
 
-[type="checkbox"], [type="radio"] {
+input[type="checkbox"], [type="radio"] {
     appearance: none;
     display: inline-block;
     background-color: rgb(var(--basalt-background-color));
