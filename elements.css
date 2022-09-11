@@ -421,7 +421,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     opacity: 0;
 }
 
-#u-credit-view .modalbox > hr {
+:is(#u-credit-view, #u-credit-otherwise) .modalbox > hr {
     margin: 1.25rem 1.25rem 0.625rem;
 }
 #u-credit-view .modalbox > div.credit {
