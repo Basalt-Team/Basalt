@@ -357,7 +357,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 
 /* info modal */
 
-#u-credit-view .fader {
+:is(#u-credit-view, #u-credit-otherwise) .fader {
     background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
