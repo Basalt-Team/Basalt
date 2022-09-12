@@ -71,8 +71,14 @@
     --login-status-width: calc(var(--header-UI-font-size)*20);
     --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
+    --user-icon-button-color: var(--top-bar-link-color);
+    --user-icon-button-color-hover: var(--top-bar-link-color-hover);
+    --user-icon-button-background-hover: var(--login-status-background-color);
 
     --side-bar-button-width: 3rem;
+    --side-bar-button-color: var(--top-bar-link-color);
+    --side-bar-button-color-hover: var(--top-bar-link-color-hover);
+    --side-bar-button-background-hover: var(--top-bar-link-background-hover-alt);
     --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
@@ -318,9 +324,10 @@
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--side-bar-button-background-hover));
 }
 #header .open-menu p a::after {
+    background-color: rgb(var(--side-bar-button-color));
     transition: background-color var(--side-bar-transition);
     -webkit-mask-image: var(--side-bar-button-mask);
                 mask-image: var(--side-bar-button-mask);
@@ -339,7 +346,7 @@
     height: 100%;
 }
 #header .open-menu p a:is(:hover, :focus)::after {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    background-color: rgb(var(--side-bar-button-color-hover));
 }
 
 #top-bar div[class*="top-bar"] > ul {
@@ -576,9 +583,9 @@
     height: var(--base-header-height);
     pointer-events: auto;
     cursor: pointer;
-    background-color: rgb(var(--login-status-background-color));
 }
 #login-status::before {
+    background-color: rgb(var(--user-icon-button-color));
     z-index: 2;
     -webkit-mask-image: var(--user-icon-mask);
                 mask-image: var(--user-icon-mask);
@@ -591,12 +598,13 @@
     transition: background-color var(--header-link-transition-2nd);
 }
 #login-status::after {
+    background-color: rgb(var(--user-icon-button-background-hover));
     z-index: 1;
     height: 0;
     transition: height var(--header-link-transition-2nd);
 }
 #login-status:is(:hover,:focus-within)::before {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    background-color: rgb(var(--user-icon-button-color-hover));
     transition: background-color var(--header-link-transition-1st);
 }
 #login-status:is(:hover,:focus-within)::after {
@@ -822,11 +830,12 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     top: 0; left: 0;
     width: var(--side-bar-button-width);
     height: var(--base-header-height);
-    background-color: rgb(var(--basalt-overtone));
+    background-color: rgb(var(--side-bar-button-background-hover));
     pointer-events: auto;
     cursor: pointer;
 }
 #side-bar::after {
+    background-color: rgb(var(--side-bar-button-color));
     transition: background-color var(--side-bar-transition);
     -webkit-mask-image: var(--side-bar-button-mask);
                 mask-image: var(--side-bar-button-mask);
@@ -845,7 +854,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         height: var(--base-header-height);
 }
 #side-bar:is(:hover, :focus-within)::after {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    background-color: rgb(var(--side-bar-button-color-hover));
 }
 
 #side-bar > * { direction: ltr; }
