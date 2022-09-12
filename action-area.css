@@ -852,6 +852,8 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #main-content .pager > span.current {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
+    font-weight: bold;
+    border: none;
     margin: 0;
     padding: 0;
 }
