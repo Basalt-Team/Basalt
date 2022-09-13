@@ -62,6 +62,7 @@ img, table, iframe {
 /*---------------*/
 
 h1,h2,h3,h4,h5,h6 {
+    color: inherit;
     font-weight: bold;
     font-family: var(--header-font);
     margin: 0.325em 0;
