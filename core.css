@@ -106,6 +106,7 @@
     --bottom-area-padding: calc(var(--true-font-size)*0.85);
     --footer-divider-thickness: 0.075rem;
     --footer-divider-color: var(--basalt-tertiary-color);
+    --footer-link-color: var(--basalt-sub-text-color);
     --license-area-logo: var(--header-logo);
     --license-area-logo-size: 2.75rem;
     --license-area-divider-thickness: 0.1rem;
@@ -1002,6 +1003,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--bottom-area-background-color));
     box-sizing: border-box;
     padding-bottom: 0;
+}
+#footer a {
+    color: rgb(var(--footer-link-color));
 }
 #footer > a:last-child { margin-left: 0.375ch; }
 #footer .options {
