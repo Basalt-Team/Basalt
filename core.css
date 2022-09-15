@@ -698,7 +698,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, rgb(var(--basalt-overtone),1) 0%, rgb(var(--basalt-overtone),var(--basalt-UI-opacity)) 100%);
-    color: rgb(var(--basalt-primary-color));
+    color: rgb(var(--login-status-text-color));
 }
 
 /*--- SEARCH ---*/
