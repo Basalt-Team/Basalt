@@ -808,6 +808,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     top: 0;
     left: calc(var(--side-bar-width)*-1.125);
     margin-top: var(--header-final-height);
+    margin-bottom: 0;
     height: calc(100vh - var(--header-final-height));
     width: var(--side-bar-width);
     max-width: calc(100% - 3.75rem);
