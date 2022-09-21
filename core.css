@@ -134,6 +134,9 @@
     --rate-module-background-color: var(--basalt-secondary-color);
     --rate-module-text-color: var(--basalt-main-text-color);
     --rate-module-button-size: 1.625em;
+    --rate-module-upvote-color: var(--basalt-positive-color);
+    --rate-module-downvote-color: var(--basalt-negative-color);
+    --rate-module-cancel-color: var(--basalt-overtone);
 
     --button-text-color: var(--basalt-main-text-color);
     --button-background-color: var(--basalt-secondary-color);
