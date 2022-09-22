@@ -560,8 +560,7 @@ div#toc {
 }
 
 /* non-float toc */
-#page-content table[style="margin:0; padding:0"],
-#page-content table[style="margin:0; padding:0"] :is(tbody, tr, td) { display: contents; }
+#page-content table[style^="margin:0;"] td[style^="margin:0;"] { display: contents; }
 
 #toc #toc-action-bar {
     text-align: right;
