@@ -549,6 +549,7 @@ div#toc {
     padding: 0;
     background-color: rgb(var(--toc-background-color));
     border: solid var(--toc-border-width) rgb(var(--toc-border-color));
+    box-sizing: border-box;
 }
 #toc.floatright {
     float: right;
