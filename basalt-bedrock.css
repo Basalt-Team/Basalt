@@ -4589,6 +4589,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     --bib-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 200 200' xml:space='preserve'%3E%3Cpath id='Bibliography-Icon' d='M165.6 110.1c2.6-6.4 2.6-13.8 0-20.2 2.7-6.7 2.6-14.6-.4-21.2-.2-.5-.6-.9-1-1.1l-46.4-27.1c-.4-.3-1-.4-1.5-.3l-81.4 6.9h-.5c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.2.1-.2.1l-.1.1-.2.2-.1.1-.2.2s-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2 0 .1-.1.2v1.4c0 .1 0 .2.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2-.5 1.2-.1 2.5 1 3.2l46.4 27.1c.4.2.8.3 1.3.3h.2l81.4-6.9c.9-.1 1.7-.6 2.1-1.5 3-6.6 3.1-14.5.4-21.3 2.1-7 2.1-14.4-.4-20.8zm-81.3 6.7c2.5-6.4 2.4-13.7-.1-20 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.6 5.7 2.6 12.5 0 18.2-.2.4-.2.8-.2 1.2l-76.1 6.5zm-4.8-38.5c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l34.8 20.4 5.4 3.2zm0 20.2c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.6zm0 20.3c1.9 4.7 2.1 10 .7 14.8l-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.6zm.6 35-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.1 23.5.1.1c2 4.7 2.2 10 .7 14.8zm81-5.6-76 6.5c1.6-5.7 1.2-11.9-.9-17.4 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.3 5.2 2.5 11.4.5 16.8z'/%3E%3C/svg%3E");
     --bib-cite-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 200 200' xml:space='preserve'%3E%3Cg id='Bibliography-Cite-Icon'%3E%3Cpath d='m145.2 106.1.9-25L125 94.5l-5.5-9.5 22.3-11.6-22.3-11.6 5.5-9.5 21.1 13.4-.9-25h10.9l-.9 25 21.1-13.4 5.5 9.5-22.3 11.6L181.8 85l-5.5 9.5-21.1-13.4.9 25h-10.9z'/%3E%3Cpath d='m165.9 99.7.2 6 .1 2.6c.8-2.4 1.2-5 1.3-7.6l-1.6-1zm.5 12.8.1 3.6h-31.7l.1-3.6-50.7 4.3c2.5-6.4 2.4-13.7-.1-20 0-.1.1-.2.1-.2l29-2.5-2.4-4.2-5.2-9 9.2-4.8 5.2-2.7-5.2-2.7-9.2-4.8 5.2-9 5.5-9.5 3.3-5.8-1.9-1.1c-.4-.3-1-.4-1.5-.3l-81.4 6.9h-.5c-.1 0-.2.1-.2.1s-.1 0-.1.1c-.1 0-.2.1-.2.1l-.1.1-.2.2-.1.1-.2.2s-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2-.1.1-.1.2 0 .1-.1.2v1.4c0 .1 0 .2.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2v.1c0 .1-.1.2-.1.3v.1c0 .1 0 .3-.1.4v.6c0 .1 0 .2.1.3 0 .1 0 .1.1.2 0 .1 0 .1.1.2 2.6 5.7 2.6 12.5 0 18.2-.5 1.2-.1 2.5 1 3.2l46.4 27.1c.4.2.8.3 1.3.3h.2l81.4-6.9c.9-.1 1.7-.6 2.1-1.5 3-6.6 3.1-14.5.4-21.3 1.9-6.2 2.2-12.6.5-18.4zm-86.3 41.3-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.1 23.5.1.1c2 4.7 2.2 10 .7 14.8zm0-20.2-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.5c2 4.7 2.2 10.1.7 14.9zm0-20.2-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8l40.2 23.5c2 4.7 2.2 10 .7 14.9zm0-20.3-42-24.6c1.5-4.4 1.9-9.2 1.1-13.8L74 75.1l5.4 3.2c2 4.7 2.2 10 .7 14.8zm81 55.1-76 6.5c1.6-5.7 1.2-11.9-.9-17.4 0-.1.1-.2.1-.2l76.1-6.5c0 .3.1.6.2.8 2.3 5.2 2.5 11.4.5 16.8z'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+
 /* ===CZECH BRANCH=== */
 :root:lang(cs) {
 	/* Header */
@@ -4709,7 +4710,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	/* Fonts */
 	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
 	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-	--header-font: var(--body-font-fallback);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
@@ -4722,7 +4723,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	/* Typefaces */
 	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
 	--UI-font-fallback: "Kanit", "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
-	--header-font: var(--body-font);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Kanit", Consolas, monaco, monospace;
 }
 
@@ -4735,7 +4736,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	/* Typefaces */
 	--body-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
 	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-	--header-font: var(--body-font);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", monospace;
 }
 
@@ -4747,7 +4748,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 
 	/* Typefaces */
 	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--header-font: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--header-font-fallback: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 /* ===VIETNAMESE BRANCH=== */
