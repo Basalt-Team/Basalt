@@ -1634,6 +1634,7 @@ body {
     color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-background-color));
     font-family: var(--body-font);
+    font-feature-settings: "salt", "ss01", "ss02";
     font-size: var(--true-font-size);
 }
 
@@ -1679,7 +1680,6 @@ img, table, iframe {
 
 /* id scroll jump */
 #main-content [id] {
-    scroll-snap-margin-top: var(--header-final-height);
     scroll-margin-top: var(--header-final-height);
 }
 @media only screen and (max-width: 1024px) {
