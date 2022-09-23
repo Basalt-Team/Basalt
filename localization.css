@@ -118,7 +118,7 @@
 	/* Fonts */
 	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
 	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-	--header-font: var(--body-font-fallback);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
@@ -131,7 +131,7 @@
 	/* Typefaces */
 	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
 	--UI-font-fallback: "Kanit", "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
-	--header-font: var(--body-font);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Kanit", Consolas, monaco, monospace;
 }
 
@@ -144,7 +144,7 @@
 	/* Typefaces */
 	--body-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
 	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
-	--header-font: var(--body-font);
+	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", monospace;
 }
 
@@ -156,7 +156,7 @@
 
 	/* Typefaces */
 	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--header-font: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--header-font-fallback: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 /* ===VIETNAMESE BRANCH=== */
