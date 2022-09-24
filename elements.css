@@ -82,11 +82,13 @@ h6 { font-size: 1em; }
 
 a:any-link {
     color: rgb(var(--link-color));
+    background-color: transparent;
+    text-decoration: none;
 }
 a:visited {
     color: rgb(var(--link-visited-color));
 }
-a:is(:hover,:focus) {
+a:any-link:is(:hover,:focus) {
     text-decoration: underline 0.1em;
     text-underline-offset: 0.08em;
 }
@@ -297,6 +299,7 @@ div.rate-box-with-credit-button .creditButton > p > a {
     margin: 0;
     border: none;
     color: transparent!important;
+    background-color: transparent;
     box-sizing: border-box;
     transition: all 0.095s linear;
 }
@@ -461,6 +464,10 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     padding: 0.375rem 0.625rem;
     background: rgb(var(--image-caption-background-color));
 }
+:is(.image-block, .scp-image-block) :is(.image-caption, .scp-image-caption) p {
+    margin: 0;
+}
+
 :is(.image-block, .scp-image-block).block-right {
     margin: 0.25rem 0 0.5rem 2rem;
     float: right;
@@ -817,6 +824,9 @@ div#toc {
     overflow: hidden;
 }
 
+#avatar-hover-container {
+    display: none;
+}
 
 /*---------------*/
 /*--- OWINDOW ---*/
@@ -1176,6 +1186,10 @@ div[id*="page-options-bottom"] > a {
     border-bottom: solid 0.05em rgb(var(--general-border-color));
     transition: all var(--button-hover-transition);
 }
+div[id*="page-options-bottom"] > a:is(:hover,:focus) {
+    text-decoration: none;
+}
+
 #more-options-button, #delete-button {
     position: absolute;
     top: var(--po-padding); right: var(--po-padding);

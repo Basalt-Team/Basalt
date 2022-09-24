@@ -222,6 +222,11 @@
     font-family: var(--UI-font);
 }
 
+#header a, #top-bar div[class*="top-bar"] ul li a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
 /*--- H1 LINK ---*/
 
 #header h1 {
@@ -364,6 +369,7 @@
     flex-shrink: 1;
     align-self: stretch;
     position: relative;
+    margin: 0;
 }
 #top-bar div[class*="top-bar"] > ul > li > a {
     display: flex;
@@ -438,6 +444,7 @@
     min-width: 100%;
     display: flex;
     flex-direction: column;
+    border: none;
 }
 #top-bar div[class*=top-bar] > ul > li:hover > ul,
 #top-bar div[class*=top-bar] > ul > li > ul:hover,
@@ -806,6 +813,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #search-top-box-form input[type=submit] {
     pointer-events: none;
+    background: none;
+    border: none;
     display: block;
     width: 100%;
     height: 100%;
@@ -902,6 +911,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+}
+:is(#side-bar, #interwiki) .heading > p {
+    margin: 0;
 }
 
 #side-bar a.close-menu, #side-bar:target a.close-menu {
