@@ -74,6 +74,7 @@
     --user-icon-button-color: var(--top-bar-link-color);
     --user-icon-button-color-hover: var(--top-bar-link-color-hover);
     --user-icon-button-background-hover: var(--login-status-background-color);
+    --pm-indicator-color: var(--basalt-alternate-color);
 
     --side-bar-button-width: 3rem;
     --side-bar-button-color: var(--top-bar-link-color);
@@ -645,7 +646,7 @@ a#account-topbutton, a#my-account {
     width: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
     height: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
     border-radius: calc(var(--user-button-width)/6);
-    background-color: rgb(var(--basalt-alternate-color));
+    background-color: rgb(var(--pm-indicator-color));
     top: min(0.625rem, 42.5%);
     right: min(0.45rem, calc(var(--user-button-width)/6));
     z-index: 3;
