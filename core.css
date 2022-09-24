@@ -626,7 +626,23 @@
 a#account-topbutton, a#my-account {
     display: none;
 }
-#login-status > a[href*="account/messages"] { display: none; }
+
+/* PM notification indicator */
+#login-status > a[href*="account/messages"] {
+    display: block;
+    position: absolute;
+    font-size: 0;
+    pointer-events: none;
+    user-select: none;
+    width: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
+    height: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
+    border-radius: calc(var(--user-button-width)/6);
+    background-color: rgb(var(--basalt-alternate-color));
+    top: min(0.625rem, 42.5%);
+    right: min(0.45rem, calc(var(--user-button-width)/6));
+    z-index: 3;
+    clip-path: unset;
+}
 
 #login-status span.printuser {
     grid-area: printuser;
