@@ -750,6 +750,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #history-form-1 > table.form > tbody > tr:nth-child(2):focus-within > td:first-child::before { height: 100%; }
 
 #h-perpage {
+    appearance: none;
     width: 100%;
     border: solid 0.125em rgb(var(--action-area-border-color));
     outline: solid 0 rgb(var(--basalt-UI-dark-palette));
@@ -1097,7 +1098,13 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     padding-top: 0.375em;
 }
 
-div.site-changes-box > form > table.form {
+/* Recent Changes */
+
+div.site-changes-box {
+    margin: 0.5rem 0;
+}
+
+#page-content div.site-changes-box > form > table.form {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 0.75rem;
@@ -1112,6 +1119,9 @@ div.site-changes-box > form > table.form > tbody > tr {
 }
 div.site-changes-box > form > table.form > tbody > tr:first-child {
     flex-basis: 100%;
+}
+div.site-changes-box > form > table.form td {
+    padding: 0;
 }
 div.site-changes-box > form > table.form > tbody > tr > td:first-child {
     order: -1;
@@ -1168,6 +1178,7 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     display: block;
     width: 100%;
     padding: 0;
+    border: none;
 }
 #site-changes-list div.changes-list-item > table > tbody > tr > td.title { grid-area: name; }
 #site-changes-list div.changes-list-item > table > tbody > tr > td.flags { grid-area: flag; }

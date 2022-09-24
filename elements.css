@@ -176,7 +176,7 @@ input[type="text"]:focus-visible {
 }
 
 select {
-    appearance: none;
+    appearance: auto;
     color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--basalt-background-color));
     padding: 0.25ch 0.325ch;
@@ -1093,6 +1093,8 @@ div#toc {
     font-weight: bold;
     font-size: 2.325em;
     border-bottom: solid 0.125rem rgb(var(--title-border-color));
+    padding: 0;
+    margin: 0;
 }
 .meta-title > p { margin: 0; }
 
