@@ -512,6 +512,11 @@ div.wiki-note {
     color: rgb(var(--basalt-negative-color));
 }
 
+.error-inline {
+    color: rgb(var(--basalt-negative-color));
+    border: 0.05em solid currentColor;
+}
+
 /*------------------*/
 /*--- BLOCKQUOTE ---*/
 /*------------------*/
