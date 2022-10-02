@@ -198,6 +198,10 @@
     overflow-wrap: break-word;
 }
 
+#page-content {
+    min-height: calc(100vh - var(--header-final-height) - var(--main-content-top-margin) - 2.325em - var(--main-content-bottom-margin) - var(--bottom-area-padding)*2.5 - var(--true-font-size)*5.75);
+    }
+
 /*------------------*/
 /* ---- HEADER ---- */
 /*------------------*/
