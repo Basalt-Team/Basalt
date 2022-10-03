@@ -41,6 +41,8 @@
     --header-logo: url('https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/basaltlogo.svg');
     --header-title: 'SCP Foundation';
     --header-subtitle: 'SECURE - CONTAIN - PROTECT';
+    --header-title-color: var(--basalt-main-text-color);
+    --header-subtitle-color: var(--header-title-color);
     --title-size: 1.5rem;
     --subtitle-size: 0.825rem;
 
@@ -277,12 +279,14 @@
 }
 #header h1 a span::before {
     content: var(--header-title);
+    color: rgb(var(--header-title-color));
     display: block;
     font-size: var(--title-size);
     font-weight: bold;
 }
 #header h1 a span::after {
     content: var(--header-subtitle);
+    color: rgb(var(--header-subtitle-color));
     display: block;
     font-size: var(--subtitle-size);
     font-weight: normal;
