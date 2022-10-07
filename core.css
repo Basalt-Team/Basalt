@@ -39,8 +39,6 @@
     --mono-font: 'JetBrains Mono', var(--mono-font-fallback);
 
     --header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
-    --header-title: 'SCP Foundation';
-    --header-subtitle: 'SECURE - CONTAIN - PROTECT';
     --header-title-color: var(--basalt-main-text-color);
     --header-subtitle-color: var(--header-title-color);
     --title-size: 1.5rem;
@@ -178,7 +176,16 @@
     --edit-area-main-background-color: var(--basalt-background-color);
     --edit-area-ancillary-background-color: var(--basalt-secondary-color);
 }
- 
+
+@layer header-base, header-localize;
+
+@layer header-base {
+    :root {
+        --header-title: 'SCP Foundation';
+        --header-subtitle: 'SECURE - CONTAIN - PROTECT';
+    }
+  }
+
 /*----------------------*/
 /*---- CONTENT AREA ----*/
 /*----------------------*/
@@ -278,14 +285,14 @@
     text-align: center;
 }
 #header h1 a span::before {
-    content: var(--header-title);
+    content: var(--header-title, 'SCP Foundation');
     color: rgb(var(--header-title-color));
     display: block;
     font-size: var(--title-size);
     font-weight: bold;
 }
 #header h1 a span::after {
-    content: var(--header-subtitle);
+    content: var(--header-subtitle, 'SECURE - CONTAIN - PROTECT');
     color: rgb(var(--header-subtitle-color));
     display: block;
     font-size: var(--subtitle-size);
