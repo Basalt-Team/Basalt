@@ -38,7 +38,7 @@
     --body-font: 'Inter', var(--body-font-fallback);
     --mono-font: 'JetBrains Mono', var(--mono-font-fallback);
 
-    --header-logo: url('https://cdn.statically.io/gh/Basalt-Team/Basalt/mega/basaltlogo.svg');
+    --header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
     --header-title: 'SCP Foundation';
     --header-subtitle: 'SECURE - CONTAIN - PROTECT';
     --header-title-color: var(--basalt-main-text-color);
