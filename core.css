@@ -261,7 +261,7 @@
     line-height: 1.15;
     width: max-content;
     grid-gap: calc(var(--base-header-height)*0.1);
-    padding-right: calc(var(--base-header-height)*0.1);
+    padding-right: calc(var(--base-header-height)*0.25);
     letter-spacing: calc(var(--header-UI-font-size) * -0.05);
 }
 #header h1 a::before {
