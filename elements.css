@@ -384,7 +384,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     text-transform: uppercase;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
-#u-credit-view .modalbox > div:first-child > h2 {
+:is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
 #u-credit-view .modalbox > .credit.first > p:first-child::before,

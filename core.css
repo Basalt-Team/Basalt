@@ -29,14 +29,18 @@
     --link-visited-color: var(--basalt-dark-element-color);
     --link-newpage-color: var(--basalt-alternate-color);
 
+    --header-font-primary: 'Lexend';
+    --UI-font-primary: 'Jost';
+    --body-font-primary: 'Inter';
+    --mono-font-primary: 'JetBrains Mono';
     --header-font-fallback: Franklin Gothic Medium, Franklin Gothic,ITC Franklin Gothic, "Helvetica Neue", "Helvetica", Arial, sans-serif;
     --UI-font-fallback: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --body-font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     --mono-font-fallback: Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
-    --header-font: 'Lexend', var(--header-font-fallback);
-    --UI-font: 'Jost', var(--UI-font-fallback);
-    --body-font: 'Inter', var(--body-font-fallback);
-    --mono-font: 'JetBrains Mono', var(--mono-font-fallback);
+    --header-font: var(--header-font-primary), var(--header-font-fallback);
+    --UI-font: var(--UI-font-primary), var(--UI-font-fallback);
+    --body-font: var(--body-font-primary), var(--body-font-fallback);
+    --mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
     --header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
     --header-title-color: var(--basalt-main-text-color);
@@ -503,6 +507,11 @@
     align-items: center;
     position: relative;
     isolation: isolate;
+}
+@supports not (backdrop-filter: blur(var(--basalt-UI-blur))) {
+    #top-bar div[class*=top-bar] ul li ul li a {
+        --basalt-UI-opacity: 0.995;
+    }
 }
 #top-bar div[class*=top-bar] ul > li:is(:hover,:focus-within) > ul > li > a,
 #top-bar div[class*=top-bar] ul > li > ul:is(:hover,:focus-within) > li > a {
