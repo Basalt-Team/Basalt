@@ -84,7 +84,6 @@
     --side-bar-button-color: var(--top-bar-link-color);
     --side-bar-button-color-hover: var(--top-bar-link-color-hover);
     --side-bar-button-background-hover: var(--top-bar-link-background-hover-alt);
-    --side-bar-link-color: var(--basalt-primary-color);
     --side-bar-width: 19rem;
     --side-bar-transition: 0.25s ease 0.125s;
 
