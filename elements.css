@@ -518,6 +518,14 @@ div.wiki-note {
 }
 
 /*------------------*/
+/*--- CODE BLOCK ---*/
+/*------------------*/
+
+.code :is(.hl-default, .hl-code, .hl-brackets, .hl-identifier) {
+    color: rgb(var(--basalt-main-text-color));
+}
+
+/*------------------*/
 /*--- BLOCKQUOTE ---*/
 /*------------------*/
 
