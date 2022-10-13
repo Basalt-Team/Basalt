@@ -1029,6 +1029,9 @@ template {
 
 #login-status span.printuser {
     display: contents;
+    font-size: 0;
+    user-select: none;
+    pointer-events: none;
 }
 #login-status span.printuser > a {
     display: flex;
