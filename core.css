@@ -591,7 +591,6 @@
     user-select: none;
     font-size: 0;
     grid-template-areas:
-        "printuser printuser"
         "options options";
     grid-template-columns: 1fr 1fr;
     z-index: 2;
@@ -609,7 +608,6 @@
     transition: clip-path var(--header-link-transition-2nd);
 }
 
-#login-status::before,
 #login-status::after {
     content: "";
     display: block;
@@ -617,32 +615,12 @@
     top: 0;
     right: 0;
     width: var(--user-button-width);
-    height: var(--base-header-height);
+    height: 0;
     pointer-events: auto;
     cursor: pointer;
-}
-#login-status::before {
-    background-color: rgb(var(--user-icon-button-color));
-    z-index: 2;
-    -webkit-mask-image: var(--user-icon-mask);
-                mask-image: var(--user-icon-mask);
-    -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-                mask-position: center;
-    -webkit-mask-size: 50%;
-                mask-size: 50%;
-    transition: background-color var(--header-link-transition-2nd);
-}
-#login-status::after {
     background-color: rgb(var(--user-icon-button-background-hover));
     z-index: 1;
-    height: 0;
     transition: height var(--header-link-transition-2nd);
-}
-#login-status:is(:hover,:focus-within)::before {
-    background-color: rgb(var(--user-icon-button-color-hover));
-    transition: background-color var(--header-link-transition-1st);
 }
 #login-status:is(:hover,:focus-within)::after {
     height: var(--base-header-height);
@@ -651,10 +629,33 @@
 
 /*---------------------------*/
 
-#login-status span.printuser a {
-    background: transparent;
+#login-status span.printuser {
+    display: contents;
 }
-#login-status span.printuser img { padding-right: 0; }
+#login-status span.printuser > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    width: var(--user-button-width);
+    height: var(--base-header-height);
+    pointer-events: auto;
+    z-index: 2;
+}
+#login-status span.printuser > a img {
+    background-image: none!important;
+    padding: 0;
+    display: block;
+    height: 100%;
+    flex-grow: 1;
+    object-fit: contain;
+    padding-right: 0;
+}
 
 a#account-topbutton, a#my-account {
     display: none;
@@ -677,27 +678,13 @@ a#account-topbutton, a#my-account {
     clip-path: unset;
 }
 
-#login-status span.printuser {
-    grid-area: printuser;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(var(--header-UI-dropdown-font-size)*3.25);
-    padding: calc(var(--header-UI-dropdown-font-size)*.75);
-    box-sizing: border-box;
-    background: linear-gradient(180deg, rgb(var(--login-status-background-color),1) 0%, rgb(var(--login-status-background-color),var(--basalt-UI-opacity)) 100%);
-    color: rgb(var(--login-status-text-color));
-    backdrop-filter: blur(var(--basalt-UI-blur));
-}
-
 div#account-options {
     grid-area: options;
     width: 100%;
     position: relative;
     border: none;
     display: block!important;
-    background-color: rgba(var(--login-status-background-color), var(--basalt-UI-opacity));
+    background-color: rgb(var(--login-status-background-color));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 div#account-options > ul {
@@ -740,7 +727,34 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 /* logged out */
-#login-status a + span { display: none; }
+#login-status a + span {
+    display: block;
+    width: var(--user-button-width);
+    height: var(--base-header-height);
+    clip-path: none;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(var(--user-icon-button-color));
+    z-index: 2;
+    -webkit-mask-image: var(--user-icon-mask);
+    mask-image: var(--user-icon-mask);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 50%;
+    mask-size: 50%;
+    transition: background-color var(--header-link-transition-2nd);
+}
+#login-status:is(:hover,:focus-within) a + span {
+    background-color: rgb(var(--user-icon-button-color-hover));
+    transition: background-color var(--header-link-transition-1st);
+}
+
 #login-status a:is(.login-status-create-account, .login-status-sign-in) {
     display: flex;
     position: relative;
@@ -749,7 +763,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgb(var(--basalt-overtone),1) 0%, rgb(var(--basalt-overtone),var(--basalt-UI-opacity)) 100%);
+    background-color: rgb(var(--login-status-background-color));
     color: rgb(var(--login-status-text-color));
 }
 
