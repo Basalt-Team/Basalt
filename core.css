@@ -667,12 +667,12 @@ a#account-topbutton, a#my-account {
     font-size: 0;
     pointer-events: none;
     user-select: none;
-    width: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
-    height: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
+    width: min(calc(var(--user-button-width)/5), calc(var(--base-header-height)/4));
+    height: min(calc(var(--user-button-width)/5), calc(var(--base-header-height)/4));
     border-radius: calc(var(--user-button-width)/6);
     background-color: rgb(var(--pm-indicator-color));
     top: min(0.625rem, 42.5%);
-    right: min(0.45rem, calc(var(--user-button-width)/6));
+    right: min(0.325rem, calc(var(--user-button-width)/6));
     z-index: 3;
     clip-path: unset;
 }
