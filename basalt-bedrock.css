@@ -427,14 +427,18 @@ template {
     --link-visited-color: var(--basalt-dark-element-color);
     --link-newpage-color: var(--basalt-alternate-color);
 
+    --header-font-primary: 'Lexend';
+    --UI-font-primary: 'Jost';
+    --body-font-primary: 'Inter';
+    --mono-font-primary: 'JetBrains Mono';
     --header-font-fallback: Franklin Gothic Medium, Franklin Gothic,ITC Franklin Gothic, "Helvetica Neue", "Helvetica", Arial, sans-serif;
     --UI-font-fallback: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --body-font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     --mono-font-fallback: Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
-    --header-font: 'Lexend', var(--header-font-fallback);
-    --UI-font: 'Jost', var(--UI-font-fallback);
-    --body-font: 'Inter', var(--body-font-fallback);
-    --mono-font: 'JetBrains Mono', var(--mono-font-fallback);
+    --header-font: var(--header-font-primary), var(--header-font-fallback);
+    --UI-font: var(--UI-font-primary), var(--UI-font-fallback);
+    --body-font: var(--body-font-primary), var(--body-font-fallback);
+    --mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
     --header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
     --header-title-color: var(--basalt-main-text-color);
@@ -655,7 +659,7 @@ template {
     line-height: 1.15;
     width: max-content;
     grid-gap: calc(var(--base-header-height)*0.1);
-    padding-right: calc(var(--base-header-height)*0.1);
+    padding-right: calc(var(--base-header-height)*0.25);
     letter-spacing: calc(var(--header-UI-font-size) * -0.05);
 }
 #header h1 a::before {
@@ -902,6 +906,11 @@ template {
     position: relative;
     isolation: isolate;
 }
+@supports not (backdrop-filter: blur(var(--basalt-UI-blur))) {
+    #top-bar div[class*=top-bar] ul li ul li a {
+        --basalt-UI-opacity: 0.995;
+    }
+}
 #top-bar div[class*=top-bar] ul > li:is(:hover,:focus-within) > ul > li > a,
 #top-bar div[class*=top-bar] ul > li > ul:is(:hover,:focus-within) > li > a {
     clip-path: inset(0);
@@ -980,7 +989,6 @@ template {
     user-select: none;
     font-size: 0;
     grid-template-areas:
-        "printuser printuser"
         "options options";
     grid-template-columns: 1fr 1fr;
     z-index: 2;
@@ -998,7 +1006,6 @@ template {
     transition: clip-path var(--header-link-transition-2nd);
 }
 
-#login-status::before,
 #login-status::after {
     content: "";
     display: block;
@@ -1006,32 +1013,12 @@ template {
     top: 0;
     right: 0;
     width: var(--user-button-width);
-    height: var(--base-header-height);
+    height: 0;
     pointer-events: auto;
     cursor: pointer;
-}
-#login-status::before {
-    background-color: rgb(var(--user-icon-button-color));
-    z-index: 2;
-    -webkit-mask-image: var(--user-icon-mask);
-                mask-image: var(--user-icon-mask);
-    -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-                mask-position: center;
-    -webkit-mask-size: 50%;
-                mask-size: 50%;
-    transition: background-color var(--header-link-transition-2nd);
-}
-#login-status::after {
     background-color: rgb(var(--user-icon-button-background-hover));
     z-index: 1;
-    height: 0;
     transition: height var(--header-link-transition-2nd);
-}
-#login-status:is(:hover,:focus-within)::before {
-    background-color: rgb(var(--user-icon-button-color-hover));
-    transition: background-color var(--header-link-transition-1st);
 }
 #login-status:is(:hover,:focus-within)::after {
     height: var(--base-header-height);
@@ -1040,10 +1027,33 @@ template {
 
 /*---------------------------*/
 
-#login-status span.printuser a {
-    background: transparent;
+#login-status span.printuser {
+    display: contents;
 }
-#login-status span.printuser img { padding-right: 0; }
+#login-status span.printuser > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    width: var(--user-button-width);
+    height: var(--base-header-height);
+    pointer-events: auto;
+    z-index: 2;
+}
+#login-status span.printuser > a img {
+    background-image: none!important;
+    padding: 0;
+    display: block;
+    height: 100%;
+    flex-grow: 1;
+    object-fit: contain;
+    padding-right: 0;
+}
 
 a#account-topbutton, a#my-account {
     display: none;
@@ -1056,28 +1066,14 @@ a#account-topbutton, a#my-account {
     font-size: 0;
     pointer-events: none;
     user-select: none;
-    width: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
-    height: min(calc(var(--user-button-width)/6), calc(var(--base-header-height)/4));
+    width: min(calc(var(--user-button-width)/5), calc(var(--base-header-height)/4));
+    height: min(calc(var(--user-button-width)/5), calc(var(--base-header-height)/4));
     border-radius: calc(var(--user-button-width)/6);
     background-color: rgb(var(--pm-indicator-color));
     top: min(0.625rem, 42.5%);
-    right: min(0.45rem, calc(var(--user-button-width)/6));
+    right: min(0.325rem, calc(var(--user-button-width)/6));
     z-index: 3;
     clip-path: unset;
-}
-
-#login-status span.printuser {
-    grid-area: printuser;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(var(--header-UI-dropdown-font-size)*3.25);
-    padding: calc(var(--header-UI-dropdown-font-size)*.75);
-    box-sizing: border-box;
-    background: linear-gradient(180deg, rgb(var(--login-status-background-color),1) 0%, rgb(var(--login-status-background-color),var(--basalt-UI-opacity)) 100%);
-    color: rgb(var(--login-status-text-color));
-    backdrop-filter: blur(var(--basalt-UI-blur));
 }
 
 div#account-options {
@@ -1086,7 +1082,7 @@ div#account-options {
     position: relative;
     border: none;
     display: block!important;
-    background-color: rgba(var(--login-status-background-color), var(--basalt-UI-opacity));
+    background-color: rgb(var(--login-status-background-color));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 div#account-options > ul {
@@ -1129,7 +1125,34 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 /* logged out */
-#login-status a + span { display: none; }
+#login-status a + span {
+    display: block;
+    width: var(--user-button-width);
+    height: var(--base-header-height);
+    clip-path: none;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(var(--user-icon-button-color));
+    z-index: 2;
+    -webkit-mask-image: var(--user-icon-mask);
+    mask-image: var(--user-icon-mask);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 50%;
+    mask-size: 50%;
+    transition: background-color var(--header-link-transition-2nd);
+}
+#login-status:is(:hover,:focus-within) a + span {
+    background-color: rgb(var(--user-icon-button-color-hover));
+    transition: background-color var(--header-link-transition-1st);
+}
+
 #login-status a:is(.login-status-create-account, .login-status-sign-in) {
     display: flex;
     position: relative;
@@ -1138,7 +1161,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgb(var(--basalt-overtone),1) 0%, rgb(var(--basalt-overtone),var(--basalt-UI-opacity)) 100%);
+    background-color: rgb(var(--login-status-background-color));
     color: rgb(var(--login-status-text-color));
 }
 
@@ -2059,7 +2082,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
     text-transform: uppercase;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
-#u-credit-view .modalbox > div:first-child > h2 {
+:is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
 #u-credit-view .modalbox > .credit.first > p:first-child::before,
