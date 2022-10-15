@@ -1185,7 +1185,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         "open-menu top-bar top-bar top-bar top-bar";
         grid-template-rows: var(--base-header-height) var(--top-bar-mobile-height);
     }
-    #header h1 a { padding-left: calc(var(--base-header-height)*0.1); }
 
     #top-bar div.mobile-top-bar > ul { display: flex; }
     #top-bar div.top-bar > ul { display: none; }
