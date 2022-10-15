@@ -288,6 +288,8 @@
         border-right:unset;
         text-decoration:unset;
         padding:unset;
+        line-height:unset;
+        max-height:unset;
     }
     
     #top-bar .top-bar > ul > li > a,
