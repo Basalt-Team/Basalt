@@ -2,6 +2,10 @@
 :root:lang(fr) #main-content .pager::before { content: "« précédente"; }
 :root:lang(fr) #main-content .pager::after { content: "suivante »"; }
 
+:root:lang(fr) #top-bar div[class*=top-bar] ul li span.topbar_arrow {
+    display: none;
+}
+
 /* ===GERMAN BRANCH=== */
 :root:lang(de) #main-content .pager::before { content: "« vorherige"; }
 :root:lang(de) #main-content .pager::after { content: "nächste »"; }

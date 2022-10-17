@@ -338,7 +338,7 @@
     display: contents;
 }
 
-#header .open-menu p a {
+#header div.open-menu a {
     font-size: 0rem;
     display: block;
     position: relative;
@@ -346,9 +346,9 @@
     width: 100%;
     text-align: center;
 }
-#top-bar .open-menu p a:hover { background: transparent; }
-#header .open-menu p a::before,
-#header .open-menu p a::after {
+#top-bar div.open-menu a:hover { background: transparent; }
+#header div.open-menu a::before,
+#header div.open-menu a::after {
     content: "";
     display: block;
     position: absolute;
@@ -357,7 +357,7 @@
     height: 100%;
     background-color: rgb(var(--side-bar-button-background-hover));
 }
-#header .open-menu p a::after {
+#header div.open-menu a::after {
     background-color: rgb(var(--side-bar-button-color));
     transition: background-color var(--side-bar-transition);
     -webkit-mask-image: var(--side-bar-button-mask);
@@ -369,14 +369,14 @@
     -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
 }
-#header .open-menu p a::before {
+#header div.open-menu a::before {
     height: 0;
     transition: height var(--side-bar-transition);
 }
-#header .open-menu p a:is(:hover, :focus)::before {
+#header div.open-menu a:is(:hover, :focus)::before {
     height: 100%;
 }
-#header .open-menu p a:is(:hover, :focus)::after {
+#header div.open-menu a:is(:hover, :focus)::after {
     background-color: rgb(var(--side-bar-button-color-hover));
 }
 
