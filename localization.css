@@ -47,7 +47,7 @@
 	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
 	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
 /* ===THAI BRANCH=== */
@@ -158,7 +158,7 @@
 :root:lang(cn) {
 	/* Header */
 	--header-title: "SCP基金会";
-	--header-subtitle: "控制，收容，保护";
+	--header-subtitle: "控制 - 收容 - 保护";
 }
 
 /* ===THAI BRANCH=== */
