@@ -736,7 +736,7 @@ template {
     display: contents;
 }
 
-#header .open-menu p a {
+#header div.open-menu a {
     font-size: 0rem;
     display: block;
     position: relative;
@@ -744,9 +744,9 @@ template {
     width: 100%;
     text-align: center;
 }
-#top-bar .open-menu p a:hover { background: transparent; }
-#header .open-menu p a::before,
-#header .open-menu p a::after {
+#top-bar div.open-menu a:hover { background: transparent; }
+#header div.open-menu a::before,
+#header div.open-menu a::after {
     content: "";
     display: block;
     position: absolute;
@@ -755,7 +755,7 @@ template {
     height: 100%;
     background-color: rgb(var(--side-bar-button-background-hover));
 }
-#header .open-menu p a::after {
+#header div.open-menu a::after {
     background-color: rgb(var(--side-bar-button-color));
     transition: background-color var(--side-bar-transition);
     -webkit-mask-image: var(--side-bar-button-mask);
@@ -767,14 +767,14 @@ template {
     -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
 }
-#header .open-menu p a::before {
+#header div.open-menu a::before {
     height: 0;
     transition: height var(--side-bar-transition);
 }
-#header .open-menu p a:is(:hover, :focus)::before {
+#header div.open-menu a:is(:hover, :focus)::before {
     height: 100%;
 }
-#header .open-menu p a:is(:hover, :focus)::after {
+#header div.open-menu a:is(:hover, :focus)::after {
     background-color: rgb(var(--side-bar-button-color-hover));
 }
 
@@ -4750,6 +4750,10 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 :root:lang(fr) #main-content .pager::before { content: "« précédente"; }
 :root:lang(fr) #main-content .pager::after { content: "suivante »"; }
 
+:root:lang(fr) #top-bar div[class*=top-bar] ul li span.topbar_arrow {
+    display: none;
+}
+
 /* ===GERMAN BRANCH=== */
 :root:lang(de) #main-content .pager::before { content: "« vorherige"; }
 :root:lang(de) #main-content .pager::after { content: "nächste »"; }
@@ -4795,7 +4799,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
 	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
 /* ===THAI BRANCH=== */
@@ -4906,7 +4910,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 :root:lang(cn) {
 	/* Header */
 	--header-title: "SCP基金会";
-	--header-subtitle: "控制，收容，保护";
+	--header-subtitle: "控制 - 收容 - 保护";
 }
 
 /* ===THAI BRANCH=== */
