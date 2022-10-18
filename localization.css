@@ -54,6 +54,13 @@
 	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
+:root:lang(cn) #side-bar .side-block:is([style*="#f0fff6"],[style*="#e7e5e8"]) {
+    background-color: rgb(var(--side-bar-resources-background-color))!important;
+}
+:root:lang(cn) #side-bar .side-block:is([style*="#e5e5ff"],[style*="#f0f0f0"]) {
+    background-color: rgb(var(--side-bar-media-background-color))!important;
+}
+
 /* ===THAI BRANCH=== */
 :root:lang(th) {
 	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
