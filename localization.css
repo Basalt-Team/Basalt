@@ -22,6 +22,27 @@
     --header-font-fallback: var(--body-font-fallback);
 }
 
+:root:lang(ja) #side-bar .menu-item .sub-text {
+    display: flex;
+    align-items: center;
+    padding: 0 0.75em;
+    width: 15ch;
+    font-size: calc(var(--true-font-size)*0.75);
+    color: rgb(var(--basalt-sub-text-color));
+    transition: background-color var(--side-bar-link-transition);
+}
+:root:lang(ja) #side-bar .menu-item  a:is(:hover,:focus) + .sub-text {
+    background-color: rgb(var(--basalt-focus-color),0.0625);
+}
+
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#a7dba2"]) {
+    background-color: transparent!important;
+}
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#f0f0f0"]) {
+    background-color: rgb(var(--side-bar-media-background-color))!important;
+}
+:root:lang(ja) #side-bar .side-block[style*="#f0f0f0"] p { margin: 0; }
+
 /* ===KOREAN BRANCH=== */
 :root:lang(ko) {
 	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
