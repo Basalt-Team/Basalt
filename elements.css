@@ -12,7 +12,7 @@ body {
 
 body, li, p { line-height: 1.5; }
 
-.code, .code pre, .code p, tt {
+code, .code, .code pre, .code p, tt {
     font-family: var(--mono-font);
     font-size: inherit;
 }
