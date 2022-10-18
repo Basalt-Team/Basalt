@@ -1331,6 +1331,14 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #side-bar > * { direction: ltr; }
 
+#side-bar hr {
+    margin: 0.75rem;
+}
+
+#interwiki {
+    background-color: rgb(var(--side-bar-background-color));
+}
+
 :is(#side-bar, #interwiki) .side-block {
     font-family: var(--UI-font);
 }
@@ -1714,7 +1722,7 @@ body {
 
 body, li, p { line-height: 1.5; }
 
-.code, .code pre, .code p, tt {
+code, .code, .code pre, .code p, tt {
     font-family: var(--mono-font);
     font-size: inherit;
 }
@@ -4770,6 +4778,27 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     --header-font-fallback: var(--body-font-fallback);
 }
 
+:root:lang(ja) #side-bar .menu-item .sub-text {
+    display: flex;
+    align-items: center;
+    padding: 0 0.75em;
+    width: 15ch;
+    font-size: calc(var(--true-font-size)*0.75);
+    color: rgb(var(--basalt-sub-text-color));
+    transition: background-color var(--side-bar-link-transition);
+}
+:root:lang(ja) #side-bar .menu-item  a:is(:hover,:focus) + .sub-text {
+    background-color: rgb(var(--basalt-focus-color),0.0625);
+}
+
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#a7dba2"]) {
+    background-color: transparent!important;
+}
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#f0f0f0"]) {
+    background-color: rgb(var(--side-bar-media-background-color))!important;
+}
+:root:lang(ja) #side-bar .side-block[style*="#f0f0f0"] p { margin: 0; }
+
 /* ===KOREAN BRANCH=== */
 :root:lang(ko) {
 	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -4800,6 +4829,17 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+}
+
+:root:lang(cn) #side-bar .side-block:is([style*="#f0fff6"],[style*="#e7e5e8"]) {
+    background-color: rgb(var(--side-bar-resources-background-color))!important;
+}
+:root:lang(cn) #side-bar .side-block:is([style*="#e5e5ff"],[style*="#f0f0f0"]) {
+    background-color: rgb(var(--side-bar-media-background-color))!important;
+}
+
+:root:lang(cn) #side-bar .menu-item {
+    margin: 0;
 }
 
 /* ===THAI BRANCH=== */
