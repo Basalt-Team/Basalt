@@ -933,6 +933,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #side-bar > * { direction: ltr; }
 
+#interwiki {
+    background-color: rgb(var(--side-bar-background-color));
+}
+
 :is(#side-bar, #interwiki) .side-block {
     font-family: var(--UI-font);
 }
