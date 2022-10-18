@@ -82,6 +82,10 @@
     background-color: rgb(var(--side-bar-media-background-color))!important;
 }
 
+:root:lang(cn) #side-bar .menu-item {
+    margin: 0;
+}
+
 /* ===THAI BRANCH=== */
 :root:lang(th) {
 	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
