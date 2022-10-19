@@ -1369,10 +1369,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
-#side-bar .collapsible-block {
-    --side-bar-heading-background-color: var(--basalt-secondary-color);
-    --side-bar-heading-text-color: var(--basalt-main-text-color);
-}
 #side-bar .collapsible-block a.collapsible-block-link {
     display: block;
     text-align: center;
@@ -1397,7 +1393,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #side-bar .collapsible-block-content {
     position: relative;
-    background-color: rgb(var(--basalt-secondary-color));
+    background-color: rgb(var(--side-bar-background-color));
 }
 #side-bar .collapsible-block-content::after {
     content: "";
