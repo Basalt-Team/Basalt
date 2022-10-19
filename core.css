@@ -849,7 +849,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     opacity: 1;
     padding-right: calc(var(--header-UI-font-size)*0.5 + var(--search-button-width));
     z-index: 0;
-    outline-width: var(--header-border-width);
+    outline-width: 0.125rem;
+    outline-offset: -0.125rem;
     cursor: text;
     transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity 0s;
 }
