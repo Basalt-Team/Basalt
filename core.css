@@ -973,6 +973,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #side-bar .collapsible-block a.collapsible-block-link {
+    position: relative;
     display: block;
     text-align: center;
     background-color: rgb(var(--side-bar-heading-background-color));
@@ -993,10 +994,30 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--basalt-focus-color));
     color: rgb(var(--side-bar-heading-text-hover-color));
 }
+#side-bar .collapsible-block .collapsible-block-folded a.collapsible-block-link::before,
+#side-bar .collapsible-block a.collapsible-block-link::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 1.925em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(var(--basalt-focus-color),0.5);
+    z-index: 1;
+}
+#side-bar .collapsible-block a.collapsible-block-link::after {
+    background-color: currentColor;
+    clip-path: polygon(25% 35%, 75% 35%, 50% 65%);
+}
+#side-bar .collapsible-block .collapsible-block-unfolded-link a.collapsible-block-link::after {
+    background-color: currentColor;
+    clip-path: polygon(25% 65%, 75% 65%, 50% 35%);
+}
 
 #side-bar .collapsible-block-content {
     position: relative;
-    background-color: rgb(var(--side-bar-background-color));
+    background-color: rgb(var(--side-bar-background-color),0.5);
 }
 #side-bar .collapsible-block-content::after {
     content: "";
