@@ -501,6 +501,7 @@
     font-size: var(--header-UI-dropdown-font-size);
     padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
+    color: rgb(var(--top-bar-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
