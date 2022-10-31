@@ -205,7 +205,7 @@
     flex-grow: 1;
 }
 
-#main-content {
+#main-content, body.print-body #main-content {
     width: var(--main-content-width);
     margin: var(--main-content-top-margin) auto var(--main-content-bottom-margin);
     max-width: calc(100% - var(--main-content-side-margin)*2);
@@ -1284,7 +1284,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 /*---- PRINT SUPPORT ----*/
 /*-----------------------*/
 
-#print-options {
+div#print-options {
     font-size: var(--true-font-size);
     font-family: var(--UI-font);
     padding: 1rem;
@@ -1312,7 +1312,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     border-bottom-color: rgb(var(--basalt-focus-color));
 }
 
-#print-head {
+div#print-head {
     font-family: var(--mono-font);
     padding: 0 0.5rem;
     text-align: center;
