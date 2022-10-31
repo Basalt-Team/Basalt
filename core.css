@@ -1124,7 +1124,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     margin: 0.5ch 2ch;
 }
 
-#license-area {
+div#license-area {
     font-family: var(--UI-font);
     font-size: var(--license-area-font-size);
     color: rgb(var(--bottom-area-text-color));
