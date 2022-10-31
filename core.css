@@ -63,6 +63,8 @@
     --top-bar-link-color-hover: var(--basalt-light-text-color);
     --top-bar-link-background-hover: var(--basalt-focus-color);
     --top-bar-link-background-hover-alt: var(--basalt-UI-dark-palette);
+    --top-bar-dropdown-link-color: var(--top-bar-link-color);
+    --top-bar-dropdown-link-color-hover: var(--top-bar-link-color-hover);
     --top-bar-dropdown-background: var(--basalt-primary-color);
     --top-bar-dropdown-background-hover: var(--link-color);
 
@@ -501,7 +503,7 @@
     font-size: var(--header-UI-dropdown-font-size);
     padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
-    color: rgb(var(--top-bar-link-color));
+    color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
@@ -524,7 +526,7 @@
 #top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
 #top-bar div[class*=top-bar] ul > li > ul > li.sfhover a,
 #top-bar div[class*=top-bar] ul > li > ul > li:focus-within > a {
-    color: rgb(var(--top-bar-link-color-hover));
+    color: rgb(var(--top-bar-dropdown-link-color-hover));
 }
 #top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
 #top-bar div[class*=top-bar] ul li ul li.sfhover a {
