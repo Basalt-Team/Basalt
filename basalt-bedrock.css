@@ -504,6 +504,7 @@ template {
     --main-content-bottom-margin: var(--main-content-side-margin);
 
     --tag-background-color: var(--basalt-secondary-color);
+    --modal-fader-background-color: var(--basalt-UI-dark-palette);
 
     --bottom-area-text-color: var(--basalt-main-text-color);
     --bottom-area-background-color: var(--basalt-secondary-color);
@@ -602,7 +603,7 @@ template {
     flex-grow: 1;
 }
 
-#main-content {
+#main-content, body.print-body #main-content {
     width: var(--main-content-width);
     margin: var(--main-content-top-margin) auto var(--main-content-bottom-margin);
     max-width: calc(100% - var(--main-content-side-margin)*2);
@@ -1521,7 +1522,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     margin: 0.5ch 2ch;
 }
 
-#license-area {
+div#license-area {
     font-family: var(--UI-font);
     font-size: var(--license-area-font-size);
     color: rgb(var(--bottom-area-text-color));
@@ -1653,7 +1654,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
         height: 100%;
         margin-left: 0;
         opacity: 0;
-        background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
+        background-color: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
         backdrop-filter: blur(var(--basalt-UI-blur));
         z-index: -1;
         transition: width var(--side-bar-transition), opacity var(--side-bar-transition);
@@ -1681,7 +1682,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 /*---- PRINT SUPPORT ----*/
 /*-----------------------*/
 
-#print-options {
+div#print-options {
     font-size: var(--true-font-size);
     font-family: var(--UI-font);
     padding: 1rem;
@@ -1709,7 +1710,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     border-bottom-color: rgb(var(--basalt-focus-color));
 }
 
-#print-head {
+div#print-head {
     font-family: var(--mono-font);
     padding: 0 0.5rem;
     text-align: center;
@@ -2091,7 +2092,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 /* info modal */
 
 :is(#u-credit-view, #u-credit-otherwise) .fader {
-    background: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
+    background: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 :is(#u-credit-view, div#u-credit-otherwise) .modalbox {
@@ -2386,9 +2387,11 @@ div#toc {
     display: flex;
     width: 100%; height: 100%;
     border: none;
+    background: none;
     color: rgb(var(--basalt-main-text-color));
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     text-align: center;
     padding: 0.5em 1.5em;
     box-sizing: border-box;
@@ -2437,6 +2440,7 @@ div#toc {
 .yui-navset.yui-navset-top .yui-content {
     border: solid var(--tab-border-width) rgb(var(--general-border-color));
     padding: 0.625rem 1rem;
+    background-color: transparent;
 }
 
 /*-------------------------------*/
@@ -2581,7 +2585,7 @@ div#toc {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(var(--basalt-UI-dark-palette),var(--basalt-UI-opacity));
+    background-color: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 
