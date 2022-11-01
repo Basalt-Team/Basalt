@@ -630,7 +630,7 @@ template {
     height: var(--header-final-height);
     background-color: rgb(var(--header-background-color));
     border-bottom: solid var(--header-border-width) rgb(var(--header-border-color));
-    grid-template-areas: "open-menu h-link top-bar search .";
+    grid-template-areas: "open-menu h-link top-bar search user";
     grid-template-columns: var(--side-bar-button-width) max-content 1fr var(--search-button-width) var(--user-button-width);
     grid-template-rows: 1fr;
     z-index: 10;
@@ -984,6 +984,7 @@ template {
 /*--- LOGIN-STATUS ---*/
 
 #login-status {
+    grid-area: user;
     position: relative;
     right: 0; top: 0;
     max-width: 100%;
@@ -1610,7 +1611,7 @@ div#license-area {
     #header {
         top: calc(var(--base-header-height)*-1);
         grid-template-areas:
-        "h-link h-link h-link search username"
+        "h-link h-link h-link search user"
         "open-menu top-bar top-bar top-bar top-bar";
         grid-template-rows: var(--base-header-height) var(--top-bar-mobile-height);
     }
