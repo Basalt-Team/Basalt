@@ -984,18 +984,11 @@ template {
 /*--- LOGIN-STATUS ---*/
 
 #login-status {
-    display: grid;
-    position: absolute;
-    top: 0; right: 0;
-    width: var(--login-status-width);
+    position: relative;
     max-width: 100%;
-    padding-top: var(--base-header-height);
     pointer-events: none;
     user-select: none;
     font-size: 0;
-    grid-template-areas:
-        "options options";
-    grid-template-columns: 1fr 1fr;
     z-index: 2;
 }
 #login-status:is(:hover,:focus-within) { pointer-events: auto; }
@@ -1085,9 +1078,10 @@ a#account-topbutton, a#my-account {
 }
 
 div#account-options {
-    grid-area: options;
-    width: 100%;
-    position: relative;
+    width: var(--login-status-width);
+    position: absolute;
+    top: var(--base-header-height);
+    right: 0;
     border: none;
     display: block!important;
     background-color: rgb(var(--login-status-background-color));
@@ -1163,14 +1157,20 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #login-status a:is(.login-status-create-account, .login-status-sign-in) {
     display: flex;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: var(--base-header-height);
     height: var(--top-bar-mobile-height);
+    width: calc(var(--login-status-width)/2);
     text-align: center;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     background-color: rgb(var(--login-status-background-color));
     color: rgb(var(--login-status-text-color));
+}
+#login-status a.login-status-create-account {
+    right: calc(var(--login-status-width)/2);
 }
 
 /*--- SEARCH ---*/
