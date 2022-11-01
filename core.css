@@ -591,9 +591,6 @@
     pointer-events: none;
     user-select: none;
     font-size: 0;
-    grid-template-areas:
-        "options options";
-    grid-template-columns: 1fr 1fr;
     z-index: 2;
 }
 #login-status:is(:hover,:focus-within) { pointer-events: auto; }
