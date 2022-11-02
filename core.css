@@ -505,6 +505,7 @@
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
+    -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
     transition: color var(--header-link-transition-2nd), clip-path var(--header-link-transition-1st);
@@ -689,7 +690,6 @@ div#account-options {
     border: none;
     display: block!important;
     background-color: rgb(var(--login-status-background-color));
-    backdrop-filter: blur(var(--basalt-UI-blur));
 }
 div#account-options > ul {
     display: grid;
@@ -1262,6 +1262,7 @@ div#license-area {
         margin-left: 0;
         opacity: 0;
         background-color: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
+        -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
         backdrop-filter: blur(var(--basalt-UI-blur));
         z-index: -1;
         transition: width var(--side-bar-transition), opacity var(--side-bar-transition);
