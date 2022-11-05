@@ -721,7 +721,7 @@ div#toc {
 .bibitems, .footnotes-footer {
     padding: 0;
     padding-bottom: 0.125rem;
-    border-left: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
+    border-inline-start: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
     margin: 1rem 0;
     height: auto;
 }
@@ -733,13 +733,15 @@ div#toc {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     width: max-content;
-    padding: 0.25em 0.5em 0.25em 0.25em;
+    padding: 0.25em;
+    padding-inline-end: 0.5em;
     margin: 0 0 0.5em;
 }
 .bibitems { counter-reset: bibindex; }
 .bibitems .bibitem, .footnotes-footer .footnote-footer  {
+    height: auto;
     margin: 0.375em 0;
-    margin-left: 2.75rem;
+    margin-inline-start: 2.75rem;
     text-indent: -0.575ch;
     position: relative;
 }
@@ -753,15 +755,15 @@ div#toc {
     font-weight: bold;
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: calc(100% + 0.25ch);
+    inset-block-start: 0;
+    inset-inline-end: calc(100% + 0.25ch);
     font-family: var(--mono-font);
 }
 
 .footnotes-footer .footnote-footer { text-indent: -0.875ch; }
 .footnotes-footer .footnote-footer > a:first-child {
-    right: calc(100% + 0.15ch);
-    top: 0;
+    inset-block-start: 0;
+    inset-inline-end: calc(100% + 0.15ch);
     display: inline-block;
     font-weight: bold;
     position: absolute;
@@ -1224,7 +1226,7 @@ div[id*="page-options-bottom"] {
     flex-wrap: wrap;
     row-gap: var(--po-padding);
     padding: var(--po-padding);
-    padding-right: calc(7.25rem + var(--po-padding));
+    padding-inline-end: calc(7.25rem + var(--po-padding));
     background-color: rgb(var(--basalt-secondary-color));
     box-sizing: border-box;
 }
@@ -1250,7 +1252,8 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 #more-options-button, #delete-button {
     position: absolute;
-    top: var(--po-padding); right: var(--po-padding);
+    inset-block-start: var(--po-padding);
+    inset-inline-end: var(--po-padding);
     width: calc(7.25rem - var(--po-padding));
     height: calc(100% - var(--po-padding)*2);
     display: flex;
@@ -1282,12 +1285,12 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 @media only screen and (max-width: 32rem) {
     div[id*="page-options-bottom"] {
         width: 100%;
-        padding-right: var(--po-padding);
+        padding-inline-end: var(--po-padding);
     }
 
     #more-options-button, #delete-button {
         position: static;
-        top: initial; left: initial;
+        inset-block-start: initial; inset-inline-end: initial;
         width: initial;
         height: initial;
         flex-basis: 100%;
