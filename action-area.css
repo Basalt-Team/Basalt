@@ -45,7 +45,8 @@
 }
 
 :is(#action-area, div.buttons) :is(a, input).btn,
-#history-subarea a.action-area-close {
+#history-subarea a.action-area-close,
+#view-diff-div a.button {
     cursor: pointer;
     margin: 0;
     display: inline-block;
@@ -60,7 +61,8 @@
     transition: all var(--button-hover-transition);
 }
 :is(#action-area, div.buttons) :is(a, input).btn:is(:hover, :focus),
-#history-subarea a.action-area-close:is(:hover, :focus) {
+#history-subarea a.action-area-close:is(:hover, :focus),
+#view-diff-div a.button:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
     background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
@@ -73,6 +75,11 @@
 #action-area div.buttons > :is([name="save"],[onclick*="PageTagsModule.listeners.save(event)"]) {
     --button-text-color: var(--basalt-positive-color);
     font-weight: bold;
+}
+
+#view-diff-div > h1 + p { text-align: center; }
+#view-diff-div a.button {
+    --button-text-color: var(--basalt-cancel-color);
 }
 
 #action-area a.action-area-close {
