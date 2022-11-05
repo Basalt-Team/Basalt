@@ -198,7 +198,6 @@ select:focus {
 }
 
 #page-content table:not(.form), table.wiki-content-table {
-    display: block;
     max-width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
