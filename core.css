@@ -470,6 +470,12 @@
     flex-direction: column;
     border: none;
 }
+#top-bar div.mobile-top-bar ul li ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 100%;
+}
+
 #top-bar div[class*=top-bar] > ul > li:hover > ul,
 #top-bar div[class*=top-bar] > ul > li > ul:hover,
 #top-bar div[class*=top-bar] > ul > li:focus-within > ul,
@@ -482,7 +488,8 @@
     z-index: 1;
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 0.325rem; height: 0;
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
@@ -496,6 +503,10 @@
 #top-bar div[class*="top-bar"] ul li ul li {
     position: relative;
     border: none;
+}
+#top-bar div.mobile-top-bar ul li ul li {
+    flex-basis: 50%;
+    flex-grow: 1;
 }
 
 #top-bar div[class*=top-bar] ul li ul li a {
@@ -537,7 +548,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 0;
     height: 100%;
     z-index: -1;
