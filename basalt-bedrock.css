@@ -868,6 +868,12 @@ template {
     flex-direction: column;
     border: none;
 }
+#top-bar div.mobile-top-bar ul li ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 100%;
+}
+
 #top-bar div[class*=top-bar] > ul > li:hover > ul,
 #top-bar div[class*=top-bar] > ul > li > ul:hover,
 #top-bar div[class*=top-bar] > ul > li:focus-within > ul,
@@ -880,7 +886,8 @@ template {
     z-index: 1;
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 0.325rem; height: 0;
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
@@ -894,6 +901,10 @@ template {
 #top-bar div[class*="top-bar"] ul li ul li {
     position: relative;
     border: none;
+}
+#top-bar div.mobile-top-bar ul li ul li {
+    flex-basis: 50%;
+    flex-grow: 1;
 }
 
 #top-bar div[class*=top-bar] ul li ul li a {
@@ -935,7 +946,8 @@ template {
     content: "";
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 0;
     height: 100%;
     z-index: -1;
@@ -1083,8 +1095,9 @@ a#account-topbutton, a#my-account {
 div#account-options {
     width: var(--login-status-width);
     position: absolute;
-    top: var(--base-header-height);
-    right: 0;
+    inset-block-start: var(--base-header-height);
+    right: unset;
+    inset-inline-end: 0;
     border: none;
     display: block!important;
     background-color: rgb(var(--login-status-background-color));
@@ -1226,8 +1239,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-input {
     display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     height: 100%;
     width: 100%;
     color: transparent;
@@ -1251,7 +1264,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-form:focus-within #search-top-box-input {
     width: calc(var(--header-UI-font-size)*16);
     opacity: 1;
-    padding-right: calc(var(--header-UI-font-size)*0.5 + var(--search-button-width));
+    padding-inline-end: calc(var(--header-UI-font-size)*0.5 + var(--search-button-width));
     z-index: 0;
     outline-width: 0.125rem;
     outline-offset: -0.125rem;
@@ -1306,7 +1319,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     content: "";
     display: block;
     position: fixed;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: var(--side-bar-button-width);
     height: var(--base-header-height);
     background-color: rgb(var(--side-bar-button-background-hover));
