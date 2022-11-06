@@ -803,8 +803,8 @@ div#toc {
     padding: 0.25ch 0.75ch;
     font-family: var(--UI-font);
     position: absolute;
-    top: -1rem;
-    left: -0.125rem;
+    inset-block-start: -1em;
+    inset-inline-start: -0.125rem;
 }
 .hovertip .content .footnote::before,
 .hovertip .content .reference::before {
@@ -812,17 +812,18 @@ div#toc {
     display: block;
     position: absolute;
     height: 100%; width: 0.325rem;
-    left: -0.125rem; top: 0.125rem;
+    inset-inline-start: -0.125rem;
+    inset-block-start: 0.125rem;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
 .hovertip .content .footnote .f-content,
 .hovertip .content .reference .r-content {
-    padding-left: 0.5rem;
+    padding-inline-start: 0.5rem;
     margin: 0.625rem 0 0;
 }
 .hovertip .content .footnote .f-footer,
 .hovertip .content .reference .r-footer {
-    text-align: right;
+    text-align: end;
     font-size: 0.825em;
     color: rgb(var(--basalt-sub-text-color));
 }
