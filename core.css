@@ -697,8 +697,9 @@ a#account-topbutton, a#my-account {
 div#account-options {
     width: var(--login-status-width);
     position: absolute;
-    top: var(--base-header-height);
-    right: 0;
+    inset-block-start: var(--base-header-height);
+    right: unset;
+    inset-inline-end: 0;
     border: none;
     display: block!important;
     background-color: rgb(var(--login-status-background-color));
@@ -840,8 +841,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-input {
     display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     height: 100%;
     width: 100%;
     color: transparent;
@@ -865,7 +866,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-form:focus-within #search-top-box-input {
     width: calc(var(--header-UI-font-size)*16);
     opacity: 1;
-    padding-right: calc(var(--header-UI-font-size)*0.5 + var(--search-button-width));
+    padding-inline-end: calc(var(--header-UI-font-size)*0.5 + var(--search-button-width));
     z-index: 0;
     outline-width: 0.125rem;
     outline-offset: -0.125rem;
@@ -920,7 +921,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     content: "";
     display: block;
     position: fixed;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: var(--side-bar-button-width);
     height: var(--base-header-height);
     background-color: rgb(var(--side-bar-button-background-hover));
