@@ -748,7 +748,6 @@ div#toc {
     margin: 0;
     margin-block-end: -0.5rem;
     inset-block-start: -0.75rem;
-    inset-inline-start: -0.325rem;
 }
 .bibitems { counter-reset: bibindex; }
 .bibitems .bibitem, .footnotes-footer .footnote-footer  {
