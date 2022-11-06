@@ -777,8 +777,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in) {
     display: flex;
     position: absolute;
-    right: 0;
-    top: var(--base-header-height);
+    inset-inline-end: 0;
+    inset-block-start: var(--base-header-height);
     height: var(--top-bar-mobile-height);
     width: calc(var(--login-status-width)/2);
     text-align: center;
@@ -789,7 +789,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     color: rgb(var(--login-status-text-color));
 }
 #login-status a.login-status-create-account {
-    right: calc(var(--login-status-width)/2);
+    inset-inline-end: calc(var(--login-status-width)/2);
 }
 
 /*--- SEARCH ---*/
