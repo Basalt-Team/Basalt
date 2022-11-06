@@ -2469,12 +2469,22 @@ div#toc {
 /*-------------------------------*/
 
 .bibitems, .footnotes-footer {
+    position: relative;
+    isolation: isolate;
     padding: 0;
     padding-bottom: 0.5rem;
-    border-inline-start: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
     background: rgb(var(--basalt-secondary-color));
     margin: 1.25rem 0;
     height: auto;
+}
+.bibitems::before, .footnotes-footer::before {
+    content: "";
+    position: absolute;
+    width: 0.35rem;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: rgb(var(--basalt-UI-dark-palette));
 }
 .bibitems .title, .footnotes-footer .title {
     font-family: var(--UI-font);
