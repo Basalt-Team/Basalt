@@ -567,8 +567,8 @@ form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-o
 }
 form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     position: absolute;
-    bottom: 0.125ch;
-    right: 1.75ch;
+    inset-block-end: 0.125ch;
+    inset-inline-end: 1.75ch;
 }
 
 #lock-info {
@@ -1430,8 +1430,8 @@ input#upload-userfile::file-selector-button {
 }
 :is(#upload-dfilename, #file-comments) + div.sub {
     position: absolute;
-    bottom: 0.25ch;
-    right: 1.5ch;
+    inset-block-end: 0.25ch;
+    inset-inline-end: 1.5ch;
     width: max-content;
 }
 
