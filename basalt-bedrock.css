@@ -1319,8 +1319,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     content: "";
     display: block;
     position: fixed;
-    inset-block-start: 0;
-    inset-inline-start: 0;
+    top: 0;
+    left: 0;
     width: var(--side-bar-button-width);
     height: var(--base-header-height);
     background-color: rgb(var(--side-bar-button-background-hover));
