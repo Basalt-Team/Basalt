@@ -238,6 +238,7 @@
     grid-template-columns: var(--side-bar-button-width) max-content 1fr var(--search-button-width) var(--user-button-width);
     grid-template-rows: 1fr;
     z-index: 10;
+    direction: ltr;
 }
 
 #header * {
