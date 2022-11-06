@@ -527,7 +527,7 @@
     position: relative;
     isolation: isolate;
 }
-@supports not (backdrop-filter: blur(var(--basalt-UI-blur))) {
+@supports (not (backdrop-filter: blur(var(--basalt-UI-blur)))) and (not (-webkit-backdrop-filter: blur(var(--basalt-UI-blur)))) {
     #top-bar div[class*=top-bar] ul li ul li a {
         --basalt-UI-opacity: 0.995;
     }
