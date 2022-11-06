@@ -176,6 +176,8 @@
     --image-caption-background-color: var(--basalt-background-color);
     --image-block-border-color: var(--basalt-undertone);
 
+    --footnote-background-color: var(--basalt-secondary-color);
+
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-background-color: var(--basalt-secondary-color);
