@@ -574,6 +574,8 @@ template {
     --image-caption-background-color: var(--basalt-background-color);
     --image-block-border-color: var(--basalt-undertone);
 
+    --footnote-background-color: var(--basalt-secondary-color);
+
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: 0.1rem;
     --edit-area-toolbar-background-color: var(--basalt-secondary-color);
@@ -2468,9 +2470,10 @@ div#toc {
 
 .bibitems, .footnotes-footer {
     padding: 0;
-    padding-bottom: 0.125rem;
+    padding-bottom: 0.5rem;
     border-inline-start: solid 0.35rem rgb(var(--basalt-UI-dark-palette));
-    margin: 1rem 0;
+    background: rgb(var(--basalt-secondary-color));
+    margin: 1.25rem 0;
     height: auto;
 }
 .bibitems .title, .footnotes-footer .title {
@@ -2481,9 +2484,12 @@ div#toc {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     width: max-content;
-    padding: 0.25em;
-    padding-inline-end: 0.5em;
-    margin: 0 0 0.5em;
+    padding: 0.25em 0.5em;
+    position: relative;
+    margin: 0;
+    margin-block-end: -0.5rem;
+    inset-block-start: -0.75rem;
+    inset-inline-start: -0.325rem;
 }
 .bibitems { counter-reset: bibindex; }
 .bibitems .bibitem, .footnotes-footer .footnote-footer  {
@@ -2516,6 +2522,7 @@ div#toc {
     font-weight: bold;
     position: absolute;
     font-family: var(--mono-font);
+    background-color: rgb(var(--footnote-background-color));
 }
 .footnotes-footer .footnote-footer > a:first-child::after { content: "."; }
 
@@ -2523,7 +2530,7 @@ div#toc {
 .hovertip {
     width: max-content;
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
-    background-color: rgb(var(--basalt-secondary-color))!important;
+    background-color: rgb(var(--footnote-background-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
     font-size: calc(var(--true-font-size)*0.95);
 }
