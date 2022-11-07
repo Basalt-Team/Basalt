@@ -636,6 +636,7 @@ template {
     grid-template-columns: var(--side-bar-button-width) max-content 1fr var(--search-button-width) var(--user-button-width);
     grid-template-rows: 1fr;
     z-index: 10;
+    direction: ltr;
 }
 
 #header * {
@@ -925,7 +926,7 @@ template {
     position: relative;
     isolation: isolate;
 }
-@supports not (backdrop-filter: blur(var(--basalt-UI-blur))) {
+@supports (not (backdrop-filter: blur(var(--basalt-UI-blur)))) and (not (-webkit-backdrop-filter: blur(var(--basalt-UI-blur)))) {
     #top-bar div[class*=top-bar] ul li ul li a {
         --basalt-UI-opacity: 0.995;
     }
@@ -1175,8 +1176,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in) {
     display: flex;
     position: absolute;
-    right: 0;
-    top: var(--base-header-height);
+    inset-inline-end: 0;
+    inset-block-start: var(--base-header-height);
     height: var(--top-bar-mobile-height);
     width: calc(var(--login-status-width)/2);
     text-align: center;
@@ -1187,7 +1188,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     color: rgb(var(--login-status-text-color));
 }
 #login-status a.login-status-create-account {
-    right: calc(var(--login-status-width)/2);
+    inset-inline-end: calc(var(--login-status-width)/2);
 }
 
 /*--- SEARCH ---*/
@@ -1525,6 +1526,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     background-color: rgb(var(--bottom-area-background-color));
     box-sizing: border-box;
     padding-bottom: 0;
+    direction: ltr;
 }
 #footer a {
     color: rgb(var(--footer-link-color));
@@ -1943,6 +1945,10 @@ select:focus {
 /*-------------*/
 /*--- TABLE ---*/
 /*-------------*/
+
+table td {
+    text-align: start;
+}
 
 #page-content table {
     width: max-content;
@@ -2554,8 +2560,8 @@ div#toc {
     padding: 0.25ch 0.75ch;
     font-family: var(--UI-font);
     position: absolute;
-    top: -1rem;
-    left: -0.125rem;
+    inset-block-start: -1em;
+    inset-inline-start: -0.125rem;
 }
 .hovertip .content .footnote::before,
 .hovertip .content .reference::before {
@@ -2563,17 +2569,18 @@ div#toc {
     display: block;
     position: absolute;
     height: 100%; width: 0.325rem;
-    left: -0.125rem; top: 0.125rem;
+    inset-inline-start: -0.125rem;
+    inset-block-start: 0.125rem;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
 .hovertip .content .footnote .f-content,
 .hovertip .content .reference .r-content {
-    padding-left: 0.5rem;
+    padding-inline-start: 0.5rem;
     margin: 0.625rem 0 0;
 }
 .hovertip .content .footnote .f-footer,
 .hovertip .content .reference .r-footer {
-    text-align: right;
+    text-align: end;
     font-size: 0.825em;
     color: rgb(var(--basalt-sub-text-color));
 }
@@ -2981,6 +2988,7 @@ div#toc {
 div[id*="page-options-bottom"] {
     --po-padding: 0.5rem;
     width: 100%;
+    line-height: 1.5;
     text-align: center;
     margin: 0;
     font-size: var(--true-font-size);
@@ -3374,7 +3382,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     display: flex;
     flex-direction: column;
     border: none;
-    border-left: solid calc(var(--edit-area-toolbar-icon-size)/8) rgb(var(--basalt-UI-dark-palette));
+    border-inline-start: solid calc(var(--edit-area-toolbar-icon-size)/8) rgb(var(--basalt-UI-dark-palette));
     background-color: rgb(var(--edit-area-toolbar-background-color));
     top: 100%;
     left: 0;
@@ -3402,7 +3410,8 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     display: block;
     width: 100%; height: 100%;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
 }
 #edit-page-form .wd-editor-toolbar-panel a::after {
     background-color: rgb(var(--basalt-main-text-color));
@@ -3690,8 +3699,8 @@ form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-o
 }
 form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     position: absolute;
-    bottom: 0.125ch;
-    right: 1.75ch;
+    inset-block-end: 0.125ch;
+    inset-inline-end: 1.75ch;
 }
 
 #lock-info {
@@ -4553,8 +4562,8 @@ input#upload-userfile::file-selector-button {
 }
 :is(#upload-dfilename, #file-comments) + div.sub {
     position: absolute;
-    bottom: 0.25ch;
-    right: 1.5ch;
+    inset-block-end: 0.25ch;
+    inset-inline-end: 1.5ch;
     width: max-content;
 }
 
