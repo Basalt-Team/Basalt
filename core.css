@@ -519,6 +519,7 @@
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
+    box-shadow: inset 0 0.05rem 0 rgb(var(--general-border-color));
     -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
