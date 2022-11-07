@@ -22,6 +22,8 @@
     --header-font-fallback: var(--body-font-fallback);
 }
 
+:root:lang(ja) #side-bar div.menu-item { margin: 0; }
+
 :root:lang(ja) #side-bar .menu-item .sub-text {
     display: flex;
     align-items: center;
