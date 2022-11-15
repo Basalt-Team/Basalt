@@ -1276,6 +1276,21 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
 }
 
 /*-------------------*/
+
+#page-version-info {
+    right: var(--main-content-side-margin);
+    border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgb(var(--blockquote-background-color),0.875);
+    -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
+    backdrop-filter: blur(var(--basalt-UI-blur));
+    max-width: min-content;
+    opacity: 1;
+    z-index: 1;
+}
+
+/*-------------------*/
 /*-------------------*/
 /*-------------------*/
 
