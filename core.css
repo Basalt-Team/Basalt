@@ -656,7 +656,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem;
+    padding: min(calc(var(--base-header-height)*0.175),0.625rem);
     box-sizing: border-box;
     position: absolute;
     top: 0;
