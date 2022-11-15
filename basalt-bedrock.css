@@ -917,6 +917,7 @@ template {
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
+    box-shadow: inset 0 0.05rem 0 rgb(var(--general-border-color));
     -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
     backdrop-filter: blur(var(--basalt-UI-blur));
     clip-path: inset(0 100% 0 0);
@@ -1053,7 +1054,7 @@ template {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem;
+    padding: min(calc(var(--base-header-height)*0.175),0.625rem);
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -4408,6 +4409,21 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
 }
 
 /*-------------------*/
+
+#page-version-info {
+    right: var(--main-content-side-margin);
+    border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgb(var(--blockquote-background-color),0.875);
+    -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
+    backdrop-filter: blur(var(--basalt-UI-blur));
+    max-width: min-content;
+    opacity: 1;
+    z-index: 1;
+}
+
+/*-------------------*/
 /*-------------------*/
 /*-------------------*/
 
@@ -4853,6 +4869,8 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, monospace;
     --header-font-fallback: var(--body-font-fallback);
 }
+
+:root:lang(ja) #side-bar div.menu-item { margin: 0; }
 
 :root:lang(ja) #side-bar .menu-item .sub-text {
     display: flex;
