@@ -43,6 +43,7 @@
     --mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
     --header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
+    --header-logo-size: contain;
     --header-title-color: var(--basalt-main-text-color);
     --header-subtitle-color: var(--header-title-color);
     --title-size: 1.5rem;
@@ -278,7 +279,7 @@
     width: calc(var(--base-header-height)*0.925);
     min-width: calc(var(--base-header-height)*0.75);
     background-image: var(--header-logo);
-    background-size: contain;
+    background-size: var(--header-logo-size);
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.25s ease-out;
@@ -1164,6 +1165,7 @@ div#license-area {
     display: block;
     height: var(--license-area-logo-size);
     width: 100%;
+    margin-block-end: calc(var(--bottom-area-padding)/2);
 }
 #license-area::before {
     background: rgb(var(--license-area-divider-color));
