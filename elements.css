@@ -28,6 +28,8 @@ img, table, iframe {
     max-width: 100%;
 }
 
+#page-content div { max-width: 100%; }
+
 /* scrollbar */
 * {
     scrollbar-width: thin;
