@@ -75,6 +75,7 @@
 
     --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-light-text-color);
+    --login-status-text-color-hover: var(--login-status-text-color);
     --login-status-width: calc(var(--header-UI-font-size)*20);
     --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
@@ -728,7 +729,7 @@ div#account-options > ul > li > a {
     color: rgb(var(--login-status-text-color));
 }
 div#account-options > ul > li > a:is(:hover, :focus) {
-    color: rgb(var(--login-status-text-color));
+    color: rgb(var(--login-status-text-color-hover));
 }
 div#account-options > ul > li > a::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in)::before {
