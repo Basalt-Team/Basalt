@@ -4538,6 +4538,7 @@ form[onsubmit*="setParent"] > table.form,
 }
 
 input#upload-userfile {
+    color: rgb(var(--basalt-main-text-color));
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: box-shadow 0.125s linear;
 }
