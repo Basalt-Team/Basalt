@@ -468,11 +468,13 @@ template {
     --top-bar-dropdown-background-hover: var(--link-color);
 
     --search-icon-color: var(--basalt-undertone);
+    --search-icon-color-hover: var(--top-bar-link-color-hover);
     --search-background-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
     --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-light-text-color);
+    --login-status-text-color-hover: var(--login-status-text-color);
     --login-status-width: calc(var(--header-UI-font-size)*20);
     --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
@@ -1126,7 +1128,7 @@ div#account-options > ul > li > a {
     color: rgb(var(--login-status-text-color));
 }
 div#account-options > ul > li > a:is(:hover, :focus) {
-    color: rgb(var(--login-status-text-color));
+    color: rgb(var(--login-status-text-color-hover));
 }
 div#account-options > ul > li > a::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in)::before {
@@ -1236,7 +1238,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     transition: background-color var(--header-link-transition-1st);
 }
 #search-top-box:is(:hover,:focus-within)::after {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    background-color: rgb(var(--search-icon-color-hover));
 }
 
 #search-top-box-form { display: contents; }
@@ -1783,6 +1785,8 @@ sub { bottom: -0.625em; }
 img, table, iframe {
     max-width: 100%;
 }
+
+#page-content div { max-width: 100%; }
 
 /* scrollbar */
 * {
