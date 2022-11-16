@@ -70,6 +70,7 @@
     --top-bar-dropdown-background-hover: var(--link-color);
 
     --search-icon-color: var(--basalt-undertone);
+    --search-icon-color-hover: var(--top-bar-link-color-hover);
     --search-background-color: var(--basalt-background-color);
     --search-button-width: 2rem;
 
@@ -839,7 +840,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     transition: background-color var(--header-link-transition-1st);
 }
 #search-top-box:is(:hover,:focus-within)::after {
-    background-color: rgb(var(--top-bar-link-color-hover));
+    background-color: rgb(var(--search-icon-color-hover));
 }
 
 #search-top-box-form { display: contents; }
