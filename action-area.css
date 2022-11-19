@@ -1600,14 +1600,27 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     border: none;
 }
 
-/*----------------*/
+/*--------------*/
 /*--- PARENT ---*/
-/*----------------*/
+/*--------------*/
 #action-area div.autocomplete-container.yui-ac { width: 100%!important; }
 
-/*-----------------------*/
+.yui-ac-content {
+    border: solid 0.05rem rgb(var(--general-border-color));
+    background-color: rgb(var(--basalt-background-color));
+}
+.autocomplete-list li {
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+}
+.autocomplete-list li.yui-ac-highlight {
+    background-color: rgb(var(--basalt-focus-color));
+    color: rgb(var(--basalt-light-text-color));
+}
+
+/*---------------------*/
 /*--- RENAME/DELETE ---*/
-/*-----------------------*/
+/*---------------------*/
 
 #rename-option-rename > p > :is(#rename-show-backlinks, #rename-hide-backlinks) {
     display: block;
