@@ -167,7 +167,10 @@ input[type="checkbox"], [type="radio"] {
 
 textarea,
 input[type="text"] {
+    margin: 0;
+    padding: 0.25rem;
     color: rgb(var(--basalt-main-text-color));
+    background-color: rgb(var(--basalt-background-color));
     border: solid 0.05rem rgb(var(--general-border-color));
     outline: solid 0 rgb(var(--basalt-focus-color));
     transition: outline-width 0.125s linear;
