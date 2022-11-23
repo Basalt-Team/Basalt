@@ -731,7 +731,7 @@ div#toc {
     isolation: isolate;
     padding: 0;
     padding-bottom: 0.5rem;
-    background: rgb(var(--basalt-secondary-color));
+    background: rgb(var(--footnote-background-color));
     margin: 1.25rem 0;
     height: auto;
 }
