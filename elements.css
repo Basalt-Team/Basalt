@@ -98,6 +98,11 @@ a.newpage {
     color: rgb(var(--link-newpage-color));
 }
 
+/* collapsible link*/
+#page-content a.collapsible-block-link {
+    overflow-wrap: anywhere;
+}
+
 /*---------------*/
 /*--- BUTTONS ---*/
 /*---------------*/
@@ -1371,13 +1376,13 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
     font-size: .625em;
     line-height: 1.15;
 }
-.ruby, ruby{
+.ruby, ruby {
     display: inline-table;
     height: 1em;
     line-height: 1;
     vertical-align: text-bottom;
 }
-.rt, .ruby, rt, ruby{
+.rt, .ruby, rt, ruby {
     text-align: center;
     white-space: nowrap;
 }
