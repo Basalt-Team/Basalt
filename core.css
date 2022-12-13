@@ -284,7 +284,6 @@
     background-size: var(--header-logo-size);
     background-position: center;
     background-repeat: no-repeat;
-    transition: transform 0.25s ease-out;
 }
 
 #header h1 a span {
@@ -312,12 +311,6 @@
     font-size: var(--subtitle-size);
     font-weight: normal;
 }
-
-#header h1 a:hover::before,
-#header h1 a:focus::before {
-    transform: rotate(-10deg);
-}
-
 
 /*--- TOP BAR ---*/
 
