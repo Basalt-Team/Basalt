@@ -1856,6 +1856,11 @@ a.newpage {
     color: rgb(var(--link-newpage-color));
 }
 
+/* collapsible link*/
+#page-content a.collapsible-block-link {
+    overflow-wrap: anywhere;
+}
+
 /*---------------*/
 /*--- BUTTONS ---*/
 /*---------------*/
@@ -1925,7 +1930,10 @@ input[type="checkbox"], [type="radio"] {
 
 textarea,
 input[type="text"] {
+    margin: 0;
+    padding: 0.25rem;
     color: rgb(var(--basalt-main-text-color));
+    background-color: rgb(var(--basalt-background-color));
     border: solid 0.05rem rgb(var(--general-border-color));
     outline: solid 0 rgb(var(--basalt-focus-color));
     transition: outline-width 0.125s linear;
@@ -2216,6 +2224,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 .image-block, .scp-image-block {
     border-bottom: solid 0.325rem rgb(var(--basalt-undertone));
     width: 300px;
+    background: rgb(var(--image-caption-background-color));
 }
 :is(.image-block, .scp-image-block) img {
     width: 100%!important;
@@ -2486,7 +2495,7 @@ div#toc {
     isolation: isolate;
     padding: 0;
     padding-bottom: 0.5rem;
-    background: rgb(var(--basalt-secondary-color));
+    background: rgb(var(--footnote-background-color));
     margin: 1.25rem 0;
     height: auto;
 }
@@ -3044,7 +3053,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 }
 #page-options-bottom-2 { padding-top: 0; }
 #delete-button {
-    top: 0;
+    inset-block-start: 0;
     color: rgba(var(--basalt-cancel-color));
     background-color: rgba(var(--basalt-cancel-color),0.105);
     height: calc(100% - var(--po-padding));
@@ -3126,13 +3135,13 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
     font-size: .625em;
     line-height: 1.15;
 }
-.ruby, ruby{
+.ruby, ruby {
     display: inline-table;
     height: 1em;
     line-height: 1;
     vertical-align: text-bottom;
 }
-.rt, .ruby, rt, ruby{
+.rt, .ruby, rt, ruby {
     text-align: center;
     white-space: nowrap;
 }
@@ -3671,9 +3680,11 @@ form#edit-page-form table.edit-page-bottomtable tr td > div:nth-of-type(1) {
 }
 
 form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-size: calc(var(--true-font-size)*0.875);
     font-weight: bold;
-    display: grid;
     transition: color 0.175s ease-out;
 }
 form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-of-type(1)::before {
@@ -3699,6 +3710,7 @@ form#edit-page-form table.edit-page-bottomtable tr td:nth-of-type(1) > div:nth-o
     font-weight: initial;
     background-color: rgb(var(--edit-area-ancillary-background-color));
     border: none;
+    flex-grow: 1;
     order: 2;
 }
 #edit-page-comments:focus-visible {
@@ -4739,14 +4751,27 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     border: none;
 }
 
-/*----------------*/
+/*--------------*/
 /*--- PARENT ---*/
-/*----------------*/
+/*--------------*/
 #action-area div.autocomplete-container.yui-ac { width: 100%!important; }
 
-/*-----------------------*/
+.yui-ac-content {
+    border: solid 0.05rem rgb(var(--general-border-color));
+    background-color: rgb(var(--basalt-background-color));
+}
+.autocomplete-list li {
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+}
+.autocomplete-list li.yui-ac-highlight {
+    background-color: rgb(var(--basalt-focus-color));
+    color: rgb(var(--basalt-light-text-color));
+}
+
+/*---------------------*/
 /*--- RENAME/DELETE ---*/
-/*-----------------------*/
+/*---------------------*/
 
 #rename-option-rename > p > :is(#rename-show-backlinks, #rename-hide-backlinks) {
     display: block;
