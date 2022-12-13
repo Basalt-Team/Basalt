@@ -627,12 +627,10 @@ div#toc {
 #toc-list div[style*="1em"]::before {
     content: counter(toc-num1) ".";
     position: absolute;
-    top: 0;
-    right: 100%;
+    inset-block-start: 0.325em;
+    inset-inline-end: 100%;
     height: 100%;
     font-size: 0.75em;
-    display: flex;
-    align-items: center;
     font-family: var(--UI-font);
     padding-right: 0.325em;
 }
