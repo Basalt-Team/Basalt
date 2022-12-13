@@ -906,14 +906,14 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     position: fixed;
     top: 0;
     left: calc(var(--side-bar-width)*-1.125);
+    padding: 0;
+    margin: 0;
     margin-top: var(--header-final-height);
-    margin-bottom: 0;
     height: calc(100vh - var(--header-final-height));
     width: var(--side-bar-width);
     max-width: calc(100% - 3.75rem);
     box-sizing: border-box;
     background-color: rgb(var(--side-bar-background-color));
-    padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     direction: rtl;
