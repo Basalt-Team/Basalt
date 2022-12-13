@@ -466,6 +466,7 @@ div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before
 .image-block, .scp-image-block {
     border-bottom: solid 0.325rem rgb(var(--basalt-undertone));
     width: 300px;
+    background: rgb(var(--image-caption-background-color));
 }
 :is(.image-block, .scp-image-block) img {
     width: 100%!important;
