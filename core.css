@@ -992,6 +992,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
+#side-bar .collapsible-block-folded {
+    background: none;
+}
 #side-bar .collapsible-block a.collapsible-block-link {
     position: relative;
     display: block;
@@ -1062,6 +1065,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 :is(#side-bar, #interwiki) .menu-item.small {
     display: flex;
     font-size: 0;
+}
+#side-bar div.menu-item {
+    margin: 0;
 }
 :is(#side-bar, #interwiki) .menu-item > p { display: contents; }
 :is(#side-bar, #interwiki) .menu-item > img { display: none; }
