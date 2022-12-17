@@ -1336,16 +1336,16 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 .bblock {
     background-color: rgb(var(--basalt-main-text-color));
-    transition: color 0.75s linear;
+    transition: color 0.675s linear;
 }
 .bblock:is(:hover, :focus-within) {
     background-color: rgb(var(--basalt-main-text-color));
-    color: rgb(var(--basalt-light-text-color));
+    color: rgb(var(--basalt-background-color));
 }
 
 .dblock {
     background-color: currentColor;
-    transition: background-color 0.75s linear;
+    transition: background-color 0.675s linear;
 }
 .dblock:is(:hover, :focus-within) {
     background-color: transparent;
