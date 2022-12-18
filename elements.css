@@ -616,7 +616,7 @@ div#toc {
     border-top: inherit;
     margin: 0;
     padding: 0.625rem;
-    padding-left: 1.125rem;
+    padding-inline-start: 1.125rem;
     background-color: rgb(var(--basalt-background-color));
     counter-reset: toc-num1;
 }
@@ -634,11 +634,16 @@ div#toc {
     font-family: var(--UI-font);
     padding-right: 0.325em;
 }
-#toc-list > div[style*="2em"] > a { font-size: 0.965em; }
-#toc-list > div[style*="3em"] > a { font-size: 0.915em; }
-#toc-list > div[style*="4em"] > a { font-size: 0.865em; }
-#toc-list > div[style*="5em"] > a { font-size: 0.835em; }
-#toc-list > div[style*="6em"] > a { font-size: 0.775em; }
+#toc-list > div {
+    --toc-entry-indent: 1em;
+    margin-left: 0!important;
+    margin-inline-start: var(--toc-entry-indent)!important;
+}
+#toc-list > div[style*="2em"] > a { font-size: 0.965em; --toc-entry-indent: 2em; }
+#toc-list > div[style*="3em"] > a { font-size: 0.915em; --toc-entry-indent: 3em; }
+#toc-list > div[style*="4em"] > a { font-size: 0.865em; --toc-entry-indent: 4em; }
+#toc-list > div[style*="5em"] > a { font-size: 0.835em; --toc-entry-indent: 5em; }
+#toc-list > div[style*="6em"] > a { font-size: 0.775em; --toc-entry-indent: 6em; }
 
 /*------------*/
 /*--- TABS ---*/
@@ -734,7 +739,8 @@ div#toc {
     position: relative;
     isolation: isolate;
     padding: 0;
-    padding-bottom: 0.5rem;
+    padding-block-end: 0.5rem;
+    padding-inline-end: 1.25rem;
     background: rgb(var(--footnote-background-color));
     margin: 1.25rem 0;
     height: auto;
