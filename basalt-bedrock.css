@@ -1390,6 +1390,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     display: none;
 }
 
+#side-bar .collapsible-block-folded {
+    background: none;
+}
 #side-bar .collapsible-block a.collapsible-block-link {
     position: relative;
     display: block;
@@ -1460,6 +1463,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 :is(#side-bar, #interwiki) .menu-item.small {
     display: flex;
     font-size: 0;
+}
+#side-bar div.menu-item {
+    margin: 0;
 }
 :is(#side-bar, #interwiki) .menu-item > p { display: contents; }
 :is(#side-bar, #interwiki) .menu-item > img { display: none; }
@@ -2367,7 +2373,7 @@ div#toc {
     border-top: inherit;
     margin: 0;
     padding: 0.625rem;
-    padding-left: 1.125rem;
+    padding-inline-start: 1.125rem;
     background-color: rgb(var(--basalt-background-color));
     counter-reset: toc-num1;
 }
@@ -2385,11 +2391,16 @@ div#toc {
     font-family: var(--UI-font);
     padding-right: 0.325em;
 }
-#toc-list > div[style*="2em"] > a { font-size: 0.965em; }
-#toc-list > div[style*="3em"] > a { font-size: 0.915em; }
-#toc-list > div[style*="4em"] > a { font-size: 0.865em; }
-#toc-list > div[style*="5em"] > a { font-size: 0.835em; }
-#toc-list > div[style*="6em"] > a { font-size: 0.775em; }
+#toc-list > div {
+    --toc-entry-indent: 1em;
+    margin-left: 0!important;
+    margin-inline-start: var(--toc-entry-indent)!important;
+}
+#toc-list > div[style*="2em"] > a { font-size: 0.965em; --toc-entry-indent: 2em; }
+#toc-list > div[style*="3em"] > a { font-size: 0.915em; --toc-entry-indent: 3em; }
+#toc-list > div[style*="4em"] > a { font-size: 0.865em; --toc-entry-indent: 4em; }
+#toc-list > div[style*="5em"] > a { font-size: 0.835em; --toc-entry-indent: 5em; }
+#toc-list > div[style*="6em"] > a { font-size: 0.775em; --toc-entry-indent: 6em; }
 
 /*------------*/
 /*--- TABS ---*/
@@ -2485,7 +2496,8 @@ div#toc {
     position: relative;
     isolation: isolate;
     padding: 0;
-    padding-bottom: 0.5rem;
+    padding-block-end: 0.5rem;
+    padding-inline-end: 1.25rem;
     background: rgb(var(--footnote-background-color));
     margin: 1.25rem 0;
     height: auto;
@@ -3087,16 +3099,16 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 .bblock {
     background-color: rgb(var(--basalt-main-text-color));
-    transition: color 0.75s linear;
+    transition: color 0.675s linear;
 }
 .bblock:is(:hover, :focus-within) {
     background-color: rgb(var(--basalt-main-text-color));
-    color: rgb(var(--basalt-light-text-color));
+    color: rgb(var(--basalt-background-color));
 }
 
 .dblock {
     background-color: currentColor;
-    transition: background-color 0.75s linear;
+    transition: background-color 0.675s linear;
 }
 .dblock:is(:hover, :focus-within) {
     background-color: transparent;
