@@ -639,11 +639,11 @@ div#toc {
     margin-left: 0!important;
     margin-inline-start: var(--toc-entry-indent)!important;
 }
-#toc-list > div[style*="2em"] > a { font-size: 0.965em; --toc-entry-indent: 2em; }
-#toc-list > div[style*="3em"] > a { font-size: 0.915em; --toc-entry-indent: 3em; }
-#toc-list > div[style*="4em"] > a { font-size: 0.865em; --toc-entry-indent: 4em; }
-#toc-list > div[style*="5em"] > a { font-size: 0.835em; --toc-entry-indent: 5em; }
-#toc-list > div[style*="6em"] > a { font-size: 0.775em; --toc-entry-indent: 6em; }
+#toc-list > div[style*="2em"] { font-size: 0.965em; --toc-entry-indent: 2em; }
+#toc-list > div[style*="3em"] { font-size: 0.915em; --toc-entry-indent: 3em; }
+#toc-list > div[style*="4em"] { font-size: 0.865em; --toc-entry-indent: 4em; }
+#toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5em; }
+#toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6em; }
 
 /*------------*/
 /*--- TABS ---*/
