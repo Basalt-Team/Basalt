@@ -299,7 +299,7 @@ div.rate-box-with-credit-button .creditButton {
     display: block;
     width: var(--rate-module-button-size);
     height: var(--rate-module-button-size);
-    padding-left: 0.325em;
+    padding-inline-start: 0.325em;
 }
 div.rate-box-with-credit-button .creditButton > p { display: contents; }
 
@@ -598,7 +598,7 @@ div#toc {
 #page-content table[style^="margin:0;"] td[style^="margin:0;"] { display: contents; }
 
 #toc #toc-action-bar {
-    text-align: right;
+    text-align: end;
     padding: 0.625rem;
     width: 4em;
 }
@@ -607,7 +607,7 @@ div#toc {
     order: -1;
     padding: 0.625rem 0.875em;
     margin: 0;
-    text-align: left;
+    text-align: start;
     font-size: 1.05em;
 }
 
@@ -632,7 +632,7 @@ div#toc {
     height: 100%;
     font-size: 0.75em;
     font-family: var(--UI-font);
-    padding-right: 0.325em;
+    padding-inline-end: 0.325em;
 }
 #toc-list > div {
     --toc-entry-indent: 1em;
