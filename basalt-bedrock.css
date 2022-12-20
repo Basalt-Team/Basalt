@@ -547,6 +547,8 @@ template {
     --rate-module-upvote-color: var(--basalt-positive-color);
     --rate-module-downvote-color: var(--basalt-negative-color);
     --rate-module-cancel-color: var(--basalt-overtone);
+    --rate-module-info-icon-color: var(--basalt-light-text-color);
+    --rate-module-info-background-color: var(--basalt-UI-dark-palette);
 
     --button-text-color: var(--basalt-main-text-color);
     --button-background-color: var(--basalt-secondary-color);
@@ -2056,7 +2058,7 @@ div.rate-box-with-credit-button .creditButton {
     display: block;
     width: var(--rate-module-button-size);
     height: var(--rate-module-button-size);
-    padding-left: 0.325em;
+    padding-inline-start: 0.325em;
 }
 div.rate-box-with-credit-button .creditButton > p { display: contents; }
 
@@ -2075,7 +2077,8 @@ div.rate-box-with-credit-button .creditButton > p > a {
 }
 div.page-rate-widget-box span.btn > a { border-bottom: solid 0.05em rgb(var(--general-border-color)); }
 div.page-rate-widget-box span.btn > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::before {
+div.rate-box-with-credit-button .creditButton > p > a::before,
+div.rate-box-with-credit-button .creditButton > p > a::after {
     content: "";
     display: block;
     background-color: rgb(var(--basalt-main-text-color));
@@ -2084,15 +2087,8 @@ div.rate-box-with-credit-button .creditButton > p > a::before {
     height: 100%;
     transition: background-color 0.095s linear;
 }
-div.rate-box-with-credit-button .creditButton > p > a::before { background-color: rgb(var(--basalt-UI-dark-palette)); }
-div.rate-box-with-credit-button .creditButton > p > a::after {
-    content: "";
-    display: block;
-    background-color: rgb(var(--basalt-light-text-color));
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+div.rate-box-with-credit-button .creditButton > p > a::before { background-color: rgb(var(--rate-module-info-background-color)); }
+div.rate-box-with-credit-button .creditButton > p > a::after { background-color: rgb(var(--rate-module-info-icon-color)); }
 
 div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::after {
@@ -2355,7 +2351,7 @@ div#toc {
 #page-content table[style^="margin:0;"] td[style^="margin:0;"] { display: contents; }
 
 #toc #toc-action-bar {
-    text-align: right;
+    text-align: end;
     padding: 0.625rem;
     width: 4em;
 }
@@ -2364,7 +2360,7 @@ div#toc {
     order: -1;
     padding: 0.625rem 0.875em;
     margin: 0;
-    text-align: left;
+    text-align: start;
     font-size: 1.05em;
 }
 
@@ -2389,7 +2385,7 @@ div#toc {
     height: 100%;
     font-size: 0.75em;
     font-family: var(--UI-font);
-    padding-right: 0.325em;
+    padding-inline-end: 0.325em;
 }
 #toc-list > div {
     --toc-entry-indent: 1em;
@@ -2399,8 +2395,8 @@ div#toc {
 #toc-list > div[style*="2em"] { font-size: 0.965em; --toc-entry-indent: 2em; }
 #toc-list > div[style*="3em"] { font-size: 0.915em; --toc-entry-indent: 3em; }
 #toc-list > div[style*="4em"] { font-size: 0.865em; --toc-entry-indent: 4em; }
-#toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5em; }
-#toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6em; }
+#toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5.075em; }
+#toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6.25em; }
 
 /*------------*/
 /*--- TABS ---*/
