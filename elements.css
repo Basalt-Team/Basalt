@@ -319,7 +319,7 @@ div.rate-box-with-credit-button .creditButton > p > a {
 div.page-rate-widget-box span.btn > a { border-bottom: solid 0.05em rgb(var(--general-border-color)); }
 div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::after  {
+div.rate-box-with-credit-button .creditButton > p > a::after {
     content: "";
     display: block;
     background-color: rgb(var(--basalt-main-text-color));
@@ -636,8 +636,8 @@ div#toc {
 #toc-list > div[style*="2em"] { font-size: 0.965em; --toc-entry-indent: 2em; }
 #toc-list > div[style*="3em"] { font-size: 0.915em; --toc-entry-indent: 3em; }
 #toc-list > div[style*="4em"] { font-size: 0.865em; --toc-entry-indent: 4em; }
-#toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5em; }
-#toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6em; }
+#toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5.075em; }
+#toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6.25em; }
 
 /*------------*/
 /*--- TABS ---*/
