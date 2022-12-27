@@ -497,7 +497,7 @@ template {
     --side-bar-media-background-color: var(--basalt-undertone), 0.115;
     --side-bar-resources-background-color: var(--basalt-alternate-color), 0.115;
     --side-bar-heading-text-color: var(--basalt-light-text-color);
-    --side-bar-heading-text-hover-color: var(--basalt-light-text-color);
+    --side-bar-heading-text-color-hover: var(--basalt-light-text-color);
     --side-bar-heading-background-color: var(--basalt-UI-dark-palette);
     --side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
     --side-bar-unfolded-heading-background-color: var(--basalt-UI-dark-palette);
@@ -1415,7 +1415,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #side-bar .collapsible-block a.collapsible-block-link:is(:hover,:focus) {
     text-decoration: none;
     background-color: rgb(var(--basalt-focus-color));
-    color: rgb(var(--side-bar-heading-text-hover-color));
+    color: rgb(var(--side-bar-heading-text-color-hover));
 }
 #side-bar .collapsible-block .collapsible-block-folded a.collapsible-block-link::before,
 #side-bar .collapsible-block a.collapsible-block-link::after {
