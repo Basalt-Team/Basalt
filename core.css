@@ -1358,3 +1358,10 @@ body.print-body #page-info {
     text-align: right;
     padding: 0;
 }
+
+body.print-body div#license-area {
+    padding-top: var(--bottom-area-padding);
+}
+body.print-body #license-area::after {
+    top: var(--bottom-area-padding);
+}
