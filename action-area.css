@@ -1424,7 +1424,8 @@ input#upload-userfile {
 }
 input#upload-userfile::file-selector-button {
     padding: 0.5ch;
-    margin: 0 0.55em 0 0.125em;
+    margin: 0 0.125em;
+    margin-inline-end: 0.55em;
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-background-color));
