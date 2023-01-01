@@ -961,7 +961,7 @@ div#toc {
 
 .owindow .button-bar > a[onclick*="cleanAll"] {
     position: absolute;
-    top: 0; right: 0;
+    inset-block-start: 0; inset-inline-end: 0;
     display: block;
     border: none;
     height: 2.75rem; width: 2.75rem;
@@ -1055,7 +1055,6 @@ div#toc {
     border-width: 0.1em 0;
     max-height: 47.5vh;
     overflow-y: auto;
-    direction: rtl;
 }
 .owindow > .content.modal-body > img + h1 + table > tbody { display: contents; }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr {
@@ -1063,7 +1062,6 @@ div#toc {
     grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
     align-items: center;
     padding: 0.5em;
-    direction: ltr;
 }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr:not(:last-child) {
     border-bottom: solid 0.1em rgb(var(--basalt-tertiary-color));
