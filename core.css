@@ -513,7 +513,7 @@
 #top-bar div[class*=top-bar] ul li ul li a {
     width: 100%;
     font-size: var(--header-UI-dropdown-font-size);
-    padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
+    padding: calc(var(--header-UI-dropdown-font-size) * 0.575) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
@@ -1257,6 +1257,9 @@ div#license-area {
     #top-bar div[class*="top-bar"] ul li ul {
         transform: none;
         left: 0;
+    }
+    #top-bar div[class*="top-bar"] ul li ul li a {
+        padding: calc(var(--header-UI-dropdown-font-size) * 0.875) calc(var(--header-UI-dropdown-font-size) * 1.05);
     }
 
     /*--- mobile side-bar ---*/
