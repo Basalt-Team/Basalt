@@ -1220,9 +1220,10 @@ div#license-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    grid-gap: 0.375rem;
 }
 #footer-bar .units .unit {
-    flex-basis: 12.5rem;
+    flex-basis: 12.5em;
     text-align: center;
 }
 
