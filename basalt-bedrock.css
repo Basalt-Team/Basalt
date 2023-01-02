@@ -911,7 +911,7 @@ template {
 #top-bar div[class*=top-bar] ul li ul li a {
     width: 100%;
     font-size: var(--header-UI-dropdown-font-size);
-    padding: calc(var(--header-UI-dropdown-font-size) * 0.775) calc(var(--header-UI-dropdown-font-size) * 1.05);
+    padding: calc(var(--header-UI-dropdown-font-size) * 0.575) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
     background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
@@ -1473,7 +1473,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 :is(#side-bar, #interwiki) .menu-item > img { display: none; }
 :is(#side-bar, #interwiki) .menu-item a {
     display: inline-block;
-    padding: 0.375em 0.625em;
+    padding: 0.375em 0.575rem;
     font-size: var(--true-font-size);
     color: rgb(var(--side-bar-link-color));
     flex-grow: 1;
@@ -1482,7 +1482,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     transition: color var(--side-bar-link-transition);
 }
 :is(#side-bar, #interwiki) .menu-item.small a {
-    font-size: calc(var(--true-font-size) * 0.925);
+    font-size: calc(var(--true-font-size) * 0.875);
+    padding-block: 0.325em;
 }
 #side-bar .menu-item a[href="/"],
 #side-bar .menu-item a[href="/forum:start"] {
@@ -1655,6 +1656,9 @@ div#license-area {
         transform: none;
         left: 0;
     }
+    #top-bar div[class*="top-bar"] ul li ul li a {
+        padding: calc(var(--header-UI-dropdown-font-size) * 0.875) calc(var(--header-UI-dropdown-font-size) * 1.05);
+    }
 
     /*--- mobile side-bar ---*/
 
@@ -1755,6 +1759,13 @@ body.print-body #page-info {
     width: 100%;
     text-align: right;
     padding: 0;
+}
+
+body.print-body div#license-area {
+    padding-top: var(--bottom-area-padding);
+}
+body.print-body #license-area::after {
+    top: var(--bottom-area-padding);
 }
 
 /*-------------*/
@@ -2720,7 +2731,7 @@ div#toc {
 
 .owindow .button-bar > a[onclick*="cleanAll"] {
     position: absolute;
-    top: 0; right: 0;
+    inset-block-start: 0; inset-inline-end: 0;
     display: block;
     border: none;
     height: 2.75rem; width: 2.75rem;
@@ -2814,7 +2825,6 @@ div#toc {
     border-width: 0.1em 0;
     max-height: 47.5vh;
     overflow-y: auto;
-    direction: rtl;
 }
 .owindow > .content.modal-body > img + h1 + table > tbody { display: contents; }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr {
@@ -2822,7 +2832,6 @@ div#toc {
     grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
     align-items: center;
     padding: 0.5em;
-    direction: ltr;
 }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr:not(:last-child) {
     border-bottom: solid 0.1em rgb(var(--basalt-tertiary-color));
@@ -3921,7 +3930,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #history-form-1 > table.form > tbody > tr:nth-child(2) > td:nth-child(2)::after {
     content: "";
     position: absolute;
-    top: 0; right: 0;
+    inset-block-start: 0; inset-inline-end: 0;
     display: flex;
     align-items: center; justify-content: center;
     width: 1.625em;
@@ -4035,7 +4044,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #main-content .pager span > a::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0; inset-inline-start: 0;
     display: block;
     width: 100%;
     height: 0;
@@ -4061,7 +4070,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     transition: width 0.125s ease-out;
 }
 #main-content .pager > span.target:last-child > a::before {
-    right: 0; left: unset;
+    inset-inline-end: 0; inset-inline-start: unset;
 }
 #main-content .pager > span.target:is(:nth-child(2), :last-child) > a:is(:hover, :focus)::before {
     width: 100%;
@@ -4188,7 +4197,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(3) {
     grid-area: flags;
     align-items: stretch;
-    justify-content: left;
+    justify-content: start;
     padding: 0;
 }
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(3) > span {
@@ -4241,8 +4250,8 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(6) {
     grid-area: date;
-    justify-content: right;
-    text-align: right;
+    justify-content: end;
+    text-align: end;
     font-size: 0.975em;
     font-family: var(--UI-font);
     padding: 0!important;
@@ -4398,8 +4407,8 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
             "flag user date date";
         grid-template-columns: 3.25em 1fr 4.5em 5.875em;
     }
-    #site-changes-list div.changes-list-item > table > tbody > tr > td.flags { text-align: left; }
-    #site-changes-list div.changes-list-item > table > tbody > tr > td:is(.revision-no,.mod-date) { text-align: right; }
+    #site-changes-list div.changes-list-item > table > tbody > tr > td.flags { text-align: start; }
+    #site-changes-list div.changes-list-item > table > tbody > tr > td:is(.revision-no,.mod-date) { text-align: end; }
 }
 
 #history-subarea > h2 {
@@ -4571,7 +4580,8 @@ input#upload-userfile {
 }
 input#upload-userfile::file-selector-button {
     padding: 0.5ch;
-    margin: 0 0.55em 0 0.125em;
+    margin: 0 0.125em;
+    margin-inline-end: 0.55em;
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-background-color));
