@@ -1540,12 +1540,17 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 
 #action-area > h1 + p + h2 + div[style*="padding-left"] {
     padding-left: 0!important;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.375em;
 }
 #action-area > h1 + p + h2 + div[style*="padding-left"] > div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     grid-gap: 0.75rem;
+    text-align: center;
     font-family: var(--mono-font);
 }
 #action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"] {
