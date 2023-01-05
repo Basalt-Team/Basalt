@@ -647,6 +647,7 @@ div#toc {
     display: flex;
     flex-direction: column;
     margin: 0.75rem 0;
+    clear: both;
 }
 .yui-navset.yui-navset-top > ul.yui-nav {
     display: flex;
