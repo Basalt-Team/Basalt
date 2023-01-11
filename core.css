@@ -77,7 +77,7 @@
     --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-light-text-color);
     --login-status-text-color-hover: var(--login-status-text-color);
-    --login-status-width: calc(var(--header-UI-font-size)*20);
+    --login-status-width: calc(var(--header-UI-font-size)*24);
     --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
     --user-icon-button-color: var(--top-bar-link-color);
