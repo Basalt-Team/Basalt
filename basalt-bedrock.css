@@ -475,7 +475,7 @@ template {
     --login-status-background-color: var(--basalt-UI-dark-palette);
     --login-status-text-color: var(--basalt-light-text-color);
     --login-status-text-color-hover: var(--login-status-text-color);
-    --login-status-width: calc(var(--header-UI-font-size)*20);
+    --login-status-width: calc(var(--header-UI-font-size)*24);
     --login-status-link-background-hover: var(--top-bar-link-background-hover);
     --user-button-width: 3rem;
     --user-icon-button-color: var(--top-bar-link-color);
@@ -1491,6 +1491,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     font-weight: bold;
 }
 #side-bar .menu-item a[href*="scp-series"] {
+    flex-basis: 2.5em;
     text-align: center;
 }
 :is(#side-bar, #interwiki) .menu-item a:is(:hover, :focus) {
@@ -1618,9 +1619,10 @@ div#license-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    grid-gap: 0.375rem;
 }
 #footer-bar .units .unit {
-    flex-basis: 12.5rem;
+    flex-basis: 12.5em;
     text-align: center;
 }
 
@@ -2417,6 +2419,7 @@ div#toc {
     display: flex;
     flex-direction: column;
     margin: 0.75rem 0;
+    clear: both;
 }
 .yui-navset.yui-navset-top > ul.yui-nav {
     display: flex;
@@ -2905,6 +2908,7 @@ div#toc {
     font-family: var(--header-font);
     font-weight: bold;
     font-size: 2.325em;
+    line-height: normal;
     border-bottom: solid 0.125rem rgb(var(--title-border-color));
     padding: 0;
     margin: 0;
@@ -3781,8 +3785,8 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 #who-rated-page-area > div br { display: none; }
 #who-rated-page-area > div span:nth-of-type(2n+1) {
-    padding-left: 0.75rem;
-    border-left: solid 0.075rem rgb(var(--action-area-border-color));
+    padding-inline-start: 0.75rem;
+    border-inline-start: solid 0.075rem rgb(var(--action-area-border-color));
     transition: background-color 0.175s ease-out;
     position: relative;
     align-items: center;
@@ -4700,16 +4704,20 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 #action-area > h1 + p + h2 + div[style*="padding-left"] > div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     grid-gap: 0.75rem;
+    text-align: center;
     font-family: var(--mono-font);
+    padding: 0.5rem 0;
 }
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div:not(:last-child) { border-bottom: 0.05rem solid rgb(var(--general-border-color)); }
 #action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"] {
     order: 1;
     margin-right: 0!important;
     cursor: pointer;
     margin: 0;
     display: inline-block;
+    min-width: max-content;
     padding: 0.5ch;
     font-family: var(--UI-font);
     text-decoration: none;
