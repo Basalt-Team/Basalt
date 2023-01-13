@@ -841,7 +841,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-form { display: contents; }
 
 #search-top-box-input {
-    display: flex;
+    display: none;
+    /*
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: 0;
@@ -858,6 +859,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     z-index: 3;
     outline: solid 0 rgb(var(--basalt-focus-color));
     transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity var(--header-link-transition-1st);
+    */
 }
 #search-top-box-form:focus-within #search-top-box-input,
 #search-top-box-input:focus,
@@ -877,7 +879,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #search-top-box-form input[type=submit] {
-    pointer-events: none;
+    pointer-events: auto;
     background: none;
     border: none;
     display: block;
