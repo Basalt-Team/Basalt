@@ -1239,7 +1239,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #search-top-box-form { display: contents; }
 
 #search-top-box-input {
-    display: flex;
+    display: none;
+    /*
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: 0;
@@ -1256,6 +1257,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     z-index: 3;
     outline: solid 0 rgb(var(--basalt-focus-color));
     transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity var(--header-link-transition-1st);
+    */
 }
 #search-top-box-form:focus-within #search-top-box-input,
 #search-top-box-input:focus,
@@ -1275,7 +1277,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #search-top-box-form input[type=submit] {
-    pointer-events: none;
+    pointer-events: auto;
     background: none;
     border: none;
     display: block;
@@ -1979,18 +1981,18 @@ table td {
     text-align: start;
 }
 
-#page-content table {
+:where(#page-content) table {
     width: max-content;
 }
 
-#page-content table:not(.form), table.wiki-content-table {
+:where(#page-content) table:not(.form), table.wiki-content-table {
     max-width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
     margin: 0.25rem auto;
     border-collapse: collapse;
 }
-:is(#page-content table:not(.form), table.wiki-content-table) th {
+:is(:where(#page-content) table:not(.form), table.wiki-content-table) th {
     background-color: rgb(var(--basalt-UI-dark-palette));
     border-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
@@ -1998,7 +2000,7 @@ table td {
     font-family: var(--header-font);
     font-weight: bold;
 }
-:is(#page-content table:not(.form), table.wiki-content-table) td {
+:is(:where(#page-content) table:not(.form), table.wiki-content-table) td {
     border: solid 0.05rem rgb(var(--general-border-color));
     padding: 0.5em 0.625em;
 }
