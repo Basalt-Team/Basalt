@@ -139,13 +139,14 @@
 }
 
 .forum-thread-box .new-post {
-    display: flex;
     text-align: center;
-    margin: 1rem 0;
+    margin: 0;
 }
 #new-post-button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.75rem 0;
     font-weight: bold;
-    flex-grow: 1;
     --button-text-color: var(--basalt-positive-color);
 }
 #new-post-button::before { content: "+"; margin-inline-end: 0.25ch; }
