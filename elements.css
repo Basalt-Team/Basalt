@@ -1138,7 +1138,7 @@ div#toc {
     font-size: 2.325em;
     line-height: normal;
     border-bottom: solid 0.125rem rgb(var(--title-border-color));
-    padding: 0;
+    padding: .125em 0;
     margin: 0;
 }
 .meta-title > p { margin: 0; }
