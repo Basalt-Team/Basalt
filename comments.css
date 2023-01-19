@@ -109,7 +109,8 @@
     outline-width: 0.175rem;
 }
 
-.thread-container .post .long .head .title, .thread-container .post.folded .short a.title {
+.thread-container .post .long .head .title,
+.thread-container .post.folded .short a.title {
     font-weight: bold;
     font-size: 1.25em;
     font-family: var(--header-font);
@@ -126,6 +127,7 @@
 .thread-container .post .short > a.options { order: 1; }
 .thread-container .post.folded .short .odate { flex-grow: 1; }
 #thread-container-posts .thread-container .post .long .revisions table tr td { border: none; }
+
 .thread-container .post .long .revisions table tr.active td {
     background-color: rgb(var(--basalt-focus-color),0.125);
 }
