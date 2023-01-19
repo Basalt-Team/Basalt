@@ -51,17 +51,6 @@
     border-inline-start: solid 0.05rem rgb(var(--general-border-color));
 }
 
-.thread-container .post .long .content {
-    contain: layout paint;
-}
-.thread-container .post .long .changes {
-    font-size: 0.875em;
-    color: rgb(var(--basalt-sub-text-color));
-    text-align: end;
-    margin-bottom: 0;
-    font-family: var(--UI-font);
-}
-
 .thread-container .post .head, .thread-container .post.folded .short {
     background-color: rgb(var(--basalt-secondary-color));
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
@@ -77,9 +66,21 @@
     padding: 0.325em;
     padding-inline-start: 0.675em;
 }
+
 .thread-container .post .long .head > .options { float: none; grid-area: options; height: auto; }
 .thread-container .post .long .head > .title { float: none; grid-area: title; }
 .thread-container .post .long .head > .info { float: none; grid-area: info; }
+
+.thread-container .post .long .content {
+    contain: layout paint;
+}
+.thread-container .post .long .changes {
+    font-size: 0.875em;
+    color: rgb(var(--basalt-sub-text-color));
+    text-align: end;
+    margin-bottom: 0;
+    font-family: var(--UI-font);
+}
 
 .thread-container .post .options a,
 .thread-container .post .short > a.options,
