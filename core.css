@@ -581,7 +581,7 @@
     height: 0.75em;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     position: absolute;
-    top: calc(var(--header-UI-dropdown-font-size)*1.5);
+    top: calc(var(--header-UI-dropdown-font-size)*1.325);
     left: calc(var(--header-UI-dropdown-font-size)*-0.625);
     transform: translateY(-50%);
     background-color: rgb(var(--top-bar-link-background-hover-alt));
