@@ -470,6 +470,7 @@
     display: flex;
     flex-direction: column;
     border: none;
+    contain: layout;
 }
 #top-bar div.mobile-top-bar ul li ul {
     flex-wrap: wrap;
@@ -526,6 +527,8 @@
     align-items: center;
     position: relative;
     isolation: isolate;
+    contain: layout style paint;
+    content-visibility: auto;
 }
 @supports (not (backdrop-filter: blur(var(--basalt-UI-blur)))) and (not (-webkit-backdrop-filter: blur(var(--basalt-UI-blur)))) {
     #top-bar div[class*=top-bar] ul li ul li a {
