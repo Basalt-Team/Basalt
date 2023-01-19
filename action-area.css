@@ -204,7 +204,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 }
 
 /* Toolbar area */
-#wd-editor-toolbar-panel {
+#wd-editor-toolbar-panel, #np-editor-panel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -215,18 +215,18 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     padding: 0.5rem;
     margin-top: 0.5rem;
 }
-#wd-editor-toolbar-panel > div {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) > div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
     grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
 }
-#wd-editor-toolbar-panel > div > ul {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) > div > ul {
     display: contents;
 }
 
-#wd-editor-toolbar-panel > div > ul > li {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) > div > ul > li {
     float: none;
     position: relative;
     margin: 0;
