@@ -245,7 +245,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     position: relative;
 }
 
-#wd-editor-toolbar-panel ul li ul {
+.wd-editor-toolbar-panel ul li ul {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -258,18 +258,18 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     pointer-events: none;
     transition: clip-path 0.175s ease-out;
 }
-#wd-editor-toolbar-panel ul li.sfhover ul,
-#wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
+.wd-editor-toolbar-panel ul li.sfhover ul,
+.wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
     clip-path: inset(0);
     pointer-events: auto;
 }
 
-#wd-editor-toolbar-panel ul li ul li a {
+.wd-editor-toolbar-panel ul li ul li a {
     height: calc(var(--edit-area-toolbar-icon-size)*7/8);
     width: calc(var(--edit-area-toolbar-icon-size)*7/8);
 }
 
-#edit-page-form .wd-editor-toolbar-panel a:focus {
+.wd-editor-toolbar-panel ul li a:focus {
     outline: none;
 }
 .wd-editor-toolbar-panel ul li a::before,
@@ -438,8 +438,8 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 }
 
 /* Edit area */
-form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
-#edit-page-textarea {
+form:is(#edit-page-form, #new-post-form) > div:nth-of-type(2) { min-width: 100%; }
+#edit-page-textarea, #np-text {
     min-width: inherit;
     min-height: calc(var(--true-font-size)*8);
     font-family: var(--body-font);
@@ -450,13 +450,13 @@ form#edit-page-form > div:nth-of-type(2) { min-width: 100%; }
     box-sizing: border-box;
     transition: border-color 0.125s linear;
 }
-#edit-page-textarea:focus-visible {
+:is(#edit-page-textarea, #np-text):focus-visible {
     outline: none;
     border-color: rgb(var(--basalt-focus-color));
 }
 
 /* Size buttons + help area */
-form#edit-page-form .change-textarea-size {
+form .change-textarea-size {
     float: none;
     display: flex;
     flex-wrap: wrap;
@@ -469,7 +469,7 @@ form#edit-page-form .change-textarea-size {
     justify-content: flex-end;
     align-items: stretch;
 }
-form#edit-page-form .change-textarea-size a {
+form .change-textarea-size a {
     text-decoration: none;
     display: flex;
     width: 10ch;
@@ -484,21 +484,21 @@ form#edit-page-form .change-textarea-size a {
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
-form#edit-page-form .change-textarea-size a:is(:hover,:focus) {
+form .change-textarea-size a:is(:hover,:focus) {
     color: rgb(var(--button-hover-text-color));
     background-color: rgb(var(--button-hover-background-color));
     outline-width: var(--edit-area-border-width);
 }
 
-form#edit-page-form .edit-help-34 {
+form .edit-help-34 {
     display: flex;
     flex-wrap: wrap;
     font-size: 0;
     align-items: center;
     margin: 0;
 }
-form#edit-page-form .edit-help-34 a {
-    margin-right: 0.625em;
+form .edit-help-34 a {
+    margin-inline-end: 0.625em;
     width: max-content;
     font-size: calc(var(--true-font-size)*0.75);
 }
