@@ -574,6 +574,10 @@
 #top-bar div[class*=top-bar] ul li ul li.sfhover > ul {
     pointer-events: auto;
 }
+
+#top-bar div[class*=top-bar] ul li span[class*="topbar_arrow"] {
+    display: none;
+}
 #top-bar div[class*=top-bar] ul li ul li ul::before {
     content: "";
     display: block;
