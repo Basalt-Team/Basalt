@@ -245,7 +245,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     position: relative;
 }
 
-.wd-editor-toolbar-panel ul li ul {
+form[id] div.wd-editor-toolbar-panel ul li ul {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -258,8 +258,8 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     pointer-events: none;
     transition: clip-path 0.175s ease-out;
 }
-.wd-editor-toolbar-panel ul li.sfhover ul,
-.wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
+form[id] div.wd-editor-toolbar-panel ul li.sfhover ul,
+form[id] div.wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
     clip-path: inset(0);
     pointer-events: auto;
 }
