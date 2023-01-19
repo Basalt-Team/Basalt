@@ -272,8 +272,8 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
 #edit-page-form .wd-editor-toolbar-panel a:focus {
     outline: none;
 }
-#edit-page-form .wd-editor-toolbar-panel a::before,
-#edit-page-form .wd-editor-toolbar-panel a::after {
+.wd-editor-toolbar-panel ul li a::before,
+.wd-editor-toolbar-panel ul li a::after {
     content: "";
     display: block;
     width: 100%; height: 100%;
@@ -281,7 +281,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     inset-block-start: 0;
     inset-inline-start: 0;
 }
-#edit-page-form .wd-editor-toolbar-panel a::after {
+.wd-editor-toolbar-panel ul li a::after {
     background-color: rgb(var(--basalt-main-text-color));
     -webkit-mask-image: var(--edit-area-toolbar-icon-mask);
     mask-image: var(--edit-area-toolbar-icon-mask);
@@ -293,20 +293,20 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     mask-repeat: no-repeat;
     transition: background-color var(--button-hover-transition);
 }
-#edit-page-form .wd-editor-toolbar-panel a::before {
+.wd-editor-toolbar-panel ul li a::before {
     background-color: rgb(var(--basalt-focus-color));
     width: 0;
     transition: all var(--button-hover-transition);
 }
-#edit-page-form .wd-editor-toolbar-panel a:is(:hover, :focus)::before { width: 100%; }
-#edit-page-form .wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::before,
-#edit-page-form .wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::before {
+.wd-editor-toolbar-panel ul li a:is(:hover, :focus)::before { width: 100%; }
+.wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::before,
+.wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::before {
     width: 100%;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
-#edit-page-form .wd-editor-toolbar-panel a:is(:hover, :focus)::after,
-#edit-page-form .wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::after,
-#edit-page-form .wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::after {
+.wd-editor-toolbar-panel ul li a:is(:hover, :focus)::after,
+.wd-editor-toolbar-panel div > ul > li.sfhover > a:not(:hover, :focus)::after,
+.wd-editor-toolbar-panel div > ul > li:focus-within > a:not(:hover, :focus)::after {
     background-color: rgb(var(--basalt-light-text-color));
 }
 
