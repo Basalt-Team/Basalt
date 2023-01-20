@@ -8,40 +8,55 @@
     <title>Basalt</title>
   </head>
   <style>
+
       @import url('https://rsms.me/inter/inter.css');
+      @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap');
     
       body {
           overflow: hidden;
           background-color: black;
       }
 
-      body p, body a {
-          font-size: 1.3rem;
-          font-family: Inter, sans-serif;
+      p, a {
+          font-size: calc(10px + 1.5vw);
+          font-family: Sofia Sans, Inter, sans-serif;
           color: white;
       }
 
-      body a {
-          text-decoration: none !important;
+      a {
+          text-decoration: none;
           font-weight: 900;
-          transition-duration: 0.15s;
       }
 
-      body a:hover {
+      a:hover {
           background: white;
           color: black;
       }
 
       ::selection {
-          background: rgba(0, 0, 0, 0.34);
-          color: #ff8686;
+          color: #8d8d8d;
       }
 
   </style>
   <body>
-<div style="display: flex; flex-direction: column; align-content: center; justify-content: center; align-items: center; flex-wrap: wrap; height: 100vh; width: auto; text-align: center;">
-    <img src="basalt-theme-logo.svg" alt="basalt" style="width: 50%; filter: invert(1);">
-    <p>This is where we store files. Check out the theme page <a href="https://scp-wiki.wikidot.com/theme:basalt">here</a> and the GitHub repository <a href="https://github.com/Basalt-Team/Basalt">here.</a></p>
+
+<div style="display: flex; align-content: center; justify-content: center; align-items: center; flex-flow: column wrap; height: 100vh; width: auto; text-align: center;">
+
+    <img src="https://raw.githubusercontent.com/Basalt-Team/Basalt/gh-pages/basalt-theme-logo.svg" alt="basalt" style="width: calc(100px + 45vw); filter: invert(1);">
+    <p>An alternative base visual theme for the SCP Wiki.</p>
+
+    <br>
+
+    <div style="letter-spacing: 0.02rem; margin-top: 2rem; word-spacing: 3rem;">
+        <p> <a href="https://scp-wiki.wikidot.com/theme:bedrock">BEDROCK</a> <a href="https://scp-wiki.wikidot.com/theme:basalt">BASALT</a> <a href="https://scp-wiki.wikidot.com/theme:foxtrot">FOXTROT</a> </p>
+        <p style="word-spacing: 0.3rem;"> <a style="font-size: 70%;" href="https://scp-wiki.wikidot.com/theme:bedrock">GITHUB REPO</a> </p>
+    </div>
+
 </div>
-  </body>
+
+<div style="position: absolute; bottom: 0.2rem; left: 1rem; user-select: none;">
+    <p style="font-size: 0.9rem;"> MIT License <span style="margin-left: 4rem; word-spacing: 1rem;">EstrellaYoshte Liryn <span style="word-spacing: normal;">Placeholder McD</span> </p>
+</div>
+
+</body>
 </html>
