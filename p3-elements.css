@@ -28,7 +28,7 @@ img, table, iframe {
     max-width: 100%;
 }
 
-:where(#page-content) div { max-width: 100%; }
+#page-content div { max-width: 100%; }
 
 /* scrollbar */
 * {
@@ -543,6 +543,9 @@ blockquote, div.blockquote {
     margin: 1.25rem auto;
     padding: 0.125rem 1.45rem;
     box-sizing: border-box;
+}
+#main-content blockquote,
+#main-content div.blockquote {
     max-width: calc(var(--main-content-width)*0.825);
 }
 
