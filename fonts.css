@@ -71,3 +71,69 @@
     font-display: swap;
     src: url('./fonts/Lexend-Bold.woff2') format('woff2');
 }
+
+/*-------------------------------*/
+/*----- INTERNATIONAL FONTS -----*/
+/*-------------------------------*/
+
+/*---- Noto Sans Simplifed Chinese ----*/
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/NotoSansSC-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/NotoSansSC-Bold.woff2') format('woff2');
+}
+
+/*---- Noto Sans Traditional Chinese ----*/
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/NotoSansTC-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/NotoSansTC-Bold.woff2') format('woff2');
+}
+
+/*---- Kanit ----*/
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/Kanit-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/Kanit-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url('./fonts/Kanit-Italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: url('./fonts/Kanit-BoldItalic.woff2') format('woff2');
+}
