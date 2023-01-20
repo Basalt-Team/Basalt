@@ -1172,6 +1172,9 @@ div#toc {
 .meta-title > p { margin: 0; }
 
 #breadcrumbs, .pseudocrumbs {
+    display: flex;
+    grid-gap: 0.275em;
+    font-size: 0.875em;
     font-size: 0.875em;
     margin: 0;
     font-weight: bold;
