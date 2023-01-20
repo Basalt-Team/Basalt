@@ -357,7 +357,8 @@ div.creditButtonStandalone > p > a::after {
 }
 
 div.page-rate-widget-box span.btn > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::after {
+div.rate-box-with-credit-button .creditButton > p > a::after,
+div.creditButtonStandalone > p > a::after {
     -webkit-mask-size: 40%;
     mask-size: 40%;
     -webkit-mask-repeat: no-repeat;
