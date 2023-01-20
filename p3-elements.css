@@ -1160,6 +1160,7 @@ div#toc {
 /*-----------------------*/
 /*---- PAGE TAG AREA ----*/
 /*-----------------------*/
+
 #main-content > .page-tags {
     display: flex;
     flex-direction: column;
