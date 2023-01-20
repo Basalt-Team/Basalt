@@ -2,7 +2,7 @@
 <img src="https://basalt-team.github.io/Basalt/basalt-theme-logo.svg" width="50%">
 </p>
 
-<h1>Overview</h1>
+<h2>Overview</h2>
 
 **Basalt** is an alternative base visual theme for the SCP Wiki. Its aims are to introduce simple modern CSS layouts in place of those offered by outdated or overly-complex contemporary themes.
 
