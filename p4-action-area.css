@@ -8,7 +8,7 @@
 
 #action-area div.sub {
     color: rgb(var(--basalt-sub-text-color));
-    font-size: 81.25%;
+    font-size: 0.8125em;
     text-align: right;
 }
 #action-area div.buttons {
