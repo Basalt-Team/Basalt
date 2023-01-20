@@ -961,6 +961,7 @@ template {
     display: flex;
     width: 100%;
     height: 100%;
+    max-height: unset;
     padding: 0 calc(var(--header-UI-font-size)*0.75);
     box-sizing: border-box;
     align-items: center;
@@ -1074,6 +1075,7 @@ template {
 
 #top-bar div[class*=top-bar] ul li ul li a {
     width: 100%;
+    max-height: unset;
     font-size: var(--header-UI-dropdown-font-size);
     padding: calc(var(--header-UI-dropdown-font-size) * 0.575) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
@@ -2245,7 +2247,10 @@ div.rate-box-with-credit-button .creditButton {
     height: var(--rate-module-button-size);
     padding-inline-start: 0.325em;
 }
-div.rate-box-with-credit-button .creditButton > p { display: contents; }
+div.rate-box-with-credit-button .creditButton > p,
+div.creditRate > p {
+    display: contents;
+}
 
 div.page-rate-widget-box span.btn > a,
 div.rate-box-with-credit-button .creditButton > p > a {
@@ -2260,10 +2265,26 @@ div.rate-box-with-credit-button .creditButton > p > a {
     box-sizing: border-box;
     transition: all 0.095s linear;
 }
+div.creditButtonStandalone > p > a {
+    display: inline-block;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    line-height: inherit;
+    color: transparent;
+    font-size: initial;
+    width: var(--rate-module-button-size);
+    height: var(--rate-module-button-size);
+    margin: 0.25rem 0;
+    position: relative;
+}
+
 div.page-rate-widget-box span.btn > a { border-bottom: solid 0.05em rgb(var(--general-border-color)); }
 div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::after {
+div.rate-box-with-credit-button .creditButton > p > a::after,
+div.creditButtonStandalone > p > a::before,
+div.creditButtonStandalone > p > a::after {
     content: "";
     display: block;
     background-color: rgb(var(--basalt-main-text-color));
@@ -2272,8 +2293,14 @@ div.rate-box-with-credit-button .creditButton > p > a::after {
     height: 100%;
     transition: background-color 0.095s linear;
 }
-div.rate-box-with-credit-button .creditButton > p > a::before { background-color: rgb(var(--rate-module-info-background-color)); }
-div.rate-box-with-credit-button .creditButton > p > a::after { background-color: rgb(var(--rate-module-info-icon-color)); }
+div.rate-box-with-credit-button .creditButton > p > a::before,
+div.creditButtonStandalone > p > a::before {
+    background-color: rgb(var(--rate-module-info-background-color));
+}
+div.rate-box-with-credit-button .creditButton > p > a::after,
+div.creditButtonStandalone > p > a::after {
+    background-color: rgb(var(--rate-module-info-icon-color));
+}
 
 div.page-rate-widget-box span.btn > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::after {
@@ -2296,7 +2323,8 @@ div.page-rate-widget-box span.cancel > a::before {
     -webkit-mask-image: var(--vote-cancel-mask);
     mask-image: var(--vote-cancel-mask);
 }
-div.rate-box-with-credit-button .creditButton > p > a::after {
+div.rate-box-with-credit-button .creditButton > p > a::after,
+div.creditButtonStandalone > p > a::after {
     -webkit-mask-image: var(--vote-info-mask);
     mask-image: var(--vote-info-mask);
     -webkit-mask-size: 27.5%;
@@ -2309,7 +2337,8 @@ div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: 
 div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-upvote-color)); }
 div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-downvote-color)); }
 div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-cancel-color)); }
-div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
+div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before,
+div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
 /* info modal */
 
@@ -3107,6 +3136,7 @@ div#toc {
 /*-----------------------*/
 /*---- PAGE TAG AREA ----*/
 /*-----------------------*/
+
 #main-content > .page-tags {
     display: flex;
     flex-direction: column;
