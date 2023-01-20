@@ -400,6 +400,7 @@
     display: flex;
     width: 100%;
     height: 100%;
+    max-height: unset;
     padding: 0 calc(var(--header-UI-font-size)*0.75);
     box-sizing: border-box;
     align-items: center;
@@ -513,6 +514,7 @@
 
 #top-bar div[class*=top-bar] ul li ul li a {
     width: 100%;
+    max-height: unset;
     font-size: var(--header-UI-dropdown-font-size);
     padding: calc(var(--header-UI-dropdown-font-size) * 0.575) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
