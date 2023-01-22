@@ -21,11 +21,11 @@
     font-named-instance: 'Italic';
 }
 
-  /*---- JetBrains Mono (variable) ----*/
+  /*---- JetBrains Mono ----*/
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
-    font-weight: 100 800;
+    font-weight: 400;
     font-display: swap;
     src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
 }
@@ -33,9 +33,25 @@
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: italic;
-    font-weight: 100 800;
+    font-weight: 400;
     font-display: swap;
     src: url('./fonts/JetBrainsMono-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2');
+}
+  
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
 }
 
 /*---- Jost ----*/
