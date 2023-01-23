@@ -3452,7 +3452,7 @@ div:where(#action-area, .buttons) :is(a, input).btn:is(:hover, :focus),
     z-index: 1;
     align-self: center;
     width: max-content;
-    color: rgb(var(--basalt-cancel-color));
+    --button-text-color: var(--basalt-cancel-color);
 }
 
 #action-area > h1 {
