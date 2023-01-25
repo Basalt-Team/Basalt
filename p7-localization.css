@@ -11,13 +11,6 @@
 :root:lang(it) #main-content .pager::after { content: "prossimo »"; }
 
 /* ===JAPANESE BRANCH=== */
-:root:lang(ja) {
-	--body-font-fallback: "メイリオ", Meiryo, Tahoma, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	--UI-font-fallback: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, monospace;
-    --header-font-fallback: var(--body-font-fallback);
-}
-
 :root:lang(ja) #side-bar div.menu-item { margin: 0; }
 
 :root:lang(ja) #side-bar .menu-item .sub-text {
@@ -42,12 +35,6 @@
 :root:lang(ja) #side-bar .side-block[style*="#f0f0f0"] p { margin: 0; }
 
 /* ===KOREAN BRANCH=== */
-:root:lang(ko) {
-	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	--UI-font-fallback: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
-	--mono-font-fallback: "Nanum Gothic Coding", Recursive, "Apple SD Gothic Neo", "NanumBarunGothic", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, monospace;
-    --header-font-fallback: var(--body-font-fallback);
-}
 :root:lang(ko) #main-content .pager::before { content: "« 이전"; }
 :root:lang(ko) #main-content .pager::after { content: "다음 »"; }
 
@@ -59,20 +46,7 @@
 :root:lang(pt-br) #main-content .pager::before { content: "« anterior"; }
 :root:lang(pt-br) #main-content .pager::after { content: "próximo »"; }
 
-/* ===RUSSIAN BRANCH=== */
-:root:lang(ru) {
-	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--header-font-fallback: Inter, Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-}
-
 /* ===SIMPLIFIED CHINESE BRANCH=== */
-:root:lang(cn) {
-	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
-	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
-}
-
 :root:lang(cn) #side-bar .side-block:is([style*="#f0fff6"],[style*="#e7e5e8"]) {
     background-color: rgb(var(--side-bar-resources-background-color))!important;
 }
@@ -84,8 +58,117 @@
     margin: 0;
 }
 
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+
+/* ===CZECH BRANCH=== */
+:root:where(:lang(cs)) {
+	/* Header */
+	--header-title: "SCP Nadace";
+	--header-subtitle: "ČESKÁ VĚTEV SCP NADACE";
+}
+
+/* ===FRENCH BRANCH=== */
+:root:where(:lang(fr)) {
+	/* header */
+	--header-title: "Fondation SCP";
+	--header-subtitle: "SÉCURISER - CONTENIR - PROTÉGER";
+}
+
+/* ===GERMAN BRANCH=== */
+:root::where(:lang(de)) {
+	/* Header */
+	--header-title: "SCP Foundation";
+	--header-subtitle: "AUF DEUTSCH";
+}
+
+/* ===GREEK BRANCH=== */
+:root:where(:lang(el)) {
+	/* Header */
+	--header-title: "Το Ίδρυμα SCP";
+	--header-subtitle: "ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ";
+}
+
+/* ===ITALIAN BRANCH=== */
+:root:where(:lang(it)) {
+	/* Header */
+	--header-title: "Fondazione SCP";
+	--header-subtitle: "BRANCA ITALIANA - SCP FOUNDATION";
+}
+
+:root:where(:lang(ja)) {
+	/* Header */
+	--header-title: "SCP財団";
+	--header-subtitle: "確保、収容、保護";
+	/* Fonts */
+	--body-font-fallback: "メイリオ", Meiryo, Tahoma, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	--UI-font-fallback: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
+	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, monospace;
+    --header-font-fallback: var(--body-font-fallback);
+}
+
+/* ===KOREAN BRANCH=== */
+:root:where(:lang(ko)) {
+	/* Header */
+	--header-title: "SCP 재단";
+	--header-subtitle: "확보 - 격리 - 보호";
+	/* Fonts */
+	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--UI-font-fallback: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
+	--mono-font-fallback: "Nanum Gothic Coding", Recursive, "Apple SD Gothic Neo", "NanumBarunGothic", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, monospace;
+    --header-font-fallback: var(--body-font-fallback);
+}
+
+/* ===POLISH BRANCH=== */
+:root:where(:lang(pl)) {
+	/* Header */
+	--header-title: "Fundacja SCP";
+	--header-subtitle: "POLSKA FILIA SCP";
+}
+
+/* ===PORTUGESE BRANCH=== */
+:root:where(:lang(pt-br)) {
+	/* Header */
+	--header-title: "Fundação SCP";
+	--header-subtitle: "FILIAL LUSÓFONA";
+}
+
+/* ===RUSSIAN BRANCH=== */
+:root:where(:lang(ru)) {
+	/* Header */
+	--header-title: "SCP Foundation";
+	--header-subtitle: "RUSSIAN BRANCH";
+	/* Fonts */
+	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--header-font-fallback: Inter, Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+/* ===SPANISH BRANCH=== */
+:root:where(:lang(es)) {
+	/* Header */
+	--header-title: "La Fundación SCP";
+	--header-subtitle: "RAMA HISPANOHABLANTE";
+}
+
+/* ===SIMPLIFIED CHINESE BRANCH=== */
+:root:where(:lang(cn)) {
+	/* Header */
+	--header-title: "SCP基金会";
+	--header-subtitle: "控制 - 收容 - 保护";
+	/* Fonts */
+	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+	--header-font-fallback: var(--body-font-fallback);
+	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+}
+
 /* ===THAI BRANCH=== */
-:root:lang(th) {
+:root:where(:lang(th)) {
+	/* Header */
+	--header-title: "สถาบัน SCP";
+	--header-subtitle: "ควบคุม, กักกัน, ป้องกัน";
+	/* Fonts */
 	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
 	--UI-font-fallback: "Kanit", "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
@@ -93,7 +176,11 @@
 }
 
 /* ===TRADITIONAL CHINESE BRANCH=== */
-:root:lang(zh) {
+:root:where(:lang(zh)) {
+	/* Header */
+	--header-title: "SCP基金會";
+	--header-subtitle: "控制，收容，保護";
+	/* Fonts */
 	--body-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
 	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
@@ -101,126 +188,18 @@
 }
 
 /* ===UKRAINIAN BRANCH=== */
-:root:lang(uk) {
+:root:where(:lang(uk)) {
+	/* Header */
+	--header-title: "Фонд SCP.";
+	--header-subtitle: "ОХОРОНЯТИ. УТРИМУВАТИ. ЗАХИЩАТИ.";
+	/* Fonts */
 	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--header-font-fallback: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
-/*--------------------------------------------*/
-/*--------------------------------------------*/
-/*--------------------------------------------*/
-
-@layer header-localize {
-
-/* ===CZECH BRANCH=== */
-:root:lang(cs) {
-	/* Header */
-	--header-title: "SCP Nadace";
-	--header-subtitle: "ČESKÁ VĚTEV SCP NADACE";
-}
-
-/* ===FRENCH BRANCH=== */
-:root:lang(fr) {
-	/* header */
-	--header-title: "Fondation SCP";
-	--header-subtitle: "SÉCURISER - CONTENIR - PROTÉGER";
-}
-
-/* ===GERMAN BRANCH=== */
-:root:lang(de) {
-	/* Header */
-	--header-title: "SCP Foundation";
-	--header-subtitle: "AUF DEUTSCH";
-}
-
-/* ===GREEK BRANCH=== */
-:root:lang(el) {
-	/* Header */
-	--header-title: "Το Ίδρυμα SCP";
-	--header-subtitle: "ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ";
-}
-
-/* ===ITALIAN BRANCH=== */
-:root:lang(it) {
-	/* Header */
-	--header-title: "Fondazione SCP";
-	--header-subtitle: "BRANCA ITALIANA - SCP FOUNDATION";
-}
-
-:root:lang(ja) {
-	/* Header */
-	--header-title: "SCP財団";
-	--header-subtitle: "確保、収容、保護";
-}
-
-/* ===KOREAN BRANCH=== */
-:root:lang(ko) {
-	/* Header */
-	--header-title: "SCP 재단";
-	--header-subtitle: "확보 - 격리 - 보호";
-}
-
-/* ===POLISH BRANCH=== */
-:root:lang(pl) {
-	/* Header */
-	--header-title: "Fundacja SCP";
-	--header-subtitle: "POLSKA FILIA SCP";
-}
-
-/* ===PORTUGESE BRANCH=== */
-:root:lang(pt-br) {
-	/* Header */
-	--header-title: "Fundação SCP";
-	--header-subtitle: "FILIAL LUSÓFONA";
-}
-
-/* ===RUSSIAN BRANCH=== */
-:root:lang(ru) {
-	/* Header */
-	--header-title: "SCP Foundation";
-	--header-subtitle: "RUSSIAN BRANCH";
-}
-
-/* ===SPANISH BRANCH=== */
-:root:lang(es) {
-	/* Header */
-	--header-title: "La Fundación SCP";
-	--header-subtitle: "RAMA HISPANOHABLANTE";
-}
-
-/* ===SIMPLIFIED CHINESE BRANCH=== */
-:root:lang(cn) {
-	/* Header */
-	--header-title: "SCP基金会";
-	--header-subtitle: "控制 - 收容 - 保护";
-}
-
-/* ===THAI BRANCH=== */
-:root:lang(th) {
-	/* Header */
-	--header-title: "สถาบัน SCP";
-	--header-subtitle: "ควบคุม, กักกัน, ป้องกัน";
-}
-
-/* ===TRADITIONAL CHINESE BRANCH=== */
-:root:lang(zh) {
-	/* Header */
-	--header-title: "SCP基金會";
-	--header-subtitle: "控制，收容，保護";
-}
-
-/* ===UKRAINIAN BRANCH=== */
-:root:lang(uk) {
-	/* Header */
-	--header-title: "Фонд SCP.";
-	--header-subtitle: "ОХОРОНЯТИ. УТРИМУВАТИ. ЗАХИЩАТИ.";
-}
-
 /* ===VIETNAMESE BRANCH=== */
-:root:lang(vi) {
+:root:where(:lang(vi)) {
 	/* Header */
 	--header-title: "Tổ Chức SCP";
 	--header-subtitle: "QUẢN THÚC - LƯU TRỮ - BẢO VỆ";
-}
-
 }
