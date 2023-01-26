@@ -103,8 +103,8 @@
 	--header-subtitle: "確保、収容、保護";
 	/* Fonts */
 	--body-font-fallback: "メイリオ", Meiryo, Tahoma, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	--UI-font-fallback: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans CJK JP", sans-serif;
-	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, monospace;
+	--UI-font-fallback: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans JP", sans-serif;
+	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans JP", TakaoPGothic, monospace;
     --header-font-fallback: var(--body-font-fallback);
 }
 
@@ -115,7 +115,7 @@
 	--header-subtitle: "확보 - 격리 - 보호";
 	/* Fonts */
 	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	--UI-font-fallback: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans CJK KR", sans-serif;
+	--UI-font-fallback: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans KR", sans-serif;
 	--mono-font-fallback: "Nanum Gothic Coding", Recursive, "Apple SD Gothic Neo", "NanumBarunGothic", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, monospace;
     --header-font-fallback: var(--body-font-fallback);
 }
@@ -158,7 +158,7 @@
 	--header-subtitle: "控制 - 收容 - 保护";
 	/* Fonts */
 	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
-	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans SC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
@@ -182,7 +182,7 @@
 	--header-subtitle: "控制，收容，保護";
 	/* Fonts */
 	--body-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
-	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
+	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans TC", sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", monospace;
 }
