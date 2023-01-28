@@ -1,233 +1,243 @@
-/*----------------------*/
-/*----- BASE FONTS -----*/
-/*----------------------*/
+/* ---------------------- */
+/* ----- BASE FONTS ----- */
+/* ---------------------- */
 
-/*---- Inter (variable) ----*/
+/* ---- Inter (variable) ---- */
 @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('./fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
-    font-named-instance: 'Regular';
-}
-  
-@font-face {
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('./fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
-    font-named-instance: 'Italic';
-}
-
-/*---- JetBrains Mono ----*/
-@font-face {
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
-}
-  
-@font-face {
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./fonts/JetBrainsMono-Italic.woff2') format('woff2');
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('./fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
 }
 
 @font-face {
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2');
-}
-  
-@font-face {
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('./fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+	font-family: Inter;
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('./fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
 }
 
-/*---- Jost ----*/
+/* ---- JetBrains Mono ---- */
 @font-face {
-    font-family: 'Jost';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Jost-Book.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Jost';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Jost-Bold.woff2') format('woff2');
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
 }
 
-/*---- Lexend ----*/
 @font-face {
-    font-family: 'Lexend';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Lexend-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Lexend';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Lexend-Bold.woff2') format('woff2');
+	font-family: 'JetBrains Mono';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('./fonts/JetBrainsMono-Italic.woff2') format('woff2');
 }
 
-/*-------------------------------*/
-/*----- INTERNATIONAL FONTS -----*/
-/*-------------------------------*/
-
-/*---- Noto Sans Simplifed Chinese ----*/
 @font-face {
-    font-family: 'Noto Sans SC';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansSC-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Sans SC';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansSC-Bold.woff2') format('woff2');
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('./fonts/JetBrainsMono-Bold.woff2') format('woff2');
 }
 
-/*---- Noto Serif Simplified Chinese ----*/
 @font-face {
-    font-family: 'Noto Serif SC';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSerifSC-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Serif SC';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSerifSC-Bold.woff2') format('woff2');
+	font-family: 'JetBrains Mono';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('./fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
 }
 
-/*---- Noto Sans Traditional Chinese ----*/
+/* ---- Jost ---- */
 @font-face {
-    font-family: 'Noto Sans TC';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansTC-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansTC-Bold.woff2') format('woff2');
+	font-family: Jost;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Jost-Book.woff2') format('woff2');
 }
 
-/*---- Noto Sans Japanese ----*/
 @font-face {
-    font-family: 'Noto Sans JP';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansJP-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Sans JP';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansJP-Bold.woff2') format('woff2');
+	font-family: Jost;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Jost-Bold.woff2') format('woff2');
 }
 
-/*---- Noto Sans Korean ----*/
+/* ---- Lexend ---- */
 @font-face {
-    font-family: 'Noto Sans KR';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansKR-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansKR-Bold.woff2') format('woff2');
+	font-family: Lexend;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Lexend-Regular.woff2') format('woff2');
 }
 
-/*---- Noto Sans Thai ----*/
 @font-face {
-    font-family: 'Noto Sans Thai';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansThai-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Noto Sans Thai';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NotoSansThai-Bold.woff2') format('woff2');
+	font-family: Lexend;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Lexend-Bold.woff2') format('woff2');
 }
 
-/*---- Kanit ----*/
+/* ------------------------------- */
+/* ----- INTERNATIONAL FONTS ----- */
+/* ------------------------------- */
+
+/* ---- Noto Sans Simplifed Chinese ---- */
 @font-face {
-    font-family: 'Kanit';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Kanit-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Kanit';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/Kanit-Bold.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Kanit';
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-    src: url('./fonts/Kanit-Italic.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Kanit';
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-    src: url('./fonts/Kanit-BoldItalic.woff2') format('woff2');
+	font-family: 'Noto Sans SC';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansSC-Regular.woff2') format('woff2');
 }
 
-/*---- Nanum Gothic ----*/
 @font-face {
-    font-family: 'Nanum Gothic';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NanumGothic-Regular.woff2') format('woff2');
+	font-family: 'Noto Sans SC';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansSC-Bold.woff2') format('woff2');
 }
+
+/* ---- Noto Serif Simplified Chinese ---- */
 @font-face {
-    font-family: 'Nanum Gothic';
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url('./fonts/NanumGothic-Bold.woff2') format('woff2');
+	font-family: 'Noto Serif SC';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSerifSC-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Serif SC';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSerifSC-Bold.woff2') format('woff2');
+}
+
+/* ---- Noto Sans Traditional Chinese ---- */
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansTC-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Sans TC';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansTC-Bold.woff2') format('woff2');
+}
+
+/* ---- Noto Sans Japanese ---- */
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansJP-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansJP-Bold.woff2') format('woff2');
+}
+
+/* ---- Noto Sans Korean ---- */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansKR-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansKR-Bold.woff2') format('woff2');
+}
+
+/* ---- Noto Sans Thai ---- */
+@font-face {
+	font-family: 'Noto Sans Thai';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansThai-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Sans Thai';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NotoSansThai-Bold.woff2') format('woff2');
+}
+
+/* ---- Kanit ---- */
+@font-face {
+	font-family: Kanit;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Kanit-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Kanit;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/Kanit-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Kanit;
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	src: url('./fonts/Kanit-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Kanit;
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url('./fonts/Kanit-BoldItalic.woff2') format('woff2');
+}
+
+/* ---- Nanum Gothic ---- */
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NanumGothic-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./fonts/NanumGothic-Bold.woff2') format('woff2');
 }

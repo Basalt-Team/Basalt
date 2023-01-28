@@ -1,205 +1,266 @@
 /* ===FRENCH BRANCH=== */
-:root:lang(fr) #main-content .pager::before { content: "« précédente"; }
-:root:lang(fr) #main-content .pager::after { content: "suivante »"; }
+:root:lang(fr) #main-content .pager::before {
+	content: '« précédente';
+}
+
+:root:lang(fr) #main-content .pager::after {
+	content: 'suivante »';
+}
 
 /* ===GERMAN BRANCH=== */
-:root:lang(de) #main-content .pager::before { content: "« vorherige"; }
-:root:lang(de) #main-content .pager::after { content: "nächste »"; }
+:root:lang(de) #main-content .pager::before {
+	content: '« vorherige';
+}
+
+:root:lang(de) #main-content .pager::after {
+	content: 'nächste »';
+}
 
 /* ===ITALIAN BRANCH=== */
-:root:lang(it) #main-content .pager::before { content: "« precedente"; }
-:root:lang(it) #main-content .pager::after { content: "prossimo »"; }
+:root:lang(it) #main-content .pager::before {
+	content: '« precedente';
+}
+
+:root:lang(it) #main-content .pager::after {
+	content: 'prossimo »';
+}
 
 /* ===JAPANESE BRANCH=== */
-:root:lang(ja) #side-bar div.menu-item { margin: 0; }
+:root:lang(ja) #side-bar div.menu-item {
+	margin: 0;
+}
 
 :root:lang(ja) #side-bar .menu-item .sub-text {
-    display: flex;
-    align-items: center;
-    padding: 0 0.75em;
-    width: 15ch;
-    font-size: calc(var(--true-font-size)*0.75);
-    color: rgb(var(--basalt-sub-text-color));
-    transition: background-color var(--side-bar-link-transition);
-}
-:root:lang(ja) #side-bar .menu-item  a:is(:hover,:focus) + .sub-text {
-    background-color: rgb(var(--basalt-focus-color),0.0625);
+	display: flex;
+	align-items: center;
+	padding: 0 .75em;
+	width: 15ch;
+	font-size: calc(var(--true-font-size) *.75);
+	color: rgb(var(--basalt-sub-text-color));
+	transition: background-color var(--side-bar-link-transition);
 }
 
-:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#a7dba2"]) {
-    background-color: transparent!important;
+:root:lang(ja) #side-bar .menu-item a:is(:hover,:focus) + .sub-text {
+	background-color: rgb(var(--basalt-focus-color), .0625);
 }
-:root:lang(ja) #side-bar .side-block:is(.sns, [style*="#f0f0f0"]) {
-    background-color: rgb(var(--side-bar-media-background-color))!important;
+
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*='#a7dba2']) {
+	background-color: transparent !important;
 }
-:root:lang(ja) #side-bar .side-block[style*="#f0f0f0"] p { margin: 0; }
+
+:root:lang(ja) #side-bar .side-block:is(.sns, [style*='#f0f0f0']) {
+	background-color: rgb(var(--side-bar-media-background-color)) !important;
+}
+
+:root:lang(ja) #side-bar .side-block[style*='#f0f0f0'] p {
+	margin: 0;
+}
 
 /* ===KOREAN BRANCH=== */
-:root:lang(ko) #main-content .pager::before { content: "« 이전"; }
-:root:lang(ko) #main-content .pager::after { content: "다음 »"; }
+:root:lang(ko) #main-content .pager::before {
+	content: '« 이전';
+}
+
+:root:lang(ko) #main-content .pager::after {
+	content: '다음 »';
+}
 
 /* ===POLISH BRANCH=== */
-:root:lang(pl) #main-content .pager::before { content: "« poprzednia"; }
-:root:lang(pl) #main-content .pager::after { content: "następna »"; }
+:root:lang(pl) #main-content .pager::before {
+	content: '« poprzednia';
+}
+
+:root:lang(pl) #main-content .pager::after {
+	content: 'następna »';
+}
 
 /* ===PORTUGESE BRANCH=== */
-:root:lang(pt-br) #main-content .pager::before { content: "« anterior"; }
-:root:lang(pt-br) #main-content .pager::after { content: "próximo »"; }
+:root:lang(pt-br) #main-content .pager::before {
+	content: '« anterior';
+}
+
+:root:lang(pt-br) #main-content .pager::after {
+	content: 'próximo »';
+}
 
 /* ===SIMPLIFIED CHINESE BRANCH=== */
-:root:lang(cn) #side-bar .side-block:is([style*="#f0fff6"],[style*="#e7e5e8"]) {
-    background-color: rgb(var(--side-bar-resources-background-color))!important;
+:root:lang(cn) #side-bar .side-block:is([style*='#f0fff6'],[style*='#e7e5e8']) {
+	background-color: rgb(var(--side-bar-resources-background-color)) !important;
 }
-:root:lang(cn) #side-bar .side-block:is([style*="#e5e5ff"],[style*="#f0f0f0"]) {
-    background-color: rgb(var(--side-bar-media-background-color))!important;
+
+:root:lang(cn) #side-bar .side-block:is([style*='#e5e5ff'],[style*='#f0f0f0']) {
+	background-color: rgb(var(--side-bar-media-background-color)) !important;
 }
 
 :root:lang(cn) #side-bar .menu-item {
-    margin: 0;
+	margin: 0;
 }
 
-/*--------------------------------------------*/
-/*--------------------------------------------*/
-/*--------------------------------------------*/
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
 
 /* ===CZECH BRANCH=== */
 :root:where(:lang(cs)) {
+
 	/* Header */
-	--header-title: "SCP Nadace";
-	--header-subtitle: "ČESKÁ VĚTEV SCP NADACE";
+	--header-title: 'SCP Nadace';
+	--header-subtitle: 'ČESKÁ VĚTEV SCP NADACE';
 }
 
 /* ===FRENCH BRANCH=== */
 :root:where(:lang(fr)) {
+
 	/* header */
-	--header-title: "Fondation SCP";
-	--header-subtitle: "SÉCURISER - CONTENIR - PROTÉGER";
+	--header-title: 'Fondation SCP';
+	--header-subtitle: 'SÉCURISER - CONTENIR - PROTÉGER';
 }
 
 /* ===GERMAN BRANCH=== */
-:root::where(:lang(de)) {
+:root:where(:lang(de)) {
+
 	/* Header */
-	--header-title: "SCP Foundation";
-	--header-subtitle: "AUF DEUTSCH";
+	--header-title: 'SCP Foundation';
+	--header-subtitle: 'AUF DEUTSCH';
 }
 
 /* ===GREEK BRANCH=== */
 :root:where(:lang(el)) {
+
 	/* Header */
-	--header-title: "Το Ίδρυμα SCP";
-	--header-subtitle: "ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ";
+	--header-title: 'Το Ίδρυμα SCP';
+	--header-subtitle: 'ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ';
 }
 
 /* ===ITALIAN BRANCH=== */
 :root:where(:lang(it)) {
+
 	/* Header */
-	--header-title: "Fondazione SCP";
-	--header-subtitle: "BRANCA ITALIANA - SCP FOUNDATION";
+	--header-title: 'Fondazione SCP';
+	--header-subtitle: 'BRANCA ITALIANA - SCP FOUNDATION';
 }
 
 :root:where(:lang(ja)) {
+
 	/* Header */
-	--header-title: "SCP財団";
-	--header-subtitle: "確保、収容、保護";
+	--header-title: 'SCP財団';
+	--header-subtitle: '確保、収容、保護';
+
 	/* Fonts */
-	--body-font-fallback: "メイリオ", Meiryo, Tahoma, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	--UI-font-fallback: "游ゴシック体", YuGothic, "ヒラギノ丸ゴ", "Hiragino Sans", "Yu Gothic UI", "Meiryo UI", "MS Gothic", Roboto, Noto, "Noto Sans JP", sans-serif;
-	--mono-font-fallback: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", "Noto Sans JP", TakaoPGothic, monospace;
-    --header-font-fallback: var(--body-font-fallback);
+	--body-font-fallback: 'メイリオ', meiryo, tahoma, verdana, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	--UI-font-fallback: '游ゴシック体', yugothic, 'ヒラギノ丸ゴ', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', 'MS Gothic', roboto, noto, 'Noto Sans JP', sans-serif;
+	--mono-font-fallback: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'ＭＳ ゴシック', 'MS Gothic', 'Noto Sans JP', takaopgothic, monospace;
+	--header-font-fallback: var(--body-font-fallback);
 }
 
 /* ===KOREAN BRANCH=== */
 :root:where(:lang(ko)) {
+
 	/* Header */
-	--header-title: "SCP 재단";
-	--header-subtitle: "확보 - 격리 - 보호";
+	--header-title: 'SCP 재단';
+	--header-subtitle: '확보 - 격리 - 보호';
+
 	/* Fonts */
-	--body-font-fallback: Inter, NanumBarunCatsi, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	--UI-font-fallback: "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Noto, "Noto Sans KR", sans-serif;
-	--mono-font-fallback: "Nanum Gothic Coding", Recursive, "Apple SD Gothic Neo", "NanumBarunGothic", "맑은 고딕", "Malgun Gothic", "굴림", "Gulim", "돋움", "Dotum", "Helvetica Neue", "Helvetica", Arial, monospace;
-    --header-font-fallback: var(--body-font-fallback);
+	--body-font-fallback: inter, nanumbaruncatsi, 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', '돋움', 'Dotum', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+	--UI-font-fallback: 'Nanum Gothic', 'Apple SD Gothic Neo', 'Malgun Gothic', roboto, noto, 'Noto Sans KR', sans-serif;
+	--mono-font-fallback: 'Nanum Gothic Coding', recursive, 'Apple SD Gothic Neo', 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', '돋움', 'Dotum', 'Helvetica Neue', 'Helvetica', arial, monospace;
+	--header-font-fallback: var(--body-font-fallback);
 }
 
 /* ===POLISH BRANCH=== */
 :root:where(:lang(pl)) {
+
 	/* Header */
-	--header-title: "Fundacja SCP";
-	--header-subtitle: "POLSKA FILIA SCP";
+	--header-title: 'Fundacja SCP';
+	--header-subtitle: 'POLSKA FILIA SCP';
 }
 
 /* ===PORTUGESE BRANCH=== */
 :root:where(:lang(pt-br)) {
+
 	/* Header */
-	--header-title: "Fundação SCP";
-	--header-subtitle: "FILIAL LUSÓFONA";
+	--header-title: 'Fundação SCP';
+	--header-subtitle: 'FILIAL LUSÓFONA';
 }
 
 /* ===RUSSIAN BRANCH=== */
 :root:where(:lang(ru)) {
+
 	/* Header */
-	--header-title: "SCP Foundation";
-	--header-subtitle: "RUSSIAN BRANCH";
+	--header-title: 'SCP Foundation';
+	--header-subtitle: 'RUSSIAN BRANCH';
+
 	/* Fonts */
-	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--header-font-fallback: Inter, Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--body-font-fallback: charcoal, geneva, 'Helvetica Neue', helvetica, arial, sans-serif;
+	--header-font-fallback: inter, charcoal, 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
 }
 
 /* ===SPANISH BRANCH=== */
 :root:where(:lang(es)) {
+
 	/* Header */
-	--header-title: "La Fundación SCP";
-	--header-subtitle: "RAMA HISPANOHABLANTE";
+	--header-title: 'La Fundación SCP';
+	--header-subtitle: 'RAMA HISPANOHABLANTE';
 }
 
 /* ===SIMPLIFIED CHINESE BRANCH=== */
 :root:where(:lang(cn)) {
+
 	/* Header */
-	--header-title: "SCP基金会";
-	--header-subtitle: "控制 - 收容 - 保护";
+	--header-title: 'SCP基金会';
+	--header-subtitle: '控制 - 收容 - 保护';
+
 	/* Fonts */
-	--body-font-fallback: "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
-	--UI-font-fallback: "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans SC", sans-serif;
+	--body-font-fallback: 'Noto Sans SC', verdana, 'Microsoft YaHei', '微软雅黑', geneva, sans-serif, stxihei, '华文细黑';
+	--UI-font-fallback: '方体', 'PingFang SC', '黑体', 'Heiti SC', 'Microsoft JhengHei UI', 'Microsoft JhengHei', roboto, noto, 'Noto Sans SC', sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "幼圆", "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+	--mono-font-fallback: '幼圆', 'Noto Serif SC', 'Microsoft YaHei', '微软雅黑', 'Courier New', courier, monospace, stxihei, '华文细黑';
 }
 
 /* ===THAI BRANCH=== */
 :root:where(:lang(th)) {
+
 	/* Header */
-	--header-title: "สถาบัน SCP";
-	--header-subtitle: "ควบคุม, กักกัน, ป้องกัน";
+	--header-title: 'สถาบัน SCP';
+	--header-subtitle: 'ควบคุม, กักกัน, ป้องกัน';
+
 	/* Fonts */
-	--body-font-fallback: "Kanit", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Verdana, Geneva, sans-serif;
-	--UI-font-fallback: "Kanit", "Thonburi", "Leelawadee UI", "Cordia New", Roboto, Noto, "Noto Sans Thai", sans-serif;
+	--body-font-fallback: 'Kanit', -apple-system, system-ui, blinkmacsystemfont, 'Segoe UI', verdana, geneva, sans-serif;
+	--UI-font-fallback: 'Kanit', 'Thonburi', 'Leelawadee UI', 'Cordia New', roboto, noto, 'Noto Sans Thai', sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "Kanit", Consolas, monaco, monospace;
+	--mono-font-fallback: 'Kanit', consolas, monaco, monospace;
 }
 
 /* ===TRADITIONAL CHINESE BRANCH=== */
 :root:where(:lang(zh)) {
+
 	/* Header */
-	--header-title: "SCP基金會";
-	--header-subtitle: "控制，收容，保護";
+	--header-title: 'SCP基金會';
+	--header-subtitle: '控制，收容，保護';
+
 	/* Fonts */
-	--body-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
-	--UI-font-fallback: "方體", "PingFang HK", "方體", "PingFang TC", "黑體", "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans TC", sans-serif;
+	--body-font-fallback: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', 'Microsoft JhengHei UI', “微軟雅黑”, 'Microsoft YaHei', 'Microsoft YaHei UI', sans-serif;
+	--UI-font-fallback: '方體', 'PingFang HK', '方體', 'PingFang TC', '黑體', 'Heiti TC', 'Microsoft JhengHei UI', 'Microsoft JhengHei', roboto, noto, 'Noto Sans TC', sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", monospace;
+	--mono-font-fallback: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', 'Microsoft JhengHei UI', “微軟雅黑”, 'Microsoft YaHei', 'Microsoft YaHei UI', monospace;
 }
 
 /* ===UKRAINIAN BRANCH=== */
 :root:where(:lang(uk)) {
+
 	/* Header */
-	--header-title: "Фонд SCP.";
-	--header-subtitle: "ОХОРОНЯТИ. УТРИМУВАТИ. ЗАХИЩАТИ.";
+	--header-title: 'Фонд SCP.';
+	--header-subtitle: 'ОХОРОНЯТИ. УТРИМУВАТИ. ЗАХИЩАТИ.';
+
 	/* Fonts */
-	--body-font-fallback: Charcoal, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--header-font-fallback: Charcoal, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--body-font-fallback: charcoal, geneva, 'Helvetica Neue', helvetica, arial, sans-serif;
+	--header-font-fallback: charcoal, 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
 }
 
 /* ===VIETNAMESE BRANCH=== */
 :root:where(:lang(vi)) {
+
 	/* Header */
-	--header-title: "Tổ Chức SCP";
-	--header-subtitle: "QUẢN THÚC - LƯU TRỮ - BẢO VỆ";
+	--header-title: 'Tổ Chức SCP';
+	--header-subtitle: 'QUẢN THÚC - LƯU TRỮ - BẢO VỆ';
 }
