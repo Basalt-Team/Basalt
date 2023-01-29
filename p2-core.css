@@ -663,7 +663,7 @@
 }
 
 #login-status:is(:hover,:focus-within)::after {
-	height: var(--base-header-height);
+	height: 100%;
 	transition: height var(--header-link-transition-1st);
 }
 
@@ -686,8 +686,8 @@
 	top: 0;
 	right: 0;
 	background: transparent;
-	width: var(--user-button-width);
-	height: var(--base-header-height);
+	width: 100%;
+	height: 100%;
 	pointer-events: auto;
 	z-index: 2;
 }
@@ -726,7 +726,7 @@ a#account-topbutton, a#my-account {
 div#account-options {
 	width: var(--login-status-width);
 	position: absolute;
-	inset-block-start: var(--base-header-height);
+	inset-block-start: 100%;
 	right: unset;
 	inset-inline-end: 0;
 	border: none;
@@ -779,10 +779,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 /* logged out */
-#login-status a + span {
+#login-status > a:first-child + span {
 	display: block;
-	width: var(--user-button-width);
-	height: var(--base-header-height);
+	width: 100%;
+	height: 100%;
 	clip-path: none;
 	pointer-events: auto;
 	cursor: pointer;
@@ -803,7 +803,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	transition: background-color var(--header-link-transition-2nd);
 }
 
-#login-status:is(:hover,:focus-within) a + span {
+#login-status:is(:hover,:focus-within) > a:first-child + span {
 	background-color: rgb(var(--user-icon-button-color-hover));
 	transition: background-color var(--header-link-transition-1st);
 }
@@ -812,7 +812,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	display: flex;
 	position: absolute;
 	inset-inline-end: 0;
-	inset-block-start: var(--base-header-height);
+	inset-block-start: 100%;
 	height: var(--top-bar-mobile-height);
 	width: calc(var(--login-status-width)/2);
 	text-align: center;
