@@ -1545,7 +1545,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 #side-bar {
 	position: fixed;
 	top: 0;
-	left: calc(var(--side-bar-width) *- 1.125);
+	left: calc(var(--side-bar-width) * -1.125);
 	padding: 0;
 	margin: 0;
 	margin-top: var(--header-final-height);
