@@ -512,7 +512,7 @@
     padding: calc(var(--header-UI-dropdown-font-size) * 0.575) calc(var(--header-UI-dropdown-font-size) * 1.05);
     box-sizing: border-box;
     color: rgb(var(--top-bar-dropdown-link-color));
-    background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
+    background: rgb(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
     box-shadow: inset 0 0.05rem 0 rgb(var(--general-border-color));
     -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
     backdrop-filter: blur(var(--basalt-UI-blur));
@@ -542,7 +542,7 @@
 }
 #top-bar div[class*=top-bar] ul li ul li a:is(:hover, :focus),
 #top-bar div[class*=top-bar] ul li ul li.sfhover a {
-    background: rgba(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
+    background: rgb(var(--top-bar-dropdown-background), var(--basalt-UI-opacity));
 }
 #top-bar div[class*=top-bar] ul li ul li a::before {
     content: "";

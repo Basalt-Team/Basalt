@@ -1056,13 +1056,13 @@ div#toc {
 }
 @keyframes load-pulsate {
   0% {
-    box-shadow: 0 0 0 0 rgba(var(--basalt-undertone), 0.5), inset 0 0 0 0 rgba(var(--basalt-undertone), 0.375);
+    box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0.5), inset 0 0 0 0 rgb(var(--basalt-undertone), 0.375);
   }
   70% {
-    box-shadow: 0 0 0 0.675rem rgba(var(--basalt-undertone), 0), inset 0 0 0 0.45rem rgba(var(--basalt-undertone), 0);
+    box-shadow: 0 0 0 0.675rem rgb(var(--basalt-undertone), 0), inset 0 0 0 0.45rem rgb(var(--basalt-undertone), 0);
   }
     100% {
-    box-shadow: 0 0 0 0 rgba(var(--basalt-undertone), 0), inset 0 0 0 0 rgba(var(--basalt-undertone), 0);
+    box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0), inset 0 0 0 0 rgb(var(--basalt-undertone), 0);
   }
 }
 
@@ -1221,7 +1221,7 @@ div#toc {
     margin: 0;
     padding: 0.25em 0.475em;
     flex-grow: 1;
-    background-color: rgba(var(--tag-background-color), var(--basalt-UI-opacity));
+    background-color: rgb(var(--tag-background-color), var(--basalt-UI-opacity));
     border-radius: 0 0.5em;
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: all var(--button-hover-transition);
@@ -1326,8 +1326,8 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 #page-options-bottom-2 { padding-top: 0; }
 #delete-button {
     inset-block-start: 0;
-    color: rgba(var(--basalt-cancel-color));
-    background-color: rgba(var(--basalt-cancel-color),0.105);
+    color: rgb(var(--basalt-cancel-color));
+    background-color: rgb(var(--basalt-cancel-color),0.105);
     height: calc(100% - var(--po-padding));
 }
 
@@ -1392,7 +1392,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 .tags {
     display: inline-block;
-    background-color: rgba(var(--tag-background-color), var(--basalt-UI-opacity));
+    background-color: rgb(var(--tag-background-color), var(--basalt-UI-opacity));
     border-radius: 0 0.5em;
     padding: 0.25em 0.475em;
     transition: all var(--button-hover-transition);
