@@ -595,7 +595,7 @@
 	clip-path: polygon(0 0, 100% 50%, 0 100%);
 	position: absolute;
 	top: calc(var(--header-UI-dropdown-font-size) *1.325);
-	left: calc(var(--header-UI-dropdown-font-size) *- .625);
+	left: calc(var(--header-UI-dropdown-font-size) *-.625);
 	transform: translateY(-50%);
 	background-color: rgb(var(--top-bar-link-background-hover-alt));
 	z-index: 2;
