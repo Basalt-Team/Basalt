@@ -25,14 +25,6 @@ body {
 }
 
 /**
-   * Render the `main` element consistently in IE.
-   */
-
-main {
-	display: block;
-}
-
-/**
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
@@ -47,13 +39,10 @@ h1 {
 
 /**
    * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
    */
 
 hr {
 	box-sizing: content-box; /* 1 */
-	height: 0; /* 1 */
-	overflow: visible; /* 2 */
 }
 
 /**
@@ -75,17 +64,6 @@ pre {
 
 a {
 	background-color: transparent;
-}
-
-/**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-
-abbr[title] {
-	border-bottom: none; /* 1 */
-	text-decoration: underline; /* 2 */
-	text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -169,16 +147,6 @@ textarea {
 }
 
 /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-
-button,
-input { /* 1 */
-	overflow: visible;
-}
-
-/**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
    * 1. Remove the inheritance of text transform in Firefox.
    */
@@ -223,57 +191,6 @@ button:-moz-focusring,
 }
 
 /**
-   * Correct the padding in Firefox.
-   */
-
-fieldset {
-	padding: .35em .75em .625em;
-}
-
-/**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-
-legend {
-	box-sizing: border-box; /* 1 */
-	color: inherit; /* 2 */
-	display: table; /* 1 */
-	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
-	white-space: normal; /* 1 */
-}
-
-/**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-
-progress {
-	vertical-align: baseline;
-}
-
-/**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-
-textarea {
-	overflow: auto;
-}
-
-/**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-
-[type='checkbox'],
-[type='radio'] {
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
-}
-
-/**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
@@ -308,36 +225,6 @@ textarea {
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
-}
-
-/* Interactive
-	 ========================================================================== */
-
-/*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-
-details {
-	display: block;
-}
-
-/*
-   * Add the correct display in all browsers.
-   */
-
-summary {
-	display: list-item;
-}
-
-/* Misc
-	 ========================================================================== */
-
-/**
-   * Add the correct display in IE 10+.
-   */
-
-template {
-	display: none;
 }
 
 /**
