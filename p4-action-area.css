@@ -1267,6 +1267,19 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     margin: 0.425rem 0;
 }
 
+.diff-box table.page-compare th {
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    border-color: rgb(var(--basalt-UI-dark-palette));
+    color: rgb(var(--basalt-light-text-color));
+    padding: 0.5em 0.75em;
+    font-family: var(--header-font);
+    font-weight: bold;
+}
+.diff-box table.page-compare td {
+    border: solid 0.05rem rgb(var(--general-border-color));
+    padding: 0.5em 0.625em;
+}
+
 .inline-diff.page-source ins {
     text-decoration: none;
     background-color: rgb(var(--basalt-positive-color),0.1875);
