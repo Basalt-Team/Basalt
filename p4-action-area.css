@@ -251,8 +251,9 @@ form[id] div.wd-editor-toolbar-panel ul li ul {
     border: none;
     border-inline-start: solid calc(var(--edit-area-toolbar-icon-size)/8) rgb(var(--basalt-UI-dark-palette));
     background-color: rgb(var(--edit-area-toolbar-background-color));
-    top: 100%;
     left: 0;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
     clip-path: inset(0 0 100% 0);
     pointer-events: none;
     transition: clip-path 0.175s ease-out;
@@ -635,7 +636,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     content: "";
     display: block;
     position: absolute;
-    top: 0; left: 100%;
+    inset-block-start: 0; inset-inline-start: 100%;
     width: 1.75rem;
     height: 100%;
 }
@@ -855,7 +856,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     display: block;
     background-color: inherit;
     position: absolute;
-    top: calc(2em - 0.25rem);
+    inset-block-start: calc(2em - 0.25rem);
     left: 0;
     width: 100%;
     height: 0.25rem;
@@ -1018,7 +1019,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     content: "";
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0; inset-inline-start: 0;
     height: 100%; width: 0;
     background-color: rgb(var(--basalt-UI-dark-palette));
     transition: width 0.075s ease-out;
@@ -1063,7 +1064,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     content: "";
     display: block;
     position: absolute;
-    top: 0; left: 0;
+    inset-block-start: 0; inset-inline-start: 0;
     height: 100%; width: 0;
     background: rgb(var(--basalt-focus-color));
     transition: width 0.075s ease-out;
