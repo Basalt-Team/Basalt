@@ -22,9 +22,11 @@
 	--basalt-UI-dark-palette: var(--basalt-overtone);
 	--basalt-focus-color: var(--basalt-undertone);
 	--basalt-background-color: var(--basalt-primary-color);
+
 	--link-color: var(--basalt-bright-element-color);
 	--link-visited-color: var(--basalt-dark-element-color);
 	--link-newpage-color: var(--basalt-alternate-color);
+
 	--header-font-primary: 'Lexend';
 	--UI-font-primary: 'Jost';
 	--body-font-primary: 'Inter';
@@ -37,6 +39,7 @@
 	--UI-font: var(--UI-font-primary), var(--UI-font-fallback);
 	--body-font: var(--body-font-primary), var(--body-font-fallback);
 	--mono-font: var(--mono-font-primary), var(--mono-font-fallback);
+
 	--header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
 	--header-logo-size: contain;
 	--header-title: 'SCP Foundation';
@@ -167,6 +170,9 @@
 	--edit-area-toolbar-icon-size: 1.875rem;
 	--edit-area-main-background-color: var(--basalt-background-color);
 	--edit-area-ancillary-background-color: var(--basalt-secondary-color);
+
+	--pager-previous-button: "« previous";
+	--pager-next-button: "next »";
 }
 
 /* ---------------------- */

@@ -1,31 +1,73 @@
-/* ===FRENCH BRANCH=== */
-:root:lang(fr) #main-content .pager::before {
-	content: '« précédente';
+/* ===CZECH BRANCH=== */
+:root:where(:lang(cs)) {
+
+	/* Header */
+	--header-title: 'SCP Nadace';
+	--header-subtitle: 'ČESKÁ VĚTEV SCP NADACE';
 }
 
-:root:lang(fr) #main-content .pager::after {
-	content: 'suivante »';
+
+/* ===FRENCH BRANCH=== */
+:root:where(:lang(fr)) {
+
+	/* header */
+	--header-title: 'Fondation SCP';
+	--header-subtitle: 'SÉCURISER - CONTENIR - PROTÉGER';
+
+	--pager-previous-button: "« précédente";
+	--pager-next-button: "suivante »";
 }
+
 
 /* ===GERMAN BRANCH=== */
-:root:lang(de) #main-content .pager::before {
-	content: '« vorherige';
+:root:where(:lang(de)) {
+
+	/* Header */
+	--header-title: 'SCP Foundation';
+	--header-subtitle: 'AUF DEUTSCH';
+
+	/* Pager */
+	--pager-previous-button: "« vorherige";
+	--pager-next-button: "nächste »";
 }
 
-:root:lang(de) #main-content .pager::after {
-	content: 'nächste »';
+
+/* ===GREEK BRANCH=== */
+:root:where(:lang(el)) {
+
+	/* Header */
+	--header-title: 'Το Ίδρυμα SCP';
+	--header-subtitle: 'ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ';
 }
+
 
 /* ===ITALIAN BRANCH=== */
-:root:lang(it) #main-content .pager::before {
-	content: '« precedente';
+:root:where(:lang(it)) {
+
+	/* Header */
+	--header-title: 'Fondazione SCP';
+	--header-subtitle: 'BRANCA ITALIANA - SCP FOUNDATION';
+
+	/* Pager */
+	--pager-previous-button: "« precedente";
+	--pager-next-button: "prossimo »";
 }
 
-:root:lang(it) #main-content .pager::after {
-	content: 'prossimo »';
-}
 
 /* ===JAPANESE BRANCH=== */
+:root:where(:lang(ja)) {
+
+	/* Header */
+	--header-title: 'SCP財団';
+	--header-subtitle: '確保、収容、保護';
+
+	/* Fonts */
+	--body-font-fallback: 'メイリオ', meiryo, tahoma, verdana, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	--UI-font-fallback: '游ゴシック体', yugothic, 'ヒラギノ丸ゴ', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', 'MS Gothic', roboto, noto, 'Noto Sans JP', sans-serif;
+	--mono-font-fallback: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'ＭＳ ゴシック', 'MS Gothic', 'Noto Sans JP', takaopgothic, monospace;
+	--header-font-fallback: var(--body-font-fallback);
+}
+
 :root:lang(ja) #side-bar div.menu-item {
 	margin: 0;
 }
@@ -56,102 +98,6 @@
 	margin: 0;
 }
 
-/* ===KOREAN BRANCH=== */
-:root:lang(ko) #main-content .pager::before {
-	content: '« 이전';
-}
-
-:root:lang(ko) #main-content .pager::after {
-	content: '다음 »';
-}
-
-/* ===POLISH BRANCH=== */
-:root:lang(pl) #main-content .pager::before {
-	content: '« poprzednia';
-}
-
-:root:lang(pl) #main-content .pager::after {
-	content: 'następna »';
-}
-
-/* ===PORTUGESE BRANCH=== */
-:root:lang(pt-br) #main-content .pager::before {
-	content: '« anterior';
-}
-
-:root:lang(pt-br) #main-content .pager::after {
-	content: 'próximo »';
-}
-
-/* ===SIMPLIFIED CHINESE BRANCH=== */
-:root:lang(cn) #side-bar .side-block:is([style*='#f0fff6'],[style*='#e7e5e8']) {
-	background-color: rgb(var(--side-bar-resources-background-color)) !important;
-}
-
-:root:lang(cn) #side-bar .side-block:is([style*='#e5e5ff'],[style*='#f0f0f0']) {
-	background-color: rgb(var(--side-bar-media-background-color)) !important;
-}
-
-:root:lang(cn) #side-bar .menu-item {
-	margin: 0;
-}
-
-/* -------------------------------------------- */
-/* -------------------------------------------- */
-/* -------------------------------------------- */
-
-/* ===CZECH BRANCH=== */
-:root:where(:lang(cs)) {
-
-	/* Header */
-	--header-title: 'SCP Nadace';
-	--header-subtitle: 'ČESKÁ VĚTEV SCP NADACE';
-}
-
-/* ===FRENCH BRANCH=== */
-:root:where(:lang(fr)) {
-
-	/* header */
-	--header-title: 'Fondation SCP';
-	--header-subtitle: 'SÉCURISER - CONTENIR - PROTÉGER';
-}
-
-/* ===GERMAN BRANCH=== */
-:root:where(:lang(de)) {
-
-	/* Header */
-	--header-title: 'SCP Foundation';
-	--header-subtitle: 'AUF DEUTSCH';
-}
-
-/* ===GREEK BRANCH=== */
-:root:where(:lang(el)) {
-
-	/* Header */
-	--header-title: 'Το Ίδρυμα SCP';
-	--header-subtitle: 'ΕΛΛΗΝΌΦΩΝΟΣ ΚΛΆΔΟΣ';
-}
-
-/* ===ITALIAN BRANCH=== */
-:root:where(:lang(it)) {
-
-	/* Header */
-	--header-title: 'Fondazione SCP';
-	--header-subtitle: 'BRANCA ITALIANA - SCP FOUNDATION';
-}
-
-:root:where(:lang(ja)) {
-
-	/* Header */
-	--header-title: 'SCP財団';
-	--header-subtitle: '確保、収容、保護';
-
-	/* Fonts */
-	--body-font-fallback: 'メイリオ', meiryo, tahoma, verdana, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-	--UI-font-fallback: '游ゴシック体', yugothic, 'ヒラギノ丸ゴ', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo UI', 'MS Gothic', roboto, noto, 'Noto Sans JP', sans-serif;
-	--mono-font-fallback: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka, メイリオ, meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'ＭＳ ゴシック', 'MS Gothic', 'Noto Sans JP', takaopgothic, monospace;
-	--header-font-fallback: var(--body-font-fallback);
-}
 
 /* ===KOREAN BRANCH=== */
 :root:where(:lang(ko)) {
@@ -160,6 +106,10 @@
 	--header-title: 'SCP 재단';
 	--header-subtitle: '확보 - 격리 - 보호';
 
+	/* Pager */
+	--pager-previous-button: "« 이전";
+	--pager-next-button: "다음 »";
+
 	/* Fonts */
 	--body-font-fallback: inter, nanumbaruncatsi, 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', '돋움', 'Dotum', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
 	--UI-font-fallback: 'Nanum Gothic', 'Apple SD Gothic Neo', 'Malgun Gothic', roboto, noto, 'Noto Sans KR', sans-serif;
@@ -167,13 +117,19 @@
 	--header-font-fallback: var(--body-font-fallback);
 }
 
+
 /* ===POLISH BRANCH=== */
 :root:where(:lang(pl)) {
 
 	/* Header */
 	--header-title: 'Fundacja SCP';
 	--header-subtitle: 'POLSKA FILIA SCP';
+
+	/* Pager */
+	--pager-previous-button: "« poprzednia";
+	--pager-next-button: "następna »";
 }
+
 
 /* ===PORTUGESE BRANCH=== */
 :root:where(:lang(pt-br)) {
@@ -181,7 +137,12 @@
 	/* Header */
 	--header-title: 'Fundação SCP';
 	--header-subtitle: 'FILIAL LUSÓFONA';
+
+	/* Pager */
+	--pager-previous-button: "« anterior";
+	--pager-next-button: "próximo »";
 }
+
 
 /* ===RUSSIAN BRANCH=== */
 :root:where(:lang(ru)) {
@@ -195,6 +156,7 @@
 	--header-font-fallback: inter, charcoal, 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
 }
 
+
 /* ===SPANISH BRANCH=== */
 :root:where(:lang(es)) {
 
@@ -202,6 +164,7 @@
 	--header-title: 'La Fundación SCP';
 	--header-subtitle: 'RAMA HISPANOHABLANTE';
 }
+
 
 /* ===SIMPLIFIED CHINESE BRANCH=== */
 :root:where(:lang(cn)) {
@@ -217,6 +180,19 @@
 	--mono-font-fallback: '幼圆', 'Noto Serif SC', 'Microsoft YaHei', '微软雅黑', 'Courier New', courier, monospace, stxihei, '华文细黑';
 }
 
+:root:lang(cn) #side-bar .side-block:is([style*='#f0fff6'],[style*='#e7e5e8']) {
+	background-color: rgb(var(--side-bar-resources-background-color)) !important;
+}
+
+:root:lang(cn) #side-bar .side-block:is([style*='#e5e5ff'],[style*='#f0f0f0']) {
+	background-color: rgb(var(--side-bar-media-background-color)) !important;
+}
+
+:root:lang(cn) #side-bar .menu-item {
+	margin: 0;
+}
+
+
 /* ===THAI BRANCH=== */
 :root:where(:lang(th)) {
 
@@ -230,6 +206,7 @@
 	--header-font-fallback: var(--body-font-fallback);
 	--mono-font-fallback: 'Kanit', consolas, monaco, monospace;
 }
+
 
 /* ===TRADITIONAL CHINESE BRANCH=== */
 :root:where(:lang(zh)) {
@@ -245,6 +222,7 @@
 	--mono-font-fallback: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', 'Microsoft JhengHei UI', “微軟雅黑”, 'Microsoft YaHei', 'Microsoft YaHei UI', monospace;
 }
 
+
 /* ===UKRAINIAN BRANCH=== */
 :root:where(:lang(uk)) {
 
@@ -256,6 +234,7 @@
 	--body-font-fallback: charcoal, geneva, 'Helvetica Neue', helvetica, arial, sans-serif;
 	--header-font-fallback: charcoal, 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
 }
+
 
 /* ===VIETNAMESE BRANCH=== */
 :root:where(:lang(vi)) {

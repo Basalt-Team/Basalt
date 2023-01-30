@@ -931,8 +931,8 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     z-index: -1;
     cursor: not-allowed;
 }
-#main-content .pager::before { content: "« previous"; grid-area: prv; }
-#main-content .pager::after { content: "next »"; grid-area: nxt; }
+#main-content .pager::before { content: var(--pager-previous-button); grid-area: prv; }
+#main-content .pager::after { content: var(--pager-next-button); grid-area: nxt; }
 
 /*-------------------------------------*/
 
