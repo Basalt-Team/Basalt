@@ -1280,15 +1280,36 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     padding: 0.5em 0.625em;
 }
 
+#action-area .inline-diff.page-source {
+    font-size: .825em;
+    border-inline-start: .125rem solid rgb(var(--general-border-color));
+    padding-inline-start: 1.625em;
+    position: relative;
+}
+
+.inline-diff.page-source :is(ins,del) {
+    background-color: rgb(var(--diff-action-color),0.1875);
+}
+
 .inline-diff.page-source ins {
     text-decoration: none;
-    background-color: rgb(var(--basalt-positive-color),0.1875);
+    --diff-action-color:var(--basalt-positive-color);
 }
 .inline-diff.page-source del {
-    background-color: rgb(var(--basalt-negative-color),0.1875);
+    --diff-action-color:var(--basalt-negative-color);
 }
 .inline-diff.page-source :is(ins, del) > br {
     display: none;
+}
+.inline-diff.page-source :not(ins,del) + :is(ins,del)::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: -.425rem;
+    margin-block-start: .45ex;
+    width: .775rem;
+    height: .775rem;
+    border-radius: 1rem;
+    background: rgb(var(--diff-action-color));
 }
 
 /*-------------------*/
