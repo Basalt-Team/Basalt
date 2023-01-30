@@ -1288,7 +1288,7 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
 }
 
 .inline-diff.page-source :is(ins,del) {
-    background-color: rgb(var(--diff-action-color),0.1875);
+    background-color: rgb(var(--diff-action-color),0.275);
 }
 
 .inline-diff.page-source ins {
