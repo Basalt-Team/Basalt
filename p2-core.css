@@ -213,6 +213,7 @@
 	grid-template-rows: 1fr;
 	z-index: 10;
 	direction: ltr;
+	contain: size layout;
 }
 
 #header * {
