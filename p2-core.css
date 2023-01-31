@@ -964,6 +964,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #side-bar {
 	position: fixed;
+	float: none;
 	top: 0;
 	left: calc(var(--side-bar-width) * -1.125);
 	padding: 0;
