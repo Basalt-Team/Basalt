@@ -80,6 +80,7 @@
 	--user-icon-button-color-hover: var(--top-bar-link-color-hover);
 	--user-icon-button-background-hover: var(--login-status-background-color);
 	--pm-indicator-color: var(--basalt-alternate-color);
+
 	--side-bar-button-width: 3rem;
 	--side-bar-button-color: var(--top-bar-link-color);
 	--side-bar-button-color-hover: var(--top-bar-link-color-hover);
@@ -98,12 +99,12 @@
 	--side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
 	--side-bar-unfolded-heading-background-color: var(--basalt-UI-dark-palette);
 	--side-bar-link-transition: var(--header-link-transition-1st);
+
 	--main-content-width: 67.5rem;
 	--main-content-top-margin: .325rem;
 	--main-content-side-margin: 1.325rem;
 	--main-content-bottom-margin: var(--main-content-side-margin);
-	--tag-background-color: var(--basalt-secondary-color);
-	--modal-fader-background-color: var(--basalt-UI-dark-palette);
+
 	--bottom-area-text-color: var(--basalt-main-text-color);
 	--bottom-area-background-color: var(--basalt-secondary-color);
 	--bottom-area-padding: calc(var(--true-font-size) *.85);
@@ -114,6 +115,7 @@
 	--license-area-logo-size: 2.75rem;
 	--license-area-divider-thickness: .1rem;
 	--license-area-divider-color: var(--basalt-tertiary-color);
+
 	--base-font-size: 1rem;
 	--true-font-size:
 		clamp(
@@ -125,10 +127,12 @@
 	--header-UI-dropdown-font-size: calc(var(--header-UI-font-size) * 1.175);
 	--footer-font-size: calc(var(--true-font-size) *.825);
 	--license-area-font-size: calc(var(--true-font-size) *.8);
+
 	--scrollbar-track-color: var(--basalt-tertiary-color);
 	--scrollbar-thumb-color: var(--basalt-undertone);
 	--selection-text-color: var(--basalt-light-text-color);
 	--selection-background-color: var(--basalt-focus-color);
+	
 	--title-border-color: var(--basalt-undertone);
 	--hr-color: var(--basalt-undertone);
 	--rate-module-background-color: var(--basalt-secondary-color);
@@ -164,6 +168,9 @@
 	--image-caption-background-color: var(--basalt-background-color);
 	--image-block-border-color: var(--basalt-undertone);
 	--footnote-background-color: var(--basalt-secondary-color);
+	--tag-background-color: var(--basalt-secondary-color);
+	--modal-fader-background-color: var(--basalt-UI-dark-palette);
+
 	--edit-area-border-color: var(--action-area-border-color);
 	--edit-area-border-width: .1rem;
 	--edit-area-toolbar-background-color: var(--basalt-secondary-color);
