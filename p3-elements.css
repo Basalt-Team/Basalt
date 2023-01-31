@@ -1405,12 +1405,11 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 }
 .rt, rt {
     display: table-header-group;
-    font-size: .625em;
+    font-size: .575em;
     line-height: 1.15;
 }
 .ruby, ruby {
     display: inline-table;
-    height: 1em;
     line-height: 1;
     vertical-align: text-bottom;
 }
