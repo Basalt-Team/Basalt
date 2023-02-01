@@ -116,17 +116,6 @@ sup {
 	top: -.5em;
 }
 
-/* Embedded content
-	 ========================================================================== */
-
-/**
-   * Remove the border on images inside links in IE 10.
-   */
-
-img {
-	border-style: none;
-}
-
 /* Forms
 	 ========================================================================== */
 
@@ -142,7 +131,7 @@ select,
 textarea {
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
+	line-height: 1.25; /* 1 */
 	margin: 0; /* 2 */
 }
 
@@ -225,14 +214,6 @@ button:-moz-focusring,
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
-}
-
-/**
-   * Add the correct display in IE 10.
-   */
-
-[hidden] {
-	display: none;
 }
 
 /* ---------------------- */
@@ -1445,6 +1426,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #side-bar {
 	position: fixed;
+	float: none;
 	top: 0;
 	left: calc(var(--side-bar-width) * -1.125);
 	padding: 0;
@@ -2837,7 +2819,13 @@ div#toc {
     background-color: rgb(var(--footnote-background-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
     font-size: calc(var(--true-font-size)*0.95);
+    animation: 0.1325s hover-in forwards;
 }
+@keyframes hover-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .hovertip .content {
     padding: 0.325em 0.5em;
 }
@@ -4725,6 +4713,7 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
 .inline-diff.page-source :is(ins, del) > br {
     display: none;
 }
+.inline-diff.page-source :is(ins,del):first-child::before,
 .inline-diff.page-source :not(ins,del) + :is(ins,del)::before {
     content: "";
     position: absolute;
@@ -4734,6 +4723,9 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     height: .775rem;
     border-radius: 1rem;
     background: rgb(var(--diff-action-color));
+}
+.inline-diff.page-source :is(del+br+del)::before {
+    visibility: hidden;
 }
 
 /*-------------------*/
