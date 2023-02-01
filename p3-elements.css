@@ -834,7 +834,13 @@ div#toc {
     background-color: rgb(var(--footnote-background-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
     font-size: calc(var(--true-font-size)*0.95);
+    animation: 0.1325s hover-in forwards;
 }
+@keyframes hover-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .hovertip .content {
     padding: 0.325em 0.5em;
 }
