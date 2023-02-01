@@ -1302,6 +1302,7 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
 .inline-diff.page-source :is(ins, del) > br {
     display: none;
 }
+.inline-diff.page-source :is(ins,del):first-child::before,
 .inline-diff.page-source :not(ins,del) + :is(ins,del)::before {
     content: "";
     position: absolute;
@@ -1311,6 +1312,9 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
     height: .775rem;
     border-radius: 1rem;
     background: rgb(var(--diff-action-color));
+}
+.inline-diff.page-source :is(del+br+del)::before {
+    visibility: hidden;
 }
 
 /*-------------------*/
