@@ -116,17 +116,6 @@ sup {
 	top: -.5em;
 }
 
-/* Embedded content
-	 ========================================================================== */
-
-/**
-   * Remove the border on images inside links in IE 10.
-   */
-
-img {
-	border-style: none;
-}
-
 /* Forms
 	 ========================================================================== */
 
@@ -142,7 +131,7 @@ select,
 textarea {
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
+	line-height: 1.25; /* 1 */
 	margin: 0; /* 2 */
 }
 
@@ -225,12 +214,4 @@ button:-moz-focusring,
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
-}
-
-/**
-   * Add the correct display in IE 10.
-   */
-
-[hidden] {
-	display: none;
 }
