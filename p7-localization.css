@@ -192,6 +192,10 @@
 	margin: 0;
 }
 
+:root:lang(cn) div.page-rate-widget-box .rate-points {
+        background-color: transparent !important;
+}
+
 
 /* ===THAI BRANCH=== */
 :root:where(:lang(th)) {
