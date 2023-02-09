@@ -1496,6 +1496,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #interwiki {
+	--true-font-size: var(--base-font-size);
 	background-color: rgb(var(--side-bar-background-color));
 }
 
@@ -5624,9 +5625,9 @@ input#np-title.text {
 
 	/* Fonts */
 	--body-font-fallback: 'Noto Sans SC', verdana, 'Microsoft YaHei', '微软雅黑', geneva, sans-serif, stxihei, '华文细黑';
-	--UI-font-fallback: '方体', 'PingFang SC', '黑体', 'Heiti SC', 'Microsoft JhengHei UI', 'Microsoft JhengHei', roboto, noto, 'Noto Sans SC', sans-serif;
+	--UI-font-fallback: 'Noto Sans SC', '方体', 'PingFang SC', '黑体', 'Heiti SC', 'Microsoft JhengHei UI', 'Microsoft JhengHei', roboto, noto, 'Noto Sans SC', sans-serif;
 	--header-font-fallback: var(--body-font-fallback);
-	--mono-font-fallback: '幼圆', 'Noto Serif SC', 'Microsoft YaHei', '微软雅黑', 'Courier New', courier, monospace, stxihei, '华文细黑';
+	--mono-font-fallback: 'Noto Serif SC', 'Microsoft YaHei', '微软雅黑', 'Courier New', courier, monospace, stxihei, '华文细黑';
 }
 
 :root:lang(cn) #side-bar .side-block:is([style*='#f0fff6'],[style*='#e7e5e8']) {
@@ -5639,6 +5640,10 @@ input#np-title.text {
 
 :root:lang(cn) #side-bar .menu-item {
 	margin: 0;
+}
+
+:root:lang(cn) div.page-rate-widget-box .rate-points {
+        background-color: transparent !important;
 }
 
 
