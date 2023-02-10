@@ -1180,13 +1180,14 @@ div#toc {
 
 #breadcrumbs, .pseudocrumbs {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     grid-gap: 0.275em;
-    font-size: 0.875em;
     font-size: 0.875em;
     margin: 0;
     font-weight: bold;
 }
-.pseudocrumbs > p { margin: 0; }
+.pseudocrumbs > p { display: contents; }
 
 :is(#breadcrumbs, .pseudocrumbs) a {
     font-weight: normal;
