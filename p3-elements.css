@@ -459,7 +459,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     height: 1rem!important;
     top: 1rem;
     right: 0.5rem;
-    opacity: 0;
+    filter: opacity(0);
 }
 
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > hr {
