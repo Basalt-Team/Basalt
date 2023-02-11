@@ -1496,7 +1496,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #interwiki {
-	--true-font-size: var(--base-font-size);
+	--true-font-size: calc(var(--base-font-size)*.9125);
 	background-color: rgb(var(--side-bar-background-color));
 }
 
@@ -2332,6 +2332,8 @@ div.creditButtonStandalone > p > a::after {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     transition: background-color 0.095s linear;
 }
 div.rate-box-with-credit-button .creditButton > p > a::before,
@@ -2445,7 +2447,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     height: 1rem!important;
     top: 1rem;
     right: 0.5rem;
-    opacity: 0;
+    filter: opacity(0);
 }
 
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > hr {
@@ -3166,13 +3168,14 @@ div#toc {
 
 #breadcrumbs, .pseudocrumbs {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     grid-gap: 0.275em;
-    font-size: 0.875em;
     font-size: 0.875em;
     margin: 0;
     font-weight: bold;
 }
-.pseudocrumbs > p { margin: 0; }
+.pseudocrumbs > p { display: contents; }
 
 :is(#breadcrumbs, .pseudocrumbs) a {
     font-weight: normal;
