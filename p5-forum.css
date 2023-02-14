@@ -7,7 +7,7 @@
 
 .forum-breadcrumbs {
 	display: flex;
-	grid-gap: .25rem;
+	gap: .25rem;
 	font-size: .875em;
 	margin-top: 0;
 	font-weight: bold;
@@ -42,7 +42,7 @@
 #thread-container-posts {
 	display: flex;
 	flex-direction: column;
-	grid-gap: .75rem;
+	gap: .75rem;
 }
 
 .thread-container .post {
@@ -141,7 +141,7 @@
 .thread-container .post.folded .short {
 	display: flex;
 	align-items: baseline;
-	grid-gap: .5ch;
+	gap: .5ch;
 	font-size: .825em;
 	padding: .425em;
 	padding-inline-start: .625em;
@@ -240,7 +240,7 @@ input#np-title.text {
 #new-post-form div.buttons {
 	display: flex;
 	flex-wrap: wrap;
-	grid-gap: .325rem;
+	gap: .325rem;
 	padding: 0;
 	margin: .325rem 0;
 }

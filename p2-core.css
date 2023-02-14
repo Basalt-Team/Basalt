@@ -257,7 +257,7 @@
 	height: 100%;
 	line-height: 1.15;
 	width: max-content;
-	grid-gap: calc(var(--base-header-height) *.125);
+	gap: calc(var(--base-header-height) *.125);
 	padding-left: calc(var(--base-header-height) *.125);
 	padding-right: calc(var(--base-header-height) *.25);
 	letter-spacing: calc(var(--header-UI-font-size) * -.05);
@@ -1344,7 +1344,7 @@ div#license-area {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	grid-gap: .375rem;
+	gap: .375rem;
 }
 
 #footer-bar .units .unit {

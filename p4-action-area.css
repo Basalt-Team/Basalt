@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 0.5rem;
+    gap: 0.5rem;
     padding: 0.625em 0;
     width: 100%;
     max-width: calc(var(--main-content-width)*0.75);
@@ -207,7 +207,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
+    gap: calc(var(--edit-area-toolbar-icon-size)/4);
     background-color: rgb(var(--edit-area-toolbar-background-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     border-bottom: 0;
@@ -219,7 +219,7 @@ form#edit-page-form table.form:focus-within  td:nth-of-type(1)::after {
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    grid-gap: calc(var(--edit-area-toolbar-icon-size)/4);
+    gap: calc(var(--edit-area-toolbar-icon-size)/4);
 }
 :is(#wd-editor-toolbar-panel, #np-editor-panel) > div > ul {
     display: contents;
@@ -462,7 +462,7 @@ form .change-textarea-size {
     flex-wrap: wrap;
     width: 100%;
     padding: var(--edit-area-border-width);
-    grid-gap: var(--edit-area-border-width);
+    gap: var(--edit-area-border-width);
     background-color: rgb(var(--edit-area-border-color));
     box-sizing: border-box;
     padding-top: 0;
@@ -508,7 +508,7 @@ form .edit-help-34 a {
 form#edit-page-form table.edit-page-bottomtable {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 0.75rem;
+    gap: 0.75rem;
     padding: 0!important;
 }
 form#edit-page-form table.edit-page-bottomtable tbody,
@@ -588,7 +588,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 #edit-page-form > div.buttons.alignleft {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(calc(var(--main-content-width)/4), 100%), 1fr));
-    grid-gap: 0.625rem;
+    gap: 0.625rem;
     padding: 0.625rem 0 0;
     max-width: 100%;
 }
@@ -606,7 +606,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 0.25em;
+    gap: 0.25em;
 }
 
 /*------------*/
@@ -722,7 +722,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     grid-template-columns: repeat(auto-fill, 1.25em minmax(9.875em, 1fr));
     grid-auto-rows: auto;
     text-indent: -0.5ex;
-    grid-gap: 0.325em 0.375em;
+    gap: 0.325em 0.375em;
     align-items: center;
     margin: 0.375em 0;
 }
@@ -799,7 +799,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     flex-wrap: wrap;
     padding: 0;
     margin: 1rem 0;
-    grid-gap: 0.5rem;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     height: min-content;
@@ -1037,7 +1037,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(2) {
     grid-area: radio;
-    grid-gap: 0.125rem;
+    gap: 0.125rem;
 }
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(3) {
     grid-area: flags;
@@ -1081,7 +1081,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     grid-area: actions;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.325rem;
+    gap: 0.325rem;
     align-items: center;
     text-align: center;
     height: 100%;
@@ -1119,7 +1119,7 @@ div.site-changes-box {
 #page-content div.site-changes-box > form > table.form {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 0.75rem;
+    gap: 0.75rem;
     width: 100%;
 }
 div.site-changes-box > form > table.form > tbody { display: contents; }
@@ -1157,7 +1157,7 @@ div.site-changes-box > form > table.form > tbody > tr:first-child > td:nth-child
     display: grid;
     grid-template-columns: repeat(auto-fill, 1.75em minmax(12.75em, 1fr));
     grid-auto-rows: 1.75em;
-    grid-gap: 0.175em;
+    gap: 0.175em;
     align-items: center;
     margin: 0.325rem 0;
 }
@@ -1174,7 +1174,7 @@ div.site-changes-box > form > table.form > tbody > tr > td > select {
         "name flag rev user"
         "comment flag rev date";
     grid-template-columns: 1fr 3.25em 5.875em 10em;
-    grid-gap: 0.25em;
+    gap: 0.25em;
     padding: 0.625em 0.175em 0.325em;
     align-items: center;
     font-size: 0.95em;
@@ -1350,7 +1350,7 @@ form[onsubmit*="setParent"] > table.form,
 #rename-option-rename table.form {
     display: flex;
     flex-direction: column;
-    grid-gap: 0.625rem;
+    gap: 0.625rem;
     width: 100%;
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody {
@@ -1358,7 +1358,7 @@ form[onsubmit*="setParent"] > table.form,
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr {
     display: grid;
-    grid-gap: 0.125em;
+    gap: 0.125em;
     align-items: center;
 }
 :is(#file-upload-form table.form,form[onsubmit*="setParent"] > table.form, #rename-option-rename table.form) > tbody > tr > td {
@@ -1396,7 +1396,7 @@ form[onsubmit*="setParent"] > table.form,
 }
 #action-area table.page-files > :is(thead, tbody) > tr {
     display: grid;
-    grid-gap: 0.625rem;
+    gap: 0.625rem;
     grid-template-columns: 2.5fr 1fr 4.5em 2fr;
     align-items: center;
     padding: 0.475em 0;
@@ -1426,7 +1426,7 @@ form[onsubmit*="setParent"] > table.form,
 #action-area table.page-files > tbody > tr > td:last-child {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 0.325rem;
+    gap: 0.325rem;
 }
 #action-area table.page-files > tbody > tr > td:last-child > a {
     flex-grow: 1;
@@ -1584,7 +1584,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 0.75rem;
+    gap: 0.75rem;
     text-align: center;
     font-family: var(--mono-font);
     padding: 0.5rem 0;
@@ -1632,7 +1632,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     margin: 0;
     padding: 0;
     grid-template-columns: repeat(auto-fill, minmax(min(16em, 100%), 1fr));
-    grid-gap: 0.25rem;
+    gap: 0.25rem;
 }
 
 /*-------------------*/
@@ -1688,7 +1688,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-gap: 0.25rem 1rem;
+    gap: 0.25rem 1rem;
     flex-wrap: wrap;
 }
 #action-area > a.action-area-close + h1 + p + table.form > tbody > tr > td:first-child {
@@ -1701,7 +1701,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     display: grid;
     grid-template-columns: 1.25em 1fr;
     align-items: center;
-    grid-gap: 0.25rem 0.125rem;
+    gap: 0.25rem 0.125rem;
 }
 
 #rename-option-rename > form {
