@@ -620,7 +620,10 @@ div#toc {
 }
 
 /* non-float toc */
-#page-content table[style^="margin:0;"] td[style^="margin:0;"] { display: contents; }
+table[style^="margin:0;"][style*="margin:0;"],
+table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
+    display: contents;
+} /* Replace with :has when more widley-usable */
 
 #toc #toc-action-bar {
     text-align: end;
