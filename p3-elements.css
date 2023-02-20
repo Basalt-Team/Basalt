@@ -623,7 +623,7 @@ div#toc {
 table[style^="margin:0;"][style*="margin:0;"],
 table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: contents;
-} /* Replace with :has when more widley-usable */
+} /* Replace with :has when more widely usable */
 
 #toc #toc-action-bar {
     text-align: end;
