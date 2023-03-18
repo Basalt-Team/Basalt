@@ -974,6 +974,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	width: var(--side-bar-width);
 	max-width: calc(100% - 3.75rem);
 	box-sizing: border-box;
+	font-size: calc(var(--base-font-size)*0.925);
 	background-color: rgb(var(--side-bar-background-color));
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -1034,7 +1035,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #interwiki {
-	--true-font-size: calc(var(--base-font-size)*.9125);
+	font-size: calc(var(--base-font-size)*0.925);
 	background-color: rgb(var(--side-bar-background-color));
 }
 
