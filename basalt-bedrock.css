@@ -1106,21 +1106,13 @@ button:-moz-focusring,
 	font-size: 0;
 	z-index: 2;
 }
-
 #login-status:is(:hover,:focus-within) {
 	pointer-events: auto;
 }
 
 #login-status > * {
-	clip-path: inset(0 0 0 100%);
 	user-select: text;
 	font-size: var(--header-UI-dropdown-font-size);
-	transition: clip-path var(--header-link-transition-1st);
-}
-
-#login-status:is(:hover,:focus-within) > * {
-	clip-path: inset(0);
-	transition: clip-path var(--header-link-transition-2nd);
 }
 
 #login-status::after {
@@ -1208,6 +1200,12 @@ div#account-options {
 	border: none;
 	display: block !important;
 	background-color: rgb(var(--login-status-background-color));
+	clip-path: inset(0 0 0 100%);
+    transition: clip-path var(--header-link-transition-1st);
+}
+:where(#login-status):is(:hover,:focus-within) > div#account-options {
+	clip-path: inset(0);
+	transition: clip-path var(--header-link-transition-2nd);
 }
 
 div#account-options > ul {
@@ -1436,6 +1434,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	width: var(--side-bar-width);
 	max-width: calc(100% - 3.75rem);
 	box-sizing: border-box;
+	font-size: calc(var(--base-font-size)*0.925);
 	background-color: rgb(var(--side-bar-background-color));
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -1496,7 +1495,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #interwiki {
-	--true-font-size: calc(var(--base-font-size)*.9125);
+	font-size: calc(var(--base-font-size)*0.925);
 	background-color: rgb(var(--side-bar-background-color));
 }
 
@@ -2606,7 +2605,10 @@ div#toc {
 }
 
 /* non-float toc */
-#page-content table[style^="margin:0;"] td[style^="margin:0;"] { display: contents; }
+table[style^="margin:0;"][style*="margin:0;"],
+table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
+    display: contents;
+} /* Replace with :has when more widely usable */
 
 #toc #toc-action-bar {
     text-align: end;
