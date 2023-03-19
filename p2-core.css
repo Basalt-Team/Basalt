@@ -738,10 +738,13 @@ div#account-options {
 	border: none;
 	display: block !important;
 	background-color: rgb(var(--login-status-background-color));
+}
+
+#account-options, :where(#login-status) > :is(.login-status-create-account, .login-status-sign-in) {
 	clip-path: inset(0 0 0 100%);
     transition: clip-path var(--header-link-transition-1st);
 }
-:where(#login-status):is(:hover,:focus-within) > div#account-options {
+:where(#login-status):is(:hover,:focus-within) > :is(#account-options, .login-status-create-account, .login-status-sign-in) {
 	clip-path: inset(0);
 	transition: clip-path var(--header-link-transition-2nd);
 }
