@@ -644,21 +644,13 @@
 	font-size: 0;
 	z-index: 2;
 }
-
 #login-status:is(:hover,:focus-within) {
 	pointer-events: auto;
 }
 
 #login-status > * {
-	clip-path: inset(0 0 0 100%);
 	user-select: text;
 	font-size: var(--header-UI-dropdown-font-size);
-	transition: clip-path var(--header-link-transition-1st);
-}
-
-#login-status:is(:hover,:focus-within) > * {
-	clip-path: inset(0);
-	transition: clip-path var(--header-link-transition-2nd);
 }
 
 #login-status::after {
@@ -746,6 +738,12 @@ div#account-options {
 	border: none;
 	display: block !important;
 	background-color: rgb(var(--login-status-background-color));
+	clip-path: inset(0 0 0 100%);
+    transition: clip-path var(--header-link-transition-1st);
+}
+:where(#login-status):is(:hover,:focus-within) > div#account-options {
+	clip-path: inset(0);
+	transition: clip-path var(--header-link-transition-2nd);
 }
 
 div#account-options > ul {
