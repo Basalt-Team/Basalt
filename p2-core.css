@@ -1036,8 +1036,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #interwiki {
-	font-size: calc(var(--base-font-size)*0.925);
 	background-color: rgb(var(--side-bar-background-color));
+}
+#interwiki body {
+	font-size: calc(var(--base-font-size)*0.925);
 }
 
 :is(#side-bar, #interwiki) .side-block {
