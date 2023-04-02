@@ -969,7 +969,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 }
 .owindow .button-bar {
     margin: 0;
-    padding: 0 0.5rem 0.5rem;
+    padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1088,6 +1088,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 }
 .owindow > *:not(.button-bar,.title) > *:not(img, img + h1) {
     flex-basis: 100%;
+    margin: 0;
 }
 
 .owindow > .content.modal-body > img + h1 + table {
