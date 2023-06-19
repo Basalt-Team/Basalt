@@ -10,19 +10,11 @@
     "url": "https://github.com/Basalt-Team/Basalt"
   },
   "devDependencies": {
-    "minify": "^9.2.0",
-    "prettier": "^2.8.7",
-    "stylelint": "^15.4.0",
-    "stylelint-config-standard": "^32.0.0"
+    "minify": "^9.2.0"
   },
   "scripts": {
     "build": "./build.sh",
-    "clean": "rm -rf dist",
-    "merge": "cat p?-*.css > dist/css/basalt-bedrock.css",
-    "minify": "minify dist/basalt-bedrock.css > dist/basalt-bedrock.min.css",
-    "stylelint": "stylelint *.css",
-    "stylelint:fix": "stylelint --fix *.css",
-    "prettier": "prettier -c *.css",
-    "prettier:fix": "prettier -w *.css"
+    "minify": "minify",
+    "clean": "rm -rf dist"
   }
 }
