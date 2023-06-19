@@ -3,7 +3,7 @@
   "description": "SCP Wiki theme (build process)",
   "version": "1.0.0",
   "authors": "Basalt Team",
-  "license": "CC-BY-SA-3.0",
+  "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
