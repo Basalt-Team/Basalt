@@ -1,0 +1,21 @@
+{
+  "name": "basalt-theme",
+  "description": "SCP Wiki theme (build process)",
+  "version": "1.0.0",
+  "authors": "Basalt Team",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Basalt-Team/Basalt"
+  },
+  "devDependencies": {
+    "minify": "^9.2.0"
+  },
+  "scripts": {
+    "build": "./build.sh",
+    "clean": "rm -rf dist",
+    "minify:bedrock": "minify dist/basalt-bedrock.css > dist/basalt-bedrock-min.css",
+    "minify:normalize": "minify dist/normalize.css > dist/normalize-min.css"
+  }
+}
