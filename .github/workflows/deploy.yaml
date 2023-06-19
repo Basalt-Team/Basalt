@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ mega ]
+    branches: [ mega, deploy ]
 
 env:
   BUCKET_PATH: theme/en/basalt
