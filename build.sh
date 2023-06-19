@@ -7,9 +7,9 @@ set -eu
 # Create directory structure
 mkdir -p dist
 
-# Copy fonts and images
+# Copy static files
 cp -a fonts dist
-cp images/* dist
+cp images/* misc/* dist
 
 # Merge and minify CSS files
 cat p?-*.css > dist/basalt-bedrock.css
