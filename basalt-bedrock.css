@@ -500,7 +500,7 @@ button:-moz-focusring,
 	--body-font: var(--body-font-primary), var(--body-font-fallback);
 	--mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
-	--header-logo: url('https://basalt-team.github.io/Basalt/basaltlogo.svg');
+	--header-logo: url('https://cdn.scpwiki.com/theme/en/basalt/basaltlogo.svg');
 	--header-logo-size: contain;
 	--header-title: 'SCP Foundation';
 	--header-subtitle: 'SECURE - CONTAIN - PROTECT';
