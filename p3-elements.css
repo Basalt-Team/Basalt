@@ -425,23 +425,35 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
-#u-credit-view .modalbox > .credit.first > p:first-child::before,
-#u-credit-view .modalbox > .credit.first > p:first-child::after {
+
+
+.modalbox .close-credits {
+    display: contents;
+}
+.modalbox .close-credits a {
+    color: transparent;
+    display: block;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    width: 2.75rem; height: 2.75rem;
+}
+.modalbox .close-credits a::before,
+.modalbox .close-credits a::after {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     display: block;
-    height: 2.75rem;
-    width: 2.75rem;
-    pointer-events: none;
+    height: 100%;
+    width: 100%;
 }
-#u-credit-view .modalbox > .credit.first > p:first-child::before {
+.modalbox .close-credits a::before {
     background: rgb(var(--basalt-cancel-color));
     height: 0;
     transition: height 0.125s ease-out;
 }
-#u-credit-view .modalbox > .credit.first > p:first-child::after {
+.modalbox .close-credits a::after {
     background: rgb(var(--basalt-light-text-color));
     -webkit-mask-image: var(--modal-close-mask);
     mask-image: var(--modal-close-mask);
@@ -452,16 +464,8 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }
-#u-credit-view .modalbox > .credit.first > p:first-child:hover::before {
-    height: 2.75rem;
-}
-
-#u-credit-view iframe.close-credits {
-    transform: scale(1.875);
-    height: 1rem!important;
-    top: 1rem;
-    right: 0.5rem;
-    filter: opacity(0);
+.modalbox .close-credits a:is(:hover,:focus)::before {
+    height: 100%;
 }
 
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > hr {
@@ -477,6 +481,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
 
 #u-credit-view .creditBottomRate {
     height: auto!important;
+    margin-block-end: 0.5rem;
 }
 
 /*-------------------*/
