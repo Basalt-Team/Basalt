@@ -409,8 +409,8 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     inset: unset;
     margin: initial;
     width: auto;
+    max-width: calc(100% - var(--main-content-side-margin)*2);
     height: max-content;
-    pointer-events: none;
 }
 :is(#u-credit-view, #u-credit-otherwise) .fader {
     background: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
@@ -425,9 +425,9 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     border-radius: 0;
     background: rgb(var(--basalt-background-color));
     padding: 0;
-    margin: 0 auto;
-    width: min(37.5rem, calc(100% - var(--main-content-side-margin)*2));
-    pointer-events: auto;
+    margin: auto;
+    width: 37.5rem;
+    height: 50vh; height: 50svh;
 }
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child {
     display: flex;
