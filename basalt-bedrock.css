@@ -2387,11 +2387,24 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
 
 /* info modal */
 
+#u-credit-view, #u-credit-otherwise {
+    justify-content: center;
+    align-items: center;
+}
+:is(#u-credit-view, #u-credit-otherwise) .modalcontainer {
+    position: initial;
+    inset: unset;
+    margin: initial;
+    width: auto;
+    height: max-content;
+    pointer-events: none;
+}
 :is(#u-credit-view, #u-credit-otherwise) .fader {
     background: rgb(var(--modal-fader-background-color),var(--basalt-UI-opacity));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
 :is(#u-credit-view, div#u-credit-otherwise) .modalbox {
+    position: relative;
     display: flex;
     flex-direction: column;
     box-shadow: none;
@@ -2399,6 +2412,9 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     border-radius: 0;
     background: rgb(var(--basalt-background-color));
     padding: 0;
+    margin: 0 auto;
+    width: min(37.5rem, calc(100% - var(--main-content-side-margin)*2));
+    pointer-events: auto;
 }
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child {
     display: flex;
