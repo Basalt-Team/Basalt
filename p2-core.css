@@ -967,7 +967,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	position: fixed;
 	float: none;
 	top: 0;
-	left: calc(var(--side-bar-width) * -1.125);
+	left: calc(var(--side-bar-width) * -1);
 	padding: 0;
 	margin: 0;
 	margin-top: var(--header-final-height);
@@ -1430,7 +1430,7 @@ div#license-area {
 		pointer-events: none;
 		position: fixed;
 		top: 0;
-		right: 0;
+		right: 0; left: auto;
 		width: 100%;
 		min-width: 3.75rem;
 		height: 100%;
