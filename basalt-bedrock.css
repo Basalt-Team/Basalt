@@ -1872,7 +1872,7 @@ div#license-area {
 	}
 
 	#side-bar, #side-bar:is(:hover, :focus-within):not(:target) {
-		left: calc(var(--side-bar-width) * -1.125);
+		left: calc(var(--side-bar-width) * -1);
 	}
 
 	#side-bar::before, #side-bar::after {
