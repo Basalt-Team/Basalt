@@ -474,12 +474,14 @@
 #top-bar div[class*='top-bar'] ul li ul {
 	visibility: visible;
 	pointer-events: none;
+	opacity: 0;
 	width: max-content;
 	min-width: 100%;
 	display: flex;
 	flex-direction: column;
 	border: none;
 	contain: layout;
+	transition: opacity var(--header-link-transition-2nd);
 }
 
 #top-bar div.mobile-top-bar ul li ul {
@@ -493,6 +495,8 @@
 #top-bar div[class*='top-bar'] > ul > li:focus-within > ul,
 #top-bar div[class*='top-bar'] > ul > li > ul:focus-within {
 	pointer-events: auto;
+	opacity: 1;
+    transition: opacity var(--header-link-transition-1st);
 }
 
 #top-bar div[class*='top-bar'] > ul > li > ul::before {
@@ -535,8 +539,7 @@
 	box-shadow: inset 0 .05rem 0 rgb(var(--general-border-color));
 	-webkit-backdrop-filter: blur(var(--basalt-UI-blur));
 	backdrop-filter: blur(var(--basalt-UI-blur));
-	clip-path: inset(0 100% 0 0);
-	transition: color var(--header-link-transition-2nd), clip-path var(--header-link-transition-1st);
+	transition: color var(--header-link-transition-2nd);
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -553,8 +556,7 @@
 
 #top-bar div[class*='top-bar'] ul > li:is(:hover,:focus-within) > ul > li > a,
 #top-bar div[class*='top-bar'] ul > li > ul:is(:hover,:focus-within) > li > a {
-	clip-path: inset(0);
-	transition: color var(--header-link-transition-1st), clip-path var(--header-link-transition-2nd);
+	transition: color var(--header-link-transition-1st);
 }
 
 #top-bar div[class*='top-bar'] ul li ul li a:is(:hover, :focus),
