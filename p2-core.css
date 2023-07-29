@@ -604,30 +604,18 @@
 	display: none;
 }
 
-#top-bar div[class*='top-bar'] ul li ul li ul::before {
-	content: '';
-	display: block;
-	width: .375em;
-	height: .75em;
-	clip-path: polygon(0 0, 100% 50%, 0 100%);
-	position: absolute;
-	top: calc(var(--header-UI-dropdown-font-size) *1.325);
-	left: calc(var(--header-UI-dropdown-font-size) *-.625);
-	transform: translateY(-50%);
-	background-color: rgb(var(--top-bar-link-background-hover-alt));
-	z-index: 2;
-	opacity: 0;
-	transition: opacity var(--header-link-transition-1st), background-color var(--header-link-transition-2nd);
+#top-bar div[class*=top-bar] ul li ul li a:not(:only-child) {
+    justify-content: space-between;
+    padding-inline-end: calc(var(--header-UI-dropdown-font-size) * .575);
+    column-gap: calc(var(--header-UI-dropdown-font-size) * 1.5);
 }
-
-#top-bar div[class*='top-bar'] ul li:is(:hover, :focus-within) ul li ul::before {
-	opacity: 1;
-	transition: opacity var(--header-link-transition-2nd), background-color var(--header-link-transition-2nd);
-}
-
-#top-bar div[class*='top-bar'] ul li ul li a:is(:hover, :focus) + ul::before,
-#top-bar div[class*='top-bar'] ul li ul li:is(:hover, :focus-within) ul::before {
-	background-color: rgb(var(--top-bar-link-color-hover));
+#top-bar div[class*=top-bar] ul li ul li a:not(:only-child)::after {
+    content: "";
+    display: block;
+    width: .375em;
+    height: .75em;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-color: currentColor;
 }
 
 #top-bar div[class*='top-bar'] ul li ul li.sfhover ul li a:not(:hover,:focus) {
