@@ -593,6 +593,7 @@
 	top: 0;
 	left: 100%;
 	pointer-events: none;
+	min-width: max-content;
 }
 
 #top-bar div[class*='top-bar'] ul li ul li:is(.sfhover, :hover, :focus-within) > ul {
