@@ -595,8 +595,9 @@
 	pointer-events: none;
 }
 
-#top-bar div[class*='top-bar'] ul li ul li.sfhover > ul {
+#top-bar div[class*='top-bar'] ul li ul li:is(.sfhover, :hover, :focus-within) > ul {
 	pointer-events: auto;
+	opacity: 1;
 }
 
 #top-bar div[class*='top-bar'] ul li span[class*='topbar_arrow'] {
