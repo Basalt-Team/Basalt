@@ -1052,8 +1052,9 @@ button:-moz-focusring,
 	position: absolute;
 	top: 0;
 	left: 100%;
-	pointer-events: none;
+	border-inline-start: solid .225rem rgb(var(--top-bar-dropdown-background-hover));
 	min-width: max-content;
+	pointer-events: none;
 }
 
 #top-bar div[class*='top-bar'] ul li ul li:is(.sfhover, :hover, :focus-within) > ul {
