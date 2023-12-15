@@ -651,7 +651,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 #who-rated-page-area > div span:nth-of-type(2n+1):is(:hover, :focus-within),
 #who-rated-page-area > div span:nth-of-type(2n+1):is(:hover, :focus-within) + span[style*="color"] {
-    background-color: rgb(var(--basalt-focus-color),0.0625);
+    background-color: rgb(var(--basalt-focus-color),0.125);
 }
 
 /*------------*/
