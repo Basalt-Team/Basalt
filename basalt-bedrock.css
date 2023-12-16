@@ -2801,19 +2801,30 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     margin-block-end: -0.5rem;
     inset-block-start: -0.75rem;
 }
-.bibitems { counter-reset: bibindex; }
-.bibitems .bibitem, .footnotes-footer .footnote-footer  {
+.bibitems {
+    counter-reset: bibindex;
+    font-family: var(--mono-font);
+}
+.bibitems .bibitem, .footnotes-footer .footnote-footer {
     height: auto;
     margin: 0.375em 0;
     margin-inline-start: 2.75rem;
     text-indent: -0.575ch;
     position: relative;
 }
+.bibitems .bibitem {
+    text-indent: -1ch;
+}
+.bibitems .bibitem:nth-child(n+11) {
+    text-indent: -3ch;
+}
+
 .bibitems .bibitem > *, .footnotes-footer .footnote-footer > * { text-indent: 0; }
 .bibitems .bibitem::first-letter {
     font-size: 0;
 }
 .bibitems .bibitem::after {
+    text-indent: 0;
     counter-increment: bibindex;
     content: counter(bibindex) ".";
     font-weight: bold;
@@ -2821,7 +2832,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: calc(100% + 0.25ch);
-    font-family: var(--mono-font);
+    background: rgb(var(--footnote-background-color));
 }
 
 .footnotes-footer .footnote-footer { text-indent: -0.875ch; }
