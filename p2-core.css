@@ -226,10 +226,10 @@
 	grid-template-rows: 1fr;
 	z-index: 10;
 	direction: ltr;
-	contain: size layout;
+	contain: layout;
 }
 
-#header * {
+#header > * {
 	color: var(--basalt-main-text-color);
 	font-family: var(--UI-font);
 }
@@ -1137,10 +1137,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	width: .425rem;
 	height: 100%;
 	background-color: rgb(var(--side-bar-unfolded-heading-background-color));
-	animation: collapsible-expand var(--side-bar-link-transition) forwards;
+	animation: blt-collapsible-expand var(--side-bar-link-transition) forwards;
 }
 
-@keyframes collapsible-expand {
+@keyframes blt-collapsible-expand {
 	0% {
 		height: 0;
 	}
