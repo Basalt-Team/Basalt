@@ -686,10 +686,10 @@ button:-moz-focusring,
 	grid-template-rows: 1fr;
 	z-index: 10;
 	direction: ltr;
-	contain: size layout;
+	contain: layout;
 }
 
-#header * {
+#header > * {
 	color: var(--basalt-main-text-color);
 	font-family: var(--UI-font);
 }
@@ -1597,10 +1597,10 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	width: .425rem;
 	height: 100%;
 	background-color: rgb(var(--side-bar-unfolded-heading-background-color));
-	animation: collapsible-expand var(--side-bar-link-transition) forwards;
+	animation: blt-collapsible-expand var(--side-bar-link-transition) forwards;
 }
 
-@keyframes collapsible-expand {
+@keyframes blt-collapsible-expand {
 	0% {
 		height: 0;
 	}
@@ -2854,9 +2854,9 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background-color: rgb(var(--footnote-background-color))!important;
     border: solid 0.125rem rgb(var(--general-border-color))!important;
     font-size: calc(var(--true-font-size)*0.95);
-    animation: 0.1325s hover-in forwards;
+    animation: 0.1325s blt-hover-in forwards;
 }
-@keyframes hover-in {
+@keyframes blt-hover-in {
     from { opacity: 0; }
     to { opacity: 1; }
 }
@@ -3072,9 +3072,9 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     box-sizing: border-box;
     border: solid 0.375rem rgb(var(--basalt-undertone));
     margin: 0 auto;
-    animation: load-rotate 1.325s ease-in-out infinite, load-pulsate .875s linear infinite;
+    animation: blt-load-rotate 1.325s ease-in-out infinite, blt-load-pulsate .875s linear infinite;
 }
-@keyframes load-rotate {
+@keyframes blt-load-rotate {
     50% {
         transform: rotate(0deg);
     }
@@ -3082,7 +3082,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
         transform: rotate(90deg);
     }
 }
-@keyframes load-pulsate {
+@keyframes blt-load-pulsate {
   0% {
     box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0.5), inset 0 0 0 0 rgb(var(--basalt-undertone), 0.375);
   }
