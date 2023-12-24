@@ -242,7 +242,7 @@
 /* --- H1 LINK --- */
 
 #header h1 {
-	display: block;
+	display: grid;
 	grid-area: h-link;
 	overflow: hidden;
 }
