@@ -33,6 +33,7 @@
 }
 #history-subarea,
 #action-area {
+    width: auto;
     position: relative;
     padding: 0;
     margin: 1rem 0 0;
