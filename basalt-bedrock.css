@@ -3327,7 +3327,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 }
 
 div[id*="page-options-bottom"] {
-    --po-padding: 0.5rem;
+    --_po-padding: 0.5rem;
     width: 100%;
     line-height: 1.5;
     text-align: center;
@@ -3337,9 +3337,9 @@ div[id*="page-options-bottom"] {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    row-gap: var(--po-padding);
-    padding: var(--po-padding);
-    padding-inline-end: calc(7.25rem + var(--po-padding));
+    row-gap: var(--_po-padding);
+    padding: var(--_po-padding);
+    padding-inline-end: calc(7.25rem + var(--_po-padding));
     background-color: rgb(var(--basalt-secondary-color));
     box-sizing: border-box;
 }
@@ -3365,10 +3365,10 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 
 #more-options-button, #delete-button {
     position: absolute;
-    inset-block-start: var(--po-padding);
-    inset-inline-end: var(--po-padding);
-    width: calc(7.25rem - var(--po-padding));
-    height: calc(100% - var(--po-padding)*2);
+    inset-block-start: var(--_po-padding);
+    inset-inline-end: var(--_po-padding);
+    width: calc(7.25rem - var(--_po-padding));
+    height: calc(100% - var(--_po-padding)*2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3381,7 +3381,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
     inset-block-start: 0;
     color: rgb(var(--basalt-cancel-color));
     background-color: rgb(var(--basalt-cancel-color),0.105);
-    height: calc(100% - var(--po-padding));
+    height: calc(100% - var(--_po-padding));
 }
 
 div[id*="page-options-bottom"] > a:is(:hover,:focus) {
@@ -3398,7 +3398,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
 @media only screen and (max-width: 32rem) {
     div[id*="page-options-bottom"] {
         width: 100%;
-        padding-inline-end: var(--po-padding);
+        padding-inline-end: var(--_po-padding);
     }
 
     #more-options-button, #delete-button {
