@@ -2587,14 +2587,39 @@ blockquote, div.blockquote {
     margin: 0.5rem 0;
     border: none;
     padding: 0.875rem 1rem;
+    --_brackets: var(--basalt-main-text-color);
+    --_builtin: 7,128,120;
+    --_code: var(--basalt-main-text-color);
+    --_comment: 40,155,40;
+    --_default: var(--basalt-main-text-color);
+    --_identifier: var(--basalt-main-text-color);
+    --_inlinedoc: 28,82,235;
+    --_inlinetags: 134,50,131;
+    --_number: 165,38,38;
+    --_reserved: 74,67,237;
+    --_string: var(--basalt-bright-element-color);
+    --_special: var(--basalt-dark-element-color);
+    --_quotes: var(--basalt-bright-element-color);
+    --_var: 67,144,62;
 }
 .code pre {
     margin: 0;
 }
 
-.code :is(.hl-default, .hl-code, .hl-brackets, .hl-identifier) {
-    color: rgb(var(--basalt-main-text-color));
-}
+.code .hl-brackets { color: rgb(var(--_brackets)); }
+.code .hl-builtin { color: rgb(var(--_builtin)); }
+.code .hl-code { color: rgb(var(--_code)); }
+.code .hl-comment { color: rgb(var(--_comment)); }
+.code .hl-default { color: rgb(var(--_default)); }
+.code .hl-identifier { color: rgb(var(--_identifier)); }
+.code .hl-inlinedoc { color: rgb(var(--_inlinedoc)); }
+.code .hl-inlinetags { color: rgb(var(--_inlinetags)); font-weight: bold; }
+.code .hl-number { color: rgb(var(--_number)); }
+.code .hl-reserved { color: rgb(var(--_reserved)); }
+.code .hl-string { color: rgb(var(--_string)); }
+.code .hl-special { color: rgb(var(--_special)); font-weight: bold; }
+.code .hl-quotes { color: rgb(var(--_quotes)); }
+.code .hl-var { color: rgb(var(--_var)); }
 
 /*------------------------*/
 /*--- TABLE OF CONTENT ---*/
