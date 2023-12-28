@@ -581,14 +581,6 @@ div.wiki-note {
 }
 
 /*------------------*/
-/*--- CODE BLOCK ---*/
-/*------------------*/
-
-.code :is(.hl-default, .hl-code, .hl-brackets, .hl-identifier) {
-    color: rgb(var(--basalt-main-text-color));
-}
-
-/*------------------*/
 /*--- BLOCKQUOTE ---*/
 /*------------------*/
 
@@ -609,13 +601,17 @@ blockquote, div.blockquote {
 /*------------------*/
 
 .code {
-    background-color: rgb(var(--blockquote-background-color));
+    background-color: rgb(var(--code-background-color));
     margin: 0.5rem 0;
     border: none;
     padding: 0.875rem 1rem;
 }
 .code pre {
     margin: 0;
+}
+
+.code :is(.hl-default, .hl-code, .hl-brackets, .hl-identifier) {
+    color: rgb(var(--basalt-main-text-color));
 }
 
 /*------------------------*/

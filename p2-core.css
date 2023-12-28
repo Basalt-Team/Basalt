@@ -156,6 +156,7 @@
 	--blockquote-background-color: var(--basalt-secondary-color);
 	--blockquote-border-color: var(--general-border-color);
 	--blockquote-border-width: .0875rem;
+	--code-background-color: var(--blockquote-background-color);
 	--toc-background-color: var(--blockquote-background-color);
 	--toc-border-color: var(--blockquote-border-color);
 	--toc-border-width: var(--blockquote-border-width);

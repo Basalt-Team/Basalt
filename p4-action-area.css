@@ -587,10 +587,11 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 
 /* Save button area */
 #edit-page-form > div.buttons.alignleft {
+    --_gap: .625rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min((100% - 1.25rem), max(28ch, (100% - 1.25rem)/3)), 1fr));
-    gap: 0.625rem;
-    padding: 0.625rem 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(min((100% - var(--_gap)*2), max(28ch, (100% - var(--_gap)*2)/3)), 1fr));
+    gap: var(--_gap);
+    padding: var(--_gap) 0 0;
     max-width: 100%;
 }
 #edit-page-form > .buttons.alignleft > input[type="button"] {
