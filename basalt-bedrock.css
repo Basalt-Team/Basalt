@@ -1403,6 +1403,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	height: 100%;
 	font-size: 0;
 	cursor: pointer;
+	outline: none;
 	z-index: 2;
 }
 
