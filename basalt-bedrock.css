@@ -2089,7 +2089,8 @@ a.newpage {
 /*--- BUTTONS ---*/
 /*---------------*/
 
-div.buttons input, input[type="button"], button {
+div.buttons input, input[type="button"], input[type="submit"], button {
+    appearance: none;
     margin: 0;
     padding: 0.325em 0.5em;
     cursor: pointer;
@@ -2100,7 +2101,7 @@ div.buttons input, input[type="button"], button {
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
-:is(div.buttons input, input[type="button"], button):is(:focus, :hover) {
+:is(div.buttons input, input[type="button"], input[type="submit"], button):is(:focus, :hover) {
     color: rgb(var(--button-hover-text-color));
     background-color: rgb(var(--button-hover-background-color));
     border-color: rgb(var(--button-hover-border-color));
