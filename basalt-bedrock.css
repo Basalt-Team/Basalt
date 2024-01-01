@@ -2533,6 +2533,22 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     }
 }
 
+/*------------------*/
+/*--- BLOCKQUOTE ---*/
+/*------------------*/
+
+blockquote, div.blockquote {
+    background-color: rgb(var(--blockquote-background-color));
+    border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
+    margin: 1.25rem auto;
+    padding: 0.125rem 1.45rem;
+    box-sizing: border-box;
+}
+#main-content blockquote,
+#main-content div.blockquote {
+    max-width: calc(var(--main-content-width)*0.825);
+}
+
 /*------------*/
 /*--- NOTE ---*/
 /*------------*/
@@ -2545,6 +2561,28 @@ div.wiki-note {
     border: none;
     background-color: rgb(var(--basalt-alternate-color),0.075);
     text-align: justify;
+}
+
+/*--------------------*/
+/*--- NEW PAGE BOX ---*/
+/*--------------------*/
+
+.new-page-box {
+    font-size: var(--true-font-size);
+    margin: 0!important;
+    width: 100%;
+}
+
+.new-page-box form {
+    display: flex;
+    flex-wrap: wrap;
+    --_gap: .375rem;
+    padding: var(--_gap);
+    gap: var(--_gap);
+}
+.new-page-box form input.text {
+    margin: 0!important;
+    flex-grow: 1;
 }
 
 /*-------------------*/
@@ -2561,22 +2599,6 @@ div.wiki-note {
 .error-inline {
     color: rgb(var(--basalt-negative-color));
     border: 0.05em solid currentColor;
-}
-
-/*------------------*/
-/*--- BLOCKQUOTE ---*/
-/*------------------*/
-
-blockquote, div.blockquote {
-    background-color: rgb(var(--blockquote-background-color));
-    border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
-    margin: 1.25rem auto;
-    padding: 0.125rem 1.45rem;
-    box-sizing: border-box;
-}
-#main-content blockquote,
-#main-content div.blockquote {
-    max-width: calc(var(--main-content-width)*0.825);
 }
 
 /*------------------*/
