@@ -601,6 +601,7 @@ div.wiki-note {
 .new-page-box form input.text {
     margin: 0!important;
     flex-grow: 1;
+    font-family: var(--mono-font);
 }
 
 /*-------------------*/
