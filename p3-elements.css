@@ -594,13 +594,16 @@ div.wiki-note {
 .new-page-box form {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     --_gap: .375rem;
     padding: var(--_gap);
     gap: var(--_gap);
 }
 .new-page-box form input.text {
     margin: 0!important;
+    flex-basis: 12ch;
     flex-grow: 1;
+    min-width: 6ch;
     font-family: var(--mono-font);
 }
 
