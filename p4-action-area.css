@@ -583,6 +583,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     padding: 1em;
     margin: 0;
     box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
 }
 
 /* Save button area */
