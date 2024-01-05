@@ -1178,7 +1178,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 :is(#side-bar, #interwiki) .menu-item a {
 	display: inline-block;
 	padding: .375em .575rem;
-	font-size: var(--true-font-size);
+	font-size: calc(var(--base-font-size)*0.925);
 	color: rgb(var(--side-bar-link-color));
 	flex-grow: 1;
 	isolation: isolate;
