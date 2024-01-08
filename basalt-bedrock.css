@@ -5147,7 +5147,6 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     list-style: none;
     font-family: var(--mono-font);
     font-size: .875em;
-    overflow-wrap: anywhere;
     counter-reset: backlink;
 }
 #action-area > h1 + h2 ~ h2  ~ ul:not(:has(li)) { display: none; }
@@ -5183,6 +5182,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 #action-area > h1 + h2 ~ h2  ~ ul > li > a:first-child {
     font-family: var(--body-font);
     order: -1;
+    overflow-wrap: anywhere;
 }
 
 /*-------------------*/
