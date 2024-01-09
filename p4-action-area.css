@@ -1643,6 +1643,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 /*--- BACKLINKS ---*/
 /*-----------------*/
 
+#action-area > h1 + h2 + ul,
 #action-area > h1 + h2 ~ h2  ~ ul {
     margin: 0;
     padding: 0;
@@ -1654,6 +1655,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 #action-area > h1 + h2 ~ h2  ~ ul:not(:has(li)) { display: none; }
 #action-area > h1 + h2 ~ h2  ~ ul:last-child { margin-block-start: 1rem; }
 
+#action-area > h1 + h2 + ul > li,
 #action-area > h1 + h2 ~ h2  ~ ul > li {
     display: flex;
     align-items: center;
@@ -1662,10 +1664,12 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     transition: background-color 0.125s ease-out;
     counter-increment: backlink;
 }
+#action-area > h1 + h2 + ul > li:is(:hover,:focus-within),
 #action-area > h1 + h2 ~ h2  ~ ul > li:is(:hover,:focus-within) {
     background-color: rgb(var(--basalt-focus-color),.0625);
 }
 
+#action-area > h1 + h2 + ul > li::before,
 #action-area > h1 + h2 ~ h2  ~ ul > li::before {
     content: counter(backlink) ".";
     order: -1;
@@ -1681,6 +1685,8 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
     flex-grow: 1;
     order: -1;
 }
+
+#action-area > h1 + h2 + ul > li > a,
 #action-area > h1 + h2 ~ h2  ~ ul > li > a:first-child {
     font-family: var(--body-font);
     order: -1;
