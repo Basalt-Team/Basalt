@@ -1991,9 +1991,10 @@ body {
     font-family: var(--body-font);
     font-feature-settings: "salt", "ss01", "ss02";
     font-size: var(--true-font-size);
+    line-height: 1.5;
 }
 
-body, li, p { line-height: 1.5; }
+li, p { line-height: inherit; }
 
 code, .code, .code pre, .code p, tt {
     font-family: var(--mono-font);
@@ -2902,8 +2903,10 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 .hovertip {
     width: max-content;
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
-    background-color: rgb(var(--footnote-background-color))!important;
-    border: solid 0.125rem rgb(var(--general-border-color))!important;
+    background-color: var(--_background-color)!important;
+    border: solid 0.125rem var(--_border)!important;
+    --_background-color: rgb(var(--footnote-background-color));
+    --_border: solid 0.125rem rgb(var(--general-border-color));
     font-size: calc(var(--true-font-size)*0.95);
     animation: 0.1325s blt-hover-in forwards;
 }
