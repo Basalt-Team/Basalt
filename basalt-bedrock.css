@@ -825,8 +825,8 @@ button:-moz-focusring,
 	transition: background-color var(--side-bar-transition);
 	-webkit-mask-image: var(--side-bar-button-mask);
 	mask-image: var(--side-bar-button-mask);
-	-webkit-mask-position: 50%;
-	mask-position: 50%;
+	-webkit-mask-position: center;
+	mask-position: center;
 	-webkit-mask-size: contain;
 	mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
@@ -1462,8 +1462,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	transition: background-color var(--side-bar-transition);
 	-webkit-mask-image: var(--side-bar-button-mask);
 	mask-image: var(--side-bar-button-mask);
-	-webkit-mask-position: 50%;
-	mask-position: 50%;
+	-webkit-mask-position: center;
+	mask-position: center;
 	-webkit-mask-size: contain;
 	mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
