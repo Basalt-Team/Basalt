@@ -2037,11 +2037,11 @@ img, table, iframe {
 }
 
 /* id scroll jump */
-#main-content [id] {
+:where(#main-content) [id] {
     scroll-margin-top: var(--header-final-height);
 }
 @media only screen and (max-width: 1024px) {
-    #main-content [id] { --header-final-height: var(--top-bar-mobile-height); }
+    :where(#main-content) [id] { --header-final-height: var(--top-bar-mobile-height); }
 }
 
 /*---------------*/
@@ -3951,6 +3951,7 @@ form:is(#edit-page-form, #new-post-form) > div:nth-of-type(2) { min-width: 100%;
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     box-sizing: border-box;
     transition: border-color 0.125s linear;
+    scroll-margin-top: initial;
 }
 :is(#edit-page-textarea, #np-text):focus-visible {
     outline: none;
