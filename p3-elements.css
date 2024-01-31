@@ -846,6 +846,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background: rgb(var(--footnote-background-color));
     margin: 1.25rem 0;
     height: auto;
+    clear: both;
 }
 .bibitems::before, .footnotes-footer::before {
     content: "";
