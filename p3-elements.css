@@ -922,7 +922,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     width: max-content;
     max-width: min(87.5%, calc(var(--main-content-width)*0.75));
     background-color: var(--_background-color)!important;
-    border: solid 0.125rem var(--_border)!important;
+    border: var(--_border)!important;
     --_background-color: rgb(var(--footnote-background-color));
     --_border: solid 0.125rem rgb(var(--general-border-color));
     font-size: calc(var(--true-font-size)*0.95);
