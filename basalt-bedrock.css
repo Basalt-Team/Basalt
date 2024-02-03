@@ -1998,7 +1998,7 @@ li, p { line-height: inherit; }
 
 code, .code, .code pre, .code p, tt {
     font-family: var(--mono-font);
-    font-size: inherit;
+    font-size: 1em;
 }
 
 sub, sup {
