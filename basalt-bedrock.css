@@ -2004,6 +2004,7 @@ code, .code, .code pre, .code p, tt {
 sub, sup {
     position: relative;
     font-size: 0.775em;
+    line-height: 1;
 }
 sup { top: -0.625em; }
 sub { bottom: -0.625em; }
