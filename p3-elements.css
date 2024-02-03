@@ -998,6 +998,10 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     overflow: hidden;
 }
 
+.printuser > a:first-child:where(:only-of-type) {
+    user-select: auto;
+}
+
 #avatar-hover-container {
     display: none;
 }
