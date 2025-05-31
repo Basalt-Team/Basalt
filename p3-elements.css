@@ -211,10 +211,6 @@ table td {
     text-align: start;
 }
 
-:where(#page-content) table {
-    width: max-content;
-}
-
 :where(#page-content) table:not(.form), table.wiki-content-table {
     max-width: 100%;
     overflow-x: auto;
